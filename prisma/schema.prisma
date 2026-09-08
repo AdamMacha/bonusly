@@ -1,0 +1,143 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id             String    @id @default(cuid())
+  name           String
+  slug           String    @unique
+  description    String?
+  icon           String?
+  order          Int       @default(0)
+  seoTitle       String?
+  seoDescription String?
+  offers         Offer[]
+  articles       Article[]
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model Offer {
+  id               String     @id @default(cuid())
+  slug             String     @unique
+  name             String
+  shortDescription String
+  description      String
+  categoryId       String
+  category         Category   @relation(fields: [categoryId], references: [id])
+  logo             String?
+  bonus            String?
+  bonusDescription String?
+  requirements     String[]
+  pros             String[]
+  cons             String[]
+  referralUrl      String
+  affiliateUrl     String?
+  trackingSlug     String     @unique
+  rating           Float?
+  featured         Boolean    @default(false)
+  active           Boolean    @default(true)
+  verified         Boolean    @default(false)
+  lastVerifiedAt   DateTime?
+  seoTitle         String?
+  seoDescription   String?
+  clicks           Click[]
+  faq              OfferFaq[]
+  leads            Lead[]
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+
+  @@index([categoryId])
+  @@index([active, featured])
+}
+
+model OfferFaq {
+  id       String @id @default(cuid())
+  offerId  String
+  offer    Offer  @relation(fields: [offerId], references: [id], onDelete: Cascade)
+  question String
+  answer   String
+  order    Int    @default(0)
+
+  @@index([offerId])
+}
+
+model Article {
+  id             String    @id @default(cuid())
+  slug           String    @unique
+  title          String
+  excerpt        String
+  content        String
+  featuredImage  String?
+  categoryId     String
+  category       Category  @relation(fields: [categoryId], references: [id])
+  authorId       String
+  author         Author    @relation(fields: [authorId], references: [id])
+  publishedAt    DateTime?
+  featured       Boolean   @default(false)
+  draft          Boolean   @default(true)
+  keywords       String[]
+  canonicalUrl   String?
+  seoTitle       String?
+  seoDescription String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@index([categoryId])
+  @@index([authorId])
+  @@index([draft, publishedAt])
+}
+
+model Author {
+  id       String    @id @default(cuid())
+  name     String
+  slug     String    @unique
+  bio      String?
+  avatar   String?
+  articles Article[]
+}
+
+model Click {
+  id          String   @id @default(cuid())
+  offerId     String
+  offer       Offer    @relation(fields: [offerId], references: [id], onDelete: Cascade)
+  referrer    String?
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+  userAgent   String?
+  createdAt   DateTime @default(now())
+
+  @@index([offerId])
+  @@index([createdAt])
+}
+
+model NewsletterSubscriber {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  confirmed    Boolean  @default(false)
+  unsubscribed Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Lead {
+  id        String   @id @default(cuid())
+  offerId   String?
+  offer     Offer?   @relation(fields: [offerId], references: [id], onDelete: SetNull)
+  name      String
+  email     String
+  phone     String?
+  note      String?
+  status    String   @default("NEW")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([offerId])
+  @@index([createdAt])
+}

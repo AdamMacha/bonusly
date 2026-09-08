@@ -91,7 +91,6 @@ Použij moderní stabilní stack:
 * TypeScript
 * React
 * Tailwind CSS
-* shadcn/ui
 * PostgreSQL
 * Prisma ORM
 * Resend
@@ -239,10 +238,6 @@ Příklady:
 
 * Wolt kurýr
 * foodora kurýr
-* Bolt Food
-* Bolt řidič
-* Uber
-* další
 
 Slug:
 
@@ -304,6 +299,7 @@ Tato kategorie může obsahovat:
 
 * cashback
 * registrační bonusy
+* casino bonusy
 * slevy
 * promo akce
 * časově omezené nabídky
