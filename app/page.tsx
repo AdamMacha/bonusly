@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/json-ld";
 import Link from "next/link";
 
 export default async function Home() {
-  const [featuredOffers, categories, latestArticles] = await Promise.all([
+  const [featuredOffers, categories, latestArticles, heroArticles] = await Promise.all([
     prisma.offer.findMany({
       where: { active: true, featured: true },
       include: { category: true },
@@ -26,7 +26,17 @@ export default async function Home() {
       take: 3,
       orderBy: { publishedAt: "desc" },
     }),
+    prisma.article.findMany({
+      where: { draft: false },
+      include: { category: true, author: true, offer: true },
+      take: 12,
+      orderBy: [{ featured: "desc" }, { publishedAt: "desc" }],
+    }),
   ]);
+
+  const explicitlyFeatured = heroArticles.filter((a) => a.featured);
+  const carouselArticles =
+    explicitlyFeatured.length > 0 ? explicitlyFeatured : heroArticles.slice(0, 5);
 
   return (
     <>
@@ -54,7 +64,7 @@ export default async function Home() {
         }}
       />
 
-      <Hero />
+      <Hero articles={carouselArticles} />
 
       {/* Featured Offers */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">

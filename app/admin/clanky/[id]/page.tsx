@@ -198,12 +198,27 @@ export default async function EditArticlePage({ params }: Props) {
           />
         </div>
 
-        <div className="flex flex-wrap gap-6 pt-2">
-          <label className="flex items-center gap-2 text-sm cursor-pointer">
-            <input type="checkbox" name="featured" className="rounded text-green" defaultChecked={article.featured} />
-            <span className="text-navy font-medium">Doporučeno (Featured)</span>
-          </label>
-          <label className="flex items-center gap-2 text-sm cursor-pointer">
+        <div className="space-y-3 pt-2">
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50/50 p-4">
+            <label className="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="featured"
+                className="mt-1 h-4 w-4 rounded text-green focus:ring-green border-slate-300"
+                defaultChecked={article.featured}
+              />
+              <div>
+                <span className="text-sm font-semibold text-navy flex items-center gap-1.5">
+                  🎡 Zobrazit v 3D Hero Carouselu na hlavní stránce
+                </span>
+                <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                  Zařadí kartu článku do rotujícího 3D carouselu v úvodní sekci homepage (s odznakem Top tip a přímým proklikem).
+                </p>
+              </div>
+            </label>
+          </div>
+
+          <label className="flex items-center gap-2 text-sm cursor-pointer px-1">
             <input type="checkbox" name="draft" value="off" className="rounded text-green" defaultChecked={!article.draft} />
             <span className="text-navy font-medium">Publikováno (odškrtnout pro koncept)</span>
           </label>

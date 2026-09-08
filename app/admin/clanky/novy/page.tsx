@@ -81,9 +81,29 @@ export default async function NovyClanekPage() {
           <label htmlFor="keywords" className="block text-sm font-medium text-navy mb-1">Klíčová slova (oddělená čárkou)</label>
           <input id="keywords" name="keywords" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:border-green" />
         </div>
-        <div className="flex gap-6">
-          <label className="flex items-center gap-2 text-sm"><input type="checkbox" name="featured" className="rounded" /> Featured</label>
-          <label className="flex items-center gap-2 text-sm"><input type="checkbox" name="draft" value="off" className="rounded" /> Publikovat (ne draft)</label>
+        <div className="space-y-3 pt-2">
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50/50 p-4">
+            <label className="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="featured"
+                className="mt-1 h-4 w-4 rounded text-green focus:ring-green border-slate-300"
+              />
+              <div>
+                <span className="text-sm font-semibold text-navy flex items-center gap-1.5">
+                  🎡 Zobrazit v 3D Hero Carouselu na hlavní stránce
+                </span>
+                <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                  Zařadí kartu článku do rotujícího 3D carouselu v úvodní sekci homepage (s odznakem Top tip a přímým proklikem).
+                </p>
+              </div>
+            </label>
+          </div>
+
+          <label className="flex items-center gap-2 text-sm cursor-pointer px-1">
+            <input type="checkbox" name="draft" value="off" className="rounded text-green" defaultChecked />
+            <span className="text-navy font-medium">Publikovat ihned (odškrtnout pro koncept)</span>
+          </label>
         </div>
         <button type="submit" className="rounded-lg bg-green px-6 py-2.5 text-sm font-semibold text-navy hover:bg-green-light transition-colors">
           Vytvořit článek

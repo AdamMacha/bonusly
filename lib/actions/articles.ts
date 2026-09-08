@@ -93,3 +93,24 @@ export async function deleteArticle(id: string) {
   revalidatePath("/");
   redirect("/admin/clanky");
 }
+
+export async function toggleArticleCarousel(id: string) {
+  await requireAdminAuth();
+
+  const article = await prisma.article.findUnique({
+    where: { id },
+    select: { featured: true },
+  });
+
+  if (!article) return;
+
+  await prisma.article.update({
+    where: { id },
+    data: { featured: !article.featured },
+  });
+
+  revalidatePath("/admin/clanky");
+  revalidatePath("/blog");
+  revalidatePath("/");
+}
+
