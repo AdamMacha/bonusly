@@ -36,11 +36,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const offers = await prisma.offer.findMany({
-    where: { active: true },
-    select: { slug: true },
-  });
-  return offers.map((o) => ({ slug: o.slug }));
+  try {
+    const offers = await prisma.offer.findMany({
+      where: { active: true },
+      select: { slug: true },
+    });
+    return offers.map((o) => ({ slug: o.slug }));
+  } catch {
+    return [];
+  }
 }
 
 export default async function OfferPage({ params }: Props) {
