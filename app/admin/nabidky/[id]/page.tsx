@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { updateOffer, deleteOffer } from "@/lib/actions/offers";
+import { AdminDeleteButton } from "@/components/admin-delete-button";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -235,15 +236,10 @@ export default async function EditOfferPage({ params }: Props) {
       </form>
 
       <form action={deleteWithId} className="mt-6 max-w-2xl">
-        <button
-          type="submit"
-          className="rounded-xl border border-red-200 px-4 py-2 text-xs font-semibold text-red-600 hover:bg-red-50 transition-colors"
-          onClick={(e) => {
-            if (!confirm(`Opravdu chcete smazat nabídku ${offer.name}?`)) e.preventDefault();
-          }}
-        >
-          Smazat nabídku
-        </button>
+        <AdminDeleteButton
+          label="Smazat nabídku"
+          confirmMessage={`Opravdu chcete smazat nabídku ${offer.name}?`}
+        />
       </form>
     </div>
   );
