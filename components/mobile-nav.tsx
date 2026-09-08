@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { SocialLinks } from "./social-links";
 
 interface MobileNavProps {
   links: { href: string; label: string }[];
@@ -47,7 +48,7 @@ export function MobileNav({ links }: MobileNavProps) {
                 {link.label}
               </Link>
             ))}
-            <div className="pt-3 border-t border-white/5">
+            <div className="pt-3 border-t border-white/5 space-y-3">
               <Link
                 href="/nabidky"
                 onClick={() => setIsOpen(false)}
@@ -55,6 +56,9 @@ export function MobileNav({ links }: MobileNavProps) {
               >
                 Prozkoumat nabídky
               </Link>
+              <div className="flex items-center justify-center pt-2">
+                <SocialLinks />
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { SocialLinks } from "./social-links";
 
 const footerLinks = {
   nabidky: [
@@ -40,6 +41,12 @@ export function Footer() {
             <p className="mt-3 text-sm text-slate-400 leading-relaxed">
               Porovnáváme nabídky, přivýdělky a finanční produkty na jednom místě.
             </p>
+            <div className="mt-5">
+              <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2.5">
+                Sledujte nás
+              </span>
+              <SocialLinks />
+            </div>
           </div>
 
           {/* Nabídky */}

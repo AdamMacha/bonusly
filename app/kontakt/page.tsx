@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { SocialLinks } from "@/components/social-links";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -17,6 +18,13 @@ export default function KontaktPage() {
         <p>
           <a href="mailto:info@bonusly.cz">info@bonusly.cz</a>
         </p>
+        <h2>Sociální sítě</h2>
+        <p>
+          Sledujte nás na sociálních sítích, kde pravidelně sdílíme novinky, tipy na nejvýhodnější bonusy a přivýdělky:
+        </p>
+        <div className="not-prose my-4">
+          <SocialLinks variant="light" iconClassName="w-5 h-5" />
+        </div>
         <h2>Spolupráce</h2>
         <p>
           Pokud máte zájem o spolupráci nebo chcete přidat vaši nabídku na BONUSLY, kontaktujte nás na výše uvedeném emailu.
