@@ -2,9 +2,10 @@ import { prisma } from "@/lib/db";
 import { createArticle } from "@/lib/actions/articles";
 
 export default async function NovyClanekPage() {
-  const [categories, authors] = await Promise.all([
+  const [categories, authors, offers] = await Promise.all([
     prisma.category.findMany({ orderBy: { order: "asc" } }),
     prisma.author.findMany(),
+    prisma.offer.findMany({ where: { active: true }, orderBy: { name: "asc" } }),
   ]);
 
   return (
@@ -54,6 +55,27 @@ export default async function NovyClanekPage() {
               className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:border-green"
             />
           </div>
+        </div>
+        <div>
+          <label htmlFor="offerId" className="block text-sm font-medium text-navy mb-1">
+            Propojená nabídka (pro referral tlačítko a konverze)
+          </label>
+          <select
+            id="offerId"
+            name="offerId"
+            defaultValue=""
+            className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:border-green bg-white"
+          >
+            <option value="">— Žádná (automaticky vybrat nejlepší nabídku z kategorie) —</option>
+            {offers.map((o) => (
+              <option key={o.id} value={o.id}>
+                {o.name} {o.bonus ? `— [${o.bonus}]` : ""}
+              </option>
+            ))}
+          </select>
+          <p className="text-xs text-slate-400 mt-1">
+            Vybraná nabídka se v článku zobrazí jako zvýrazněný konverzní box a plovoucí lišta s tlačítkem na sledovací odkaz /go/[trackingSlug].
+          </p>
         </div>
         <div>
           <label htmlFor="keywords" className="block text-sm font-medium text-navy mb-1">Klíčová slova (oddělená čárkou)</label>

@@ -39,6 +39,7 @@ export const articleSchema = z.object({
   featuredImage: z.string().optional(),
   categoryId: z.string().min(1, "Kategorie je povinná"),
   authorId: z.string().min(1, "Autor je povinný"),
+  offerId: z.string().optional().nullable(),
   featured: z.boolean().default(false),
   draft: z.boolean().default(true),
   keywords: z.array(z.string()).default([]),

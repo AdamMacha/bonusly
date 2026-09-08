@@ -11,7 +11,7 @@ export default async function EditArticlePage({ params }: Props) {
   const { id } = await params;
 
   // Vyhledáme článek podle ID nebo slugu pro maximální kompatibilitu
-  const [article, categories, authors] = await Promise.all([
+  const [article, categories, authors, offers] = await Promise.all([
     prisma.article.findFirst({
       where: {
         OR: [{ id }, { slug: id }],
@@ -19,6 +19,7 @@ export default async function EditArticlePage({ params }: Props) {
     }),
     prisma.category.findMany({ orderBy: { order: "asc" } }),
     prisma.author.findMany(),
+    prisma.offer.findMany({ where: { active: true }, orderBy: { name: "asc" } }),
   ]);
 
   if (!article) {
@@ -163,6 +164,28 @@ export default async function EditArticlePage({ params }: Props) {
               className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:border-green"
             />
           </div>
+        </div>
+
+        <div>
+          <label htmlFor="offerId" className="block text-sm font-medium text-navy mb-1">
+            Propojená nabídka (pro referral tlačítko a konverze)
+          </label>
+          <select
+            id="offerId"
+            name="offerId"
+            defaultValue={article.offerId || ""}
+            className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:border-green bg-white"
+          >
+            <option value="">— Žádná (automaticky vybrat nejlepší nabídku z kategorie) —</option>
+            {offers.map((o) => (
+              <option key={o.id} value={o.id}>
+                {o.name} {o.bonus ? `— [${o.bonus}]` : ""}
+              </option>
+            ))}
+          </select>
+          <p className="text-xs text-slate-400 mt-1">
+            Vybraná nabídka se v článku zobrazí jako zvýrazněný konverzní box, spodní souhrn a plovoucí lišta s tlačítkem na sledovací odkaz /go/{article.offerId ? offers.find(o => o.id === article.offerId)?.trackingSlug : "..."}.
+          </p>
         </div>
 
         <div>

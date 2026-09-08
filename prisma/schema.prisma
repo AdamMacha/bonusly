@@ -51,6 +51,7 @@ model Offer {
   clicks           Click[]
   faq              OfferFaq[]
   leads            Lead[]
+  articles         Article[]
   createdAt        DateTime   @default(now())
   updatedAt        DateTime   @updatedAt
 
@@ -80,6 +81,8 @@ model Article {
   category       Category  @relation(fields: [categoryId], references: [id])
   authorId       String
   author         Author    @relation(fields: [authorId], references: [id])
+  offerId        String?
+  offer          Offer?    @relation(fields: [offerId], references: [id], onDelete: SetNull)
   publishedAt    DateTime?
   featured       Boolean   @default(false)
   draft          Boolean   @default(true)
@@ -92,6 +95,7 @@ model Article {
 
   @@index([categoryId])
   @@index([authorId])
+  @@index([offerId])
   @@index([draft, publishedAt])
 }
 

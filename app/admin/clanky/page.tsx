@@ -3,8 +3,8 @@ import { prisma } from "@/lib/db";
 
 export default async function AdminClankyPage() {
   const articles = await prisma.article.findMany({
-    include: { category: true, author: true },
-    orderBy: { createdAt: "desc" },
+    include: { category: true, author: true, offer: true },
+    orderBy: { publishedAt: "desc" },
   });
 
   return (
@@ -22,6 +22,7 @@ export default async function AdminClankyPage() {
               <tr className="bg-slate-50 border-b border-slate-100">
                 <th className="text-left px-4 py-3 font-medium text-slate-600">Název</th>
                 <th className="text-left px-4 py-3 font-medium text-slate-600">Kategorie</th>
+                <th className="text-left px-4 py-3 font-medium text-slate-600">Propojená nabídka (CTA)</th>
                 <th className="text-left px-4 py-3 font-medium text-slate-600">Status</th>
                 <th className="text-left px-4 py-3 font-medium text-slate-600">Datum publikace</th>
                 <th className="text-left px-4 py-3 font-medium text-slate-600">Autor</th>
@@ -36,6 +37,15 @@ export default async function AdminClankyPage() {
                     <div className="text-xs text-slate-400">{article.slug}</div>
                   </td>
                   <td className="px-4 py-3 text-slate-600">{article.category.name}</td>
+                  <td className="px-4 py-3">
+                    {article.offer ? (
+                      <span className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 border border-emerald-200/60 px-2.5 py-1 text-xs font-semibold text-emerald-800">
+                        <span>🎯</span> {article.offer.name}
+                      </span>
+                    ) : (
+                      <span className="text-xs text-slate-400 italic">Dle kategorie</span>
+                    )}
+                  </td>
                   <td className="px-4 py-3">
                     {article.draft ? (
                       <span className="inline-flex items-center rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-600">Draft</span>

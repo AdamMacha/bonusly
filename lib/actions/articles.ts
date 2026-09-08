@@ -16,6 +16,7 @@ export async function createArticle(formData: FormData) {
     keywords: raw.keywords ? String(raw.keywords).split(",").map((k) => k.trim()).filter(Boolean) : [],
     featured: raw.featured === "on",
     draft: raw.draft !== "off",
+    offerId: raw.offerId && raw.offerId !== "" && raw.offerId !== "none" ? String(raw.offerId) : null,
   });
 
   let publishedDate: Date | null = null;
@@ -52,6 +53,7 @@ export async function updateArticle(id: string, formData: FormData) {
     keywords: raw.keywords ? String(raw.keywords).split(",").map((k) => k.trim()).filter(Boolean) : [],
     featured: raw.featured === "on",
     draft: raw.draft !== "off",
+    offerId: raw.offerId && raw.offerId !== "" && raw.offerId !== "none" ? String(raw.offerId) : null,
   });
 
   const existing = await prisma.article.findUnique({ where: { id }, select: { publishedAt: true } });

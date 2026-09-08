@@ -10,6 +10,9 @@ import Image from "next/image";
 import { renderMarkdown } from "@/lib/markdown";
 import { calculateReadingTime } from "@/lib/reading-time";
 
+import { ArticleOfferHeroCta, ArticleOfferBottomCta } from "@/components/article-offer-cta";
+import { ArticleStickyBar } from "@/components/article-sticky-bar";
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -41,14 +44,34 @@ export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
   const article = await prisma.article.findUnique({
     where: { slug },
-    include: { category: true, author: true },
+    include: {
+      category: true,
+      author: true,
+      offer: {
+        include: { category: true },
+      },
+    },
   });
 
   if (!article || article.draft) notFound();
 
+  // Najdeme přiřazenou nabídku, případně nejlepší nabídku z dané kategorie
+  let targetOffer = article.offer;
+  if (!targetOffer) {
+    targetOffer = await prisma.offer.findFirst({
+      where: { categoryId: article.categoryId, active: true },
+      include: { category: true },
+      orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
+    });
+  }
+
   const [relatedOffers, relatedArticles] = await Promise.all([
     prisma.offer.findMany({
-      where: { categoryId: article.categoryId, active: true },
+      where: {
+        categoryId: article.categoryId,
+        active: true,
+        id: targetOffer ? { not: targetOffer.id } : undefined,
+      },
       include: { category: true },
       take: 3,
     }),
@@ -141,7 +164,7 @@ export default async function ArticlePage({ params }: Props) {
         </header>
 
         {article.featuredImage && (
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl mb-10 shadow-md border border-slate-100">
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl mb-8 shadow-md border border-slate-100">
             <Image
               src={article.featuredImage}
               alt={article.title}
@@ -153,11 +176,20 @@ export default async function ArticlePage({ params }: Props) {
           </div>
         )}
 
+        {/* Hero Conversion CTA Box */}
+        {targetOffer && <ArticleOfferHeroCta offer={targetOffer} />}
+
         <div
           className="prose prose-slate max-w-none text-slate-700 leading-relaxed [&>h2]:text-2xl [&>h2]:font-bold [&>h2]:text-navy [&>h2]:mt-8 [&>h2]:mb-4 [&>h3]:text-xl [&>h3]:font-bold [&>h3]:text-navy [&>h3]:mt-6 [&>h3]:mb-3 [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-2 [&>ul]:mb-6 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:space-y-2 [&>ol]:mb-6 [&>blockquote]:border-l-4 [&>blockquote]:border-green [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:text-slate-600 [&>strong]:text-navy [&>strong]:font-semibold"
           dangerouslySetInnerHTML={{ __html: renderMarkdown(article.content) }}
         />
+
+        {/* Bottom Conversion CTA Box */}
+        {targetOffer && <ArticleOfferBottomCta offer={targetOffer} />}
       </article>
+
+      {/* Floating Sticky Conversion Bar */}
+      {targetOffer && <ArticleStickyBar offer={targetOffer} />}
 
       {/* Newsletter CTA */}
       <div className="max-w-3xl mt-12 rounded-xl bg-slate-50 border border-slate-100 p-8">
