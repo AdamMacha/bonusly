@@ -4,8 +4,11 @@ import { prisma } from "@/lib/db";
 import { offerSchema } from "@/lib/validations";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { requireAdminAuth } from "@/lib/auth";
 
 export async function createOffer(formData: FormData) {
+  await requireAdminAuth();
+
   const raw = Object.fromEntries(formData.entries());
 
   const data = offerSchema.parse({
@@ -26,6 +29,8 @@ export async function createOffer(formData: FormData) {
 }
 
 export async function updateOffer(id: string, formData: FormData) {
+  await requireAdminAuth();
+
   const raw = Object.fromEntries(formData.entries());
 
   const data = offerSchema.parse({
@@ -47,6 +52,8 @@ export async function updateOffer(id: string, formData: FormData) {
 }
 
 export async function deleteOffer(id: string) {
+  await requireAdminAuth();
+
   await prisma.offer.delete({ where: { id } });
   revalidatePath("/admin/nabidky");
   revalidatePath("/nabidky");

@@ -23,6 +23,7 @@ export default async function AdminClankyPage() {
                 <th className="text-left px-4 py-3 font-medium text-slate-600">Název</th>
                 <th className="text-left px-4 py-3 font-medium text-slate-600">Kategorie</th>
                 <th className="text-left px-4 py-3 font-medium text-slate-600">Status</th>
+                <th className="text-left px-4 py-3 font-medium text-slate-600">Datum publikace</th>
                 <th className="text-left px-4 py-3 font-medium text-slate-600">Autor</th>
                 <th className="text-left px-4 py-3 font-medium text-slate-600">Akce</th>
               </tr>
@@ -41,6 +42,9 @@ export default async function AdminClankyPage() {
                     ) : (
                       <span className="inline-flex items-center rounded-full bg-green/10 px-2 py-0.5 text-xs font-medium text-green-dark">Publikováno</span>
                     )}
+                  </td>
+                  <td className="px-4 py-3 text-slate-600 whitespace-nowrap text-xs">
+                    {article.publishedAt ? new Date(article.publishedAt).toLocaleDateString("cs-CZ") : "—"}
                   </td>
                   <td className="px-4 py-3 text-slate-600">{article.author.name}</td>
                   <td className="px-4 py-3">

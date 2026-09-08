@@ -556,7 +556,7 @@ Vyplňte níže uvedený jednoduchý formulář (vaše jméno a e-mail či telef
   await prisma.article.create({
     data: {
       slug: "jak-si-privydelat-jako-wolt-kuryr",
-      title: "Jak si přivydělat jako Wolt kurýr: Kompletní průvodce a reálné výdělky 2024",
+      title: "Jak si přivydělat jako Wolt kurýr: Kompletní průvodce a reálné výdělky",
       excerpt: "Přemýšlíte o rozvozu jídla s Woltem? Zjistěte, kolik si reálně vyděláte, jak funguje registrace, zda potřebujete IČO a jak získat vstupní bonus 4 000 Kč s kódem CPCJPUX.",
       content: `
 Práce kurýra pro Wolt se v posledních letech stala jedním z nejpopulárnějších způsobů, jak si flexibilně přivydělat peníze ke studiu, zaměstnání nebo podnikání. V tomto podrobném článku se podíváme na vše, co potřebujete vědět, než vyrazíte do ulic.
@@ -584,7 +584,7 @@ Při registraci zadejte referral kód **CPCJPUX**. Po odjetí 150 objednávek b�
       featuredImage: "https://images.unsplash.com/photo-1526367790999-0150786686a2?w=1200&auto=format&fit=crop&q=80",
       categoryId: catPrivydelek.id,
       authorId: author.id,
-      publishedAt: new Date("2024-03-01"),
+      publishedAt: new Date("2026-07-12"),
       featured: true,
       draft: false,
       keywords: ["wolt kuryr", "privydelek rozvoz", "wolt kód CPCJPUX", "wolt bonus", "prace kuryr"],
@@ -616,7 +616,7 @@ Při registraci zadejte promo kód **0G1ADBC5** a do 7 dní zainvestujte alespo�
       featuredImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&auto=format&fit=crop&q=80",
       categoryId: catFinance.id,
       authorId: author.id,
-      publishedAt: new Date("2024-03-05"),
+      publishedAt: new Date("2026-07-22"),
       featured: true,
       draft: false,
       keywords: ["investown zkusenosti", "investown bonus 0G1ADBC5", "investice do nemovitosti", "investown recenze"],
@@ -642,11 +642,11 @@ Pokud ještě platíte v zahraničí běžnou kartou od tradiční banky, přich
       featuredImage: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=1200&auto=format&fit=crop&q=80",
       categoryId: catBanky.id,
       authorId: author.id,
-      publishedAt: new Date("2024-03-10"),
+      publishedAt: new Date("2026-08-02"),
       featured: false,
       draft: false,
       keywords: ["revolut recenze", "revolut zkusenosti", "revpoints", "karta do zahranici"],
-      seoTitle: "Revolut recenze & zkušenosti 2024 | BONUSLY",
+      seoTitle: "Revolut recenze & zkušenosti | BONUSLY",
       seoDescription: "Jak ušetřit na směnách měn a jak získat virtuální karty zdarma. Kompletní recenze aplikace Revolut.",
     },
   });
@@ -655,7 +655,7 @@ Pokud ještě platíte v zahraničí běžnou kartou od tradiční banky, přich
   await prisma.article.create({
     data: {
       slug: "wolt-vs-foodora-kuryr-srovnani",
-      title: "Wolt vs. Foodora kurýr: Velké srovnání výdělků a podmínek 2024",
+      title: "Wolt vs. Foodora kurýr: Velké srovnání výdělků a podmínek",
       excerpt: "Kde si jako kurýr vyděláte více peněz? Porovnali jsme hodinové sazby, plánování směn, aplikaci a bonusy obou největších rozvážkových služeb v Česku.",
       content: `
 Rozvážení jídla na kole, skútru nebo v autě patří mezi nejoblíbenější flexibilní přivýdělky v Česku. Dvě největší platformy na našem trhu jsou **Wolt** a **Foodora** (dříve Dáme jídlo). Která z nich se vám vyplatí více?
@@ -674,7 +674,7 @@ Wolt aktuálně nabízí startovací bonus **4 000 Kč** pro nové kurýry při 
       featuredImage: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&auto=format&fit=crop&q=80",
       categoryId: catPrivydelek.id,
       authorId: author.id,
-      publishedAt: new Date("2024-03-12"),
+      publishedAt: new Date("2026-08-11"),
       featured: false,
       draft: false,
       keywords: ["wolt vs foodora", "kurýr srovnání", "kolik bere kurýr", "rozvoz jídla výdělek"],
@@ -706,7 +706,7 @@ Běžný účet **mKonto od mBank** patří dlouhodobě k nejúspěšnějším b
       featuredImage: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&auto=format&fit=crop&q=80",
       categoryId: catBanky.id,
       authorId: author.id,
-      publishedAt: new Date("2024-03-14"),
+      publishedAt: new Date("2026-08-20"),
       featured: true,
       draft: false,
       keywords: ["mbank recenze", "mkonto bonus 1000 kč", "mbank kód adamm1863", "účet bez poplatků"],
@@ -736,7 +736,7 @@ Kromě akcií zdarma nabízí Trading 212 i atraktivní úročení neinvestovan�
       featuredImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&auto=format&fit=crop&q=80",
       categoryId: catFinance.id,
       authorId: author.id,
-      publishedAt: new Date("2024-03-16"),
+      publishedAt: new Date("2026-08-28"),
       featured: false,
       draft: false,
       keywords: ["trading 212 akcie zdarma", "trading 212 recenze", "akcie zdarma", "jak investovat"],
@@ -765,7 +765,7 @@ Sázková kancelář **Tipsport** nabízí jeden z nejštědřejších uvítací
       featuredImage: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=1200&auto=format&fit=crop&q=80",
       categoryId: catBonusy.id,
       authorId: author.id,
-      publishedAt: new Date("2024-03-18"),
+      publishedAt: new Date("2026-09-05"),
       featured: false,
       draft: false,
       keywords: ["tipsport bonus 1300", "tipsport 300 kč zdarma", "tipsport pozvánka", "peníze zdarma za registraci"],

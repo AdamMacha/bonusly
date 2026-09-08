@@ -120,7 +120,7 @@ export default async function EditArticlePage({ params }: Props) {
           />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
             <label htmlFor="categoryId" className="block text-sm font-medium text-navy mb-1">Kategorie *</label>
             <select
@@ -152,6 +152,16 @@ export default async function EditArticlePage({ params }: Props) {
                 </option>
               ))}
             </select>
+          </div>
+          <div>
+            <label htmlFor="publishedAt" className="block text-sm font-medium text-navy mb-1">Datum publikace</label>
+            <input
+              type="date"
+              id="publishedAt"
+              name="publishedAt"
+              defaultValue={article.publishedAt ? new Date(article.publishedAt).toISOString().split("T")[0] : ""}
+              className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:outline-none focus:border-green"
+            />
           </div>
         </div>
 

@@ -1,7 +1,13 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { isAdminAuthenticated } from "@/lib/auth";
 
 export async function GET() {
+  const isAuth = await isAdminAuthenticated();
+  if (!isAuth) {
+    return new NextResponse("Unauthorized", { status: 401 });
+  }
+
   const leads = await prisma.lead.findMany({
     include: { offer: { select: { name: true } } },
     orderBy: { createdAt: "desc" },

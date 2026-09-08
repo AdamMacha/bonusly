@@ -42,6 +42,7 @@ export const articleSchema = z.object({
   featured: z.boolean().default(false),
   draft: z.boolean().default(true),
   keywords: z.array(z.string()).default([]),
+  publishedAt: z.string().optional().or(z.date()).nullable(),
   canonicalUrl: z.string().url().optional().or(z.literal("")),
   seoTitle: z.string().optional(),
   seoDescription: z.string().optional(),
