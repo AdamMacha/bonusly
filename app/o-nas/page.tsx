@@ -3,7 +3,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "O nás",
-  description: "BONUSLY je moderní česká platforma pro porovnávání nabídek, přivýdělků a finančních produktů.",
+  description: "BONUSLY je moderní česká platforma pro porovnávání nabídek, možností extra příjmu a finančních produktů.",
 };
 
 export default function ONasPage() {
@@ -13,7 +13,7 @@ export default function ONasPage() {
       <h1 className="text-3xl font-bold text-navy tracking-tight mb-6">O BONUSLY</h1>
       <div className="prose">
         <p>
-          BONUSLY je moderní česká platforma, která pomáhá lidem objevovat zajímavé přivýdělky, referral nabídky, finanční produkty, bankovní účty, platební karty a registrační bonusy.
+          BONUSLY je moderní česká platforma, která pomáhá lidem objevovat možnosti extra příjmu, referral nabídky, finanční produkty, bankovní účty, platební karty a registrační bonusy.
         </p>
         <p>
           Naším cílem je poskytnout přehledné a ověřené informace na jednom místě, aby uživatelé mohli snadno porovnat dostupné nabídky a vybrat si to, co jim dává smysl.

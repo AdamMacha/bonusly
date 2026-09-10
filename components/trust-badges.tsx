@@ -15,7 +15,7 @@ const badges = [
       </svg>
     ),
     title: "Přehledně na jednom místě",
-    description: "Nabídky, přivýdělky i finanční produkty přehledně.",
+    description: "Nabídky, extra příjem i finanční produkty přehledně.",
   },
   {
     icon: (

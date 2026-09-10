@@ -31,14 +31,14 @@ export function Hero({ articles = [] }: HeroProps) {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
-              Objev bonusy, přivýdělky{" "}
+              Objev bonusy, extra příjem{" "}
               <br className="hidden sm:block" />
               a výhody, které se{" "}
               <span className="text-green">vyplatí</span>.
             </h1>
 
             <p className="mt-5 sm:mt-6 text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl">
-              Porovnáváme zajímavé nabídky, finanční produkty, přivýdělky a bonusy na jednom místě. Vyber si to, co dává smysl právě tobě.
+              Porovnáváme zajímavé nabídky, finanční produkty, extra příjem a bonusy na jednom místě. Vyber si to, co dává smysl právě tobě.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">
@@ -73,7 +73,7 @@ export function Hero({ articles = [] }: HeroProps) {
                 { label: "Trading 212", href: "/nabidky/trading-212" },
                 { label: "Revolut", href: "/nabidky/revolut" },
                 { label: "Raiffeisenbank", href: "/nabidky/raiffeisenbank" },
-                { label: "Přivýdělek", href: "/kategorie/privydelek" },
+                { label: "Extra příjem", href: "/kategorie/extra-prijem" },
               ].map((tag) => (
                 <Link
                   key={tag.label}

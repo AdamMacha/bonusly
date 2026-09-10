@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const categoryIcons: Record<string, string> = {
+  "extra-prijem": "🛵",
   privydelek: "🛵",
   finance: "💰",
   banky: "🏦",

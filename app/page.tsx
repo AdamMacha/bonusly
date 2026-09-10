@@ -46,7 +46,7 @@ export default async function Home() {
           "@type": "WebSite",
           name: "BONUSLY",
           url: process.env.NEXT_PUBLIC_BASE_URL,
-          description: "Porovnáváme nabídky, přivýdělky a finanční produkty na jednom místě.",
+          description: "Porovnáváme nabídky, extra příjem a finanční produkty na jednom místě.",
           potentialAction: {
             "@type": "SearchAction",
             target: `${process.env.NEXT_PUBLIC_BASE_URL}/hledani?q={search_term_string}`,

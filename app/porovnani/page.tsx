@@ -4,14 +4,14 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Srovnání nabídek a služeb",
-  description: "Podrobná srovnání finančních produktů, brokerských účtů, karet a přivýdělků na BONUSLY.",
+  description: "Podrobná srovnání finančních produktů, brokerských účtů, karet a extra příjmů na BONUSLY.",
 };
 
 const popularComparisons = [
   {
     title: "Wolt kurýr vs foodora kurýr",
     slug: "wolt-kuryr-vs-foodora-kuryr",
-    category: "Přivýdělek",
+    category: "Extra příjem",
     description: "Srovnání dvou největších rozvážkových služeb v ČR. Kde si vyděláte více peněz a kdo nabízí lepší podmínky?",
   },
   {

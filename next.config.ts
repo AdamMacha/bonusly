@@ -19,6 +19,11 @@ const nextConfig: NextConfig = {
         destination: "/kategorie/banky",
         permanent: true,
       },
+      {
+        source: "/kategorie/privydelek",
+        destination: "/kategorie/extra-prijem",
+        permanent: true,
+      },
     ];
   },
 };

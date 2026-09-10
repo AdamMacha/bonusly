@@ -13,11 +13,11 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "BONUSLY — Bonusy, přivýdělky a výhody na jednom místě",
+    default: "BONUSLY — Bonusy, extra příjem a výhody na jednom místě",
     template: "%s | BONUSLY",
   },
   description:
-    "Porovnáváme zajímavé nabídky, finanční produkty, přivýdělky a bonusy na jednom místě. Najdi to, co se ti vyplatí.",
+    "Porovnáváme zajímavé nabídky, finanční produkty, extra příjem a bonusy na jednom místě. Najdi to, co se ti vyplatí.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"),
   openGraph: {
     type: "website",

@@ -20,7 +20,7 @@ export default function KontaktPage() {
         </p>
         <h2>Sociální sítě</h2>
         <p>
-          Sledujte nás na sociálních sítích, kde pravidelně sdílíme novinky, tipy na nejvýhodnější bonusy a přivýdělky:
+          Sledujte nás na sociálních sítích, kde pravidelně sdílíme novinky, tipy na nejvýhodnější bonusy a možnosti extra příjmu:
         </p>
         <div className="not-prose my-4">
           <SocialLinks variant="light" iconClassName="w-5 h-5" />

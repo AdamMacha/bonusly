@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Kategorie",
-  description: "Procházejte nabídky podle kategorií — přivýdělek, finance, banky a bonusy.",
+  description: "Procházejte nabídky podle kategorií — extra příjem, finance, banky a bonusy.",
 };
 
 export default async function KategoriePage() {

@@ -5,7 +5,7 @@ import { Search } from "./search";
 
 const navLinks = [
   { href: "/nabidky", label: "Nabídky" },
-  { href: "/kategorie/privydelek", label: "Přivýdělek" },
+  { href: "/kategorie/extra-prijem", label: "Extra příjem" },
   { href: "/kategorie/finance", label: "Finance" },
   { href: "/kategorie/banky", label: "Banky" },
   { href: "/kategorie/bonusy", label: "Bonusy" },

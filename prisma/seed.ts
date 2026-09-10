@@ -29,13 +29,13 @@ async function main() {
   // 2. Vytvoření kategorií
   const catPrivydelek = await prisma.category.create({
     data: {
-      name: "Přivýdělek",
-      slug: "privydelek",
+      name: "Extra příjem",
+      slug: "extra-prijem",
       icon: "🛵",
       order: 1,
       description: "Flexibilní práce, brigády a možnosti rozvozu jídla či nákupů s týdenním vyplácením.",
-      seoTitle: "Přivýdělek a flexibilní brigády | BONUSLY",
-      seoDescription: "Jak si přivydělat peníze navíc? Objevte nejlépe placené přivýdělky, rozvoz pro Wolt a Foodora s bonusem do začátku.",
+      seoTitle: "Extra příjem a flexibilní brigády | BONUSLY",
+      seoDescription: "Jak získat extra příjem? Objevte nejlepší možnosti extra příjmu, rozvoz pro Wolt a Foodora s bonusem do začátku.",
     },
   });
 
@@ -651,7 +651,7 @@ Pokud ještě platíte v zahraničí běžnou kartou od tradiční banky, přich
     },
   });
 
-  // 4.4 Wolt vs Foodora (Přivýdělek)
+  // 4.4 Wolt vs Foodora (Extra příjem)
   await prisma.article.create({
     data: {
       slug: "wolt-vs-foodora-kuryr-srovnani",

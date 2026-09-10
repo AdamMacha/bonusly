@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = {
   title: "Všechny nabídky",
-  description: "Procházejte ověřené nabídky, přivýdělky, finanční produkty a bonusy na jednom místě.",
+  description: "Procházejte ověřené nabídky, extra příjem, finanční produkty a bonusy na jednom místě.",
 };
 
 export default async function NabidkyPage() {
@@ -36,7 +36,7 @@ export default async function NabidkyPage() {
       <div className="mb-10">
         <h1 className="text-3xl font-bold text-navy tracking-tight">Všechny nabídky</h1>
         <p className="mt-2 text-slate-500 max-w-2xl">
-          Procházejte ověřené nabídky, přivýdělky, finanční produkty a bonusy.
+          Procházejte ověřené nabídky, extra příjem, finanční produkty a bonusy.
         </p>
       </div>
 

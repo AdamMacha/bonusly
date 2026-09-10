@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
               <h1 style="color: #0B1220; font-size: 24px;">Vítej v BONUSLY!</h1>
               <p style="color: #475569; line-height: 1.6;">
-                Díky za přihlášení k odběru. Budeme tě informovat o nových bonusech, přivýdělcích a zajímavých nabídkách.
+                Díky za přihlášení k odběru. Budeme tě informovat o nových bonusech, možnostech extra příjmu a zajímavých nabídkách.
               </p>
               <p style="color: #475569; line-height: 1.6;">
                 Mezitím se můžeš podívat na naše <a href="${process.env.NEXT_PUBLIC_BASE_URL || "https://bonusly.cz"}/nabidky" style="color: #10B981;">aktuální nabídky</a>.

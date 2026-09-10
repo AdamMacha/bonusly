@@ -11,7 +11,7 @@ import { calculateReadingTime } from "@/lib/reading-time";
 
 export const metadata: Metadata = {
   title: "Blog & Magazín | BONUSLY",
-  description: "Průvodci, srovnání a tipy ze světa bonusů, přivýdělků a osobních financí. Ověřené návody krok za krokem.",
+  description: "Průvodci, srovnání a tipy ze světa bonusů, extra příjmů a osobních financí. Ověřené návody krok za krokem.",
 };
 
 const ARTICLES_PER_PAGE = 9;

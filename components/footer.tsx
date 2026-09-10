@@ -4,7 +4,7 @@ import { SocialLinks } from "./social-links";
 
 const footerLinks = {
   nabidky: [
-    { href: "/kategorie/privydelek", label: "Přivýdělek" },
+    { href: "/kategorie/extra-prijem", label: "Extra příjem" },
     { href: "/kategorie/finance", label: "Finance" },
     { href: "/kategorie/banky", label: "Banky" },
     { href: "/kategorie/bonusy", label: "Bonusy" },
@@ -39,7 +39,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-3 text-sm text-slate-400 leading-relaxed">
-              Porovnáváme nabídky, přivýdělky a finanční produkty na jednom místě.
+              Porovnáváme nabídky, extra příjem a finanční produkty na jednom místě.
             </p>
             <div className="mt-5">
               <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2.5">
