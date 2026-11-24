@@ -7,6 +7,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 export const metadata: Metadata = {
   title: "Přihlášení a registrace",
   description: "Přihlaste se do BONUSLY a získejte přístup k peněžence, cashbacku a přehledu svých odměn.",
+  robots: { index: false, follow: false },
 };
 
 interface Props {

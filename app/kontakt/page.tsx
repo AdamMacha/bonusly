@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { SocialLinks } from "@/components/social-links";
 
+import { buildCanonical } from "@/lib/seo";
+
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: "Kontaktujte tým BONUSLY. Rádi vám odpovíme na vaše dotazy.",
+  description: "Kontaktujte tým BONUSLY. Rádi vám odpovíme na vaše dotazy ohledně nabídek nebo spolupráce.",
+  alternates: { canonical: buildCanonical("/kontakt") },
 };
 
 export default function KontaktPage() {

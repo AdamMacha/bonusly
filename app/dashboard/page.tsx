@@ -8,7 +8,7 @@ import { CashoutForm } from "./cashout-form";
 import { TransactionStatus, CashoutStatus } from "@prisma/client";
 
 export const metadata: Metadata = {
-  title: "Moje peněženka a odměny | BONUSLY",
+  title: "Moje peněženka a odměny",
   description: "Přehled vašeho zůstatku, čekajících odměn, historie transakcí a žádostí o výplatu.",
   robots: { index: false, follow: false },
 };

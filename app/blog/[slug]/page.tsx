@@ -1,33 +1,68 @@
+import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { prisma } from "@/lib/db";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { RelatedOffers } from "@/components/related-offers";
 import { RelatedArticles } from "@/components/related-articles";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { JsonLd } from "@/components/json-ld";
-import Image from "next/image";
 import { renderMarkdown } from "@/lib/markdown";
 import { calculateReadingTime } from "@/lib/reading-time";
-
 import { ArticleOfferHeroCta, ArticleOfferBottomCta } from "@/components/article-offer-cta";
 import { ArticleStickyBar } from "@/components/article-sticky-bar";
+import { buildCanonical, cleanSeoTitle, getBaseUrl } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
+const getArticleBySlug = cache(async (slug: string) => {
+  return prisma.article.findUnique({
+    where: { slug },
+    include: {
+      category: true,
+      author: true,
+      offer: {
+        include: { category: true },
+      },
+    },
+  });
+});
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const article = await prisma.article.findUnique({
-    where: { slug },
-    select: { title: true, seoTitle: true, seoDescription: true, excerpt: true },
-  });
-  if (!article) return {};
+  const article = await getArticleBySlug(slug);
+  if (!article || article.draft) return {};
+
+  const title = cleanSeoTitle(article.seoTitle || article.title);
+  const description = article.seoDescription || article.excerpt;
+  const canonical = article.canonicalUrl || buildCanonical(`/blog/${article.slug}`);
+
   return {
-    title: article.seoTitle || article.title,
-    description: article.seoDescription || article.excerpt,
-    openGraph: { title: article.seoTitle || article.title, description: article.seoDescription || article.excerpt },
+    title,
+    description,
+    keywords: article.keywords.length > 0 ? article.keywords : undefined,
+    alternates: { canonical },
+    openGraph: {
+      type: "article",
+      url: canonical,
+      title: `${title} | BONUSLY`,
+      description,
+      publishedTime: article.publishedAt?.toISOString(),
+      modifiedTime: article.updatedAt.toISOString(),
+      authors: [article.author.name],
+      ...(article.featuredImage && {
+        images: [{ url: article.featuredImage, alt: article.title }],
+      }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | BONUSLY`,
+      description,
+      ...(article.featuredImage && { images: [article.featuredImage] }),
+    },
   };
 }
 
@@ -42,20 +77,10 @@ export async function generateStaticParams() {
 
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
-  const article = await prisma.article.findUnique({
-    where: { slug },
-    include: {
-      category: true,
-      author: true,
-      offer: {
-        include: { category: true },
-      },
-    },
-  });
+  const article = await getArticleBySlug(slug);
 
   if (!article || article.draft) notFound();
 
-  // Najdeme přiřazenou nabídku, případně nejlepší nabídku z dané kategorie
   let targetOffer = article.offer;
   if (!targetOffer) {
     targetOffer = await prisma.offer.findFirst({
@@ -82,6 +107,10 @@ export default async function ArticlePage({ params }: Props) {
     }),
   ]);
 
+  const baseUrl = getBaseUrl();
+  const pageUrl = buildCanonical(`/blog/${article.slug}`);
+  const wordCount = article.content.trim().split(/\s+/).length;
+
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
       <JsonLd
@@ -89,12 +118,28 @@ export default async function ArticlePage({ params }: Props) {
           "@context": "https://schema.org",
           "@type": "Article",
           headline: article.title,
-          description: article.excerpt,
+          description: article.seoDescription || article.excerpt,
+          ...(article.featuredImage && { image: [article.featuredImage] }),
           author: { "@type": "Person", name: article.author.name },
           datePublished: article.publishedAt?.toISOString(),
           dateModified: article.updatedAt.toISOString(),
-          publisher: { "@type": "Organization", name: "BONUSLY" },
-          url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${article.slug}`,
+          wordCount,
+          ...(article.keywords.length > 0 && { keywords: article.keywords.join(", ") }),
+          inLanguage: "cs-CZ",
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": pageUrl,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "BONUSLY",
+            url: baseUrl,
+            logo: {
+              "@type": "ImageObject",
+              url: `${baseUrl}/logo.png`,
+            },
+          },
+          url: pageUrl,
         }}
       />
       <JsonLd
@@ -102,9 +147,15 @@ export default async function ArticlePage({ params }: Props) {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "BONUSLY", item: process.env.NEXT_PUBLIC_BASE_URL },
-            { "@type": "ListItem", position: 2, name: "Blog", item: `${process.env.NEXT_PUBLIC_BASE_URL}/blog` },
-            { "@type": "ListItem", position: 3, name: article.title, item: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${article.slug}` },
+            { "@type": "ListItem", position: 1, name: "BONUSLY", item: baseUrl },
+            { "@type": "ListItem", position: 2, name: "Blog", item: `${baseUrl}/blog` },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: article.category.name,
+              item: `${baseUrl}/kategorie/${article.category.slug}`,
+            },
+            { "@type": "ListItem", position: 4, name: article.title, item: pageUrl },
           ],
         }}
       />
@@ -155,7 +206,7 @@ export default async function ArticlePage({ params }: Props) {
             )}
             <span>·</span>
             <span className="inline-flex items-center gap-1">
-              <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg aria-hidden="true" className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               {calculateReadingTime(article.content)} min čtení
@@ -170,6 +221,7 @@ export default async function ArticlePage({ params }: Props) {
               alt={article.title}
               fill
               priority
+              fetchPriority="high"
               sizes="(max-width: 768px) 100vw, 768px"
               className="object-cover"
             />
@@ -193,8 +245,8 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* Newsletter CTA */}
       <div className="max-w-3xl mt-12 rounded-xl bg-slate-50 border border-slate-100 p-8">
-        <h3 className="text-lg font-bold text-navy mb-2">Líbil se vám článek?</h3>
-        <p className="text-sm text-slate-500 mb-4">Přihlaste se k odběru novinek a nepropásněte žádný nový článek.</p>
+        <h2 className="text-lg font-bold text-navy mb-2">Líbil se vám článek?</h2>
+        <p className="text-sm text-slate-500 mb-4">Přihlaste se k odběru novinek a nepropásněte žádný nový článek ani bonus.</p>
         <NewsletterForm />
       </div>
 

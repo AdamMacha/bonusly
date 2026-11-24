@@ -100,7 +100,7 @@ export function ArticleOfferHeroCta({ offer }: ArticleOfferCtaProps) {
           <a
             href={`/go/${offer.trackingSlug}`}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow sponsored noopener"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-navy hover:bg-slate-800 text-white px-6 py-3 text-sm font-bold shadow-md shadow-navy/20 hover:shadow-lg transition-all active:scale-98 text-center"
           >
             <span>Získat bonus a přejít na web</span>
@@ -183,7 +183,7 @@ export function ArticleOfferBottomCta({ offer }: ArticleOfferCtaProps) {
             <a
               href={`/go/${offer.trackingSlug}`}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow sponsored noopener"
               className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-green hover:bg-green-light px-7 py-4 text-base font-extrabold text-navy shadow-lg shadow-green/30 hover:shadow-green/50 transition-all active:scale-98 text-center"
             >
               <span>Aktivovat bonus na webu</span>

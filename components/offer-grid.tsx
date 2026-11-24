@@ -6,6 +6,8 @@ interface Offer {
   shortDescription: string;
   logo?: string | null;
   bonus?: string | null;
+  promoCode?: string | null;
+  rating?: number | null;
   verified: boolean;
   featured: boolean;
   category: {
@@ -48,6 +50,8 @@ export function OfferGrid({ offers, title, description }: OfferGridProps) {
             shortDescription={offer.shortDescription}
             logo={offer.logo}
             bonus={offer.bonus}
+            promoCode={offer.promoCode}
+            rating={offer.rating}
             categoryName={offer.category.name}
             verified={offer.verified}
             featured={offer.featured}

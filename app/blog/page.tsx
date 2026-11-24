@@ -9,9 +9,22 @@ import { Pagination } from "@/components/pagination";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { calculateReadingTime } from "@/lib/reading-time";
 
+import { buildCanonical } from "@/lib/seo";
+
+const canonical = buildCanonical("/blog");
+
 export const metadata: Metadata = {
-  title: "Blog & Magazín | BONUSLY",
-  description: "Průvodci, srovnání a tipy ze světa bonusů, extra příjmů a osobních financí. Ověřené návody krok za krokem.",
+  title: "Blog & Magazín — Průvodci, recenze a srovnání",
+  description:
+    "Průvodci, srovnání a tipy ze světa bonusů, investic, slevových kódů, extra příjmů a osobních financí. Ověřené návody krok za krokem.",
+  alternates: { canonical },
+  openGraph: {
+    type: "website",
+    url: canonical,
+    title: "Blog & Magazín | BONUSLY",
+    description:
+      "Průvodci, srovnání a tipy ze světa bonusů, investic, extra příjmů a osobních financí.",
+  },
 };
 
 const ARTICLES_PER_PAGE = 9;

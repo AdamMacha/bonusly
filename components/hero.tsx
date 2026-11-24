@@ -31,14 +31,14 @@ export function Hero({ articles = [] }: HeroProps) {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
-              Objev bonusy, extra příjem{" "}
+              Objev bonusy, slevy{" "}
               <br className="hidden sm:block" />
               a výhody, které se{" "}
               <span className="text-green">vyplatí</span>.
             </h1>
 
             <p className="mt-5 sm:mt-6 text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl">
-              Porovnáváme zajímavé nabídky, finanční produkty, extra příjem a bonusy na jednom místě. Vyber si to, co dává smysl právě tobě.
+              Porovnáváme přes 40 ověřených nabídek v ČR — bankovní bonusy, investice, pojištění, levnější energie, ověřené slevové kódy i extra příjem na jednom místě.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">
@@ -53,27 +53,29 @@ export function Hero({ articles = [] }: HeroProps) {
                   viewBox="0 0 24 24"
                   strokeWidth={2}
                   stroke="currentColor"
+                  aria-hidden="true"
                   className="w-4 h-4"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
               </Link>
               <Link
-                href="/blog"
+                href="/akce-a-kupony"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 px-6 py-3.5 text-base font-medium text-white hover:bg-white/5 transition-colors"
               >
-                Přečíst blog
+                Aktuální akce & kódy
               </Link>
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-2 text-xs text-slate-400">
               <span className="font-medium text-slate-500">Populární:</span>
               {[
+                { label: "Slevové kódy", href: "/akce-a-kupony" },
+                { label: "Raiffeisenbank 3 000 Kč", href: "/nabidky/raiffeisenbank" },
                 { label: "Wolt kurýr", href: "/nabidky/wolt-kuryr" },
-                { label: "Trading 212", href: "/nabidky/trading-212" },
-                { label: "Revolut", href: "/nabidky/revolut" },
-                { label: "Raiffeisenbank", href: "/nabidky/raiffeisenbank" },
-                { label: "Extra příjem", href: "/kategorie/extra-prijem" },
+                { label: "ČSOB Pojišťovna -20 %", href: "/nabidky/csob-pojistovna" },
+                { label: "Vodafone akce", href: "/nabidky/vodafone" },
+                { label: "Jabkolevně -600 Kč", href: "/nabidky/jabkolevne" },
               ].map((tag) => (
                 <Link
                   key={tag.label}

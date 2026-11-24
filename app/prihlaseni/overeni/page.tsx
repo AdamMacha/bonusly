@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 export const metadata: Metadata = {
   title: "Zkontrolujte svůj e-mail",
   description: "Na váš e-mail jsme odeslali přihlašovací odkaz.",
+  robots: { index: false, follow: false },
 };
 
 export default function OvereniPage() {

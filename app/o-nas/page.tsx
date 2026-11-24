@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 
+import { buildCanonical } from "@/lib/seo";
+
 export const metadata: Metadata = {
   title: "O nás",
-  description: "BONUSLY je moderní česká platforma pro porovnávání nabídek, možností extra příjmu a finančních produktů.",
+  description:
+    "BONUSLY je moderní česká platforma pro porovnávání nabídek, ověřených slevových kódů, investic, bankovních bonusů a možností extra příjmu.",
+  alternates: { canonical: buildCanonical("/o-nas") },
 };
 
 export default function ONasPage() {

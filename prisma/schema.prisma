@@ -50,8 +50,12 @@ model Offer {
   seoDescription   String?
   rewardAmount     Float?
   partnerNetwork   String?
+  promoCode        String?
+  promoCodeNote    String?
+  ctaLabel         String?
   clicks           Click[]
   faq              OfferFaq[]
+  promos           OfferPromo[]
   leads            Lead[]
   articles         Article[]
   transactions     Transaction[]
@@ -71,6 +75,26 @@ model OfferFaq {
   order    Int    @default(0)
 
   @@index([offerId])
+}
+
+model OfferPromo {
+  id           String    @id @default(cuid())
+  offerId      String
+  offer        Offer     @relation(fields: [offerId], references: [id], onDelete: Cascade)
+  title        String
+  description  String?
+  badge        String?
+  code         String?
+  validUntil   DateTime?
+  affiliateUrl String
+  trackingSlug String    @unique
+  active       Boolean   @default(true)
+  order        Int       @default(0)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@index([offerId])
+  @@index([active])
 }
 
 model Article {

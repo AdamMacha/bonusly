@@ -3,16 +3,22 @@ import Image from "next/image";
 import { SocialLinks } from "./social-links";
 
 const footerLinks = {
-  nabidky: [
+  kategorie: [
     { href: "/kategorie/extra-prijem", label: "Extra příjem" },
-    { href: "/kategorie/finance", label: "Finance" },
-    { href: "/kategorie/banky", label: "Banky" },
-    { href: "/kategorie/bonusy", label: "Bonusy" },
+    { href: "/kategorie/banky", label: "Banky & Účty" },
+    { href: "/kategorie/finance", label: "Investice & Finance" },
+    { href: "/kategorie/pojisteni-a-sluzby", label: "Energie, Pojištění & Tarify" },
+    { href: "/kategorie/elektro", label: "Elektro & Apple" },
+    { href: "/kategorie/dum-a-zahrada", label: "Dům, Zahrada & Auto" },
+    { href: "/kategorie/nakupy-a-volny-cas", label: "Šperky, Sport & Děti" },
+    { href: "/kategorie/bonusy", label: "Bonusy & Slevové kódy" },
   ],
   informace: [
+    { href: "/nabidky", label: "Všechny nabídky" },
+    { href: "/akce-a-kupony", label: "Akce a slevové kódy" },
+    { href: "/porovnani", label: "Srovnání nabídek" },
+    { href: "/blog", label: "Blog & Magazín" },
     { href: "/o-nas", label: "O BONUSLY" },
-    { href: "/porovnani", label: "Srovnání" },
-    { href: "/blog", label: "Blog" },
     { href: "/kontakt", label: "Kontakt" },
   ],
   pravni: [
@@ -29,17 +35,21 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="inline-block bg-white/95 hover:bg-white transition-all px-2.5 py-1.5 rounded-lg shadow-sm">
+            <Link
+              href="/"
+              className="inline-block bg-white/95 hover:bg-white transition-all px-2.5 py-1.5 rounded-lg shadow-sm"
+            >
               <Image
                 src="/logo.png"
                 alt="BONUSLY"
                 width={120}
                 height={30}
+                loading="lazy"
                 className="h-6 w-auto object-contain"
               />
             </Link>
             <p className="mt-3 text-sm text-slate-400 leading-relaxed">
-              Porovnáváme nabídky, extra příjem a finanční produkty na jednom místě.
+              Porovnáváme ověřené bonusy, slevové kódy, investice, pojištění, energie a možnosti extra příjmu na jednom místě.
             </p>
             <div className="mt-5">
               <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2.5">
@@ -49,11 +59,11 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Nabídky */}
+          {/* Kategorie */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Nabídky</h3>
-            <ul className="space-y-2.5">
-              {footerLinks.nabidky.map((link) => (
+            <h2 className="text-sm font-semibold text-white mb-4">Kategorie nabídek</h2>
+            <ul className="space-y-2">
+              {footerLinks.kategorie.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-slate-400 hover:text-white transition-colors">
                     {link.label}
@@ -65,7 +75,7 @@ export function Footer() {
 
           {/* Informace */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Informace</h3>
+            <h2 className="text-sm font-semibold text-white mb-4">Objevujte</h2>
             <ul className="space-y-2.5">
               {footerLinks.informace.map((link) => (
                 <li key={link.href}>
@@ -79,7 +89,7 @@ export function Footer() {
 
           {/* Právní */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4">Právní</h3>
+            <h2 className="text-sm font-semibold text-white mb-4">Právní</h2>
             <ul className="space-y-2.5">
               {footerLinks.pravni.map((link) => (
                 <li key={link.href}>
@@ -95,7 +105,7 @@ export function Footer() {
         {/* Affiliate disclosure */}
         <div className="mt-10 pt-8 border-t border-white/5">
           <p className="text-xs text-slate-500 leading-relaxed max-w-3xl">
-            BONUSLY může získat provizi, pokud nabídku využijete prostřednictvím některých našich odkazů. Pro uživatele se cena nabídky tímto nemění. Všechny informace na webu jsou pouze informativní a nepředstavují finanční poradenství.
+            BONUSLY může získat provizi, pokud nabídku využijete prostřednictvím některých našich partnerských odkazů. Pro uživatele se cena nabídky tímto nemění. Všechny informace na webu jsou pouze informativní a nepředstavují finanční ani investiční poradenství.
           </p>
         </div>
 

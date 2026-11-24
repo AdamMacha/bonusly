@@ -6,9 +6,17 @@ interface CtaButtonProps {
   size?: "sm" | "md" | "lg";
   variant?: "primary" | "secondary";
   className?: string;
+  external?: boolean;
 }
 
-export function CtaButton({ href, children, size = "md", variant = "primary", className = "" }: CtaButtonProps) {
+export function CtaButton({
+  href,
+  children,
+  size = "md",
+  variant = "primary",
+  className = "",
+  external,
+}: CtaButtonProps) {
   const sizeClasses = {
     sm: "px-4 py-2 text-sm",
     md: "px-6 py-3 text-base",
@@ -20,17 +28,50 @@ export function CtaButton({ href, children, size = "md", variant = "primary", cl
     secondary: "border border-slate-200 text-navy hover:bg-slate-50",
   };
 
-  return (
-    <Link
-      href={href}
-      className={`inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
+  const isAffiliateOrExternal =
+    external || href.startsWith("/go/") || href.startsWith("http://") || href.startsWith("https://");
+
+  const classes = `inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+
+  const icon = variant === "primary" && (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      aria-hidden="true"
+      className="w-4 h-4 shrink-0"
     >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+      />
+    </svg>
+  );
+
+  // Používáme nativní <a> pro /go/ a externí affiliate odkazy:
+  // 1) Next.js <Link> by prefetchoval /go/ a zkresloval statistiku kliků
+  // 2) rel="nofollow sponsored noopener" splňuje pravidla Google Search pro affiliate
+  if (isAffiliateOrExternal) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="nofollow sponsored noopener"
+        className={classes}
+      >
+        {children}
+        {icon}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={classes}>
       {children}
-      {variant === "primary" && (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-        </svg>
-      )}
+      {icon}
     </Link>
   );
 }

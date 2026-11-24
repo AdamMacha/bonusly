@@ -1,44 +1,73 @@
 import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/db";
+import { CURATED_COMPARISONS, getBaseUrl } from "@/lib/seo";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+export const revalidate = 3600;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseUrl = getBaseUrl();
+
   const [categories, offers, articles] = await Promise.all([
     prisma.category.findMany({ select: { slug: true, updatedAt: true } }),
-    prisma.offer.findMany({ where: { active: true }, select: { slug: true, updatedAt: true } }),
-    prisma.article.findMany({ where: { draft: false }, select: { slug: true, updatedAt: true } }),
+    prisma.offer.findMany({
+      where: { active: true },
+      select: { slug: true, updatedAt: true, featured: true },
+    }),
+    prisma.article.findMany({
+      where: { draft: false },
+      select: { slug: true, updatedAt: true },
+    }),
   ]);
 
+  const activeOfferSlugs = new Set(offers.map((o) => o.slug));
+  const now = new Date();
+
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE_URL, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
-    { url: `${BASE_URL}/nabidky`, lastModified: new Date(), changeFrequency: "daily", priority: 0.9 },
-    { url: `${BASE_URL}/porovnani`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: "daily", priority: 0.8 },
-    { url: `${BASE_URL}/o-nas`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
-    { url: `${BASE_URL}/kontakt`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.3 },
+    { url: baseUrl, lastModified: now, changeFrequency: "daily", priority: 1.0 },
+    { url: `${baseUrl}/nabidky`, lastModified: now, changeFrequency: "daily", priority: 0.95 },
+    { url: `${baseUrl}/akce-a-kupony`, lastModified: now, changeFrequency: "daily", priority: 0.95 },
+    { url: `${baseUrl}/kategorie`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${baseUrl}/porovnani`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "daily", priority: 0.85 },
+    { url: `${baseUrl}/o-nas`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${baseUrl}/kontakt`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = categories.map((c) => ({
-    url: `${BASE_URL}/kategorie/${c.slug}`,
+    url: `${baseUrl}/kategorie/${c.slug}`,
     lastModified: c.updatedAt,
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  const offerPages: MetadataRoute.Sitemap = offers.map((o) => ({
+    url: `${baseUrl}/nabidky/${o.slug}`,
+    lastModified: o.updatedAt,
+    changeFrequency: "weekly",
+    priority: o.featured ? 0.9 : 0.8,
+  }));
+
+  const comparisonPages: MetadataRoute.Sitemap = CURATED_COMPARISONS.filter(
+    (c) => activeOfferSlugs.has(c.slugA) && activeOfferSlugs.has(c.slugB)
+  ).map((c) => ({
+    url: `${baseUrl}/porovnani/${c.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.75,
+  }));
+
+  const articlePages: MetadataRoute.Sitemap = articles.map((a) => ({
+    url: `${baseUrl}/blog/${a.slug}`,
+    lastModified: a.updatedAt,
     changeFrequency: "weekly",
     priority: 0.8,
   }));
 
-  const offerPages: MetadataRoute.Sitemap = offers.map((o) => ({
-    url: `${BASE_URL}/nabidky/${o.slug}`,
-    lastModified: o.updatedAt,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
-
-  const articlePages: MetadataRoute.Sitemap = articles.map((a) => ({
-    url: `${BASE_URL}/blog/${a.slug}`,
-    lastModified: a.updatedAt,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
-
-  return [...staticPages, ...categoryPages, ...offerPages, ...articlePages];
+  return [
+    ...staticPages,
+    ...categoryPages,
+    ...offerPages,
+    ...comparisonPages,
+    ...articlePages,
+  ];
 }

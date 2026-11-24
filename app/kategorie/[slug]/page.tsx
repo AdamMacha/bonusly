@@ -1,22 +1,63 @@
+import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { OfferGrid } from "@/components/offer-grid";
 import { ArticleGrid } from "@/components/article-grid";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
+import { CopyCodeButton } from "@/components/copy-code-button";
+import { CtaButton } from "@/components/cta-button";
+import { buildCanonical, cleanSeoTitle, getBaseUrl } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
+const getCategoryBySlug = cache(async (slug: string) => {
+  return prisma.category.findUnique({
+    where: { slug },
+    include: {
+      offers: {
+        where: { active: true },
+        include: {
+          category: true,
+          promos: { where: { active: true }, orderBy: { order: "asc" } },
+        },
+        orderBy: [{ featured: "desc" }, { rating: "desc" }, { createdAt: "desc" }],
+      },
+    },
+  });
+});
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const category = await prisma.category.findUnique({ where: { slug } });
+  const category = await getCategoryBySlug(slug);
   if (!category) return {};
+
+  const title = cleanSeoTitle(category.seoTitle || category.name);
+  const description =
+    category.seoDescription || `Procházejte ověřené nabídky a bonusy v kategorii ${category.name} na BONUSLY.`;
+  const canonical = buildCanonical(`/kategorie/${category.slug}`);
+
   return {
-    title: category.seoTitle || category.name,
-    description: category.seoDescription || `Procházejte nabídky v kategorii ${category.name} na BONUSLY.`,
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      type: "website",
+      url: canonical,
+      title: `${title} | BONUSLY`,
+      description,
+      locale: "cs_CZ",
+      siteName: "BONUSLY",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | BONUSLY`,
+      description,
+    },
   };
 }
 
@@ -31,25 +72,36 @@ export async function generateStaticParams() {
 
 export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
-  const category = await prisma.category.findUnique({
-    where: { slug },
-    include: {
-      offers: {
-        where: { active: true },
-        include: { category: true },
-        orderBy: [{ featured: "desc" }, { createdAt: "desc" }],
-      },
-    },
-  });
+  const category = await getCategoryBySlug(slug);
 
   if (!category) notFound();
 
-  const articles = await prisma.article.findMany({
-    where: { categoryId: category.id, draft: false },
-    include: { category: true, author: true },
-    take: 6,
-    orderBy: { publishedAt: "desc" },
-  });
+  const [articles, otherCategories] = await Promise.all([
+    prisma.article.findMany({
+      where: { categoryId: category.id, draft: false },
+      include: { category: true, author: true },
+      take: 6,
+      orderBy: { publishedAt: "desc" },
+    }),
+    prisma.category.findMany({
+      where: { slug: { not: category.slug } },
+      orderBy: { order: "asc" },
+      select: { slug: true, name: true, icon: true },
+    }),
+  ]);
+
+  const baseUrl = getBaseUrl();
+  const pageUrl = buildCanonical(`/kategorie/${category.slug}`);
+  const categoryPromos = category.offers.flatMap((o) =>
+    o.promos.map((p) => ({ ...p, offerName: o.name, offerSlug: o.slug }))
+  );
+
+  const countLabel =
+    category.offers.length === 1
+      ? "ověřená nabídka"
+      : category.offers.length < 5
+        ? "ověřené nabídky"
+        : "ověřených nabídek";
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
@@ -58,8 +110,18 @@ export default async function CategoryPage({ params }: Props) {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: category.name,
-          description: category.description || `Nabídky v kategorii ${category.name}`,
-          url: `${process.env.NEXT_PUBLIC_BASE_URL}/kategorie/${category.slug}`,
+          description: category.seoDescription || category.description || `Nabídky v kategorii ${category.name}`,
+          url: pageUrl,
+          mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: category.offers.length,
+            itemListElement: category.offers.map((o, idx) => ({
+              "@type": "ListItem",
+              position: idx + 1,
+              name: o.name,
+              url: `${baseUrl}/nabidky/${o.slug}`,
+            })),
+          },
         }}
       />
       <JsonLd
@@ -67,32 +129,109 @@ export default async function CategoryPage({ params }: Props) {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "BONUSLY", item: process.env.NEXT_PUBLIC_BASE_URL },
-            { "@type": "ListItem", position: 2, name: "Kategorie", item: `${process.env.NEXT_PUBLIC_BASE_URL}/kategorie` },
-            { "@type": "ListItem", position: 3, name: category.name, item: `${process.env.NEXT_PUBLIC_BASE_URL}/kategorie/${category.slug}` },
+            { "@type": "ListItem", position: 1, name: "BONUSLY", item: baseUrl },
+            { "@type": "ListItem", position: 2, name: "Kategorie", item: `${baseUrl}/kategorie` },
+            { "@type": "ListItem", position: 3, name: category.name, item: pageUrl },
           ],
         }}
       />
 
       <Breadcrumbs items={[{ label: "Kategorie", href: "/kategorie" }, { label: category.name }]} />
 
-      <h1 className="text-3xl font-bold text-navy tracking-tight">{category.name}</h1>
-      {category.description && (
-        <p className="mt-2 text-slate-500 max-w-2xl">{category.description}</p>
+      <header className="max-w-3xl">
+        <div className="flex items-center gap-3 mb-2">
+          {category.icon && (
+            <span aria-hidden="true" className="text-3xl">
+              {category.icon}
+            </span>
+          )}
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
+            {category.name}
+          </h1>
+        </div>
+        {category.description && (
+          <p className="mt-2 text-base sm:text-lg text-slate-600 leading-relaxed">
+            {category.description}
+          </p>
+        )}
+      </header>
+
+      {/* Active promos & codes in this category */}
+      {categoryPromos.length > 0 && (
+        <section className="mt-8 rounded-2xl border border-green/25 bg-green/5 p-5 sm:p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-base sm:text-lg font-bold text-navy flex items-center gap-2">
+              <span aria-hidden="true">🔥</span> Aktuální promo akce a kódy v sekci {category.name}
+            </h2>
+            <Link href="/akce-a-kupony" className="text-xs font-semibold text-green-dark hover:text-green">
+              Všechny kupóny →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {categoryPromos.slice(0, 4).map((p) => (
+              <div
+                key={p.id}
+                className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white p-4"
+              >
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <Link
+                      href={`/nabidky/${p.offerSlug}`}
+                      className="text-xs font-bold text-slate-500 hover:text-navy"
+                    >
+                      {p.offerName}
+                    </Link>
+                    {p.badge && (
+                      <span className="rounded-full bg-green/15 px-2 py-0.5 text-[11px] font-bold text-green-dark">
+                        {p.badge}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm font-semibold text-navy line-clamp-1">{p.title}</p>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  {p.code && <CopyCodeButton code={p.code} size="sm" />}
+                  <CtaButton href={`/go/promo/${p.trackingSlug}`} size="sm">
+                    Aktivovat
+                  </CtaButton>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       )}
 
       <div className="mt-10">
         <OfferGrid
           offers={category.offers}
           title={`Nabídky v kategorii ${category.name}`}
-          description={`${category.offers.length} ${category.offers.length === 1 ? "nabídka" : "nabídek"} k dispozici.`}
+          description={`${category.offers.length} ${countLabel} k dispozici.`}
         />
       </div>
 
       {articles.length > 0 && (
         <div className="mt-16 border-t border-slate-100 pt-12">
-          <ArticleGrid articles={articles} title="Související články" />
+          <ArticleGrid articles={articles} title="Související průvodci a recenze" />
         </div>
+      )}
+
+      {/* Cross-linking to other categories */}
+      {otherCategories.length > 0 && (
+        <nav aria-label="Další kategorie" className="mt-16 border-t border-slate-100 pt-10">
+          <h2 className="text-base font-bold text-navy mb-4">Prozkoumejte další kategorie</h2>
+          <div className="flex flex-wrap gap-2.5">
+            {otherCategories.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/kategorie/${cat.slug}`}
+                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:border-green/40 hover:text-green-dark transition-colors"
+              >
+                {cat.icon && <span aria-hidden="true">{cat.icon}</span>}
+                <span>{cat.name}</span>
+              </Link>
+            ))}
+          </div>
+        </nav>
       )}
     </div>
   );

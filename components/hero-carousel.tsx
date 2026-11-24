@@ -192,7 +192,9 @@ export function HeroCarousel({ articles }: HeroCarouselProps) {
                         fill
                         sizes="(max-width: 768px) 300px, 350px"
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                        priority={isActive}
+                        priority={index === 0}
+                        fetchPriority={index === 0 ? "high" : "low"}
+                        loading={index === 0 ? "eager" : "lazy"}
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-navy via-navy-light to-navy flex items-center justify-center">

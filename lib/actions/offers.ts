@@ -23,8 +23,11 @@ export async function createOffer(formData: FormData) {
   });
 
   await prisma.offer.create({ data });
+  revalidatePath("/");
   revalidatePath("/admin/nabidky");
   revalidatePath("/nabidky");
+  revalidatePath("/akce-a-kupony");
+  revalidatePath("/sitemap.xml");
   redirect("/admin/nabidky");
 }
 
@@ -45,9 +48,12 @@ export async function updateOffer(id: string, formData: FormData) {
   });
 
   await prisma.offer.update({ where: { id }, data });
+  revalidatePath("/");
   revalidatePath("/admin/nabidky");
   revalidatePath("/nabidky");
+  revalidatePath("/akce-a-kupony");
   revalidatePath(`/nabidky/${data.slug}`);
+  revalidatePath("/sitemap.xml");
   redirect("/admin/nabidky");
 }
 
@@ -55,7 +61,10 @@ export async function deleteOffer(id: string) {
   await requireAdminAuth();
 
   await prisma.offer.delete({ where: { id } });
+  revalidatePath("/");
   revalidatePath("/admin/nabidky");
   revalidatePath("/nabidky");
+  revalidatePath("/akce-a-kupony");
+  revalidatePath("/sitemap.xml");
   redirect("/admin/nabidky");
 }
