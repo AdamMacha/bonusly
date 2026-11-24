@@ -28,6 +28,8 @@ export async function createOffer(formData: FormData) {
   revalidatePath("/nabidky");
   revalidatePath("/akce-a-kupony");
   revalidatePath("/sitemap.xml");
+  revalidatePath("/sitemap_index.xml");
+  revalidatePath("/nabidky-sitemap.xml");
   redirect("/admin/nabidky");
 }
 
@@ -66,5 +68,7 @@ export async function deleteOffer(id: string) {
   revalidatePath("/nabidky");
   revalidatePath("/akce-a-kupony");
   revalidatePath("/sitemap.xml");
+  revalidatePath("/sitemap_index.xml");
+  revalidatePath("/nabidky-sitemap.xml");
   redirect("/admin/nabidky");
 }
