@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { auth } from "@/auth";
+import { isEhubUrl, appendSubId } from "@/lib/affiliate";
 
 export async function GET(
   request: NextRequest,
@@ -9,17 +11,36 @@ export async function GET(
 
   const offer = await prisma.offer.findUnique({
     where: { trackingSlug: slug },
-    select: { id: true, referralUrl: true, active: true },
+    select: {
+      id: true,
+      referralUrl: true,
+      affiliateUrl: true,
+      partnerNetwork: true,
+      active: true,
+    },
   });
 
   if (!offer || !offer.active) {
     return NextResponse.redirect(new URL("/nabidky", request.url));
   }
 
-  // Track the click
+  // Zjistíme uživatele z query parametru nebo aktuální session
+  const url = new URL(request.url);
+  const subIdParam = url.searchParams.get("sub_id");
+  let userId = subIdParam;
+
+  if (!userId) {
+    try {
+      const session = await auth();
+      userId = session?.user?.id || null;
+    } catch {
+      userId = null;
+    }
+  }
+
+  // Sledování kliku
   const referrer = request.headers.get("referer") || null;
   const userAgent = request.headers.get("user-agent") || null;
-  const url = new URL(request.url);
   const utmSource = url.searchParams.get("utm_source");
   const utmMedium = url.searchParams.get("utm_medium");
   const utmCampaign = url.searchParams.get("utm_campaign");
@@ -28,6 +49,7 @@ export async function GET(
     await prisma.click.create({
       data: {
         offerId: offer.id,
+        userId: userId || undefined,
         referrer,
         utmSource,
         utmMedium,
@@ -36,9 +58,16 @@ export async function GET(
       },
     });
   } catch {
-    // Don't block redirect if tracking fails
     console.error("Failed to track click for:", slug);
   }
 
-  return NextResponse.redirect(offer.referralUrl);
+  // Příprava cílové URL (přednost má affiliateUrl)
+  let targetUrl = offer.affiliateUrl || offer.referralUrl;
+
+  // Pokud je uživatel přihlášen a jedná se o eHUB link (nebo eHUB síť), přidáme sub_id
+  if (userId && (isEhubUrl(targetUrl, offer.partnerNetwork) || offer.partnerNetwork === "ehub")) {
+    targetUrl = appendSubId(targetUrl, userId, "sub_id");
+  }
+
+  return NextResponse.redirect(targetUrl);
 }

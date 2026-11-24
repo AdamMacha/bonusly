@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { MobileNav } from "./mobile-nav";
 import { Search } from "./search";
+import { UserNav } from "./user-nav";
 
 const navLinks = [
   { href: "/nabidky", label: "Nabídky" },
@@ -47,6 +48,7 @@ export function Navbar() {
             <div className="hidden sm:block">
               <Search />
             </div>
+            <UserNav />
             <Link
               href="/nabidky"
               className="hidden sm:inline-flex items-center gap-2 rounded-lg bg-green px-4 py-2 text-sm font-medium text-navy hover:bg-green-light transition-colors"

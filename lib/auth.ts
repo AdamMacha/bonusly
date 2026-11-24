@@ -6,6 +6,8 @@ import {
   isValidAdminToken,
 } from "./auth-crypto";
 
+import { auth } from "@/auth";
+
 export { ADMIN_COOKIE_NAME, hashPassword, getAdminPassword, isValidAdminToken };
 
 /**
@@ -41,12 +43,20 @@ export async function destroyAdminSession() {
 }
 
 /**
- * Zkontroluje, zda je aktuální uživatel přihlášen jako admin.
+ * Zkontroluje, zda je aktuální uživatel přihlášen jako admin (přes heslo nebo roli ADMIN v NextAuth).
  */
 export async function isAdminAuthenticated(): Promise<boolean> {
   const cookieStore = await cookies();
   const sessionCookie = cookieStore.get(ADMIN_COOKIE_NAME)?.value;
-  return isValidAdminToken(sessionCookie);
+  const isPasswordAuth = await isValidAdminToken(sessionCookie);
+  if (isPasswordAuth) return true;
+
+  try {
+    const session = await auth();
+    return session?.user?.role === "ADMIN";
+  } catch {
+    return false;
+  }
 }
 
 /**

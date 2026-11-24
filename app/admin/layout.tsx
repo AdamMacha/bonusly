@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 
 const adminLinks = [
   { href: "/admin", label: "Dashboard", icon: "📊" },
+  { href: "/admin/uzivatele", label: "Uživatelé & Peněženka", icon: "👥" },
+  { href: "/admin/vybery", label: "Žádosti o výběr", icon: "💸" },
   { href: "/admin/nabidky", label: "Nabídky", icon: "🎯" },
   { href: "/admin/clanky", label: "Články", icon: "📝" },
   { href: "/admin/leady", label: "Zájemci (Leady)", icon: "📋" },

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CashbackBanner } from "./cashback-banner";
 
 export interface ArticleOfferData {
   id: string;
@@ -12,6 +13,7 @@ export interface ArticleOfferData {
   shortDescription: string;
   rating?: number | null;
   verified: boolean;
+  rewardAmount?: number | null;
   category?: { name: string; slug: string };
 }
 
@@ -124,6 +126,7 @@ export function ArticleOfferHeroCta({ offer }: ArticleOfferCtaProps) {
           </Link>
         </div>
       </div>
+      <CashbackBanner rewardAmount={offer.rewardAmount} bonusText={offer.bonus} className="mt-4" />
     </aside>
   );
 }
@@ -206,6 +209,8 @@ export function ArticleOfferBottomCta({ offer }: ArticleOfferCtaProps) {
             </Link>
           </div>
         </div>
+
+        <CashbackBanner rewardAmount={offer.rewardAmount} bonusText={offer.bonus} className="mt-6" />
       </div>
     </section>
   );

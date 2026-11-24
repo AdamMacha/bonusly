@@ -11,6 +11,7 @@ import { JsonLd } from "@/components/json-ld";
 import { CtaButton } from "@/components/cta-button";
 import { renderMarkdown } from "@/lib/markdown";
 import { TipsportLeadForm } from "@/components/tipsport-lead-form";
+import { CashbackBanner } from "@/components/cashback-banner";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -172,8 +173,10 @@ export default async function OfferPage({ params }: Props) {
             <TipsportLeadForm offerSlug={offer.slug} offerName={offer.name} />
           )}
 
+          <CashbackBanner rewardAmount={offer.rewardAmount} bonusText={offer.bonus} className="mt-6" />
+
           {/* CTA */}
-          <div className="mt-8">
+          <div className="mt-6">
             <CtaButton href={`/go/${offer.trackingSlug}`} size="lg">
               Získat nabídku
             </CtaButton>

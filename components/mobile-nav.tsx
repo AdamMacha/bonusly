@@ -48,6 +48,13 @@ export function MobileNav({ links }: MobileNavProps) {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/dashboard"
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-3 text-sm font-semibold text-emerald-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+            >
+              💰 Moje peněženka & odměny
+            </Link>
             <div className="pt-3 border-t border-white/5 space-y-3">
               <Link
                 href="/nabidky"

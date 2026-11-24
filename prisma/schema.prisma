@@ -48,10 +48,13 @@ model Offer {
   lastVerifiedAt   DateTime?
   seoTitle         String?
   seoDescription   String?
+  rewardAmount     Float?
+  partnerNetwork   String?
   clicks           Click[]
   faq              OfferFaq[]
   leads            Lead[]
   articles         Article[]
+  transactions     Transaction[]
   createdAt        DateTime   @default(now())
   updatedAt        DateTime   @updatedAt
 
@@ -112,6 +115,8 @@ model Click {
   id          String   @id @default(cuid())
   offerId     String
   offer       Offer    @relation(fields: [offerId], references: [id], onDelete: Cascade)
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
   referrer    String?
   utmSource   String?
   utmMedium   String?
@@ -120,6 +125,7 @@ model Click {
   createdAt   DateTime @default(now())
 
   @@index([offerId])
+  @@index([userId])
   @@index([createdAt])
 }
 
@@ -146,4 +152,113 @@ model Lead {
 
   @@index([offerId])
   @@index([createdAt])
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum TransactionStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum CashoutStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model User {
+  id            String           @id @default(cuid())
+  name          String?
+  email         String           @unique
+  emailVerified DateTime?
+  image         String?
+  role          Role             @default(USER)
+  balance       Float            @default(0)
+  bankAccount   String?
+  accounts      Account[]
+  sessions      Session[]
+  transactions  Transaction[]
+  cashouts      CashoutRequest[]
+  clicks        Click[]
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Transaction {
+  id          String            @id @default(cuid())
+  userId      String
+  user        User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  offerId     String?
+  offer       Offer?            @relation(fields: [offerId], references: [id], onDelete: SetNull)
+  amount      Float
+  status      TransactionStatus @default(PENDING)
+  source      String            @default("eHUB")
+  affiliateId String?
+  description String?
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([affiliateId])
+  @@index([offerId])
+}
+
+model CashoutRequest {
+  id          String        @id @default(cuid())
+  userId      String
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount      Float
+  bankAccount String
+  status      CashoutStatus @default(PENDING)
+  note        String?
+  processedAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([userId])
+  @@index([status])
 }
