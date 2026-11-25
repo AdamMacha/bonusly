@@ -40,6 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/`, lastModified: homeDate },
     { url: `${baseUrl}/nabidky`, lastModified: latestOfferDate },
     { url: `${baseUrl}/akce-a-kupony`, lastModified: latestPromoDate },
+    { url: `${baseUrl}/jak-funguje-cashback`, lastModified: staticDate },
     { url: `${baseUrl}/nejlepsi-bankovni-bonusy-2026`, lastModified: maxDate(staticDate, latestOfferDate) },
     { url: `${baseUrl}/investicni-bonusy-2026`, lastModified: maxDate(staticDate, latestOfferDate) },
     { url: `${baseUrl}/kalkulacka-bonusu`, lastModified: maxDate(staticDate, latestOfferDate) },

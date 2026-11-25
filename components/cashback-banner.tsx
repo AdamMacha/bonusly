@@ -65,7 +65,10 @@ export function CashbackBanner({
           <Link href="/dashboard" className="font-bold text-emerald-800 underline underline-offset-2">
             BONUSLY peněženky
           </Link>
-          .
+          .{" "}
+          <Link href="/jak-funguje-cashback" className="text-emerald-700 hover:text-emerald-950 underline underline-offset-2">
+            Tipy pro správné připsání
+          </Link>
         </div>
       </div>
     );
@@ -84,12 +87,20 @@ export function CashbackBanner({
           <span>do tvé BONUSLY peněženky — stačí se před proklikem zdarma přihlásit.</span>
         </div>
       </div>
-      <Link
-        href="/prihlaseni"
-        className="inline-flex items-center gap-1 font-bold text-amber-800 hover:text-amber-950 underline underline-offset-2 shrink-0 self-start sm:self-auto"
-      >
-        Aktivovat cashback <span aria-hidden="true">→</span>
-      </Link>
+      <div className="flex items-center gap-3 shrink-0 self-start sm:self-auto">
+        <Link
+          href="/jak-funguje-cashback"
+          className="font-medium text-amber-800/90 hover:text-amber-950 underline underline-offset-2"
+        >
+          Jak to funguje?
+        </Link>
+        <Link
+          href="/prihlaseni"
+          className="inline-flex items-center gap-1 font-bold text-amber-800 hover:text-amber-950 underline underline-offset-2"
+        >
+          Aktivovat cashback <span aria-hidden="true">→</span>
+        </Link>
+      </div>
     </div>
   );
 }

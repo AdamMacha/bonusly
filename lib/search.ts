@@ -149,21 +149,122 @@ export function matchesSearchQuery(haystack: string, rawQuery: string): boolean 
   });
 }
 
+export interface SearchableOfferFields {
+  name: string;
+  slug: string;
+  shortDescription?: string | null;
+  bonus?: string | null;
+  promoCode?: string | null;
+  featured?: boolean;
+  rating?: number | null;
+  category: {
+    name: string;
+    slug?: string;
+  };
+}
+
+/**
+ * Ohodnotí relevanci nabídky vůči dotazu (název > kategorie/kód > bonus > popis).
+ * Zajistí, že např. dotaz „banka“ řadí banky a účty (Raiffeisenbank, mBank, Air Bank,
+ * Revolut) vysoko nad e-shopy, které slovo zmiňují jen v popisu.
+ */
+export function scoreOfferSearchMatch(
+  offer: SearchableOfferFields,
+  rawQuery: string
+): number {
+  const normQ = normalizeSearchText(rawQuery);
+  if (!normQ) return (offer.featured ? 10 : 0) + (offer.rating || 0);
+
+  const terms = expandSearchTerms(normQ);
+  const directStem = normQ.length >= 5 ? normQ.slice(0, -1) : normQ;
+
+  const normName = normalizeSearchText(offer.name);
+  const normSlug = normalizeSearchText(offer.slug);
+  const normCat = normalizeSearchText(`${offer.category.name} ${offer.category.slug || ""}`);
+  const normCode = normalizeSearchText(offer.promoCode || "");
+  const normBonus = normalizeSearchText(offer.bonus || "");
+  const normDesc = normalizeSearchText(offer.shortDescription || "");
+
+  let score = 0;
+
+  if (normName === normQ || normSlug === normQ) {
+    score += 140;
+  } else if (normName.startsWith(normQ) || normSlug.startsWith(normQ)) {
+    score += 115;
+  } else if (normName.includes(normQ) || normName.includes(directStem)) {
+    score += 95;
+  } else if (terms.some((t) => t.length >= 3 && normName.includes(t))) {
+    score += 70;
+  }
+
+  if (normCat.includes(normQ) || normCat.includes(directStem)) {
+    score += 75;
+  } else if (terms.some((t) => t.length >= 3 && normCat.includes(t))) {
+    score += 45;
+  }
+
+  if (normCode && (normCode === normQ || normCode.includes(normQ))) {
+    score += 65;
+  }
+
+  if (normBonus.includes(normQ) || normBonus.includes(directStem)) {
+    score += 25;
+  } else if (terms.some((t) => t.length >= 3 && normBonus.includes(t))) {
+    score += 12;
+  }
+
+  if (normDesc.includes(normQ)) {
+    score += 15;
+  } else if (terms.some((t) => t.length >= 3 && normDesc.includes(t))) {
+    score += 5;
+  }
+
+  if (offer.featured) score += 8;
+  score += offer.rating || 0;
+
+  return score;
+}
+
+/**
+ * Extrahuje hodnotu cashbacku pro řazení „Nejvyšší cashback (%)“.
+ * Procentní cashback vrací přímo jako číslo (např. „Cashback až 12,5 %“ -> 12.5),
+ * pevný Kč cashback zařadí za procenta s váhou podle částky.
+ */
+export function extractCashbackValue(cashbackLabel?: string | null): number {
+  if (!cashbackLabel) return 0;
+
+  const pctMatches = Array.from(cashbackLabel.matchAll(/(\d+(?:[.,]\d+)?)\s*%/g));
+  if (pctMatches.length > 0) {
+    return (
+      100 +
+      Math.max(...pctMatches.map((m) => parseFloat(m[1].replace(",", ".")) || 0))
+    );
+  }
+
+  const kcMatch = cashbackLabel.match(/(\d[\d\s]*)\s*Kč/i);
+  if (kcMatch) {
+    const kc = parseInt(kcMatch[1].replace(/\s+/g, ""), 10) || 0;
+    return Math.min(99, kc / 100);
+  }
+
+  return 0;
+}
+
 /**
  * Extrahuje reálnou peněžní hodnotu bonusu/slevy v Kč pro řazení "Nejvyšší bonus".
- * Ignoruje prahové částky jako "nad 2 000 Kč", "od 500 Kč", měsíční tarify "za 299 Kč"
- * nebo úvěrové limity typu "2,5 mil. Kč".
+ * Ignoruje prahové částky jako "nad 2 000 Kč", "od 500 Kč", měsíční tarify "za 299 Kč",
+ * sezónní/pozastavené poznámky v závorce, LTV poměry a úvěrové limity typu "2,5 mil. Kč".
  */
 export function extractBonusValue(bonus?: string | null): number {
   if (!bonus) return 0;
 
-  // Odstraníme závorky s podmínkami minimální útraty (např. "(nad 2 000 Kč bez DPH)")
-  // a fráze popisující minimální vklad/nákup či měsíční cenu služby
+  // Odstraníme závorky s podmínkami minimální útraty, LTV nebo sezónními/neaktivními poznámkami
   const cleaned = bonus
-    .replace(/\([^)]*(?:nad|od|min\.?|měs|do\s+\d)[^)]*\)/gi, " ")
+    .replace(/\([^)]*(?:nad|od|min\.?|měs|do\s+\d|sezónn|LTV|dočasně)[^)]*\)/gi, " ")
     .replace(/(?:při\s+nákupu\s+nad|nad|od|min\.?)\s*\d[\d\s.,]*\s*(?:mil\.?\s*)?Kč/gi, " ")
     .replace(/\bza\s+\d[\d\s.,]*\s*Kč(?:\s*\/\s*měs\.?)?/gi, " ")
-    .replace(/\d[\d\s.,]*\s*mil\.?\s*Kč/gi, " ");
+    .replace(/\d[\d\s.,]*\s*mil\.?\s*Kč/gi, " ")
+    .replace(/\b100\s*%\s*diskrétn\w*/gi, " ");
 
   // Priorita 1: Explicitní součet "celkem X Kč"
   const totalMatch = cleaned.match(/celkem\s+(\d[\d\s]*)\s*Kč/i);
@@ -179,7 +280,7 @@ export function extractBonusValue(bonus?: string | null): number {
     );
   }
 
-  // Priorita 3: EUR částky (např. "až 100 EUR" -> orientační přepočet pro řazení)
+  // Priorita 3: EUR částky mimo závorku (např. "až 100 EUR" -> orientační přepočet pro řazení)
   const eurMatch = cleaned.match(/(\d[\d\s]*)\s*EUR/i);
   if (eurMatch) {
     return (parseInt(eurMatch[1].replace(/\s+/g, ""), 10) || 0) * 25;

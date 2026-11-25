@@ -38,7 +38,7 @@ export function Hero({ articles = [] }: HeroProps) {
             </h1>
 
             <p className="mt-5 sm:mt-6 text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl">
-              Porovnáváme přes 40 ověřených nabídek v ČR — bankovní bonusy, investice, pojištění, levnější energie, ověřené slevové kódy i extra příjem na jednom místě.
+              Porovnáváme přes 220 ověřených nabídek v ČR — bankovní bonusy až 3 000 Kč, investice, pojištění, slevové kódy i cashback z nákupů na jednom místě.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">

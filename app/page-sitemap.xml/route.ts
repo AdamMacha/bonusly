@@ -45,6 +45,7 @@ export async function GET() {
     { loc: `${baseUrl}/`, lastmod: homeLastMod },
     { loc: `${baseUrl}/nabidky`, lastmod: offersLastMod },
     { loc: `${baseUrl}/akce-a-kupony`, lastmod: promosLastMod },
+    { loc: `${baseUrl}/jak-funguje-cashback`, lastmod: STATIC_CONTENT_LASTMOD },
     { loc: `${baseUrl}/nejlepsi-bankovni-bonusy-2026`, lastmod: maxDate(staticDate, offersLastMod) },
     { loc: `${baseUrl}/investicni-bonusy-2026`, lastmod: maxDate(staticDate, offersLastMod) },
     { loc: `${baseUrl}/kalkulacka-bonusu`, lastmod: maxDate(staticDate, offersLastMod) },

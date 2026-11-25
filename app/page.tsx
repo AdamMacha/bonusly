@@ -16,6 +16,7 @@ import {
   getBaseUrl,
   SOCIAL_LINKS,
 } from "@/lib/seo";
+import { formatPromoValidUntil } from "@/lib/date";
 
 export const revalidate = 3600;
 
@@ -23,23 +24,23 @@ const canonical = buildCanonical("/");
 
 export const metadata: Metadata = {
   title: {
-    absolute: "BONUSLY — Ověřené bonusy, slevové kódy a investice 2026",
+    absolute: "BONUSLY — Ověřené bonusy, slevové kódy a cashback 2026",
   },
   description:
-    "Porovnáváme přes 40 ověřených nabídek v ČR: bankovní bonusy až 3 000 Kč, investice bez poplatků, pojištění -20 %, slevové kódy i extra příjem.",
+    "Porovnáváme přes 220 ověřených nabídek a 80+ kupónů v ČR: bankovní bonusy až 3 000 Kč, investice, pojištění -20 % i cashback z nákupů.",
   alternates: { canonical },
   openGraph: {
     type: "website",
     url: canonical,
-    title: "BONUSLY — Ověřené bonusy, slevové kódy a investice 2026",
+    title: "BONUSLY — Ověřené bonusy, slevové kódy a cashback 2026",
     description:
-      "Porovnáváme přes 40 ověřených nabídek v ČR: bankovní bonusy až 3 000 Kč, investice bez poplatků, pojištění -20 % a ověřené slevové kódy.",
+      "Porovnáváme přes 220 ověřených nabídek a 80+ kupónů v ČR: bankovní bonusy až 3 000 Kč, investice bez poplatků, pojištění -20 % a cashback z nákupů.",
     images: [{ url: `${canonical}opengraph-image`, width: 1200, height: 630, alt: "BONUSLY" }],
   },
 };
 
 export default async function Home() {
-  const [featuredOffers, categories, activePromos, latestArticles, heroArticles] =
+  const [featuredOffers, categories, rawActivePromos, latestArticles, heroArticles] =
     await Promise.all([
       prisma.offer.findMany({
         where: { active: true, featured: true },
@@ -54,10 +55,10 @@ export default async function Home() {
       prisma.offerPromo.findMany({
         where: { active: true, offer: { active: true } },
         include: {
-          offer: { select: { slug: true, name: true } },
+          offer: { select: { slug: true, name: true, featured: true } },
         },
         orderBy: [{ code: "asc" }, { order: "asc" }],
-        take: 6,
+        take: 48,
       }),
       prisma.article.findMany({
         where: { draft: false },
@@ -72,6 +73,24 @@ export default async function Home() {
         orderBy: [{ featured: "desc" }, { publishedAt: "desc" }],
       }),
     ]);
+
+  // Max 1 promo na značku na homepage, přednost mají slevové kódy a pestrost e-shopů
+  const seenBrands = new Set<string>();
+  const activePromos: typeof rawActivePromos = [];
+  const sortedCandidates = [...rawActivePromos].sort((a, b) => {
+    const aHasCode = a.code ? 1 : 0;
+    const bHasCode = b.code ? 1 : 0;
+    if (bHasCode !== aHasCode) return bHasCode - aHasCode;
+    return Number(b.offer.featured) - Number(a.offer.featured) || a.order - b.order;
+  });
+  for (const promo of sortedCandidates) {
+    if (seenBrands.has(promo.offer.slug)) continue;
+    seenBrands.add(promo.offer.slug);
+    activePromos.push(promo);
+    if (activePromos.length >= 6) break;
+  }
+
+  const totalOfferCount = categories.reduce((sum, c) => sum + c._count.offers, 0);
 
   const explicitlyFeatured = heroArticles.filter((a) => a.featured);
   const carouselArticles =
@@ -176,14 +195,22 @@ export default async function Home() {
                         {promo.title}
                       </Link>
                     </h3>
-                    {promo.validUntil && (
-                      <p className="mt-2 text-xs text-slate-400">
-                        Platí do{" "}
-                        <time dateTime={promo.validUntil.toISOString()}>
-                          {new Date(promo.validUntil).toLocaleDateString("cs-CZ")}
-                        </time>
-                      </p>
-                    )}
+                    {(() => {
+                      const validity = formatPromoValidUntil(promo.validUntil);
+                      if (!validity) return null;
+                      return (
+                        <p className="mt-2 text-xs text-slate-400">
+                          {validity.isLongTerm ? (
+                            validity.label
+                          ) : (
+                            <>
+                              Platí do{" "}
+                              <time dateTime={validity.iso}>{validity.label}</time>
+                            </>
+                          )}
+                        </p>
+                      );
+                    })()}
                   </div>
 
                   <div className="mt-4 pt-3.5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
@@ -290,7 +317,11 @@ export default async function Home() {
       {/* Categories */}
       <section className="bg-slate-50 border-y border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-          <CategoryGrid categories={categories} title="Procházet podle kategorií" />
+          <CategoryGrid
+            categories={categories}
+            totalOfferCount={totalOfferCount}
+            title="Procházet podle kategorií"
+          />
         </div>
       </section>
 

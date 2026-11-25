@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { matchesSearchQuery, normalizeSearchText } from "@/lib/search";
+import { matchesSearchQuery, scoreOfferSearchMatch } from "@/lib/search";
 
 export async function GET(request: NextRequest) {
   const q = (request.nextUrl.searchParams.get("q") || "").trim();
@@ -62,23 +62,12 @@ export async function GET(request: NextRequest) {
     }),
   ]);
 
-  const normQ = normalizeSearchText(q);
-
   const matchedOffers = allOffers
     .filter((o) => {
       const hay = `${o.name} ${o.slug} ${o.shortDescription} ${o.bonus || ""} ${o.promoCode || ""} ${o.category.name} ${o.category.slug}`;
       return matchesSearchQuery(hay, q);
     })
-    .sort((a, b) => {
-      // Přesnější shody v názvu nebo promo kódu mají přednost
-      const aName = normalizeSearchText(a.name).includes(normQ) ? 2 : 0;
-      const bName = normalizeSearchText(b.name).includes(normQ) ? 2 : 0;
-      const aCode = a.promoCode && normalizeSearchText(a.promoCode).includes(normQ) ? 2 : 0;
-      const bCode = b.promoCode && normalizeSearchText(b.promoCode).includes(normQ) ? 2 : 0;
-      const diff = bName + bCode - (aName + aCode);
-      if (diff !== 0) return diff;
-      return Number(b.featured) - Number(a.featured) || (b.rating || 0) - (a.rating || 0);
-    })
+    .sort((a, b) => scoreOfferSearchMatch(b, q) - scoreOfferSearchMatch(a, q))
     .slice(0, 8)
     .map(({ slug, name, bonus, promoCode, logo, rating, category }) => ({
       slug,

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { formatCzDate } from "@/lib/date";
 
 export interface OfferReviewItem {
   id: string;
@@ -154,7 +155,7 @@ export function OfferReviews({
                     </span>
                   )}
                   <time dateTime={rev.createdAt}>
-                    {new Date(rev.createdAt).toLocaleDateString("cs-CZ")}
+                    {formatCzDate(rev.createdAt)}
                   </time>
                 </div>
               </div>

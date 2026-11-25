@@ -140,7 +140,8 @@ export async function syncCollaborations(prisma: PrismaClient) {
       faqCount += offer.faq.length;
     }
 
-    // Upsert Sheet 2 promo akcí & kupónů pro tuto nabídku
+    // Upsert Sheet 2 promo akcí & kupónů pro tuto nabídku a deaktivace odstraněných duplicit
+    const activePromoSlugs = (offer.promos ?? []).map((p) => p.trackingSlug);
     if (offer.promos && offer.promos.length > 0) {
       for (const promo of offer.promos) {
         await prisma.offerPromo.upsert({
@@ -172,6 +173,15 @@ export async function syncCollaborations(prisma: PrismaClient) {
         promoCount++;
       }
     }
+    await prisma.offerPromo.updateMany({
+      where: {
+        offerId: savedOffer.id,
+        ...(activePromoSlugs.length > 0
+          ? { trackingSlug: { notIn: activePromoSlugs } }
+          : {}),
+      },
+      data: { active: false },
+    });
   }
 
   console.log(`✅ Synchronizováno nabídek: ${ALL_OFFERS.length}`);

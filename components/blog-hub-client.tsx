@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArticleCard } from "./article-card";
+import { formatCzDate } from "@/lib/date";
 
 export interface BlogArticleItem {
   slug: string;
@@ -138,7 +139,7 @@ export function BlogHubClient({
                   <div className="flex items-center gap-2 text-xs font-medium text-slate-400 mb-3">
                     {featuredArticle.publishedAt && (
                       <time dateTime={featuredArticle.publishedAt}>
-                        {new Date(featuredArticle.publishedAt).toLocaleDateString("cs-CZ", {
+                        {formatCzDate(featuredArticle.publishedAt, {
                           day: "numeric",
                           month: "long",
                           year: "numeric",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { formatCzDate } from "@/lib/date";
 
 export interface ArticleCardProps {
   slug: string;
@@ -88,7 +89,7 @@ export function ArticleCard({
         <div className="flex items-center gap-2 text-xs font-medium text-slate-400 mb-2.5">
           {publishedAt && (
             <time dateTime={new Date(publishedAt).toISOString()}>
-              {new Date(publishedAt).toLocaleDateString("cs-CZ", {
+              {formatCzDate(publishedAt, {
                 day: "numeric",
                 month: "short",
                 year: "numeric",

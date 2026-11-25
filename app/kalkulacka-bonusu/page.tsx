@@ -97,7 +97,7 @@ export default function KalkulackaBonusuPage() {
           Kolik si dnes vyděláte na bonusech v ČR?
         </h1>
         <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
-          Zaškrtněte banky, investiční platformy a slevy, které ještě nevyužíváte. Kalkulačka okamžitě spočítá váš celkový bonus a připraví pořadí kroků.
+          Zaškrtněte banky, investiční platformy a slevy, které ještě nevyužíváte, a připočítejte roční cashback z běžných nákupů. Kalkulačka okamžitě spočítá váš celkový zisk a připraví akční plán.
         </p>
       </header>
 

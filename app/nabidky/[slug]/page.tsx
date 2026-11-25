@@ -23,6 +23,7 @@ import {
   getBaseUrl,
   getComparisonsForOffer,
 } from "@/lib/seo";
+import { formatCzDate, formatPromoValidUntil } from "@/lib/date";
 
 export const revalidate = 3600;
 
@@ -99,7 +100,7 @@ export default async function OfferPage({ params }: Props) {
 
   if (!offer || !offer.active) notFound();
 
-  const ADULT_OFFER_SLUGS = ["eroticcity", "cigaretycajk", "vapoo"];
+  const ADULT_OFFER_SLUGS = ["eroticcity", "cigaretycajk", "vapoo", "venixvape"];
   const excludedRelatedSlugs = ADULT_OFFER_SLUGS.includes(offer.slug)
     ? [offer.slug]
     : [offer.slug, ...ADULT_OFFER_SLUGS];
@@ -161,7 +162,7 @@ export default async function OfferPage({ params }: Props) {
   const comparisons = getComparisonsForOffer(offer.slug);
   const ctaText = offer.ctaLabel || `Získat nabídku u ${offer.name}`;
   const verifiedDateFormatted = offer.lastVerifiedAt
-    ? new Date(offer.lastVerifiedAt).toLocaleDateString("cs-CZ", {
+    ? formatCzDate(offer.lastVerifiedAt, {
         day: "numeric",
         month: "long",
         year: "numeric",
@@ -487,14 +488,22 @@ export default async function OfferPage({ params }: Props) {
                               {promo.badge}
                             </span>
                           )}
-                          {promo.validUntil && (
-                            <span className="text-xs text-slate-500">
-                              Platí do{" "}
-                              <time dateTime={promo.validUntil.toISOString()}>
-                                {new Date(promo.validUntil).toLocaleDateString("cs-CZ")}
-                              </time>
-                            </span>
-                          )}
+                          {(() => {
+                            const validity = formatPromoValidUntil(promo.validUntil);
+                            if (!validity) return null;
+                            return (
+                              <span className="text-xs text-slate-500">
+                                {validity.isLongTerm ? (
+                                  validity.label
+                                ) : (
+                                  <>
+                                    Platí do{" "}
+                                    <time dateTime={validity.iso}>{validity.label}</time>
+                                  </>
+                                )}
+                              </span>
+                            );
+                          })()}
                         </div>
                         <h3 className="text-base font-bold text-navy">{promo.title}</h3>
                         {promo.description && (

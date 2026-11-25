@@ -5,7 +5,7 @@ import { OfferGrid } from "@/components/offer-grid";
 import { ArticleGrid } from "@/components/article-grid";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { buildCanonical } from "@/lib/seo";
-import { matchesSearchQuery, normalizeSearchText } from "@/lib/search";
+import { matchesSearchQuery, scoreOfferSearchMatch } from "@/lib/search";
 
 export const metadata: Metadata = {
   title: "Vyhledávání nabídek a článků",
@@ -42,18 +42,12 @@ export default async function HledaniPage({ searchParams }: Props) {
       }),
     ]);
 
-    const normQ = normalizeSearchText(query);
-
     offers = allOffers
       .filter((o) => {
         const hay = `${o.name} ${o.slug} ${o.shortDescription} ${o.description} ${o.bonus || ""} ${o.promoCode || ""} ${o.category.name} ${o.category.slug}`;
         return matchesSearchQuery(hay, query);
       })
-      .sort((a, b) => {
-        const aName = normalizeSearchText(a.name).includes(normQ) ? 1 : 0;
-        const bName = normalizeSearchText(b.name).includes(normQ) ? 1 : 0;
-        return bName - aName || Number(b.featured) - Number(a.featured) || (b.rating || 0) - (a.rating || 0);
-      })
+      .sort((a, b) => scoreOfferSearchMatch(b, query) - scoreOfferSearchMatch(a, query))
       .slice(0, 24);
 
     articles = allArticles

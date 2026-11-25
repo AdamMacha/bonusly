@@ -3,7 +3,12 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { OfferCard } from "./offer-card";
-import { extractBonusValue, matchesSearchQuery } from "@/lib/search";
+import {
+  extractBonusValue,
+  extractCashbackValue,
+  matchesSearchQuery,
+  scoreOfferSearchMatch,
+} from "@/lib/search";
 
 export interface CatalogOfferItem {
   slug: string;
@@ -36,13 +41,22 @@ interface OfferCatalogClientProps {
   categories: CategoryFilterItem[];
 }
 
-type SortKey = "featured" | "bonus" | "rating" | "promo" | "alpha";
+type SortKey = "featured" | "cashback" | "bonus" | "rating" | "promo" | "alpha";
+
+const PAGE_SIZE = 24;
 
 export function OfferCatalogClient({ offers, categories }: OfferCatalogClientProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [onlyWithCashback, setOnlyWithCashback] = useState(false);
   const [onlyWithPromo, setOnlyWithPromo] = useState(false);
   const [sortBy, setSortBy] = useState<SortKey>("featured");
   const [query, setQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+
+  const cashbackOfferCount = useMemo(
+    () => offers.filter((o) => Boolean(o.cashbackLabel)).length,
+    [offers]
+  );
 
   const filteredOffers = useMemo(() => {
     const q = query.trim();
@@ -50,11 +64,14 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
       if (selectedCategory !== "all" && offer.category.slug !== selectedCategory) {
         return false;
       }
+      if (onlyWithCashback && !offer.cashbackLabel) {
+        return false;
+      }
       if (onlyWithPromo && !offer.promoCode && !offer.hasPromos) {
         return false;
       }
       if (q) {
-        const hay = `${offer.name} ${offer.slug} ${offer.shortDescription} ${offer.bonus || ""} ${offer.promoCode || ""} ${offer.category.name} ${offer.category.slug}`;
+        const hay = `${offer.name} ${offer.slug} ${offer.shortDescription} ${offer.bonus || ""} ${offer.promoCode || ""} ${offer.cashbackLabel || ""} ${offer.category.name} ${offer.category.slug}`;
         if (!matchesSearchQuery(hay, q)) return false;
       }
       return true;
@@ -62,8 +79,21 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
 
     const sorted = [...list];
     switch (sortBy) {
+      case "cashback":
+        sorted.sort(
+          (a, b) =>
+            extractCashbackValue(b.cashbackLabel) - extractCashbackValue(a.cashbackLabel) ||
+            Number(b.featured) - Number(a.featured) ||
+            (b.rating || 0) - (a.rating || 0)
+        );
+        break;
       case "bonus":
-        sorted.sort((a, b) => extractBonusValue(b.bonus) - extractBonusValue(a.bonus));
+        sorted.sort(
+          (a, b) =>
+            extractBonusValue(b.bonus) - extractBonusValue(a.bonus) ||
+            Number(b.featured) - Number(a.featured) ||
+            (b.rating || 0) - (a.rating || 0)
+        );
         break;
       case "rating":
         sorted.sort((a, b) => (b.rating || 0) - (a.rating || 0));
@@ -80,14 +110,23 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
         break;
       case "featured":
       default:
-        sorted.sort(
-          (a, b) => Number(b.featured) - Number(a.featured) || (b.rating || 0) - (a.rating || 0)
-        );
+        if (q) {
+          sorted.sort((a, b) => scoreOfferSearchMatch(b, q) - scoreOfferSearchMatch(a, q));
+        } else {
+          sorted.sort(
+            (a, b) => Number(b.featured) - Number(a.featured) || (b.rating || 0) - (a.rating || 0)
+          );
+        }
         break;
     }
 
     return sorted;
-  }, [offers, selectedCategory, onlyWithPromo, sortBy, query]);
+  }, [offers, selectedCategory, onlyWithCashback, onlyWithPromo, sortBy, query]);
+
+  const displayedOffers = filteredOffers.slice(0, visibleCount);
+  const remainingCount = Math.max(0, filteredOffers.length - displayedOffers.length);
+
+  const resetPagination = () => setVisibleCount(PAGE_SIZE);
 
   return (
     <div>
@@ -102,8 +141,11 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
               id="catalog-search"
               type="search"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Hledat značku, bonus nebo kód..."
+              onChange={(e) => {
+                setQuery(e.target.value);
+                resetPagination();
+              }}
+              placeholder="Hledat značku, bonus, cashback nebo kód..."
               className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-navy placeholder:text-slate-400 focus:border-green focus:outline-none focus:ring-2 focus:ring-green/20"
             />
           </search>
@@ -115,10 +157,14 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
             <select
               id="catalog-sort"
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as SortKey)}
+              onChange={(e) => {
+                setSortBy(e.target.value as SortKey);
+                resetPagination();
+              }}
               className="rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-xs font-semibold text-navy focus:border-green focus:outline-none cursor-pointer"
             >
               <option value="featured">Řadit: Doporučené</option>
+              <option value="cashback">Řadit: Nejvyšší cashback (%)</option>
               <option value="bonus">Řadit: Nejvyšší bonus</option>
               <option value="promo">Řadit: S kupónem první</option>
               <option value="rating">Řadit: Nejvyšší hodnocení</option>
@@ -127,9 +173,29 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
 
             <button
               type="button"
-              onClick={() => setOnlyWithPromo((v) => !v)}
+              onClick={() => {
+                setOnlyWithCashback((v) => !v);
+                resetPagination();
+              }}
+              aria-pressed={onlyWithCashback}
+              className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-2.5 text-xs font-semibold border transition-colors cursor-pointer ${
+                onlyWithCashback
+                  ? "bg-amber-500 text-white border-amber-500 shadow-xs"
+                  : "bg-amber-50/70 text-amber-900 border-amber-200/80 hover:border-amber-400"
+              }`}
+            >
+              <span aria-hidden="true">💰</span>
+              <span>Jen s cashbackem ({cashbackOfferCount})</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                setOnlyWithPromo((v) => !v);
+                resetPagination();
+              }}
               aria-pressed={onlyWithPromo}
-              className={`inline-flex items-center gap-1.5 rounded-xl px-4 py-2.5 text-xs font-semibold border transition-colors cursor-pointer ${
+              className={`inline-flex items-center gap-1.5 rounded-xl px-3.5 py-2.5 text-xs font-semibold border transition-colors cursor-pointer ${
                 onlyWithPromo
                   ? "bg-navy text-white border-navy"
                   : "bg-white text-slate-700 border-slate-200 hover:border-green/40"
@@ -148,12 +214,15 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
           </div>
         </div>
 
-        {/* Category Filter Pills */}
-        <div className="flex flex-wrap gap-2">
+        {/* Category Filter Pills (horizontally scrollable on mobile, wrapped on desktop) */}
+        <div className="flex flex-nowrap overflow-x-auto pb-1.5 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0 sm:flex-wrap sm:overflow-visible gap-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <button
             type="button"
-            onClick={() => setSelectedCategory("all")}
-            className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer ${
+            onClick={() => {
+              setSelectedCategory("all");
+              resetPagination();
+            }}
+            className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer ${
               selectedCategory === "all"
                 ? "bg-navy text-white"
                 : "border border-slate-200 bg-white text-slate-600 hover:border-green/40 hover:text-navy"
@@ -171,8 +240,11 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
               <button
                 key={cat.slug}
                 type="button"
-                onClick={() => setSelectedCategory(cat.slug)}
-                className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer ${
+                onClick={() => {
+                  setSelectedCategory(cat.slug);
+                  resetPagination();
+                }}
+                className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer ${
                   active
                     ? "bg-navy text-white"
                     : "border border-slate-200 bg-white text-slate-600 hover:border-green/40 hover:text-navy"
@@ -190,9 +262,28 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
       </div>
 
       {/* Results Count */}
-      <p className="mb-5 text-xs font-medium text-slate-500">
-        Zobrazeno <strong className="text-navy">{filteredOffers.length}</strong> z {offers.length} ověřených nabídek
-      </p>
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-2 text-xs font-medium text-slate-500">
+        <p>
+          Zobrazeno <strong className="text-navy">{displayedOffers.length}</strong> z{" "}
+          <strong className="text-navy">{filteredOffers.length}</strong> odpovídajících nabídek
+          {filteredOffers.length !== offers.length && ` (celkem ${offers.length})`}
+        </p>
+        {(selectedCategory !== "all" || onlyWithCashback || onlyWithPromo || query.trim()) && (
+          <button
+            type="button"
+            onClick={() => {
+              setSelectedCategory("all");
+              setOnlyWithCashback(false);
+              setOnlyWithPromo(false);
+              setQuery("");
+              resetPagination();
+            }}
+            className="text-green-dark hover:text-green font-semibold cursor-pointer"
+          >
+            Zrušit filtry ×
+          </button>
+        )}
+      </div>
 
       {/* Offers Grid */}
       {filteredOffers.length === 0 ? (
@@ -203,8 +294,10 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
             type="button"
             onClick={() => {
               setSelectedCategory("all");
+              setOnlyWithCashback(false);
               setOnlyWithPromo(false);
               setQuery("");
+              resetPagination();
             }}
             className="mt-4 inline-flex items-center rounded-lg bg-navy px-4 py-2 text-xs font-semibold text-white hover:bg-navy-light cursor-pointer"
           >
@@ -212,24 +305,46 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredOffers.map((offer) => (
-            <OfferCard
-              key={offer.slug}
-              slug={offer.slug}
-              name={offer.name}
-              shortDescription={offer.shortDescription}
-              logo={offer.logo}
-              bonus={offer.bonus}
-              promoCode={offer.promoCode}
-              cashbackLabel={offer.cashbackLabel}
-              rating={offer.rating}
-              categoryName={offer.category.name}
-              verified={offer.verified}
-              featured={offer.featured}
-            />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {displayedOffers.map((offer) => (
+              <OfferCard
+                key={offer.slug}
+                slug={offer.slug}
+                name={offer.name}
+                shortDescription={offer.shortDescription}
+                logo={offer.logo}
+                bonus={offer.bonus}
+                promoCode={offer.promoCode}
+                cashbackLabel={offer.cashbackLabel}
+                rating={offer.rating}
+                categoryName={offer.category.name}
+                verified={offer.verified}
+                featured={offer.featured}
+              />
+            ))}
+          </div>
+
+          {remainingCount > 0 && (
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <button
+                type="button"
+                onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-navy-light transition-colors shadow-xs cursor-pointer"
+              >
+                Zobrazit dalších {Math.min(PAGE_SIZE, remainingCount)} nabídek
+                <span className="text-slate-300 font-normal">(zbývá {remainingCount})</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setVisibleCount(filteredOffers.length)}
+                className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-600 hover:border-green/40 hover:text-navy transition-colors cursor-pointer"
+              >
+                Zobrazit všech {filteredOffers.length}
+              </button>
+            </div>
+          )}
+        </>
       )}
 
       {/* Crawl-friendly direct category links */}

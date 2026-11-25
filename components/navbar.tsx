@@ -1,16 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MobileNav } from "./mobile-nav";
+import { NavbarCategoriesMenu } from "./navbar-categories-menu";
 import { Search } from "./search";
 import { UserNav } from "./user-nav";
 
 const navLinks = [
-  { href: "/nabidky", label: "Nabídky" },
   { href: "/akce-a-kupony", label: "Akce & kupóny" },
   { href: "/kategorie/banky", label: "Banky" },
   { href: "/kategorie/finance", label: "Investice" },
   { href: "/porovnani", label: "Srovnání" },
   { href: "/blog", label: "Blog" },
+];
+
+const mobileLinks = [
+  { href: "/nabidky", label: "Všechny nabídky" },
+  ...navLinks,
+  { href: "/jak-funguje-cashback", label: "Jak funguje cashback 50/50" },
+  { href: "/kalkulacka-bonusu", label: "Kalkulačka bonusů" },
 ];
 
 export function Navbar() {
@@ -33,6 +40,7 @@ export function Navbar() {
               />
             </Link>
             <div className="hidden lg:flex items-center gap-1">
+              <NavbarCategoriesMenu />
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -55,7 +63,7 @@ export function Navbar() {
             >
               Prozkoumat nabídky
             </Link>
-            <MobileNav links={navLinks} />
+            <MobileNav links={mobileLinks} />
           </div>
         </div>
       </nav>
