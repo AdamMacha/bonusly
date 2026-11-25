@@ -3,6 +3,7 @@ import { CATEGORIES_DATA } from "./data/categories";
 import { CORE_OFFERS } from "./data/offers-core";
 import { FINANCE_SERVICES_OFFERS } from "./data/offers-finance-services";
 import { ESHOP_OFFERS } from "./data/offers-eshops";
+import { OFFER_CASHBACK_MAP } from "./data/ehub-cashback-map";
 import type { OfferSeed } from "./data/types";
 
 export const ALL_OFFERS: OfferSeed[] = [
@@ -51,6 +52,9 @@ export async function syncCollaborations(prisma: PrismaClient) {
       throw new Error(`Neznámá kategorie "${offer.categorySlug}" u nabídky "${offer.slug}"`);
     }
 
+    const cbMeta = OFFER_CASHBACK_MAP[offer.slug];
+    const cashbackAllowed = cbMeta ? cbMeta.cashbackAllowed : Boolean(offer.rewardAmount && offer.rewardAmount > 0);
+
     const savedOffer = await prisma.offer.upsert({
       where: { slug: offer.slug },
       update: {
@@ -72,6 +76,11 @@ export async function syncCollaborations(prisma: PrismaClient) {
         trackingSlug: offer.trackingSlug,
         partnerNetwork: offer.partnerNetwork ?? null,
         rewardAmount: offer.rewardAmount ?? null,
+        ehubCampaignId: cbMeta?.ehubCampaignId ?? null,
+        cashbackAllowed,
+        partnerCommissionRate: cbMeta?.partnerCommissionRate ?? null,
+        cashbackSharePct: cbMeta?.cashbackSharePct ?? null,
+        userCashbackLabel: cbMeta?.userCashbackLabel ?? null,
         rating: offer.rating,
         featured: offer.featured,
         active: offer.active,
@@ -100,6 +109,11 @@ export async function syncCollaborations(prisma: PrismaClient) {
         trackingSlug: offer.trackingSlug,
         partnerNetwork: offer.partnerNetwork ?? null,
         rewardAmount: offer.rewardAmount ?? null,
+        ehubCampaignId: cbMeta?.ehubCampaignId ?? null,
+        cashbackAllowed,
+        partnerCommissionRate: cbMeta?.partnerCommissionRate ?? null,
+        cashbackSharePct: cbMeta?.cashbackSharePct ?? null,
+        userCashbackLabel: cbMeta?.userCashbackLabel ?? null,
         rating: offer.rating,
         featured: offer.featured,
         active: offer.active,

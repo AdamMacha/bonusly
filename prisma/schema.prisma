@@ -48,23 +48,29 @@ model Offer {
   lastVerifiedAt   DateTime?
   seoTitle         String?
   seoDescription   String?
-  rewardAmount     Float?
-  partnerNetwork   String?
-  promoCode        String?
-  promoCodeNote    String?
-  ctaLabel         String?
-  clicks           Click[]
-  faq              OfferFaq[]
-  promos           OfferPromo[]
-  reviews          OfferReview[]
-  leads            Lead[]
-  articles         Article[]
-  transactions     Transaction[]
-  createdAt        DateTime   @default(now())
-  updatedAt        DateTime   @updatedAt
+  rewardAmount          Float?
+  partnerNetwork        String?
+  ehubCampaignId        String?
+  cashbackAllowed       Boolean    @default(false)
+  partnerCommissionRate String?
+  cashbackSharePct      Float?
+  userCashbackLabel     String?
+  promoCode             String?
+  promoCodeNote         String?
+  ctaLabel              String?
+  clicks                Click[]
+  faq                   OfferFaq[]
+  promos                OfferPromo[]
+  reviews               OfferReview[]
+  leads                 Lead[]
+  articles              Article[]
+  transactions          Transaction[]
+  createdAt             DateTime   @default(now())
+  updatedAt             DateTime   @updatedAt
 
   @@index([categoryId])
   @@index([active, featured])
+  @@index([ehubCampaignId])
 }
 
 model OfferFaq {
@@ -268,23 +274,45 @@ model VerificationToken {
 }
 
 model Transaction {
-  id          String            @id @default(cuid())
-  userId      String
-  user        User              @relation(fields: [userId], references: [id], onDelete: Cascade)
-  offerId     String?
-  offer       Offer?            @relation(fields: [offerId], references: [id], onDelete: SetNull)
-  amount      Float
-  status      TransactionStatus @default(PENDING)
-  source      String            @default("eHUB")
-  affiliateId String?
-  description String?
-  createdAt   DateTime          @default(now())
-  updatedAt   DateTime          @updatedAt
+  id               String            @id @default(cuid())
+  userId           String
+  user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  offerId          String?
+  offer            Offer?            @relation(fields: [offerId], references: [id], onDelete: SetNull)
+  clickId          String?
+  orderId          String?
+  orderAmount      Float?
+  grossCommission  Float?
+  cashbackSharePct Float?
+  amount           Float
+  platformProfit   Float?
+  status           TransactionStatus @default(PENDING)
+  payoutStatus     String?
+  source           String            @default("eHUB")
+  affiliateId      String?
+  description      String?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
 
   @@index([userId])
   @@index([status])
   @@index([affiliateId])
   @@index([offerId])
+  @@index([clickId])
+}
+
+model EhubSyncLog {
+  id           String   @id @default(cuid())
+  trigger      String   @default("manual")
+  status       String   @default("success")
+  fetchedCount Int      @default(0)
+  createdCount Int      @default(0)
+  updatedCount Int      @default(0)
+  skippedCount Int      @default(0)
+  message      String?
+  createdAt    DateTime @default(now())
+
+  @@index([createdAt])
 }
 
 model CashoutRequest {

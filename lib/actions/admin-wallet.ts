@@ -4,7 +4,32 @@ import { revalidatePath } from "next/cache";
 import { requireAdminAuth } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { getResendClient } from "@/lib/resend";
+import { calculateCashbackSplit } from "@/lib/cashback";
+import { normalizeEhubStatus, syncEhubTransactions } from "@/lib/ehub-api";
 import { TransactionStatus, CashoutStatus } from "@prisma/client";
+
+function getErrorMessage(err: unknown): string {
+  return err instanceof Error ? err.message : "Neznámá chyba";
+}
+
+/**
+ * Ruční spuštění synchronizace transakcí z eHUB API v3 administrátorem.
+ */
+export async function triggerEhubSync(lookbackDays = 90) {
+  await requireAdminAuth();
+
+  const result = await syncEhubTransactions({
+    trigger: "manual",
+    lookbackDays,
+  });
+
+  revalidatePath("/admin");
+  revalidatePath("/admin/provize");
+  revalidatePath("/admin/uzivatele");
+  revalidatePath("/dashboard");
+
+  return result;
+}
 
 /**
  * Manuální vytvoření transakce administrátorem ke konkrétnímu uživateli.
@@ -15,7 +40,9 @@ export async function createManualTransaction(formData: FormData) {
   const userId = formData.get("userId") as string;
   const rawAmount = formData.get("amount") as string;
   const status = (formData.get("status") as TransactionStatus) || TransactionStatus.APPROVED;
-  const description = (formData.get("description") as string || "Manuální odměna od administrátora").trim();
+  const description = (
+    (formData.get("description") as string) || "Manuální odměna od administrátora"
+  ).trim();
   const offerId = (formData.get("offerId") as string) || null;
 
   if (!userId) {
@@ -23,7 +50,7 @@ export async function createManualTransaction(formData: FormData) {
   }
 
   const amount = parseFloat(rawAmount);
-  if (isNaN(amount) || amount <= 0) {
+  if (Number.isNaN(amount) || amount <= 0) {
     return { error: "Zadejte platnou kladnou částku." };
   }
 
@@ -54,6 +81,7 @@ export async function createManualTransaction(formData: FormData) {
     });
 
     revalidatePath("/admin");
+    revalidatePath("/admin/provize");
     revalidatePath("/admin/uzivatele");
     revalidatePath("/dashboard");
 
@@ -61,9 +89,9 @@ export async function createManualTransaction(formData: FormData) {
       success: true,
       message: `Transakce na částku ${amount.toLocaleString("cs-CZ")} Kč byla úspěšně vytvořena pro uživatele ${user.email}.`,
     };
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Chyba při vytváření manuální transakce:", err);
-    return { error: "Nepodařilo se vytvořit transakci: " + err?.message };
+    return { error: "Nepodařilo se vytvořit transakci: " + getErrorMessage(err) };
   }
 }
 
@@ -95,7 +123,6 @@ export async function approveCashout(cashoutId: string) {
       },
     });
 
-    // Odeslání e-mailu přes Resend
     const resendClient = getResendClient();
     if (resendClient && cashout.user.email) {
       try {
@@ -124,8 +151,8 @@ export async function approveCashout(cashoutId: string) {
     revalidatePath("/dashboard");
 
     return { success: true, message: "Žádost o výplatu byla označena jako vyplacena." };
-  } catch (err: any) {
-    return { error: "Chyba při schvalování: " + err?.message };
+  } catch (err: unknown) {
+    return { error: "Chyba při schvalování: " + getErrorMessage(err) };
   }
 }
 
@@ -150,7 +177,6 @@ export async function rejectCashout(cashoutId: string, note?: string) {
 
   try {
     await prisma.$transaction(async (tx) => {
-      // 1. Nastavíme žádost jako zamítnutou
       await tx.cashoutRequest.update({
         where: { id: cashoutId },
         data: {
@@ -160,7 +186,6 @@ export async function rejectCashout(cashoutId: string, note?: string) {
         },
       });
 
-      // 2. Vrátíme částku zpět na schválený zůstatek uživatele
       await tx.user.update({
         where: { id: cashout.userId },
         data: {
@@ -169,7 +194,6 @@ export async function rejectCashout(cashoutId: string, note?: string) {
       });
     });
 
-    // Odeslání e-mailu o zamítnutí
     const resendClient = getResendClient();
     if (resendClient && cashout.user.email) {
       try {
@@ -200,19 +224,22 @@ export async function rejectCashout(cashoutId: string, note?: string) {
     revalidatePath("/dashboard");
 
     return { success: true, message: "Žádost byla zamítnuta a částka byla vrácena uživateli na zůstatek." };
-  } catch (err: any) {
-    return { error: "Chyba při zamítání: " + err?.message };
+  } catch (err: unknown) {
+    return { error: "Chyba při zamítání: " + getErrorMessage(err) };
   }
 }
 
 /**
- * Hromadný import transakcí z CSV (export z eHUBu nebo jiných sítí).
+ * Záložní hromadný import transakcí z CSV exportu eHUBu (`/transaction` -> Export).
+ * Podporuje přesné české hlavičky eHUBu (`Klik data 1`, `Klik data 2`, `Provize`,
+ * `Hodnota objednávky`, `ID objednávky`, `Program`, `Stav`) a automaticky
+ * aplikuje rozdělení provize (výchozí 50 % uživateli / 50 % BONUSLY).
  */
 export async function importTransactionsCsv(formData: FormData) {
   await requireAdminAuth();
 
   const file = formData.get("csvFile") as File | null;
-  const rawText = (formData.get("csvText") as string || "").trim();
+  const rawText = ((formData.get("csvText") as string) || "").trim();
 
   let content = "";
   if (file && file.size > 0) {
@@ -225,12 +252,11 @@ export async function importTransactionsCsv(formData: FormData) {
     return { error: "Nahrajte prosím CSV soubor nebo vložte text z exportu." };
   }
 
-  const lines = content.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+  const lines = content.replace(/^\uFEFF/, "").split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
   if (lines.length < 2) {
     return { error: "CSV musí obsahovat záhlaví a alespoň jeden řádek dat." };
   }
 
-  // Detekce oddělovače (; nebo , nebo \t)
   const headerLine = lines[0];
   let delimiter = ",";
   if (headerLine.includes(";")) delimiter = ";";
@@ -239,26 +265,37 @@ export async function importTransactionsCsv(formData: FormData) {
   const cleanCol = (col: string) => col.replace(/^["']|["']$/g, "").trim().toLowerCase();
   const headers = headerLine.split(delimiter).map(cleanCol);
 
-  // Nalezení indexů sloupců
   const subIdIdx = headers.findIndex((h) =>
-    h === "sub_id" || h === "subid" || h === "data1" || h === "data" || h === "user" || h === "uživatel" || h === "uzivatel"
+    ["klik data 1", "data1", "sub_id", "subid", "data", "user", "uživatel", "uzivatel"].includes(h)
+  );
+  const clickIdIdx = headers.findIndex((h) =>
+    ["klik data 2", "data2", "click_id", "clickid"].includes(h)
   );
   const amountIdx = headers.findIndex((h) =>
-    h === "amount" || h === "provize" || h === "commission" || h === "částka" || h === "castka" || h === "payout" || h === "odměna"
+    ["provize", "commission", "amount", "částka", "castka", "payout", "odměna"].includes(h)
+  );
+  const orderAmountIdx = headers.findIndex((h) =>
+    ["hodnota objednávky", "hodnota objednavky", "order_amount", "orderamount"].includes(h)
   );
   const statusIdx = headers.findIndex((h) =>
-    h === "status" || h === "stav" || h === "state"
+    ["stav", "status", "state"].includes(h)
+  );
+  const payoutStatusIdx = headers.findIndex((h) =>
+    ["stav výplaty", "stav vyplaty", "payout_status"].includes(h)
   );
   const idIdx = headers.findIndex((h) =>
-    h === "id" || h === "transaction_id" || h === "transakce" || h === "id transakce" || h === "order_id"
+    ["id", "transaction_id", "transakce", "id transakce", "id objednávky", "id objednavky", "order_id"].includes(h)
+  );
+  const orderIdIdx = headers.findIndex((h) =>
+    ["id objednávky", "id objednavky", "order_id", "orderid"].includes(h)
   );
   const descIdx = headers.findIndex((h) =>
-    h === "campaign" || h === "kampaň" || h === "kampan" || h === "program" || h === "popis" || h === "description"
+    ["program", "kampaň", "kampan", "campaign", "popis", "description"].includes(h)
   );
 
   if (subIdIdx === -1 || amountIdx === -1) {
     return {
-      error: `V hlavičce CSV chybí povinné sloupce. Nalezeno: [${headers.join(", ")}]. Je nutné mít alespoň sloupec pro uživatele (sub_id nebo data1) a pro částku (provize nebo amount).`,
+      error: `V hlavičce CSV chybí povinné sloupce. Nalezeno: [${headers.join(", ")}]. Je nutné mít alespoň sloupec pro uživatele (Klik data 1 / data1 / sub_id) a pro provizi (Provize / commission / amount).`,
     };
   }
 
@@ -271,41 +308,63 @@ export async function importTransactionsCsv(formData: FormData) {
     if (row.length <= Math.max(subIdIdx, amountIdx)) continue;
 
     const subIdVal = row[subIdIdx];
-    const amountValRaw = row[amountIdx];
-    const statusValRaw = statusIdx !== -1 ? row[statusIdx] : "approved";
-    const affiliateIdVal = idIdx !== -1 ? row[idIdx] : null;
-    const descVal = descIdx !== -1 ? row[descIdx] : "eHUB CSV import";
+    const clickIdVal = clickIdIdx !== -1 ? row[clickIdIdx] || null : null;
+    const grossCommission =
+      parseFloat(row[amountIdx].replace(",", ".").replace(/[^0-9.-]/g, "")) || 0;
+    const orderAmount =
+      orderAmountIdx !== -1
+        ? parseFloat(row[orderAmountIdx].replace(",", ".").replace(/[^0-9.-]/g, "")) || 0
+        : 0;
+    const statusValRaw = statusIdx !== -1 ? row[statusIdx] : "pending";
+    const payoutStatusVal = payoutStatusIdx !== -1 ? row[payoutStatusIdx] || null : null;
+    const affiliateIdVal = idIdx !== -1 ? row[idIdx] || null : null;
+    const orderIdVal = orderIdIdx !== -1 ? row[orderIdIdx] || null : null;
+    const descVal = descIdx !== -1 ? row[descIdx] || "eHUB CSV import" : "eHUB CSV import";
 
-    if (!subIdVal) {
+    if (!subIdVal || grossCommission <= 0) {
       skippedCount++;
       continue;
     }
 
-    const amount = parseFloat(amountValRaw.replace(",", ".").replace(/[^0-9.-]/g, "")) || 0;
-    if (amount <= 0) {
-      skippedCount++;
-      continue;
-    }
+    const status = normalizeEhubStatus(statusValRaw);
 
-    // Normalizace statusu
-    const sLower = statusValRaw.toLowerCase();
-    let status: TransactionStatus = TransactionStatus.PENDING;
-    if (sLower.includes("schvál") || sLower.includes("schval") || sLower.includes("approv") || sLower === "1") {
-      status = TransactionStatus.APPROVED;
-    } else if (sLower.includes("zamít") || sLower.includes("zamit") || sLower.includes("reject") || sLower === "2") {
-      status = TransactionStatus.REJECTED;
-    }
-
-    // Najdeme uživatele
     const user = await prisma.user.findFirst({
       where: { OR: [{ id: subIdVal }, { email: subIdVal }] },
+      select: { id: true },
     });
 
     if (!user) {
-      errors.push(`Řádek ${i + 1}: Uživatel pro sub_id "${subIdVal}" nebyl nalezen.`);
+      errors.push(`Řádek ${i + 1}: Uživatel pro "${subIdVal}" nebyl nalezen.`);
       skippedCount++;
       continue;
     }
+
+    const matchedClick = clickIdVal
+      ? await prisma.click.findUnique({
+          where: { id: clickIdVal },
+          select: { id: true, offerId: true },
+        })
+      : null;
+
+    const offer = matchedClick?.offerId
+      ? await prisma.offer.findUnique({
+          where: { id: matchedClick.offerId },
+          select: { id: true, cashbackAllowed: true, cashbackSharePct: true },
+        })
+      : descVal
+        ? await prisma.offer.findFirst({
+            where: { name: { contains: descVal, mode: "insensitive" } },
+            select: { id: true, cashbackAllowed: true, cashbackSharePct: true },
+          })
+        : null;
+
+    if (offer && !offer.cashbackAllowed) {
+      errors.push(`Řádek ${i + 1}: Program "${descVal}" zakazuje cashback — přeskočeno.`);
+      skippedCount++;
+      continue;
+    }
+
+    const split = calculateCashbackSplit(grossCommission, offer?.cashbackSharePct);
 
     try {
       await prisma.$transaction(async (tx) => {
@@ -319,48 +378,72 @@ export async function importTransactionsCsv(formData: FormData) {
           if (existing.status !== TransactionStatus.APPROVED && status === TransactionStatus.APPROVED) {
             await tx.user.update({
               where: { id: user.id },
-              data: { balance: { increment: amount } },
+              data: { balance: { increment: split.userCashback } },
+            });
+          } else if (existing.status === TransactionStatus.APPROVED && status === TransactionStatus.REJECTED) {
+            await tx.user.update({
+              where: { id: user.id },
+              data: { balance: { decrement: existing.amount } },
             });
           }
           await tx.transaction.update({
             where: { id: existing.id },
-            data: { status, amount },
+            data: {
+              offerId: offer?.id ?? existing.offerId,
+              clickId: matchedClick?.id ?? existing.clickId,
+              orderId: orderIdVal ?? existing.orderId,
+              orderAmount: orderAmount > 0 ? orderAmount : existing.orderAmount,
+              grossCommission: split.grossCommission,
+              cashbackSharePct: split.cashbackSharePct,
+              amount: split.userCashback,
+              platformProfit: split.platformProfit,
+              status,
+              payoutStatus: payoutStatusVal ?? existing.payoutStatus,
+            },
           });
         } else {
           await tx.transaction.create({
             data: {
               userId: user.id,
-              amount,
+              offerId: offer?.id ?? null,
+              clickId: matchedClick?.id ?? null,
+              orderId: orderIdVal,
+              orderAmount: orderAmount > 0 ? orderAmount : null,
+              grossCommission: split.grossCommission,
+              cashbackSharePct: split.cashbackSharePct,
+              amount: split.userCashback,
+              platformProfit: split.platformProfit,
               status,
+              payoutStatus: payoutStatusVal,
               source: "eHUB",
               affiliateId: affiliateIdVal,
               description: descVal,
             },
           });
 
-          if (status === TransactionStatus.APPROVED) {
+          if (status === TransactionStatus.APPROVED && split.userCashback > 0) {
             await tx.user.update({
               where: { id: user.id },
-              data: { balance: { increment: amount } },
+              data: { balance: { increment: split.userCashback } },
             });
           }
         }
       });
       importedCount++;
-    } catch (err: any) {
-      errors.push(`Řádek ${i + 1}: Chyba při zápisu - ${err.message}`);
+    } catch (err: unknown) {
+      errors.push(`Řádek ${i + 1}: Chyba při zápisu - ${getErrorMessage(err)}`);
       skippedCount++;
     }
   }
 
   revalidatePath("/admin");
+  revalidatePath("/admin/provize");
   revalidatePath("/admin/uzivatele");
   revalidatePath("/dashboard");
 
   return {
     success: true,
-    message: `Zpracováno: ${importedCount} transakcí úspěšně naimportováno, ${skippedCount} přeskočeno.`,
+    message: `Zpracováno: ${importedCount} transakcí naimportováno (s rozdělením provize), ${skippedCount} přeskočeno.`,
     errors: errors.slice(0, 5),
   };
 }
-

@@ -49,6 +49,7 @@ export default async function NabidkyPage() {
     logo: o.logo,
     bonus: o.bonus,
     promoCode: o.promoCode,
+    cashbackLabel: o.cashbackAllowed ? o.userCashbackLabel : null,
     rating: o.rating,
     verified: o.verified,
     featured: o.featured,

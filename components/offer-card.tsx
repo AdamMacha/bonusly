@@ -8,6 +8,7 @@ interface OfferCardProps {
   logo?: string | null;
   bonus?: string | null;
   promoCode?: string | null;
+  cashbackLabel?: string | null;
   rating?: number | null;
   categoryName: string;
   verified: boolean;
@@ -21,6 +22,7 @@ export function OfferCard({
   logo,
   bonus,
   promoCode,
+  cashbackLabel,
   rating,
   categoryName,
   verified,
@@ -61,10 +63,18 @@ export function OfferCard({
           </div>
         </div>
 
-        <div className="mt-4 flex items-center justify-between gap-2">
-          <span className="inline-flex items-center rounded-md bg-slate-50 px-2 py-1 text-xs font-medium text-slate-600 truncate">
-            {categoryName}
-          </span>
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
+          <div className="flex flex-wrap items-center gap-1.5 min-w-0">
+            <span className="inline-flex items-center rounded-md bg-slate-50 px-2 py-1 text-xs font-medium text-slate-600 truncate">
+              {categoryName}
+            </span>
+            {cashbackLabel && (
+              <span className="inline-flex items-center gap-1 rounded-md bg-amber-50 border border-amber-200/70 px-2 py-0.5 text-[11px] font-bold text-amber-800 whitespace-nowrap">
+                <span aria-hidden="true">💰</span>
+                {cashbackLabel}
+              </span>
+            )}
+          </div>
           <div className="flex items-center gap-2 shrink-0">
             {rating && (
               <span className="inline-flex items-center gap-0.5 text-xs font-semibold text-amber-600">

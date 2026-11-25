@@ -19,33 +19,45 @@ export function isEhubUrl(url: string, partnerNetwork?: string | null): boolean 
 }
 
 /**
- * Přidá měřící parametr sub_id k affiliate odkazu.
+ * Připojí oficiální eHUB SubID parametry data1 (uživatel) a data2 (clickId)
+ * k partnerskému odkazu bez narušení a_aid, a_bid nebo desturl.
  */
-export function appendSubId(
+export function appendEhubTracking(
   url: string,
-  subId: string | null | undefined,
-  paramName = "sub_id"
+  params: { userId?: string | null; clickId?: string | null }
 ): string {
-  if (!subId || !subId.trim()) return url;
+  const data1 = params.userId?.trim();
+  const data2 = params.clickId?.trim();
+  if (!data1 && !data2) return url;
 
   try {
     const parsed = new URL(url);
-    parsed.searchParams.set("sub_id", subId.trim());
-    parsed.searchParams.set("data1", subId.trim());
+    if (data1) parsed.searchParams.set("data1", data1);
+    if (data2) parsed.searchParams.set("data2", data2);
     return parsed.toString();
   } catch {
-    // Pokud je URL relativní nebo neplatná
+    const parts: string[] = [];
+    if (data1) parts.push(`data1=${encodeURIComponent(data1)}`);
+    if (data2) parts.push(`data2=${encodeURIComponent(data2)}`);
     const separator = url.includes("?") ? "&" : "?";
-    return `${url}${separator}sub_id=${encodeURIComponent(subId.trim())}&data1=${encodeURIComponent(subId.trim())}`;
+    return `${url}${separator}${parts.join("&")}`;
   }
 }
 
 /**
- * Sestaví interní přesměrovací odkaz /go/[trackingSlug] se sub_id uživatele.
+ * Zpětně kompatibilní helper pro přidání identifikátoru uživatele k eHUB odkazu.
  */
-export function getOutboundLink(trackingSlug: string, userId?: string | null): string {
-  if (userId) {
-    return `/go/${trackingSlug}?sub_id=${encodeURIComponent(userId)}`;
-  }
+export function appendSubId(
+  url: string,
+  subId: string | null | undefined,
+  clickId?: string | null
+): string {
+  return appendEhubTracking(url, { userId: subId, clickId });
+}
+
+/**
+ * Sestaví interní přesměrovací odkaz /go/[trackingSlug].
+ */
+export function getOutboundLink(trackingSlug: string): string {
   return `/go/${trackingSlug}`;
 }

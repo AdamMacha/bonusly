@@ -204,6 +204,75 @@ export default async function EditOfferPage({ params }: Props) {
           </div>
         </div>
 
+        <div className="rounded-xl border border-emerald-200/70 bg-emerald-50/40 p-4 space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-bold text-navy">Provize &amp; Cashback (eHUB)</h3>
+            <label className="flex items-center gap-2 text-xs font-semibold cursor-pointer">
+              <input
+                type="checkbox"
+                name="cashbackAllowed"
+                className="rounded text-green"
+                defaultChecked={offer.cashbackAllowed}
+              />
+              <span className="text-emerald-800">Cashback povolen</span>
+            </label>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="ehubCampaignId" className="block text-xs font-medium text-navy mb-1">
+                eHUB Campaign ID (8 znaků)
+              </label>
+              <input
+                id="ehubCampaignId"
+                name="ehubCampaignId"
+                defaultValue={offer.ehubCampaignId || ""}
+                placeholder="např. 75cabc6c"
+                className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-mono focus:outline-none focus:border-green"
+              />
+            </div>
+            <div>
+              <label htmlFor="partnerCommissionRate" className="block text-xs font-medium text-navy mb-1">
+                Naše provize od partnera (interní)
+              </label>
+              <input
+                id="partnerCommissionRate"
+                name="partnerCommissionRate"
+                defaultValue={offer.partnerCommissionRate || ""}
+                placeholder="např. PPS 7,50 % nebo PPL 300 Kč"
+                className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:border-green"
+              />
+            </div>
+            <div>
+              <label htmlFor="cashbackSharePct" className="block text-xs font-medium text-navy mb-1">
+                Podíl pro uživatele v % (prázdné = výchozích 50 %)
+              </label>
+              <input
+                id="cashbackSharePct"
+                name="cashbackSharePct"
+                type="number"
+                min={0}
+                max={95}
+                step={1}
+                defaultValue={offer.cashbackSharePct ?? ""}
+                placeholder="50"
+                className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:border-green"
+              />
+            </div>
+            <div>
+              <label htmlFor="userCashbackLabel" className="block text-xs font-medium text-navy mb-1">
+                Štítek cashbacku na webu
+              </label>
+              <input
+                id="userCashbackLabel"
+                name="userCashbackLabel"
+                defaultValue={offer.userCashbackLabel || ""}
+                placeholder="např. Cashback 3,75 %"
+                className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm focus:outline-none focus:border-green"
+              />
+            </div>
+          </div>
+        </div>
+
         <div className="flex flex-wrap gap-6 pt-2">
           <label className="flex items-center gap-2 text-sm cursor-pointer">
             <input type="checkbox" name="featured" className="rounded text-green" defaultChecked={offer.featured} />

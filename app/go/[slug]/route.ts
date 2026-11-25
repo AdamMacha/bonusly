@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { auth } from "@/auth";
-import { isEhubUrl, appendSubId } from "@/lib/affiliate";
+import { isEhubUrl, appendEhubTracking } from "@/lib/affiliate";
 
 export async function GET(
   request: NextRequest,
@@ -16,6 +16,7 @@ export async function GET(
       referralUrl: true,
       affiliateUrl: true,
       partnerNetwork: true,
+      cashbackAllowed: true,
       active: true,
     },
   });
@@ -24,29 +25,25 @@ export async function GET(
     return NextResponse.redirect(new URL("/nabidky", request.url));
   }
 
-  // Zjistíme uživatele z query parametru nebo aktuální session
-  const url = new URL(request.url);
-  const subIdParam = url.searchParams.get("sub_id");
-  let userId = subIdParam;
-
-  if (!userId) {
-    try {
-      const session = await auth();
-      userId = session?.user?.id || null;
-    } catch {
-      userId = null;
-    }
+  // Identitu uživatele bereme bezpečně výhradně ze session (nelze podvrhnout přes URL query)
+  let userId: string | null = null;
+  try {
+    const session = await auth();
+    userId = session?.user?.id || null;
+  } catch {
+    userId = null;
   }
 
-  // Sledování kliku
+  const url = new URL(request.url);
   const referrer = request.headers.get("referer") || null;
   const userAgent = request.headers.get("user-agent") || null;
   const utmSource = url.searchParams.get("utm_source");
   const utmMedium = url.searchParams.get("utm_medium");
   const utmCampaign = url.searchParams.get("utm_campaign");
 
+  let clickId: string | null = null;
   try {
-    await prisma.click.create({
+    const click = await prisma.click.create({
       data: {
         offerId: offer.id,
         userId: userId || undefined,
@@ -56,17 +53,22 @@ export async function GET(
         utmCampaign,
         userAgent,
       },
+      select: { id: true },
     });
+    clickId = click.id;
   } catch {
     console.error("Failed to track click for:", slug);
   }
 
-  // Příprava cílové URL (přednost má affiliateUrl)
   let targetUrl = offer.affiliateUrl || offer.referralUrl;
 
-  // Pokud je uživatel přihlášen a jedná se o eHUB link (nebo eHUB síť), přidáme sub_id
-  if (userId && (isEhubUrl(targetUrl, offer.partnerNetwork) || offer.partnerNetwork === "ehub")) {
-    targetUrl = appendSubId(targetUrl, userId, "sub_id");
+  // Pro eHUB odkazy přidáme data2=clickId (analytika + reklamace) a data1=userId
+  // výhradně pokud je uživatel přihlášen A nabídka povoluje cashback!
+  if (isEhubUrl(targetUrl, offer.partnerNetwork)) {
+    targetUrl = appendEhubTracking(targetUrl, {
+      userId: offer.cashbackAllowed ? userId : null,
+      clickId,
+    });
   }
 
   return NextResponse.redirect(targetUrl);

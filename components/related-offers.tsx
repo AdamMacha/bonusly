@@ -7,6 +7,8 @@ interface Offer {
   logo?: string | null;
   bonus?: string | null;
   promoCode?: string | null;
+  cashbackAllowed?: boolean;
+  userCashbackLabel?: string | null;
   rating?: number | null;
   verified: boolean;
   featured: boolean;
@@ -29,6 +31,7 @@ export function RelatedOffers({ offers }: { offers: Offer[] }) {
             logo={offer.logo}
             bonus={offer.bonus}
             promoCode={offer.promoCode}
+            cashbackLabel={offer.cashbackAllowed ? offer.userCashbackLabel : null}
             rating={offer.rating}
             categoryName={offer.category.name}
             verified={offer.verified}

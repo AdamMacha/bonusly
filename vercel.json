@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/ehub-sync",
+      "schedule": "0 6 * * *"
+    }
+  ]
+}

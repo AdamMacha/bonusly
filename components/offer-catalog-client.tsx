@@ -12,6 +12,7 @@ export interface CatalogOfferItem {
   logo?: string | null;
   bonus?: string | null;
   promoCode?: string | null;
+  cashbackLabel?: string | null;
   rating?: number | null;
   verified: boolean;
   featured: boolean;
@@ -221,6 +222,7 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
               logo={offer.logo}
               bonus={offer.bonus}
               promoCode={offer.promoCode}
+              cashbackLabel={offer.cashbackLabel}
               rating={offer.rating}
               categoryName={offer.category.name}
               verified={offer.verified}

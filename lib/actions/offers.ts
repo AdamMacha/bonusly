@@ -19,12 +19,18 @@ export async function createOffer(formData: FormData) {
     featured: raw.featured === "on",
     active: raw.active === "on" || raw.active === undefined,
     verified: raw.verified === "on",
+    cashbackAllowed: raw.cashbackAllowed === "on",
+    ehubCampaignId: raw.ehubCampaignId ? String(raw.ehubCampaignId).trim() : null,
+    partnerCommissionRate: raw.partnerCommissionRate ? String(raw.partnerCommissionRate).trim() : null,
+    cashbackSharePct: raw.cashbackSharePct ? parseFloat(String(raw.cashbackSharePct)) : null,
+    userCashbackLabel: raw.userCashbackLabel ? String(raw.userCashbackLabel).trim() : null,
     rating: raw.rating ? parseFloat(String(raw.rating)) : undefined,
   });
 
   await prisma.offer.create({ data });
   revalidatePath("/");
   revalidatePath("/admin/nabidky");
+  revalidatePath("/admin/provize");
   revalidatePath("/nabidky");
   revalidatePath("/akce-a-kupony");
   revalidatePath("/sitemap.xml");
@@ -46,12 +52,18 @@ export async function updateOffer(id: string, formData: FormData) {
     featured: raw.featured === "on",
     active: raw.active === "on",
     verified: raw.verified === "on",
+    cashbackAllowed: raw.cashbackAllowed === "on",
+    ehubCampaignId: raw.ehubCampaignId ? String(raw.ehubCampaignId).trim() : null,
+    partnerCommissionRate: raw.partnerCommissionRate ? String(raw.partnerCommissionRate).trim() : null,
+    cashbackSharePct: raw.cashbackSharePct ? parseFloat(String(raw.cashbackSharePct)) : null,
+    userCashbackLabel: raw.userCashbackLabel ? String(raw.userCashbackLabel).trim() : null,
     rating: raw.rating ? parseFloat(String(raw.rating)) : undefined,
   });
 
   await prisma.offer.update({ where: { id }, data });
   revalidatePath("/");
   revalidatePath("/admin/nabidky");
+  revalidatePath("/admin/provize");
   revalidatePath("/nabidky");
   revalidatePath("/akce-a-kupony");
   revalidatePath(`/nabidky/${data.slug}`);

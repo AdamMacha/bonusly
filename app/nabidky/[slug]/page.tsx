@@ -431,7 +431,7 @@ export default async function OfferPage({ params }: Props) {
                   )}
                 </div>
               </div>
-              {(!offer.rewardAmount || offer.rewardAmount <= 0) && (
+              {!offer.cashbackAllowed && (!offer.rewardAmount || offer.rewardAmount <= 0) && (
                 <p className="mt-3 text-xs text-slate-500">
                   Výhodu získáte přímo u partnera — registrace ani přihlášení do BONUSLY peněženky není potřeba.
                 </p>
@@ -451,7 +451,12 @@ export default async function OfferPage({ params }: Props) {
             <TipsportLeadForm offerSlug={offer.slug} offerName={offer.name} />
           )}
 
-          <CashbackBanner rewardAmount={offer.rewardAmount} className="mt-6" />
+          <CashbackBanner
+            cashbackAllowed={offer.cashbackAllowed}
+            userCashbackLabel={offer.userCashbackLabel}
+            rewardAmount={offer.rewardAmount}
+            className="mt-6"
+          />
 
           {/* Sheet 2 Active Promo Offers & Coupons */}
           {offer.promos.length > 0 && (

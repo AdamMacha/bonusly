@@ -4,19 +4,31 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 interface CashbackBannerProps {
+  cashbackAllowed?: boolean;
+  userCashbackLabel?: string | null;
   rewardAmount?: number | null;
   bonusText?: string | null;
   className?: string;
 }
 
 export function CashbackBanner({
+  cashbackAllowed,
+  userCashbackLabel,
   rewardAmount,
   className = "",
 }: CashbackBannerProps) {
   const [isAuth, setIsAuth] = useState(false);
 
+  const hasFixedReward = Boolean(rewardAmount && rewardAmount > 0);
+  const enabled = cashbackAllowed !== undefined ? cashbackAllowed : hasFixedReward;
+  const displayLabel =
+    userCashbackLabel?.trim() ||
+    (hasFixedReward && rewardAmount
+      ? `${rewardAmount.toLocaleString("cs-CZ")} Kč`
+      : null);
+
   useEffect(() => {
-    if (!rewardAmount || rewardAmount <= 0) return;
+    if (!enabled || !displayLabel) return;
     let active = true;
     fetch("/api/auth/session", { credentials: "same-origin" })
       .then((res) => (res.ok ? res.json() : null))
@@ -29,15 +41,13 @@ export function CashbackBanner({
     return () => {
       active = false;
     };
-  }, [rewardAmount]);
+  }, [enabled, displayLabel]);
 
-  // Zobrazujeme pouze u nabídek, které mají explicitně povolenou cashback odměnu
-  // (dodržuje pravidlo zákazu cashbacku u partnerských programů).
-  if (!rewardAmount || rewardAmount <= 0) {
+  // Zobrazujeme výhradně u nabídek s explicitně povoleným cashbackem
+  // (striktně dodržuje zákaz cashbacku u partnerských programů).
+  if (!enabled || !displayLabel) {
     return null;
   }
-
-  const rewardDisplay = `${rewardAmount.toLocaleString("cs-CZ")} Kč`;
 
   if (isAuth) {
     return (
@@ -50,9 +60,12 @@ export function CashbackBanner({
         >
           ✓
         </span>
-        <div className="flex-1">
-          <span className="font-semibold">Cashback aktivní:</span> Po využití nabídky a splnění podmínek ti připíšeme{" "}
-          <strong className="text-emerald-700 font-bold">{rewardDisplay}</strong> do tvé BONUSLY peněženky.
+        <div className="flex-1 leading-relaxed">
+          <span className="font-semibold">Cashback aktivní ({displayLabel}):</span> Díky přihlášení tvůj proklik automaticky měříme a po schválení partnerem ti připíšeme odměnu do{" "}
+          <Link href="/dashboard" className="font-bold text-emerald-800 underline underline-offset-2">
+            BONUSLY peněženky
+          </Link>
+          .
         </div>
       </div>
     );
@@ -63,20 +76,19 @@ export function CashbackBanner({
       className={`flex flex-col sm:flex-row sm:items-center justify-between gap-2 rounded-xl bg-amber-50/90 border border-amber-200/80 px-3.5 py-2.5 text-xs text-amber-900 ${className}`}
     >
       <div className="flex items-center gap-2">
-        <span aria-hidden="true" className="text-base">
-          🎁
+        <span aria-hidden="true" className="text-base shrink-0">
+          💰
         </span>
-        <div>
-          <span>Přihlas se a získej k této nabídce navíc </span>
-          <strong className="text-amber-800 font-bold">{rewardDisplay}</strong>
-          <span> do své BONUSLY peněženky!</span>
+        <div className="leading-relaxed">
+          <strong className="text-amber-950 font-bold">{displayLabel} navíc</strong>{" "}
+          <span>do tvé BONUSLY peněženky — stačí se před proklikem zdarma přihlásit.</span>
         </div>
       </div>
       <Link
         href="/prihlaseni"
         className="inline-flex items-center gap-1 font-bold text-amber-800 hover:text-amber-950 underline underline-offset-2 shrink-0 self-start sm:self-auto"
       >
-        Přihlásit se <span aria-hidden="true">→</span>
+        Aktivovat cashback <span aria-hidden="true">→</span>
       </Link>
     </div>
   );
