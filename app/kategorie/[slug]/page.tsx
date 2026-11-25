@@ -27,7 +27,7 @@ const getCategoryBySlug = cache(async (slug: string) => {
           category: true,
           promos: { where: { active: true }, orderBy: { order: "asc" } },
         },
-        orderBy: [{ featured: "desc" }, { rating: "desc" }, { createdAt: "desc" }],
+        orderBy: [{ priority: "desc" }, { featured: "desc" }, { rating: "desc" }, { createdAt: "desc" }],
       },
     },
   });

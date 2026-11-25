@@ -42,6 +42,7 @@ model Offer {
   affiliateUrl     String?
   trackingSlug     String     @unique
   rating           Float?
+  priority         Int        @default(0)
   featured         Boolean    @default(false)
   active           Boolean    @default(true)
   verified         Boolean    @default(false)
@@ -69,6 +70,7 @@ model Offer {
   updatedAt             DateTime   @updatedAt
 
   @@index([categoryId])
+  @@index([active, priority])
   @@index([active, featured])
   @@index([ehubCampaignId])
 }

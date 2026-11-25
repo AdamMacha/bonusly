@@ -43,10 +43,10 @@ export default async function Home() {
   const [featuredOffers, categories, rawActivePromos, latestArticles, heroArticles] =
     await Promise.all([
       prisma.offer.findMany({
-        where: { active: true, featured: true },
+        where: { active: true },
         include: { category: true },
         take: 9,
-        orderBy: [{ rating: "desc" }, { createdAt: "desc" }],
+        orderBy: [{ priority: "desc" }, { featured: "desc" }, { rating: "desc" }],
       }),
       prisma.category.findMany({
         include: { _count: { select: { offers: { where: { active: true } } } } },

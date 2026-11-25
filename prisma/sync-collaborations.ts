@@ -5,6 +5,7 @@ import { FINANCE_SERVICES_OFFERS } from "./data/offers-finance-services";
 import { ESHOP_OFFERS } from "./data/offers-eshops";
 import { NEW_EHUB_OFFERS } from "./data/offers-ehub-new";
 import { OFFER_CASHBACK_MAP } from "./data/ehub-cashback-map";
+import { computeOfferPriority } from "../lib/offer-priority";
 import type { OfferSeed } from "./data/types";
 
 export const ALL_OFFERS: OfferSeed[] = [
@@ -56,6 +57,14 @@ export async function syncCollaborations(prisma: PrismaClient) {
 
     const cbMeta = OFFER_CASHBACK_MAP[offer.slug];
     const cashbackAllowed = cbMeta ? cbMeta.cashbackAllowed : Boolean(offer.rewardAmount && offer.rewardAmount > 0);
+    const priority = computeOfferPriority({
+      slug: offer.slug,
+      partnerCommissionRate: cbMeta?.partnerCommissionRate ?? null,
+      cashbackAllowed,
+      promoCode: offer.promoCode ?? null,
+      hasPromos: Boolean(offer.promos && offer.promos.length > 0),
+      rating: offer.rating,
+    });
 
     const savedOffer = await prisma.offer.upsert({
       where: { slug: offer.slug },
@@ -84,6 +93,7 @@ export async function syncCollaborations(prisma: PrismaClient) {
         cashbackSharePct: cbMeta?.cashbackSharePct ?? null,
         userCashbackLabel: cbMeta?.userCashbackLabel ?? null,
         rating: offer.rating,
+        priority,
         featured: offer.featured,
         active: offer.active,
         verified: offer.verified,
@@ -117,6 +127,7 @@ export async function syncCollaborations(prisma: PrismaClient) {
         cashbackSharePct: cbMeta?.cashbackSharePct ?? null,
         userCashbackLabel: cbMeta?.userCashbackLabel ?? null,
         rating: offer.rating,
+        priority,
         featured: offer.featured,
         active: offer.active,
         verified: offer.verified,

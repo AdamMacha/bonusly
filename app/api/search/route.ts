@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
 
   if (!q) {
     const featuredOffers = await prisma.offer.findMany({
-      where: { active: true, featured: true },
+      where: { active: true },
       select: {
         slug: true,
         name: true,
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
         rating: true,
         category: { select: { name: true } },
       },
-      orderBy: [{ rating: "desc" }],
+      orderBy: [{ priority: "desc" }, { featured: "desc" }, { rating: "desc" }],
       take: 6,
     });
 
@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
         featured: true,
         category: { select: { name: true, slug: true } },
       },
-      orderBy: [{ featured: "desc" }, { rating: "desc" }],
+      orderBy: [{ priority: "desc" }, { featured: "desc" }, { rating: "desc" }],
     }),
     prisma.article.findMany({
       where: { draft: false },

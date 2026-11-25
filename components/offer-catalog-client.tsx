@@ -19,6 +19,7 @@ export interface CatalogOfferItem {
   promoCode?: string | null;
   cashbackLabel?: string | null;
   rating?: number | null;
+  priority?: number;
   verified: boolean;
   featured: boolean;
   hasPromos: boolean;
@@ -114,7 +115,10 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
           sorted.sort((a, b) => scoreOfferSearchMatch(b, q) - scoreOfferSearchMatch(a, q));
         } else {
           sorted.sort(
-            (a, b) => Number(b.featured) - Number(a.featured) || (b.rating || 0) - (a.rating || 0)
+            (a, b) =>
+              (b.priority || 0) - (a.priority || 0) ||
+              Number(b.featured) - Number(a.featured) ||
+              (b.rating || 0) - (a.rating || 0)
           );
         }
         break;

@@ -3441,7 +3441,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "shortDescription": "MAXXWIN NUTRITION s.r.o. je český výrobce prémiové sportovní výživy značky MAXXWIN® a produktů prémiové kvality pro zdraví, krásu a vitalitu značky Revix®.",
     "description": "MAXXWIN NUTRITION s.r.o. je český výrobce prémiové sportovní výživy značky MAXXWIN® a produktů prémiové kvality pro zdraví, krásu a vitalitu značky Revix®. Produkty jsou vyráběny pod přísnou certifikací IFS Food.\n\n### Jak získat Cashback 6 % na Maxxwin.cz?\n1. Přihlaste se zdarma do své **BONUSLY peněženky** (stačí e-mail).\n2. Přejděte na **Maxxwin.cz** přes tlačítko na této stránce (vypněte AdBlock a povolte cookies).\n3. Dokončete objednávku online — po schválení partnerem (obvykle do 50 dní) vám připíšeme **Cashback 6 %** přímo do peněženky.",
     "logo": "/logos/maxxwin.png",
-    "bonus": "Kód SMARTMW10 s kódem SMARTMW10 + Cashback 6 %",
+    "bonus": "Sleva 10 % s kódem SMARTMW10 + Cashback 6 %",
     "bonusDescription": "Na vše, kromě akční nabídky",
     "promoCode": "SMARTMW10",
     "promoCodeNote": "Na vše, kromě akční nabídky (do 31.12.2027)",
@@ -6730,7 +6730,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
   {
     "slug": "uvtnet",
     "name": "ÚVTnet.cz",
-    "categorySlug": "finance",
+    "categorySlug": "pojisteni-a-sluzby",
     "shortDescription": "Připojení k internetu po optické, metalické a bezdrátové síti kdekoliv v ČR. Kvalitní technické zázemí pro své klienty, kterým nabízíme technickou podporu 365 dní v roce.",
     "description": "Připojení k internetu po optické, metalické a bezdrátové síti kdekoliv v ČR. Kvalitní technické zázemí pro své klienty, kterým nabízíme technickou podporu 365 dní v roce.\n\n### Jak získat Cashback 500 Kč na ÚVTnet.cz?\n1. Přihlaste se zdarma do své **BONUSLY peněženky** (stačí e-mail).\n2. Přejděte na **ÚVTnet.cz** přes tlačítko na této stránce (vypněte AdBlock a povolte cookies).\n3. Dokončete objednávku online — po schválení partnerem (obvykle do 50 dní) vám připíšeme **Cashback 500 Kč** přímo do peněženky.",
     "logo": "/logos/uvtnet.png",

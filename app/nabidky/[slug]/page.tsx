@@ -113,7 +113,7 @@ export default async function OfferPage({ params }: Props) {
         slug: { notIn: excludedRelatedSlugs },
       },
       include: { category: true },
-      orderBy: [{ featured: "desc" }, { rating: "desc" }],
+      orderBy: [{ priority: "desc" }, { featured: "desc" }, { rating: "desc" }],
       take: 3,
     }),
     prisma.article.findMany({
@@ -140,7 +140,7 @@ export default async function OfferPage({ params }: Props) {
         },
       },
       include: { category: true },
-      orderBy: [{ featured: "desc" }, { rating: "desc" }],
+      orderBy: [{ priority: "desc" }, { featured: "desc" }, { rating: "desc" }],
       take: 3 - relatedOffers.length,
     });
     relatedOffers = [...relatedOffers, ...fallbackOffers];

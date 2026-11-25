@@ -32,7 +32,7 @@ export default async function NabidkyPage() {
         category: { select: { name: true, slug: true, icon: true } },
         _count: { select: { promos: { where: { active: true } } } },
       },
-      orderBy: [{ featured: "desc" }, { rating: "desc" }, { createdAt: "desc" }],
+      orderBy: [{ priority: "desc" }, { featured: "desc" }, { rating: "desc" }, { createdAt: "desc" }],
     }),
     prisma.category.findMany({
       include: { _count: { select: { offers: { where: { active: true } } } } },
@@ -51,6 +51,7 @@ export default async function NabidkyPage() {
     promoCode: o.promoCode,
     cashbackLabel: o.cashbackAllowed ? o.userCashbackLabel : null,
     rating: o.rating,
+    priority: o.priority,
     verified: o.verified,
     featured: o.featured,
     hasPromos: o._count.promos > 0,
