@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import { OfferLogo } from "./offer-logo";
 
 interface ArticleStickyBarProps {
   offer: {
@@ -23,17 +23,13 @@ export function ArticleStickyBar({ offer }: ArticleStickyBarProps) {
       <div className="max-w-5xl mx-auto flex items-center justify-between gap-3 sm:gap-6">
         {/* Left: Offer info */}
         <div className="flex items-center gap-3 min-w-0">
-          {offer.logo && (
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white border border-slate-100 shadow-xs flex-shrink-0 overflow-hidden p-1">
-              <Image
-                src={offer.logo}
-                alt={offer.name}
-                fill
-                unoptimized={offer.logo.endsWith(".svg")}
-                className="object-contain p-0.5"
-              />
-            </div>
-          )}
+          <OfferLogo
+            logo={offer.logo}
+            name={offer.name}
+            size="sticky"
+            alt={offer.name}
+            fallback="none"
+          />
           <div className="min-w-0">
             <div className="flex items-center gap-2">
               <span className="text-xs font-semibold uppercase tracking-wider text-green-dark">

@@ -1,7 +1,7 @@
 import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
+import { OfferLogo } from "@/components/offer-logo";
 import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -300,23 +300,7 @@ export default async function OfferPage({ params }: Props) {
         <article className="lg:col-span-2">
           {/* Offer header */}
           <header className="flex items-start gap-5">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-slate-50 border border-slate-200/80 shadow-xs">
-              {offer.logo ? (
-                <Image
-                  src={offer.logo}
-                  alt={`Logo ${offer.name}`}
-                  width={48}
-                  height={48}
-                  priority
-                  unoptimized={offer.logo.endsWith(".svg")}
-                  className="h-10 w-10 object-contain"
-                />
-              ) : (
-                <span aria-hidden="true" className="text-xl font-extrabold text-navy">
-                  {offer.name.slice(0, 2).toUpperCase()}
-                </span>
-              )}
-            </div>
+            <OfferLogo logo={offer.logo} name={offer.name} size="detail" fallback="plain" preload />
             <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-center gap-2 mb-1.5">
                 <Link

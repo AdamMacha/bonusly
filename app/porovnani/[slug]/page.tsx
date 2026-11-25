@@ -1,7 +1,7 @@
 import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Image from "next/image";
+import { OfferLogo } from "@/components/offer-logo";
 import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -150,22 +150,7 @@ export default async function PorovnaniSlugPage({ params }: Props) {
           >
             <div>
               <div className="flex items-center gap-4 mb-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-slate-50 border border-slate-100">
-                  {offer.logo ? (
-                    <Image
-                      src={offer.logo}
-                      alt={`Logo ${offer.name}`}
-                      width={40}
-                      height={40}
-                      unoptimized={offer.logo.endsWith(".svg")}
-                      className="h-8 w-8 object-contain"
-                    />
-                  ) : (
-                    <span aria-hidden="true" className="text-lg font-extrabold text-navy">
-                      {offer.name.slice(0, 2).toUpperCase()}
-                    </span>
-                  )}
-                </div>
+                <OfferLogo logo={offer.logo} name={offer.name} size="comparison" fallback="plain" />
                 <div>
                   <h2 className="text-2xl font-bold text-navy">{offer.name}</h2>
                   <div className="flex items-center gap-2 mt-1">

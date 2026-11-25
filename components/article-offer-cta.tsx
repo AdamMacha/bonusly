@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { OfferLogo } from "./offer-logo";
 import Link from "next/link";
 import { CashbackBanner } from "./cashback-banner";
 
@@ -61,21 +61,13 @@ export function ArticleOfferHeroCta({ offer }: ArticleOfferCtaProps) {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
         {/* Offer info */}
         <div className="flex items-start gap-4">
-          {offer.logo ? (
-            <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white border border-slate-200 shadow-xs flex-shrink-0 overflow-hidden p-2">
-              <Image
-                src={offer.logo}
-                alt={offer.name}
-                fill
-                unoptimized={offer.logo.endsWith(".svg")}
-                className="object-contain p-1"
-              />
-            </div>
-          ) : (
-            <div className="w-14 h-14 rounded-2xl bg-navy text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
-              {offer.name.charAt(0)}
-            </div>
-          )}
+          <OfferLogo
+            logo={offer.logo}
+            name={offer.name}
+            size="cta"
+            alt={offer.name}
+            fallback="navy-initial"
+          />
 
           <div>
             <h3 className="text-xl font-bold text-navy leading-tight">

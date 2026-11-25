@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { OfferLogo } from "./offer-logo";
 
 interface OfferCardProps {
   slug: string;
@@ -12,22 +12,6 @@ interface OfferCardProps {
   categoryName: string;
   verified: boolean;
   featured?: boolean;
-}
-
-const monogramColors = [
-  "bg-emerald-50 text-emerald-700 border-emerald-200/70",
-  "bg-sky-50 text-sky-700 border-sky-200/70",
-  "bg-indigo-50 text-indigo-700 border-indigo-200/70",
-  "bg-amber-50 text-amber-700 border-amber-200/70",
-  "bg-rose-50 text-rose-700 border-rose-200/70",
-];
-
-function getMonogramStyle(name: string): string {
-  let hash = 0;
-  for (let i = 0; i < name.length; i++) {
-    hash = (hash * 31 + name.charCodeAt(i)) % monogramColors.length;
-  }
-  return monogramColors[Math.abs(hash) % monogramColors.length];
 }
 
 export function OfferCard({
@@ -64,26 +48,8 @@ export function OfferCard({
       )}
 
       <div>
-        <div className="flex items-start gap-4">
-          {logo ? (
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-slate-50 border border-slate-100">
-              <Image
-                src={logo}
-                alt={`Logo ${name}`}
-                width={32}
-                height={32}
-                unoptimized={logo.endsWith(".svg")}
-                className="h-8 w-8 object-contain"
-              />
-            </div>
-          ) : (
-            <div
-              aria-hidden="true"
-              className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border font-extrabold text-base ${getMonogramStyle(name)}`}
-            >
-              {name.slice(0, 2).toUpperCase()}
-            </div>
-          )}
+        <div className="flex items-start gap-3.5">
+          <OfferLogo logo={logo} name={name} size="card" />
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-navy group-hover:text-green-dark transition-colors truncate">
               {name}

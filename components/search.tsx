@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
+import { OfferLogo } from "./offer-logo";
 
 interface SearchOffer {
   slug: string;
@@ -170,22 +170,13 @@ export function Search() {
               onClick={closeSearch}
               className="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors"
             >
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-100 border border-slate-200/70">
-                {offer.logo ? (
-                  <Image
-                    src={offer.logo}
-                    alt={offer.name}
-                    width={24}
-                    height={24}
-                    unoptimized={offer.logo.endsWith(".svg")}
-                    className="h-6 w-6 object-contain"
-                  />
-                ) : (
-                  <span className="text-xs font-extrabold text-navy">
-                    {offer.name.slice(0, 2).toUpperCase()}
-                  </span>
-                )}
-              </div>
+              <OfferLogo
+                logo={offer.logo}
+                name={offer.name}
+                size="search"
+                alt={offer.name}
+                fallback="plain"
+              />
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
                   <p className="text-sm font-bold text-navy truncate">{offer.name}</p>

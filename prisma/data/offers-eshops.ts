@@ -21,7 +21,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Prověřená kvalita a garance:** Každý telefon prochází kontrolou funkčnosti a stavu baterie.
 - **Rychlé doručení po celé ČR** a široká nabídka příslušenství (kryty, tvrzená skla, nabíječky).
     `.trim(),
-    logo: null,
+    logo: "/logos/jabkolevne.png",
     bonus: "Sleva 600 Kč s kódem sleva600 (nad 2 000 Kč bez DPH)",
     bonusDescription:
       "Zkopírujte slevový kód sleva600 a uplatněte jej v košíku pro okamžitou slevu 600 Kč (platí do 31. 12. 2027).",
@@ -107,7 +107,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Transparentní kategorie stavu:** Přesně víte, jaký vizuální stav kupujete (od stavu nového kusu až po cenově nejvýhodnější).
 - **Záruka a bezproblémové vrácení:** Nakupujete od českého obchodníka se zárukou, nikoliv s rizikem bazaru.
     `.trim(),
-    logo: null,
+    logo: "/logos/iphonemarket.png",
     bonus: "Sleva 400 Kč s kódem SLEVA400 (nad 2 000 Kč)",
     bonusDescription:
       "Uplatněte ověřený slevový kód SLEVA400 v košíku na iPhoneMarket.cz a získejte 400 Kč slevu (do 31. 12. 2026).",
@@ -192,7 +192,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Certifikát pravosti diamantů a doživotní servis:** Bezplatné čištění a kontrola zasazení kamenů.
 - **Luxusní dárkové balení a doprava zdarma** včetně pojištěného doručení.
     `.trim(),
-    logo: null,
+    logo: "/logos/brilianty.png",
     bonus: "Black Friday sleva 15 % s kódem BF2026 (do 29. 11. 2026)",
     bonusDescription:
       "Ušetřete 15 % na nezlevněných diamantových a zlatých špercích české výroby s kódem BF2026.",
@@ -273,7 +273,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Výhodné financování i slevy pro studenty a učitele (ISIC/ITIC):** Pravidelné akce na MacBooky a iPady do školy.
 - **Autorizovaný Apple servis a osobní vyzvednutí** na prodejnách po celé ČR.
     `.trim(),
-    logo: null,
+    logo: "/logos/istyle.png",
     bonus: "Výkup na protiúčet, studentské slevy a splátky online",
     bonusDescription:
       "Kompletní originální sortiment Apple s oficiální zárukou, výkupem starého zařízení a autorizovaným servisem.",
@@ -336,7 +336,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Audio, TV & osobní péče:** Bluetooth reproduktory, sluchátka, elektrické zubní kartáčky a fény.
 - **Sezónní akce a sady přímo od značky**, které v běžných řetězcích nenajdete.
     `.trim(),
-    logo: null,
+    logo: "/logos/sencor.png",
     bonus: "Oficiální e-shop výrobce · kompletní sortiment a akce",
     bonusDescription:
       "Kuchyňské roboty, kávovary, vysavače a spotřební elektronika přímo ze skladu oficiálního obchodu Sencor.cz.",
@@ -391,7 +391,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Letecká škola a legislativní podpora:** Školení A1/A3, A2 i pokročilé kurzy natáčení.
 - **Vlastní servis a kamenná prodejna v Praze** s možností osobního vyzkoušení.
     `.trim(),
-    logo: null,
+    logo: "/logos/dronpro.png",
     bonus: "Odborné poradenství, servis a letecká škola v ČR",
     bonusDescription:
       "Špičková nabídka dronů DJI, stabilizátorů a akčních kamer s českou podporou, servisem a kurzy pilotáže.",
@@ -445,7 +445,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Bleskové slevy (Flash Deals) a kupony pro nové zákazníky:** Při první objednávce bývají k dispozici uvítací kupony přímo v účtu.
 - **Bezpečná platba:** Doporučujeme platit přes PayPal nebo jednorázovou virtuální kartu (např. Revolut).
     `.trim(),
-    logo: null,
+    logo: "/logos/banggood.png",
     bonus: "EU & CZ sklady bez cla a DPH + denní Flash Deals",
     bonusDescription:
       "Tisíce technologických vychytávek, nářadí a chytré elektroniky za zlomek běžných cen s rychlým doručením z EU skladů.",
@@ -501,7 +501,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Sledujte recenze s reálnými fotkami** a vybírejte ověřené prodejce s hodnocením nad 95 %.
 - **Plaťte v eurech nebo dolarech kartou bez kurzové přirážky** (např. Revolut), ušetříte další 2–4 % oproti přepočtu do CZK.
     `.trim(),
-    logo: null,
+    logo: "/logos/aliexpress.png",
     bonus: "Výprodeje až 90 % · AliExpress Choice s dopravou zdarma",
     bonusDescription:
       "Přes 100 milionů produktů za bezkonkurenční ceny s rychlým doručením a automaticky vyřešeným DPH (do 150 EUR).",
@@ -558,7 +558,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Zdravotní a partnerské matrace:** Přehledný výběr tuhosti a certifikované materiály bez škodlivin.
 - **Možnost osobního vyzkoušení na prodejnách** i pohodlného doručení až domů s výnosem.
     `.trim(),
-    logo: null,
+    logo: "/logos/spime.png",
     bonus: "České masivní postele a matrace přímo od výrobce",
     bonusDescription:
       "Poctivá česká výroba Postelia: dlouhá záruka, možnost atypických rozměrů a odborné poradenství pro zdravý spánek.",
@@ -613,7 +613,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Trampolíny Marimex:** Bezpečnostní sítě, certifikovaná nosnost a náhradní díly skladem.
 - **Bazénová chemie a vysavače** pro křišťálově čistou vodu po celé léto.
     `.trim(),
-    logo: null,
+    logo: "/logos/marimex.png",
     bonus: "Kompletní bazénové sety, infrasauny a sezónní výprodeje",
     bonusDescription:
       "Špičkové bazény, vířivky, infrasauny a trampolíny s jistotou českého servisu a dlouhodobé dostupnosti náhradních dílů.",
@@ -668,7 +668,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Stropní, krbové i průmyslové ventilátory** a kompletní potrubní komponenty na jednom místě.
 - **Odborné technické parametry a rychlé dodání** ze skladu v ČR.
     `.trim(),
-    logo: null, // Zákaz loga dle podmínek!
+    logo: "/logos/ventilatory.png",
     bonus: "Kompletní vzduchotechnika a rekuperace skladem",
     bonusDescription:
       "Tiché koupelnové, potrubní, krbové i stropní ventilátory a lokální rekuperace s rychlým doručením po ČR.",
@@ -723,7 +723,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Alu kola a ocelové disky:** Snadný konfigurátor podle značky a modelu vašeho vozidla.
 - **Rychlá expedice před přezouvací sezónou** přímo k vám domů nebo rovnou do pneuservisu.
     `.trim(),
-    logo: null,
+    logo: "/logos/originalnipneu.png",
     bonus: "Pneumatiky s uvedením DOT a rychlá expedice",
     bonusDescription:
       "Ověřené značky Goodyear, Michelin, Continental, Barum i alu kola za výhodné online ceny.",
@@ -777,7 +777,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Možnost osobního vyzkoušení a půjčovna v Praze:** Otestujte si prkno před koupí nebo si nechte sestavit komplet na míru.
 - **Kompletní náhradní díly a servis:** Kolečka, ložiska, trucky, griptapy, chrániče i helmy skladem.
     `.trim(),
-    logo: null,
+    logo: "/logos/honzovy-longboardy.png",
     bonus: "Odborné poradenství, top značky a půjčovna v Praze",
     bonusDescription:
       "Prověřené longboardy, skateboardy, surfskaty, trekové brusle a koloběžky od nadšenců s tradicí.",
@@ -831,7 +831,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 - **Dřevěné a rozvojové hračky:** Kvalitní, bezpečné materiály podporující jemnou motoriku a kreativitu.
 - **Vše na jednom místě pro všechny věkové kategorie** od miminek až po školáky.
     `.trim(),
-    logo: null,
+    logo: "/logos/ministerstvo-hracek.png",
     bonus: "Elektrická autíčka i ručně vyráběné dřevěné hračky",
     bonusDescription:
       "Široký výběr originálních a bezpečných dětských hraček pro narozeniny, svátky i Vánoce s rychlým doručením.",
@@ -887,7 +887,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
 
 *Poznámka: Nabídka je určena výhradně osobám starším 18 let.*
     `.trim(),
-    logo: null,
+    logo: "/logos/eroticcity.png",
     bonus: "100% diskrétní doručení a prémiové značky (18+)",
     bonusDescription:
       "Největší český specialista s neoznačeným diskrétním balením a rychlým odesláním do výdejních boxů i domů.",

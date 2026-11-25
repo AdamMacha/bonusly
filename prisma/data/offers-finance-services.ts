@@ -24,7 +24,7 @@ export const FINANCE_SERVICES_OFFERS: OfferSeed[] = [
 2. Dokončete online registraci přímo ve webovém prohlížeči a ověřte svůj e-mail i totožnost (např. přes BankID).
 3. Nastavte si pravidelný investiční příkaz a využívejte akční podmínky bez zbytečných poplatků.
     `.trim(),
-    logo: null,
+    logo: "/logos/patria-finance.png",
     bonus: "Pravidelné ETF bez nákupních poplatků (do 31. 12. 2026)",
     bonusDescription:
       "Do 31. 12. 2026 pravidelné investice do ETF bez nákupních poplatků + Investice pro mladé bez vstupního poplatku.",
@@ -186,7 +186,7 @@ export const FINANCE_SERVICES_OFFERS: OfferSeed[] = [
 - **Kompletní péče a pojištění:** Portu Gallery zajišťuje odborné posouzení pravosti, bezpečné uskladnění i pojištění předmětů.
 - **Propojení s ekosystémem Portu:** Transparentní česká platforma skupiny WOOD & Company.
     `.trim(),
-    logo: "/logos/portu.png",
+    logo: "/logos/portu-gallery.png",
     bonus: "Investice do sběratelských aktiv již od 1 Kč",
     bonusDescription:
       "Založte účet online zdarma a diverzifikujte portfolio investicí do veteránů, umění, hodinek či archivních vín.",
@@ -254,7 +254,7 @@ export const FINANCE_SERVICES_OFFERS: OfferSeed[] = [
 2. Dokončete rychlé online AML ověření identity a smluvní dokumentaci.
 3. Vyberte si ze seznamu aktuálních nemovitostních projektů a zainvestujte již od 5 000 Kč.
     `.trim(),
-    logo: null,
+    logo: "/logos/roier.png",
     bonus: "Měsíční výnosy zajištěné nemovitostmi (LTV max. 70 %)",
     bonusDescription:
       "Investice bez vstupních poplatků do pečlivě prověřených úvěrů krytých nemovitostmi s pravidelnou měsíční výplatou výnosů.",
@@ -321,7 +321,7 @@ Noví investoři registrovaní přes náš odkaz získají **vstupní bonus 1 % 
 - **Zajištění nemovitostí v ČR/SR:** Zástavní právo a notářský zápis s přímou vykonatelností.
 - **Vstupní bonus 1 %** ze všech investic provedených v prvních 30 dnech od registrace.
     `.trim(),
-    logo: null,
+    logo: "/logos/rondainvest.png",
     bonus: "Vstupní bonus 1 % + výnos až 9 % p.a.",
     bonusDescription:
       "Získejte vstupní bonus 1 % ze zainvestované částky v prvních 30 dnech od registrace + měsíční výnosy bez poplatků.",
@@ -388,7 +388,7 @@ Noví investoři registrovaní přes náš odkaz získají **vstupní bonus 1 % 
 ### Pro koho je Flowpay nejvhodnější?
 E-shopy, restaurace, kavárny, služby a rostoucí OSVČ s prokazatelnou historií tržeb, které potřebují rychle a flexibilně podpořit svůj růst.
     `.trim(),
-    logo: null,
+    logo: "/logos/flowpay.png",
     bonus: "Až 2,5 mil. Kč bez zástavy · předčasné splacení zdarma",
     bonusDescription:
       "Rychlé online financování pro OSVČ a firmy s možností předčasného splacení zdarma i odkladu splátky.",
@@ -752,7 +752,7 @@ Vlastníte byt k pronájmu, ale nechcete řešit shánění nájemníků, neplat
 ### Pro koho je služba nejlepší?
 Pro majitele investičních bytů v Praze, Brně a dalších velkých městech, kteří chtějí skutečně pasivní příjem bez rizika a časové zátěže.
     `.trim(),
-    logo: null,
+    logo: "/logos/stalynajem.png",
     bonus: "Garantovaný měsíční nájem + bezplatná kalkulace online",
     bonusDescription:
       "Spočítejte si zdarma garantovaný měsíční příjem z vašeho bytu a předejte kompletní správu profesionálům.",
@@ -819,7 +819,7 @@ Pro majitele investičních bytů v Praze, Brně a dalších velkých městech, 
 ### Jak získat online slevu naplno?
 Vyberte si konkrétní typ pojištění v přehledu akcí výše a sjednejte pojistku přímo v online kalkulačce na webu ČSOB Pojišťovny (nepřecházejte během procesu do mobilní aplikace ČSOB SMART, aby zůstala online sleva korektně připsána).
     `.trim(),
-    logo: null, // Zákaz použití loga mimo administraci dle podmínek!
+    logo: "/logos/csob-pojistovna.png",
     bonus: "Online sleva až 20 % + Alza poukázka 500 Kč",
     bonusDescription:
       "Do 30. 11. 2026: sleva 20 % na cestovní a autopojištění, 10 % na odpovědnost a Alza poukázka 500 Kč k pojištění majetku.",
@@ -931,7 +931,7 @@ Vyberte si konkrétní typ pojištění v přehledu akcí výše a sjednejte poj
 ### Jak objednat nejvýhodněji?
 Klikněte na vybranou promo kartu výše, zkontrolujte dostupnost internetu nebo si nakonfigurujte tarif přímo na webu Vodafone.cz (v prohlížeči) a odešlete nezávaznou objednávku či žádost o zavolání operátora.
     `.trim(),
-    logo: null,
+    logo: "/logos/vodafone.png",
     bonus: "BezLimitu M za 472 Kč · Internet za 299 Kč · Disney+ zdarma",
     bonusDescription:
       "Do 30. 11. 2026: Black Friday tarif za 472 Kč, internet na rok za 299 Kč/měs. a sleva až 17 000 Kč na telefony + Disney+ na 3 měsíce zdarma.",
@@ -1030,7 +1030,7 @@ Klikněte na vybranou promo kartu výše, zkontrolujte dostupnost internetu nebo
 - **Vyřízení přechodu zdarma:** Při změně dodavatele vyřídí innogy veškerou administrativu i výpověď u stávajícího dodavatele za vás.
 - **Rychlá online poptávka:** Stačí zanechat kontakt v online formuláři a specialista vám připraví srovnání na míru vaší spotřebě.
     `.trim(),
-    logo: null, // Zákaz použití loga mimo oficiální podklady dle podmínek!
+    logo: "/logos/innogy.png",
     bonus: "Nezávazná kalkulace levnější elektřiny a plynu zdarma",
     bonusDescription:
       "Porovnejte své stávající zálohy za elektřinu a plyn s nabídkou jednoho z největších dodavatelů v ČR.",
@@ -1096,7 +1096,7 @@ Klikněte na vybranou promo kartu výše, zkontrolujte dostupnost internetu nebo
 ### Jak získat individuální nabídku?
 Vyplňte krátký nezávazný poptávkový formulář na webu E.ON.cz s platným telefonním číslem. Energetický poradce s vámi probere vaše potřeby a spočítá konkrétní roční úsporu.
     `.trim(),
-    logo: null,
+    logo: "/logos/eon.png",
     bonus: "Nezávazná nabídka energií, FVE i tepelných čerpadel",
     bonusDescription:
       "Srovnejte cenu elektřiny a plynu nebo získejte bezplatný návrh fotovoltaiky či tepelného čerpadla s dotací.",
