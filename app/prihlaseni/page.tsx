@@ -17,6 +17,8 @@ interface Props {
 export default async function PrihlaseniPage({ searchParams }: Props) {
   const session = await auth();
   const { callbackUrl = "/dashboard", error } = await searchParams;
+  const showDemoLogin =
+    process.env.ENABLE_DEMO_LOGIN === "true" || process.env.NODE_ENV !== "production";
 
   if (session?.user) {
     redirect(callbackUrl);
@@ -31,6 +33,9 @@ export default async function PrihlaseniPage({ searchParams }: Props) {
 
   async function handleQuickLogin(formData: FormData) {
     "use server";
+    if (process.env.ENABLE_DEMO_LOGIN !== "true" && process.env.NODE_ENV === "production") {
+      return;
+    }
     const email = formData.get("email") as string;
     const targetUrl = (formData.get("callbackUrl") as string) || "/dashboard";
     await signIn("credentials", { email, redirectTo: targetUrl });
@@ -47,7 +52,7 @@ export default async function PrihlaseniPage({ searchParams }: Props) {
           </div>
           <h1 className="text-3xl font-bold text-navy tracking-tight">Vítej v BONUSLY</h1>
           <p className="mt-2 text-sm text-slate-500">
-            Získej přístup k cashback peněžence, sleduj své odměny a nech si vyplácet provize přímo na účet.
+            Přihlas se do své BONUSLY peněženky pro sledování cashback odměn u vybraných nabídek (většinu slevových kódů a partnerských bonusů můžeš využít i bez přihlášení).
           </p>
         </div>
 
@@ -87,40 +92,43 @@ export default async function PrihlaseniPage({ searchParams }: Props) {
             </button>
           </form>
 
-          <div className="relative my-6">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-slate-200" />
-            </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-white px-3 text-slate-400 font-medium">nebo rychlé přihlášení</span>
-            </div>
-          </div>
+          {showDemoLogin && (
+            <>
+              <div className="relative my-6">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-slate-200" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-white px-3 text-slate-400 font-medium">nebo testovací režim</span>
+                </div>
+              </div>
 
-          {/* Quick Login Form for testing / instant access */}
-          <form action={handleQuickLogin}>
-            <input type="hidden" name="callbackUrl" value={callbackUrl} />
-            <input type="hidden" name="email" value="uzivatel@bonusly.cz" />
-            <button
-              type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-slate-100 hover:text-navy transition-colors cursor-pointer"
-            >
-              <span>⚡ Vyzkoušet demo účet (uzivatel@bonusly.cz)</span>
-            </button>
-          </form>
+              <form action={handleQuickLogin}>
+                <input type="hidden" name="callbackUrl" value={callbackUrl} />
+                <input type="hidden" name="email" value="uzivatel@bonusly.cz" />
+                <button
+                  type="submit"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-slate-100 hover:text-navy transition-colors cursor-pointer"
+                >
+                  <span>⚡ Vyzkoušet demo účet (uzivatel@bonusly.cz)</span>
+                </button>
+              </form>
+            </>
+          )}
 
           {/* Value Props */}
           <div className="mt-8 pt-6 border-t border-slate-100 space-y-2.5 text-xs text-slate-600">
             <div className="flex items-center gap-2">
               <span className="text-green font-bold">✓</span>
-              <span>Žádná složitá hesla – bezpečné přihlášení přes e-mail</span>
+              <span>Žádná složitá hesla – bezpečné přihlášení jednorázovým odkazem na e-mail</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-green font-bold">✓</span>
-              <span>Automatické připsání provizí při prokliku nabídek</span>
+              <span>Připsání extra BONUSLY cashbacku u nabídek označených štítkem odměny</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-green font-bold">✓</span>
-              <span>Rychlá výplata přímo na bankovní účet v ČR od 500 Kč</span>
+              <span>Výplata schválených odměn přímo na bankovní účet v ČR od 500 Kč</span>
             </div>
           </div>
         </div>

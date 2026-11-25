@@ -4,8 +4,8 @@ import { Prisma } from "@prisma/client";
 import { OfferGrid } from "@/components/offer-grid";
 import { ArticleGrid } from "@/components/article-grid";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-
 import { buildCanonical } from "@/lib/seo";
+import { matchesSearchQuery, normalizeSearchText } from "@/lib/search";
 
 export const metadata: Metadata = {
   title: "Vyhledávání nabídek a článků",
@@ -29,32 +29,39 @@ export default async function HledaniPage({ searchParams }: Props) {
   let articles: SearchArticle[] = [];
 
   if (query) {
-    [offers, articles] = await Promise.all([
+    const [allOffers, allArticles] = await Promise.all([
       prisma.offer.findMany({
-        where: {
-          active: true,
-          OR: [
-            { name: { contains: query, mode: "insensitive" } },
-            { shortDescription: { contains: query, mode: "insensitive" } },
-            { description: { contains: query, mode: "insensitive" } },
-          ],
-        },
+        where: { active: true },
         include: { category: true },
-        take: 20,
+        orderBy: [{ featured: "desc" }, { rating: "desc" }],
       }),
       prisma.article.findMany({
-        where: {
-          draft: false,
-          OR: [
-            { title: { contains: query, mode: "insensitive" } },
-            { excerpt: { contains: query, mode: "insensitive" } },
-            { content: { contains: query, mode: "insensitive" } },
-          ],
-        },
+        where: { draft: false },
         include: { category: true, author: true },
-        take: 20,
+        orderBy: { publishedAt: "desc" },
       }),
     ]);
+
+    const normQ = normalizeSearchText(query);
+
+    offers = allOffers
+      .filter((o) => {
+        const hay = `${o.name} ${o.slug} ${o.shortDescription} ${o.description} ${o.bonus || ""} ${o.promoCode || ""} ${o.category.name} ${o.category.slug}`;
+        return matchesSearchQuery(hay, query);
+      })
+      .sort((a, b) => {
+        const aName = normalizeSearchText(a.name).includes(normQ) ? 1 : 0;
+        const bName = normalizeSearchText(b.name).includes(normQ) ? 1 : 0;
+        return bName - aName || Number(b.featured) - Number(a.featured) || (b.rating || 0) - (a.rating || 0);
+      })
+      .slice(0, 24);
+
+    articles = allArticles
+      .filter((a) => {
+        const hay = `${a.title} ${a.excerpt} ${a.content} ${a.keywords.join(" ")} ${a.category.name}`;
+        return matchesSearchQuery(hay, query);
+      })
+      .slice(0, 20);
   }
 
   const totalResults = offers.length + articles.length;
@@ -64,14 +71,14 @@ export default async function HledaniPage({ searchParams }: Props) {
       <Breadcrumbs items={[{ label: "Hledání" }]} />
 
       <h1 className="text-3xl font-bold text-navy tracking-tight mb-2">
-        {query ? `Výsledky pro „${query}"` : "Hledání"}
+        {query ? `Výsledky pro „${query}“` : "Hledání"}
       </h1>
 
       {query ? (
         <p className="text-slate-500 mb-10">
           {totalResults === 0
             ? "Nebyla nalezena žádná nabídka ani článek."
-            : `Nalezeno ${totalResults} ${totalResults === 1 ? "výsledek" : "výsledků"}.`}
+            : `Nalezeno ${totalResults} ${totalResults === 1 ? "výsledek" : totalResults < 5 ? "výsledky" : "výsledků"}.`}
         </p>
       ) : (
         <p className="text-slate-500 mb-10">Zadejte hledaný výraz do vyhledávacího pole v navigaci.</p>

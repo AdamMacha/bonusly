@@ -21,7 +21,7 @@ export function Navbar() {
           <div className="flex items-center gap-8">
             <Link
               href="/"
-              className="flex items-center gap-2 bg-white/95 hover:bg-white transition-all px-2.5 py-1 rounded-lg shadow-sm"
+              className="flex shrink-0 items-center gap-2 bg-white/95 hover:bg-white transition-all px-2.5 py-1 rounded-lg shadow-sm"
             >
               <Image
                 src="/logo.png"
@@ -29,7 +29,7 @@ export function Navbar() {
                 width={120}
                 height={30}
                 className="h-6 w-auto object-contain"
-                priority
+                preload
               />
             </Link>
             <div className="hidden lg:flex items-center gap-1">
@@ -37,21 +37,21 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+                  className="px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors rounded-lg hover:bg-white/5 whitespace-nowrap"
                 >
                   {link.label}
                 </Link>
               ))}
             </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5 shrink-0">
             <div className="hidden sm:block">
               <Search />
             </div>
             <UserNav />
             <Link
               href="/nabidky"
-              className="hidden sm:inline-flex items-center gap-2 rounded-lg bg-green px-4 py-2 text-sm font-semibold text-navy hover:bg-green-light transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 rounded-lg bg-green px-4 py-2 text-sm font-semibold text-navy hover:bg-green-light transition-colors whitespace-nowrap"
             >
               Prozkoumat nabídky
             </Link>

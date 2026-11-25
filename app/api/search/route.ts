@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { matchesSearchQuery, normalizeSearchText } from "@/lib/search";
 
 export async function GET(request: NextRequest) {
   const q = (request.nextUrl.searchParams.get("q") || "").trim();
@@ -30,50 +31,79 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const [offers, articles] = await Promise.all([
+  // Načteme aktivní nabídky a články (malý katalog ~41 nabídek / ~7 článků)
+  // a aplikujeme chytré české vyhledávání bez diakritiky a se synonymy.
+  const [allOffers, allArticles] = await Promise.all([
     prisma.offer.findMany({
-      where: {
-        active: true,
-        OR: [
-          { name: { contains: q, mode: "insensitive" } },
-          { shortDescription: { contains: q, mode: "insensitive" } },
-          { bonus: { contains: q, mode: "insensitive" } },
-          { promoCode: { contains: q, mode: "insensitive" } },
-          { category: { name: { contains: q, mode: "insensitive" } } },
-        ],
-      },
+      where: { active: true },
       select: {
         slug: true,
         name: true,
+        shortDescription: true,
         bonus: true,
         promoCode: true,
         logo: true,
         rating: true,
-        category: { select: { name: true } },
+        featured: true,
+        category: { select: { name: true, slug: true } },
       },
       orderBy: [{ featured: "desc" }, { rating: "desc" }],
-      take: 6,
     }),
     prisma.article.findMany({
-      where: {
-        draft: false,
-        OR: [
-          { title: { contains: q, mode: "insensitive" } },
-          { excerpt: { contains: q, mode: "insensitive" } },
-        ],
-      },
+      where: { draft: false },
       select: {
         slug: true,
         title: true,
-        category: { select: { name: true } },
+        excerpt: true,
+        keywords: true,
+        category: { select: { name: true, slug: true } },
       },
       orderBy: { publishedAt: "desc" },
-      take: 3,
     }),
   ]);
 
+  const normQ = normalizeSearchText(q);
+
+  const matchedOffers = allOffers
+    .filter((o) => {
+      const hay = `${o.name} ${o.slug} ${o.shortDescription} ${o.bonus || ""} ${o.promoCode || ""} ${o.category.name} ${o.category.slug}`;
+      return matchesSearchQuery(hay, q);
+    })
+    .sort((a, b) => {
+      // Přesnější shody v názvu nebo promo kódu mají přednost
+      const aName = normalizeSearchText(a.name).includes(normQ) ? 2 : 0;
+      const bName = normalizeSearchText(b.name).includes(normQ) ? 2 : 0;
+      const aCode = a.promoCode && normalizeSearchText(a.promoCode).includes(normQ) ? 2 : 0;
+      const bCode = b.promoCode && normalizeSearchText(b.promoCode).includes(normQ) ? 2 : 0;
+      const diff = bName + bCode - (aName + aCode);
+      if (diff !== 0) return diff;
+      return Number(b.featured) - Number(a.featured) || (b.rating || 0) - (a.rating || 0);
+    })
+    .slice(0, 8)
+    .map(({ slug, name, bonus, promoCode, logo, rating, category }) => ({
+      slug,
+      name,
+      bonus,
+      promoCode,
+      logo,
+      rating,
+      category: { name: category.name },
+    }));
+
+  const matchedArticles = allArticles
+    .filter((a) => {
+      const hay = `${a.title} ${a.excerpt} ${a.keywords.join(" ")} ${a.category.name}`;
+      return matchesSearchQuery(hay, q);
+    })
+    .slice(0, 4)
+    .map(({ slug, title, category }) => ({
+      slug,
+      title,
+      category: { name: category.name },
+    }));
+
   return NextResponse.json(
-    { offers, articles },
+    { offers: matchedOffers, articles: matchedArticles },
     {
       headers: {
         "Cache-Control": "public, s-maxage=120, stale-while-revalidate=300",

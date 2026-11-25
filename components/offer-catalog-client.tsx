@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { OfferCard } from "./offer-card";
+import { extractBonusValue, matchesSearchQuery } from "@/lib/search";
 
 export interface CatalogOfferItem {
   slug: string;
@@ -36,22 +37,6 @@ interface OfferCatalogClientProps {
 
 type SortKey = "featured" | "bonus" | "rating" | "promo" | "alpha";
 
-function extractBonusValue(bonus?: string | null): number {
-  if (!bonus) return 0;
-  // Najde částky v Kč typu "4 000 Kč", "3 000 Kč", "600 Kč"
-  const kcMatches = Array.from(bonus.matchAll(/(\d[\d\s]*)\s*Kč/gi));
-  if (kcMatches.length > 0) {
-    return Math.max(
-      ...kcMatches.map((m) => parseInt(m[1].replace(/\s+/g, ""), 10) || 0)
-    );
-  }
-  const pctMatch = bonus.match(/(\d+(?:[.,]\d+)?)\s*%/);
-  if (pctMatch) {
-    return parseFloat(pctMatch[1].replace(",", ".")) * 10;
-  }
-  return 0;
-}
-
 export function OfferCatalogClient({ offers, categories }: OfferCatalogClientProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [onlyWithPromo, setOnlyWithPromo] = useState(false);
@@ -59,7 +44,7 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
   const [query, setQuery] = useState("");
 
   const filteredOffers = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const q = query.trim();
     const list = offers.filter((offer) => {
       if (selectedCategory !== "all" && offer.category.slug !== selectedCategory) {
         return false;
@@ -68,8 +53,8 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
         return false;
       }
       if (q) {
-        const hay = `${offer.name} ${offer.shortDescription} ${offer.bonus || ""} ${offer.promoCode || ""} ${offer.category.name}`.toLowerCase();
-        if (!hay.includes(q)) return false;
+        const hay = `${offer.name} ${offer.slug} ${offer.shortDescription} ${offer.bonus || ""} ${offer.promoCode || ""} ${offer.category.name} ${offer.category.slug}`;
+        if (!matchesSearchQuery(hay, q)) return false;
       }
       return true;
     });
@@ -117,7 +102,7 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Hledat značku, bonus nebo kód (např. iPhone, banka, ETF)..."
+              placeholder="Hledat značku, bonus nebo kód..."
               className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-navy placeholder:text-slate-400 focus:border-green focus:outline-none focus:ring-2 focus:ring-green/20"
             />
           </search>

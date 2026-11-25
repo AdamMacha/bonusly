@@ -16,12 +16,14 @@ interface OfferReviewsProps {
   offerSlug: string;
   offerName: string;
   initialReviews: OfferReviewItem[];
+  isInstantDiscount?: boolean;
 }
 
 export function OfferReviews({
   offerSlug,
   offerName,
   initialReviews,
+  isInstantDiscount = false,
 }: OfferReviewsProps) {
   const [reviews, setReviews] = useState<OfferReviewItem[]>(initialReviews);
   const [rating, setRating] = useState(5);
@@ -122,7 +124,7 @@ export function OfferReviews({
       </div>
 
       {/* Existing community reviews */}
-      {reviews.length > 0 && (
+      {reviews.length > 0 ? (
         <div className="mt-6 space-y-4">
           {reviews.map((rev) => (
             <article
@@ -143,10 +145,10 @@ export function OfferReviews({
                 <div className="flex items-center gap-2 text-[11px] text-slate-400">
                   {rev.bonusReceived && (
                     <span className="rounded-full bg-emerald-50 border border-emerald-200/70 px-2 py-0.5 font-semibold text-emerald-700">
-                      ✓ Bonus/sleva potvrzena
+                      ✓ {isInstantDiscount ? "Sleva/nákup potvrzen" : "Bonus/sleva potvrzena"}
                     </span>
                   )}
-                  {typeof rev.daysToReceive === "number" && (
+                  {typeof rev.daysToReceive === "number" && !isInstantDiscount && (
                     <span className="rounded-full bg-white border border-slate-200 px-2 py-0.5 text-slate-600">
                       Připsáno: {rev.daysToReceive === 0 ? "ihned" : `za ${rev.daysToReceive} dní`}
                     </span>
@@ -162,6 +164,10 @@ export function OfferReviews({
             </article>
           ))}
         </div>
+      ) : (
+        <div className="mt-5 rounded-xl bg-slate-50 border border-slate-100 px-4 py-3 text-xs text-slate-500">
+          Zatím tu není žádná uživatelská recenze. Buďte první, kdo se podělí o svou zkušenost s nabídkou {offerName}.
+        </div>
       )}
 
       {/* Submission form */}
@@ -173,7 +179,9 @@ export function OfferReviews({
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <h3 className="text-sm font-bold text-navy">
-              Získal(a) jsi bonus nebo slevu? Ohodnoť nabídku:
+              {isInstantDiscount
+                ? "Nakoupil(a) jsi nebo využil(a) slevu? Ohodnoť obchod:"
+                : "Získal(a) jsi bonus nebo slevu? Ohodnoť nabídku:"}
             </h3>
 
             {/* Honeypot */}
@@ -213,11 +221,15 @@ export function OfferReviews({
                   onChange={(e) => setBonusReceived(e.target.checked)}
                   className="rounded border-slate-300 text-green focus:ring-green"
                 />
-                <span>Bonus / sleva mi úspěšně fungovala</span>
+                <span>
+                  {isInstantDiscount
+                    ? "Slevový kód / akce mi úspěšně fungovala"
+                    : "Bonus / sleva mi úspěšně fungovala"}
+                </span>
               </label>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className={`grid grid-cols-1 ${isInstantDiscount ? "" : "sm:grid-cols-2"} gap-3`}>
               <div>
                 <label htmlFor="review-author" className="block text-xs font-medium text-slate-600 mb-1">
                   Vaše jméno nebo přezdívka *
@@ -234,21 +246,23 @@ export function OfferReviews({
                   className="w-full rounded-lg border border-slate-200 bg-slate-50/50 px-3 py-2 text-sm text-navy focus:border-green focus:bg-white focus:outline-none"
                 />
               </div>
-              <div>
-                <label htmlFor="review-days" className="block text-xs font-medium text-slate-600 mb-1">
-                  Za kolik dní bonus přišel? (volitelné, 0 = ihned)
-                </label>
-                <input
-                  id="review-days"
-                  type="number"
-                  min={0}
-                  max={365}
-                  value={daysToReceive}
-                  onChange={(e) => setDaysToReceive(e.target.value)}
-                  placeholder="Např. 7"
-                  className="w-full rounded-lg border border-slate-200 bg-slate-50/50 px-3 py-2 text-sm text-navy focus:border-green focus:bg-white focus:outline-none"
-                />
-              </div>
+              {!isInstantDiscount && (
+                <div>
+                  <label htmlFor="review-days" className="block text-xs font-medium text-slate-600 mb-1">
+                    Za kolik dní bonus přišel? (volitelné, 0 = ihned)
+                  </label>
+                  <input
+                    id="review-days"
+                    type="number"
+                    min={0}
+                    max={365}
+                    value={daysToReceive}
+                    onChange={(e) => setDaysToReceive(e.target.value)}
+                    placeholder="Např. 7"
+                    className="w-full rounded-lg border border-slate-200 bg-slate-50/50 px-3 py-2 text-sm text-navy focus:border-green focus:bg-white focus:outline-none"
+                  />
+                </div>
+              )}
             </div>
 
             <div>
@@ -261,7 +275,11 @@ export function OfferReviews({
                 maxLength={600}
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
-                placeholder="Jak proběhlo založení nebo uplatnění kódu?"
+                placeholder={
+                  isInstantDiscount
+                    ? "Jak proběhl nákup, dodání nebo uplatnění slevového kódu?"
+                    : "Jak proběhlo založení účtu nebo připsání bonusu?"
+                }
                 className="w-full rounded-lg border border-slate-200 bg-slate-50/50 px-3 py-2 text-sm text-navy focus:border-green focus:bg-white focus:outline-none"
               />
             </div>

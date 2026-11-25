@@ -42,8 +42,9 @@ export function OfferCard({
       )}
 
       {promoCode && (
-        <div className="absolute -top-2.5 right-4 inline-flex items-center gap-1 rounded-full bg-navy px-2.5 py-0.5 text-[10px] font-bold text-green uppercase tracking-wider shadow-xs">
-          <span>Kód: {promoCode}</span>
+        <div className="absolute -top-2.5 right-4 inline-flex items-center gap-1 rounded-full bg-navy px-2.5 py-0.5 text-[10px] font-bold text-green shadow-xs">
+          <span className="uppercase tracking-wider">Kód:</span>
+          <span className="font-mono tracking-normal">{promoCode}</span>
         </div>
       )}
 
@@ -94,7 +95,7 @@ export function OfferCard({
 
       {bonus && (
         <div className="mt-3 rounded-lg bg-green/5 border border-green/15 px-3 py-2 flex items-center justify-between gap-2">
-          <p className="text-sm font-semibold text-green-dark line-clamp-1">{bonus}</p>
+          <p className="text-xs sm:text-sm font-semibold text-green-dark line-clamp-2 leading-snug">{bonus}</p>
           <span
             aria-hidden="true"
             className="text-green-dark text-xs font-bold shrink-0 transition-transform group-hover:translate-x-0.5"

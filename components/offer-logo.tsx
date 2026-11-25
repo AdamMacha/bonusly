@@ -52,6 +52,15 @@ const DARK_LOGOS = new Set([
   "/logos/jabkolevne.png",
 ]);
 
+// Některá starší loga mají příponu .png, ale uvnitř jsou vektorová SVG —
+// bez unoptimized je Next.js Image proxy zbytečně tahá jako w=3840.
+const SVG_CONTENT_LOGOS = new Set([
+  "/logos/mbank.png",
+  "/logos/portu.png",
+  "/logos/wolt.png",
+  "/logos/xtb.png",
+]);
+
 const monogramColors = [
   "bg-emerald-50 text-emerald-700 border-emerald-200/70",
   "bg-sky-50 text-sky-700 border-sky-200/70",
@@ -192,7 +201,7 @@ export function OfferLogo({
           fill
           sizes={isWide ? cfg.wideSizes : cfg.squareSizes}
           preload={preload}
-          unoptimized={normalized.endsWith(".svg")}
+          unoptimized={normalized.endsWith(".svg") || SVG_CONTENT_LOGOS.has(normalized)}
           className="object-contain"
         />
       </span>

@@ -435,7 +435,7 @@ Aby vznikl nárok na kompletní kombinovanou odměnu **1 000 + 300 Kč**, vyžad
 *Tip: Hledáte spíše vysoké úročení úspor? Podívejte se také na akci [mBank mKonto + mSpořicí účet Plus 4,41 % p.a.](/nabidky/mbank-sporici-ucet).*
     `.trim(),
     logo: "/logos/mbank.png",
-    bonus: "1 000 Kč (100 Kč za každých 10 plateb kartou)",
+    bonus: "1 000 Kč (100 Kč za každou z prvních 10 plateb kartou)",
     bonusDescription:
       "Odměna 100 Kč za libovolnou platbu kartou po založení mKonta s kódem adamm1863 (limit 10 plateb = 1 000 Kč).",
     promoCode: "adamm1863",

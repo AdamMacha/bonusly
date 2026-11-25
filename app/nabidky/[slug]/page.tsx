@@ -99,9 +99,18 @@ export default async function OfferPage({ params }: Props) {
 
   if (!offer || !offer.active) notFound();
 
-  const [relatedOffers, relatedArticles] = await Promise.all([
+  const ADULT_OFFER_SLUGS = ["eroticcity"];
+  const excludedRelatedSlugs = ADULT_OFFER_SLUGS.includes(offer.slug)
+    ? [offer.slug]
+    : [offer.slug, ...ADULT_OFFER_SLUGS];
+
+  const [sameCategoryOffers, relatedArticles] = await Promise.all([
     prisma.offer.findMany({
-      where: { categoryId: offer.categoryId, active: true, slug: { not: offer.slug } },
+      where: {
+        categoryId: offer.categoryId,
+        active: true,
+        slug: { notIn: excludedRelatedSlugs },
+      },
       include: { category: true },
       orderBy: [{ featured: "desc" }, { rating: "desc" }],
       take: 3,
@@ -116,6 +125,35 @@ export default async function OfferPage({ params }: Props) {
       take: 3,
     }),
   ]);
+
+  let relatedOffers = sameCategoryOffers;
+  if (relatedOffers.length < 3) {
+    const fallbackOffers = await prisma.offer.findMany({
+      where: {
+        active: true,
+        slug: {
+          notIn: [
+            ...excludedRelatedSlugs,
+            ...relatedOffers.map((o) => o.slug),
+          ],
+        },
+      },
+      include: { category: true },
+      orderBy: [{ featured: "desc" }, { rating: "desc" }],
+      take: 3 - relatedOffers.length,
+    });
+    relatedOffers = [...relatedOffers, ...fallbackOffers];
+  }
+
+  const isInstantDiscountCategory = [
+    "elektro",
+    "dum-a-zahrada",
+    "nakupy-a-volny-cas",
+  ].includes(offer.category.slug);
+  const isReferralCode = Boolean(
+    offer.promoCodeNote &&
+      /doporu|referral/i.test(offer.promoCodeNote)
+  );
 
   const baseUrl = getBaseUrl();
   const pageUrl = buildCanonical(`/nabidky/${offer.slug}`);
@@ -369,7 +407,7 @@ export default async function OfferPage({ params }: Props) {
                 {offer.promoCode && (
                   <div className="flex flex-col sm:items-end gap-1.5 shrink-0">
                     <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">
-                      Ověřený kód
+                      {isReferralCode ? "Doporučovací kód" : "Ověřený slevový kód"}
                     </span>
                     <CopyCodeButton code={offer.promoCode} />
                     {offer.promoCodeNote && (
@@ -381,16 +419,23 @@ export default async function OfferPage({ params }: Props) {
                 )}
               </div>
 
-              <div className="mt-5 pt-4 border-t border-green/15 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                <CtaButton href={`/go/${offer.trackingSlug}`} size="lg" className="sm:w-auto">
-                  {ctaText}
-                </CtaButton>
-                {verifiedDateFormatted && (
-                  <span className="text-xs text-slate-500 sm:ml-2">
-                    Naposledy ověřeno: <strong className="text-slate-700">{verifiedDateFormatted}</strong>
-                  </span>
-                )}
+              <div className="mt-5 pt-4 border-t border-green/15 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                  <CtaButton href={`/go/${offer.trackingSlug}`} size="lg" className="sm:w-auto">
+                    {ctaText}
+                  </CtaButton>
+                  {verifiedDateFormatted && (
+                    <span className="text-xs text-slate-500 sm:ml-1">
+                      Naposledy ověřeno: <strong className="text-slate-700">{verifiedDateFormatted}</strong>
+                    </span>
+                  )}
+                </div>
               </div>
+              {(!offer.rewardAmount || offer.rewardAmount <= 0) && (
+                <p className="mt-3 text-xs text-slate-500">
+                  Výhodu získáte přímo u partnera — registrace ani přihlášení do BONUSLY peněženky není potřeba.
+                </p>
+              )}
             </section>
           )}
 
@@ -618,6 +663,7 @@ export default async function OfferPage({ params }: Props) {
             offerSlug={offer.slug}
             offerName={offer.name}
             initialReviews={serializedReviews}
+            isInstantDiscount={isInstantDiscountCategory}
           />
 
           {/* Verification date & E-E-A-T note */}
@@ -659,7 +705,7 @@ export default async function OfferPage({ params }: Props) {
               {offer.promoCode && (
                 <div className="mb-4">
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
-                    Promo kód
+                    {isReferralCode ? "Doporučovací kód" : "Slevový kód"}
                   </p>
                   <CopyCodeButton code={offer.promoCode} className="w-full justify-between" />
                 </div>

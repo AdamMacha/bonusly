@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { CopyCodeButton } from "./copy-code-button";
 
 interface CalcItem {
   id: string;
@@ -287,32 +288,35 @@ export function BonusCalculator() {
                 {selectedItems.map((item, idx) => (
                   <li
                     key={item.id}
-                    className="flex items-center justify-between gap-2 rounded-xl bg-white/5 border border-white/10 px-3.5 py-2.5 text-xs"
+                    className="rounded-xl bg-white/5 border border-white/10 px-3.5 py-2.5 text-xs space-y-2"
                   >
-                    <div className="min-w-0">
+                    <div className="flex items-center justify-between gap-2">
                       <Link
                         href={`/nabidky/${item.slug}`}
-                        className="font-bold text-white hover:text-green transition-colors truncate block"
+                        className="font-bold text-white hover:text-green transition-colors truncate block min-w-0"
                       >
                         {idx + 1}. {item.name}
                       </Link>
-                      {item.promoCode && (
-                        <span className="text-[11px] text-green">Kód: {item.promoCode}</span>
-                      )}
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span className="font-bold text-green">
+                          +{item.amount.toLocaleString("cs-CZ")} Kč
+                        </span>
+                        <a
+                          href={`/go/${item.trackingSlug}`}
+                          target="_blank"
+                          rel="nofollow sponsored noopener"
+                          className="rounded-lg bg-green px-2.5 py-1 text-[11px] font-bold text-navy hover:bg-green-light transition-colors"
+                        >
+                          Přejít ↗
+                        </a>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 shrink-0">
-                      <span className="font-bold text-green">
-                        +{item.amount.toLocaleString("cs-CZ")} Kč
-                      </span>
-                      <a
-                        href={`/go/${item.trackingSlug}`}
-                        target="_blank"
-                        rel="nofollow sponsored noopener"
-                        className="rounded-lg bg-green px-2.5 py-1 text-[11px] font-bold text-navy hover:bg-green-light transition-colors"
-                      >
-                        Přejít ↗
-                      </a>
-                    </div>
+                    <p className="text-[11px] text-slate-300 leading-snug">{item.condition}</p>
+                    {item.promoCode && (
+                      <div className="pt-0.5">
+                        <CopyCodeButton code={item.promoCode} size="sm" />
+                      </div>
+                    )}
                   </li>
                 ))}
                 {rondaInvestment > 0 && (

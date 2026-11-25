@@ -201,12 +201,105 @@ export default async function PorovnaniSlugPage({ params }: Props) {
         ))}
       </div>
 
-      {/* Comparison Table */}
+      {/* Comparison Table (Desktop) + Stacked Cards (Mobile) */}
       <section className="rounded-2xl border border-slate-200 bg-white overflow-hidden mb-14 shadow-xs">
-        <div className="p-6 border-b border-slate-100">
+        <div className="p-5 sm:p-6 border-b border-slate-100">
           <h2 className="text-xl font-bold text-navy">Detailní porovnání parametrů</h2>
         </div>
-        <div className="overflow-x-auto">
+
+        {/* Mobile stacked comparison */}
+        <div className="md:hidden divide-y divide-slate-100">
+          <div className="p-4 space-y-2.5">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              Hlavní bonus / výhoda
+            </h3>
+            <div className="rounded-xl bg-slate-50 p-3">
+              <p className="text-xs font-semibold text-slate-500">{offerA.name}</p>
+              <p className="mt-0.5 text-sm font-bold text-green-dark">{offerA.bonus || "—"}</p>
+            </div>
+            <div className="rounded-xl bg-slate-50 p-3">
+              <p className="text-xs font-semibold text-slate-500">{offerB.name}</p>
+              <p className="mt-0.5 text-sm font-bold text-green-dark">{offerB.bonus || "—"}</p>
+            </div>
+          </div>
+
+          <div className="p-4 space-y-2.5">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              Promo / Doporučovací kód
+            </h3>
+            <div className="grid grid-cols-2 gap-2.5">
+              <div className="rounded-xl bg-slate-50 p-3">
+                <p className="text-xs font-semibold text-slate-500 truncate">{offerA.name}</p>
+                <p className="mt-1 font-mono text-sm font-bold text-navy">{offerA.promoCode || "Bez kódu"}</p>
+              </div>
+              <div className="rounded-xl bg-slate-50 p-3">
+                <p className="text-xs font-semibold text-slate-500 truncate">{offerB.name}</p>
+                <p className="mt-1 font-mono text-sm font-bold text-navy">{offerB.promoCode || "Bez kódu"}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 space-y-2.5">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              Hodnocení redakce
+            </h3>
+            <div className="grid grid-cols-2 gap-2.5">
+              <div className="rounded-xl bg-slate-50 p-3">
+                <p className="text-xs font-semibold text-slate-500 truncate">{offerA.name}</p>
+                <p className="mt-1 text-sm font-bold text-navy">
+                  {offerA.rating ? `★ ${offerA.rating.toFixed(1)} / 5` : "Ověřeno"}
+                </p>
+              </div>
+              <div className="rounded-xl bg-slate-50 p-3">
+                <p className="text-xs font-semibold text-slate-500 truncate">{offerB.name}</p>
+                <p className="mt-1 text-sm font-bold text-navy">
+                  {offerB.rating ? `★ ${offerB.rating.toFixed(1)} / 5` : "Ověřeno"}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 space-y-3">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              Hlavní výhody
+            </h3>
+            {[offerA, offerB].map((item) => (
+              <div key={item.slug} className="rounded-xl bg-slate-50 p-3.5">
+                <p className="text-xs font-bold text-navy mb-2">{item.name}</p>
+                <ul className="space-y-1.5">
+                  {item.pros.slice(0, 4).map((p, i) => (
+                    <li key={i} className="text-xs text-slate-600 flex items-start gap-1.5 leading-relaxed">
+                      <span className="text-green font-bold shrink-0">✓</span>
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="p-4 space-y-3">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              Na co si dát pozor
+            </h3>
+            {[offerA, offerB].map((item) => (
+              <div key={item.slug} className="rounded-xl bg-slate-50 p-3.5">
+                <p className="text-xs font-bold text-navy mb-2">{item.name}</p>
+                <ul className="space-y-1.5">
+                  {item.cons.slice(0, 3).map((c, i) => (
+                    <li key={i} className="text-xs text-slate-600 flex items-start gap-1.5 leading-relaxed">
+                      <span className="text-red-400 font-bold shrink-0">✕</span>
+                      <span>{c}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop 3-column table */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full text-left text-sm">
             <thead className="bg-slate-50 text-slate-600 border-b border-slate-100">
               <tr>
@@ -222,7 +315,7 @@ export default async function PorovnaniSlugPage({ params }: Props) {
                 <td className="p-4 sm:px-6 font-semibold text-green-dark">{offerB.bonus || "—"}</td>
               </tr>
               <tr>
-                <td className="p-4 sm:px-6 font-medium text-slate-500">Slevový / Promo kód</td>
+                <td className="p-4 sm:px-6 font-medium text-slate-500">Promo / Doporučovací kód</td>
                 <td className="p-4 sm:px-6 font-mono font-bold text-navy">{offerA.promoCode || "Bez kódu"}</td>
                 <td className="p-4 sm:px-6 font-mono font-bold text-navy">{offerB.promoCode || "Bez kódu"}</td>
               </tr>

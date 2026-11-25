@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { submitLead } from "@/lib/actions/leads";
 
 interface Props {
@@ -121,8 +122,12 @@ export function TipsportLeadForm({ offerSlug = "tipsport", offerName = "Tipsport
               <path fillRule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clipRule="evenodd" />
             </svg>
           </button>
-          <p className="mt-2 text-[11px] text-slate-400">
-            Vaše osobní údaje chráníme a použijeme je výhradně pro odeslání pozvánky.
+          <p className="mt-2.5 text-[11px] text-slate-500 leading-relaxed">
+            Odesláním žádosti berete na vědomí, že zadané údaje použijeme výhradně k jednorázovému odeslání osobní pozvánky Přiveď kamaráda pro {offerName} dle{" "}
+            <Link href="/ochrana-soukromi" className="underline text-navy hover:text-green-dark font-medium">
+              Zásad ochrany osobních údajů
+            </Link>
+            . Bonus platí pro osoby 18+.
           </p>
         </div>
       </form>

@@ -92,7 +92,7 @@ export function HeroCarousel({ articles }: HeroCarouselProps) {
     >
       {/* 3D Scene Perspective Container */}
       <div
-        className="relative h-[430px] sm:h-[460px] w-full flex items-center justify-center overflow-visible"
+        className="relative h-[450px] sm:h-[480px] w-full flex items-center justify-center overflow-visible"
         style={{
           perspective: "1200px",
           perspectiveOrigin: "50% 48%",
@@ -103,7 +103,7 @@ export function HeroCarousel({ articles }: HeroCarouselProps) {
 
         {/* Carousel Cards */}
         <div
-          className="relative w-[285px] sm:w-[330px] md:w-[350px] h-[400px] sm:h-[430px]"
+          className="relative w-[295px] sm:w-[340px] md:w-[365px] h-[425px] sm:h-[455px]"
           style={{ transformStyle: "preserve-3d" }}
         >
           {articles.map((article, index) => {
@@ -190,15 +190,14 @@ export function HeroCarousel({ articles }: HeroCarouselProps) {
                   }`}
                 >
                   {/* Top Image Section */}
-                  <div className="relative h-[190px] sm:h-[210px] w-full overflow-hidden bg-navy-dark">
+                  <div className="relative h-[180px] sm:h-[195px] w-full overflow-hidden bg-navy-dark shrink-0">
                     {article.featuredImage ? (
                       <Image
                         src={article.featuredImage}
                         alt={article.title}
                         fill
-                        sizes="(max-width: 768px) 300px, 350px"
+                        sizes="(max-width: 768px) 300px, 365px"
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                        priority={index === 0}
                         fetchPriority={index === 0 ? "high" : "low"}
                         loading={index === 0 ? "eager" : "lazy"}
                       />
@@ -229,41 +228,44 @@ export function HeroCarousel({ articles }: HeroCarouselProps) {
                   </div>
 
                   {/* Bottom Content Section */}
-                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-2">
                     <div>
-                      <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-green transition-colors line-clamp-2 leading-snug">
+                      <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-green transition-colors line-clamp-3 leading-snug">
                         {article.title}
                       </h3>
-                      <p className="mt-2 text-xs sm:text-sm text-slate-300 line-clamp-2 leading-relaxed">
+                      <p className="mt-1.5 text-xs text-slate-300 line-clamp-2 leading-relaxed">
                         {article.excerpt}
                       </p>
                     </div>
 
                     {/* Bottom Feature: Offer bonus pill or read CTA */}
-                    <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between gap-2">
-                      {article.offer ? (
-                        <div className="flex items-center gap-1.5 min-w-0">
-                          <span className="flex-shrink-0 w-2 h-2 rounded-full bg-green animate-pulse" />
-                          <span className="text-xs font-semibold text-green truncate">
+                    <div className="pt-2.5 border-t border-white/10 space-y-2">
+                      {article.offer && (
+                        <div className="flex items-start gap-1.5 rounded-lg bg-green/10 border border-green/20 px-2.5 py-1.5">
+                          <span className="mt-1 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-green" />
+                          <span className="text-[11px] font-semibold text-green line-clamp-2 leading-snug">
                             {article.offer.bonus || article.offer.name}
                           </span>
                         </div>
-                      ) : (
-                        <span className="text-xs text-slate-400">Průvodce</span>
                       )}
 
-                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-white group-hover:text-green transition-all flex-shrink-0">
-                        Číst článek
-                        <svg
-                          className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={2}
-                          stroke="currentColor"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                        </svg>
-                      </span>
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="text-slate-400">
+                          {article.offer ? article.offer.name : "Průvodce"}
+                        </span>
+                        <span className="inline-flex items-center gap-1 font-semibold text-white group-hover:text-green transition-all flex-shrink-0">
+                          Číst článek
+                          <svg
+                            className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={2}
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                          </svg>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </Link>
