@@ -4,6 +4,8 @@
  * Uživatelské štítky počítají s výchozím dělením 50 % uživateli / 50 % BONUSLY.
  */
 
+import { NEW_EHUB_CASHBACK_MAP } from "./ehub-cashback-map-new";
+
 export interface OfferCashbackMeta {
   ehubCampaignId?: string | null;
   cashbackAllowed: boolean;
@@ -13,6 +15,7 @@ export interface OfferCashbackMeta {
 }
 
 export const OFFER_CASHBACK_MAP: Record<string, OfferCashbackMeta> = {
+  ...NEW_EHUB_CASHBACK_MAP,
   // --- Přímé spolupráce mimo eHUB ---
   revolut: {
     cashbackAllowed: true,

@@ -7,6 +7,7 @@ export const revalidate = 3600;
 export async function GET() {
   const baseUrl = getBaseUrl();
   const categories = await prisma.category.findMany({
+    where: { offers: { some: { active: true } } },
     select: { slug: true, updatedAt: true },
     orderBy: { order: "asc" },
   });

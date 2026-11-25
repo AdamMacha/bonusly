@@ -12,14 +12,14 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "*",
         allow: "/",
         disallow: [
-          "/admin/",
-          "/api/",
-          "/go/",
-          "/dashboard/",
-          "/prihlaseni/",
+          "/admin",
+          "/api",
+          "/go",
+          "/dashboard",
+          "/prihlaseni/overeni",
         ],
       },
     ],
-    sitemap: [`${baseUrl}/sitemap_index.xml`, `${baseUrl}/sitemap.xml`],
+    sitemap: `${baseUrl}/sitemap_index.xml`,
   };
 }

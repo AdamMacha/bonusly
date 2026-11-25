@@ -89,4 +89,37 @@ export const CATEGORIES_DATA: CategorySeed[] = [
     seoDescription:
       "Přehled ověřených registračních bonusů zdarma v ČR včetně Tipsport bonusu 1 300 Kč bez nutnosti velkého počátečního vkladu.",
   },
+  {
+    slug: "moda-a-doplnky",
+    name: "Móda & Doplňky",
+    icon: "👗",
+    order: 9,
+    description:
+      "České i světové módní e-shopy, obuv, kabelky, spodní prádlo a doplňky s ověřenými slevovými kódy a cashbackem.",
+    seoTitle: "Móda, obuv a doplňky — slevy a cashback 2026",
+    seoDescription:
+      "Nakupujte oblečení, obuv, spodní prádlo a módní doplňky v prověřených českých e-shopech s aktivním cashbackem a kupóny.",
+  },
+  {
+    slug: "krasa-a-zdravi",
+    name: "Zdraví, Krása & Jídlo",
+    icon: "🌿",
+    order: 10,
+    description:
+      "Přírodní kosmetika, parfémy, vitamíny, doplňky stravy, výběrová káva, čaje a zdravé potraviny s cashbackem.",
+    seoTitle: "Krása, zdraví, kosmetika a potraviny — cashback 2026",
+    seoDescription:
+      "Ověřené e-shopy s přírodní kosmetikou, doplňky stravy, čaji, kávou a zdravou výživou s cashbackem pro registrované uživatele.",
+  },
+  {
+    slug: "zvirata-a-darky",
+    name: "Dárky, Zvířata & Ostatní",
+    icon: "🐾",
+    order: 11,
+    description:
+      "Chovatelské potřeby pro psy, kočky i koně, knihy, originální dárky, delikatesy, cestování a specializované e-shopy s cashbackem.",
+    seoTitle: "Chovatelské potřeby, dárky, knihy a cashback 2026",
+    seoDescription:
+      "Kvalitní krmiva pro mazlíčky, knihy, zážitkové dárky, delikatesy a ověřené české e-shopy s cashbackem a slevovými kódy.",
+  },
 ];

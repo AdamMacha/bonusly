@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { WIDE_LOGOS, DARK_LOGOS } from "@/lib/logo-meta";
 
 export type OfferLogoSize =
   | "card"
@@ -16,41 +17,6 @@ interface OfferLogoProps {
   alt?: string;
   fallback?: "monogram" | "navy-initial" | "plain" | "none";
 }
-
-const WIDE_LOGOS = new Set([
-  "/logos/brilianty.png",
-  "/logos/iphonemarket.png",
-  "/logos/jabkolevne.png",
-  "/logos/vodafone.png",
-  "/logos/csob-pojistovna.png",
-  "/logos/stalynajem.png",
-  "/logos/rondainvest.png",
-  "/logos/patria-finance.png",
-  "/logos/spime.png",
-  "/logos/dronpro.png",
-  "/logos/ministerstvo-hracek.png",
-  "/logos/originalnipneu.png",
-  "/logos/ventilatory.png",
-  "/logos/marimex.png",
-  "/logos/istyle.png",
-  "/logos/eroticcity.png",
-  "/logos/aliexpress.png",
-  "/logos/sencor.png",
-  "/logos/eon.png",
-  "/logos/innogy.png",
-  "/logos/flowpay.png",
-  "/logos/roier.png",
-  "/logos/banggood.png",
-  "/logos/portu-gallery.png",
-  "/logos/portu-ehub.png",
-  "/logos/mbank-ehub.png",
-  "/logos/raiffeisenbank-ehub.png",
-]);
-
-const DARK_LOGOS = new Set([
-  "/logos/iphonemarket.png",
-  "/logos/jabkolevne.png",
-]);
 
 const monogramColors = [
   "bg-emerald-50 text-emerald-700 border-emerald-200/70",
