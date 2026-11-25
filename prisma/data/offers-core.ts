@@ -22,7 +22,7 @@ Wolt patří mezi nejoblíbenější rozvážkové platformy v České republice
 3. Aktivujte kurýrní aplikaci Wolt Partner a během prvních **45 dní doručte 150 objednávek** (průměrně stačí jen 3–4 zakázky denně).
 4. Bonus 4 000 Kč se připíše k vaší výplatě po splnění limitu.
     `.trim(),
-    logo: "/logos/wolt.png",
+    logo: "/logos/wolt.svg",
     bonus: "4 000 Kč bonus pro nového kurýra",
     bonusDescription:
       "Jednorázový startovací bonus 4 000 Kč po odjetí 150 objednávek během prvních 45 dní s kódem CPCJPUX.",
@@ -434,7 +434,7 @@ Aby vznikl nárok na kompletní kombinovanou odměnu **1 000 + 300 Kč**, vyžad
 
 *Tip: Hledáte spíše vysoké úročení úspor? Podívejte se také na akci [mBank mKonto + mSpořicí účet Plus 4,41 % p.a.](/nabidky/mbank-sporici-ucet).*
     `.trim(),
-    logo: "/logos/mbank.png",
+    logo: "/logos/mbank.svg",
     bonus: "1 000 Kč (100 Kč za každou z prvních 10 plateb kartou)",
     bonusDescription:
       "Odměna 100 Kč za libovolnou platbu kartou po založení mKonta s kódem adamm1863 (limit 10 plateb = 1 000 Kč).",

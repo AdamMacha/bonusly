@@ -117,7 +117,7 @@ export const FINANCE_SERVICES_OFFERS: OfferSeed[] = [
 2. Vyplňte krátký investiční dotazník a ověřte totožnost online.
 3. Podepište smlouvu elektronicky a nastavte si jednorázový nebo pravidelný měsíční vklad.
     `.trim(),
-    logo: "/logos/portu.png",
+    logo: "/logos/portu.svg",
     bonus: "Automatizované ETF investice od 500 Kč + DIP",
     bonusDescription:
       "Diverzifikovaná ETF portfolia, Investiční rezerva a daňově zvýhodněný důchodový účet DIP pod dohledem ČNB.",
@@ -672,7 +672,7 @@ Hledáte kombinaci bezplatného běžného účtu a nadprůměrného zhodnocení
 2. Založte si nové mKonto spolu s mSpořicím účtem Plus online během několika minut.
 3. Převeďte svou finanční rezervu a nechte ji pracovat s úrokem až **4,41 % p.a.**
     `.trim(),
-    logo: "/logos/mbank.png",
+    logo: "/logos/mbank.svg",
     bonus: "mSpořicí účet Plus s úrokem až 4,41 % p.a. (do 31. 1. 2027)",
     bonusDescription:
       "K nově založenému účtu mKonto získáte mSpořicí účet Plus s úrokovou sazbou až 4,41 % p.a.",

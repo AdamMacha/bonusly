@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" viewBox="0 0 500 500" baseProfile="tiny-ps">
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
   <title>Wolt</title>
   <rect width="500" height="500" fill="#FFFFFF"/>
   <path d="M250,476.5c125.1,0,226.5-101.4,226.5-226.5S375.1,23.4,250,23.4S23.5,124.9,23.5,250  S124.9,476.5,250,476.5" fill="#00C2E8"/>
