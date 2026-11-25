@@ -1,5 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { auth } from "@/auth";
 
 interface CashbackBannerProps {
   rewardAmount?: number | null;
@@ -7,24 +9,34 @@ interface CashbackBannerProps {
   className?: string;
 }
 
-export async function CashbackBanner({
+export function CashbackBanner({
   rewardAmount,
   className = "",
 }: CashbackBannerProps) {
+  const [isAuth, setIsAuth] = useState(false);
+
+  useEffect(() => {
+    if (!rewardAmount || rewardAmount <= 0) return;
+    let active = true;
+    fetch("/api/auth/session", { credentials: "same-origin" })
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (active && data?.user) {
+          setIsAuth(true);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+    };
+  }, [rewardAmount]);
+
   // Zobrazujeme pouze u nabídek, které mají explicitně povolenou cashback odměnu
   // (dodržuje pravidlo zákazu cashbacku u partnerských programů).
   if (!rewardAmount || rewardAmount <= 0) {
     return null;
   }
 
-  let session = null;
-  try {
-    session = await auth();
-  } catch {
-    session = null;
-  }
-
-  const isAuth = !!session?.user;
   const rewardDisplay = `${rewardAmount.toLocaleString("cs-CZ")} Kč`;
 
   if (isAuth) {

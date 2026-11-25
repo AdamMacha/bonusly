@@ -34,14 +34,33 @@ interface OfferCatalogClientProps {
   categories: CategoryFilterItem[];
 }
 
+type SortKey = "featured" | "bonus" | "rating" | "promo" | "alpha";
+
+function extractBonusValue(bonus?: string | null): number {
+  if (!bonus) return 0;
+  // Najde částky v Kč typu "4 000 Kč", "3 000 Kč", "600 Kč"
+  const kcMatches = Array.from(bonus.matchAll(/(\d[\d\s]*)\s*Kč/gi));
+  if (kcMatches.length > 0) {
+    return Math.max(
+      ...kcMatches.map((m) => parseInt(m[1].replace(/\s+/g, ""), 10) || 0)
+    );
+  }
+  const pctMatch = bonus.match(/(\d+(?:[.,]\d+)?)\s*%/);
+  if (pctMatch) {
+    return parseFloat(pctMatch[1].replace(",", ".")) * 10;
+  }
+  return 0;
+}
+
 export function OfferCatalogClient({ offers, categories }: OfferCatalogClientProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [onlyWithPromo, setOnlyWithPromo] = useState(false);
+  const [sortBy, setSortBy] = useState<SortKey>("featured");
   const [query, setQuery] = useState("");
 
   const filteredOffers = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return offers.filter((offer) => {
+    const list = offers.filter((offer) => {
       if (selectedCategory !== "all" && offer.category.slug !== selectedCategory) {
         return false;
       }
@@ -54,13 +73,41 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
       }
       return true;
     });
-  }, [offers, selectedCategory, onlyWithPromo, query]);
+
+    const sorted = [...list];
+    switch (sortBy) {
+      case "bonus":
+        sorted.sort((a, b) => extractBonusValue(b.bonus) - extractBonusValue(a.bonus));
+        break;
+      case "rating":
+        sorted.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        break;
+      case "promo":
+        sorted.sort((a, b) => {
+          const scoreA = (a.promoCode ? 2 : 0) + (a.hasPromos ? 1 : 0);
+          const scoreB = (b.promoCode ? 2 : 0) + (b.hasPromos ? 1 : 0);
+          return scoreB - scoreA || (b.rating || 0) - (a.rating || 0);
+        });
+        break;
+      case "alpha":
+        sorted.sort((a, b) => a.name.localeCompare(b.name, "cs"));
+        break;
+      case "featured":
+      default:
+        sorted.sort(
+          (a, b) => Number(b.featured) - Number(a.featured) || (b.rating || 0) - (a.rating || 0)
+        );
+        break;
+    }
+
+    return sorted;
+  }, [offers, selectedCategory, onlyWithPromo, sortBy, query]);
 
   return (
     <div>
-      {/* Filter Controls */}
+      {/* Filter & Sort Controls */}
       <div className="mb-8 space-y-4">
-        <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
+        <div className="flex flex-col lg:flex-row gap-3 items-stretch lg:items-center justify-between">
           <search className="relative flex-1 max-w-md">
             <label htmlFor="catalog-search" className="sr-only">
               Filtrovat nabídky
@@ -75,7 +122,23 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
             />
           </search>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <label htmlFor="catalog-sort" className="sr-only">
+              Seřadit nabídky
+            </label>
+            <select
+              id="catalog-sort"
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as SortKey)}
+              className="rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-xs font-semibold text-navy focus:border-green focus:outline-none cursor-pointer"
+            >
+              <option value="featured">Řadit: Doporučené</option>
+              <option value="bonus">Řadit: Nejvyšší bonus</option>
+              <option value="promo">Řadit: S kupónem první</option>
+              <option value="rating">Řadit: Nejvyšší hodnocení</option>
+              <option value="alpha">Řadit: Abecedně A–Z</option>
+            </select>
+
             <button
               type="button"
               onClick={() => setOnlyWithPromo((v) => !v)}
@@ -87,8 +150,9 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
               }`}
             >
               <span aria-hidden="true">🏷️</span>
-              <span>S kódem nebo promo akcí</span>
+              <span>S kódem nebo akcí</span>
             </button>
+
             <Link
               href="/akce-a-kupony"
               className="inline-flex items-center gap-1 rounded-xl bg-green/15 px-3.5 py-2.5 text-xs font-bold text-green-dark hover:bg-green/25 transition-colors whitespace-nowrap"
@@ -98,7 +162,7 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
           </div>
         </div>
 
-        {/* Category Filter Pills (with native SEO links fallback below / beside) */}
+        {/* Category Filter Pills */}
         <div className="flex flex-wrap gap-2">
           <button
             type="button"

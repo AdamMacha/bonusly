@@ -9,12 +9,14 @@ import { AffiliateDisclosure } from "@/components/affiliate-disclosure";
 import { JsonLd } from "@/components/json-ld";
 import { buildCanonical, getBaseUrl } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 const canonical = buildCanonical("/akce-a-kupony");
 
 export const metadata: Metadata = {
-  title: "Aktuální akce, promo nabídky a ověřené slevové kódy 2026",
+  title: "Aktuální akce a ověřené slevové kódy 2026",
   description:
-    "Přehled ověřených slevových kódů (Jabkolevně sleva600, iPhoneMarket SLEVA400, Brilianty BF2026) a časově omezených promo akcí Vodafone, ČSOB Pojišťovny, Patria Finance, mBank a Raiffeisenbank.",
+    "Ověřené slevové kódy bez registrace (sleva600, SLEVA400, BF2026) a časově omezené akce ČSOB, Vodafone, Patria Finance, mBank a Raiffeisenbank.",
   alternates: { canonical },
   openGraph: {
     type: "website",
@@ -22,6 +24,14 @@ export const metadata: Metadata = {
     title: "Aktuální akce a ověřené slevové kódy 2026 | BONUSLY",
     description:
       "Ověřené slevové kupóny a časově omezené akce na iPhony, šperky, pojištění, tarify, spořicí účty a ETF bez poplatků.",
+    images: [{ url: `${canonical}/opengraph-image`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aktuální akce a ověřené slevové kódy 2026 | BONUSLY",
+    description:
+      "Ověřené slevové kódy (sleva600, SLEVA400, BF2026) a časově omezené promo akce bez registrace.",
+    images: [`${canonical}/opengraph-image`],
   },
 };
 

@@ -4,6 +4,8 @@ import { getBaseUrl } from "@/lib/seo";
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = getBaseUrl();
 
+  // Poznámka: /hledani není blokováno v robots.txt, protože používá meta robots noindex,follow —
+  // Googlebot tak direktivu noindex spolehlivě přečte a stránku s parametry neindexuje.
   return {
     rules: [
       {
@@ -15,7 +17,6 @@ export default function robots(): MetadataRoute.Robots {
           "/go/",
           "/dashboard/",
           "/prihlaseni/",
-          "/hledani",
         ],
       },
     ],

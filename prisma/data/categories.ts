@@ -19,7 +19,7 @@ export const CATEGORIES_DATA: CategorySeed[] = [
     order: 2,
     description:
       "Běžné, spořicí a podnikatelské účty zdarma, kreditní karty s odměnami a výhodné půjčky s bonusem až 3 000 Kč.",
-    seoTitle: "Nejlepší bankovní účty, karty a půjčky s bonusem 2026",
+    seoTitle: "Bankovní účty a karty s bonusem 2026",
     seoDescription:
       "Srovnání bankovních účtů v ČR s peněžitou odměnou za založení online. Raiffeisenbank, mBank, Air Bank, Revolut i podnikatelské účty.",
   },
@@ -30,7 +30,7 @@ export const CATEGORIES_DATA: CategorySeed[] = [
     order: 3,
     description:
       "ETF platformy, investice zajištěné nemovitostmi, sběratelská aktiva i podnikatelské financování s bonusy pro nové klienty.",
-    seoTitle: "Nejlepší investiční platformy a finance s bonusem 2026",
+    seoTitle: "Investiční platformy a bonusy 2026",
     seoDescription:
       "Srovnání ověřených investičních platforem v ČR: Portu, Patria Finance, Investown, Roier, Ronda Invest, Trading 212 a Flowpay.",
   },
@@ -63,7 +63,7 @@ export const CATEGORIES_DATA: CategorySeed[] = [
     order: 6,
     description:
       "České postele a matrace, bazény a vířivky, profesionální vzduchotechnika a kvalitní pneumatiky s přehledným výběrem.",
-    seoTitle: "Dům, zahrada, bydlení a pneumatiky — ověřené e-shopy 2026",
+    seoTitle: "Dům, zahrada a pneumatiky — recenze 2026",
     seoDescription:
       "Kvalitní české e-shopy pro domov, zahradu i auto: Spíme.cz, Marimex, VENTILÁTORY.cz a Originálnípneu.cz s ověřenými recenzemi.",
   },

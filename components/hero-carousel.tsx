@@ -175,7 +175,13 @@ export function HeroCarousel({ articles }: HeroCarouselProps) {
                 }}
               >
                 <Link
-                  href={isActive ? `/blog/${article.slug}` : "#"}
+                  href={`/blog/${article.slug}`}
+                  onClick={(e) => {
+                    if (isClickableSide) {
+                      e.preventDefault();
+                      setActiveIndex(index);
+                    }
+                  }}
                   tabIndex={isActive ? 0 : -1}
                   className={`group relative w-full h-full flex flex-col rounded-2xl overflow-hidden border transition-all duration-300 ${
                     isActive

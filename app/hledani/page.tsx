@@ -5,8 +5,12 @@ import { OfferGrid } from "@/components/offer-grid";
 import { ArticleGrid } from "@/components/article-grid";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 
+import { buildCanonical } from "@/lib/seo";
+
 export const metadata: Metadata = {
-  title: "Hledání",
+  title: "Vyhledávání nabídek a článků",
+  description: "Vyhledejte ověřené bonusy, bankovní účty, investiční platformy, slevové kódy a články na BONUSLY.",
+  alternates: { canonical: buildCanonical("/hledani") },
   robots: { index: false, follow: true },
 };
 

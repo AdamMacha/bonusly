@@ -12,6 +12,8 @@ import { Faq } from "@/components/faq";
 import { JsonLd } from "@/components/json-ld";
 import { buildCanonical, CURATED_COMPARISONS, getBaseUrl } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -42,8 +44,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!pair) return {};
 
   const { offerA, offerB } = pair;
-  const title = `${offerA.name} vs. ${offerB.name}: Velké srovnání 2026`;
-  const description = `Podrobné porovnání ${offerA.name} a ${offerB.name}. Která nabídka se vám vyplatí více? Srovnání bonusů, slevových kódů, podmínek, výhod a nevýhod.`;
+  const shortA = offerA.name.replace(/\s+(Chytrý účet|běžný účet|Partner|Hostitel)$/i, "");
+  const shortB = offerB.name.replace(/\s+(Chytrý účet|běžný účet|Partner|Hostitel)$/i, "");
+  const rawTitle = `${shortA} vs. ${shortB}: Srovnání 2026`;
+  const title = rawTitle.length > 51 ? `${shortA} vs. ${shortB} (2026)` : rawTitle;
+  const description = `Porovnání ${shortA} a ${shortB} v roce 2026. Zjistěte, kde získáte vyšší bonus, lepší podmínky, nižší poplatky a ověřené výhody.`;
   const canonical = buildCanonical(`/porovnani/${slug}`);
 
   return {
@@ -55,11 +60,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: canonical,
       title: `${title} | BONUSLY`,
       description,
+      images: [{ url: `${canonical}/opengraph-image`, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
       title: `${title} | BONUSLY`,
       description,
+      images: [`${canonical}/opengraph-image`],
     },
   };
 }
@@ -150,6 +157,7 @@ export default async function PorovnaniSlugPage({ params }: Props) {
                       alt={`Logo ${offer.name}`}
                       width={40}
                       height={40}
+                      unoptimized={offer.logo.endsWith(".svg")}
                       className="h-8 w-8 object-contain"
                     />
                   ) : (

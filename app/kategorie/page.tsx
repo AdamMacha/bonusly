@@ -5,13 +5,23 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { buildCanonical, getBaseUrl } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 const canonical = buildCanonical("/kategorie");
 
 export const metadata: Metadata = {
-  title: "Kategorie nabídek, bonusů a slev",
+  title: "Kategorie nabídek, bonusů a slev 2026",
   description:
-    "Procházejte ověřené nabídky podle kategorií — extra příjem, banky a účty, investice, energie a pojištění, Apple a elektro, dům a zahrada i slevové kódy.",
+    "Procházejte ověřené nabídky podle kategorií — extra příjem, banky, investice, energie a pojištění, Apple a elektro, dům a zahrada i slevové kódy.",
   alternates: { canonical },
+  openGraph: {
+    type: "website",
+    url: canonical,
+    title: "Kategorie nabídek, bonusů a slev 2026 | BONUSLY",
+    description:
+      "Vyberte oblast, ve které chcete ušetřit nebo získat bonus — všech 8 ověřených kategorií na jednom místě.",
+    images: [{ url: `${getBaseUrl()}/opengraph-image`, width: 1200, height: 630 }],
+  },
 };
 
 export default async function KategoriePage() {

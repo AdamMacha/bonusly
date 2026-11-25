@@ -3,10 +3,15 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
+  experimental: {
+    staticGenerationRetryCount: 3,
+    staticGenerationMaxConcurrency: 2,
+    staticGenerationMinPagesPerWorker: 50,
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     dangerouslyAllowSVG: true,
-    contentDispositionType: "attachment",
+    contentDispositionType: "inline",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
@@ -25,6 +30,26 @@ const nextConfig: NextConfig = {
       {
         source: "/kategorie/privydelek",
         destination: "/kategorie/extra-prijem",
+        permanent: true,
+      },
+      {
+        source: "/slevove-kody",
+        destination: "/akce-a-kupony",
+        permanent: true,
+      },
+      {
+        source: "/slevove-kupony",
+        destination: "/akce-a-kupony",
+        permanent: true,
+      },
+      {
+        source: "/kupony",
+        destination: "/akce-a-kupony",
+        permanent: true,
+      },
+      {
+        source: "/akce",
+        destination: "/akce-a-kupony",
         permanent: true,
       },
     ];

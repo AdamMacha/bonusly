@@ -52,7 +52,7 @@ export const FINANCE_SERVICES_OFFERS: OfferSeed[] = [
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Patria Finance recenze 2026: Pravidelné ETF zdarma bez poplatků",
+    seoTitle: "Patria Finance 2026: Pravidelné ETF zdarma",
     seoDescription:
       "Investujte s českým brokerem Patria Finance ze skupiny ČSOB. Akce do 31. 12. 2026: pravidelné ETF bez nákupních poplatků a Investice pro mladé zdarma.",
     faq: [
@@ -145,7 +145,7 @@ export const FINANCE_SERVICES_OFFERS: OfferSeed[] = [
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Portu.cz recenze 2026: Zkušenosti, poplatky, ETF portfolia a DIP",
+    seoTitle: "Portu.cz recenze 2026: ETF portfolia a DIP",
     seoDescription:
       "Podrobná recenze investiční platformy Portu.cz. Jak fungují automatizovaná ETF portfolia od 500 Kč, Investiční rezerva a důchodový účet DIP.",
     faq: [
@@ -213,7 +213,7 @@ export const FINANCE_SERVICES_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Portu Gallery recenze 2026: Investice do sběratelských aktiv od 1 Kč",
+    seoTitle: "Portu Gallery recenze 2026: Investice od 1 Kč",
     seoDescription:
       "Jak funguje Portu Gallery? Investujte od 1 Kč do veteránů, umění, vzácných hodinek a archivního alkoholu. Výhody, rizika a zkušenosti.",
     faq: [
@@ -282,7 +282,7 @@ export const FINANCE_SERVICES_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Roier.cz recenze 2026: Investice zajištěné nemovitostmi a výnosy",
+    seoTitle: "Roier.cz recenze 2026: Investice s LTV 70 %",
     seoDescription:
       "Jak funguje investiční platforma Roier.cz? Konzervativní LTV max. 70 %, měsíční výplata výnosů a nulové poplatky. Kompletní recenze a podmínky.",
     faq: [
@@ -349,7 +349,7 @@ Noví investoři registrovaní přes náš odkaz získají **vstupní bonus 1 % 
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Ronda Invest recenze 2026: Výnos až 9 % p.a. + vstupní bonus 1 %",
+    seoTitle: "Ronda Invest 2026: Výnos 9 % + bonus 1 %",
     seoDescription:
       "Investujte do nemovitostních úvěrů bez poplatků s Ronda Invest. Výnos až 9 % p.a. měsíčně a vstupní bonus 1 % z investic v prvních 30 dnech.",
     faq: [
@@ -416,7 +416,7 @@ E-shopy, restaurace, kavárny, služby a rostoucí OSVČ s prokazatelnou histori
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Flowpay.io recenze 2026: Podnikatelský úvěr až 2,5 mil. Kč bez zástavy",
+    seoTitle: "Flowpay.io 2026: Financování firem až 2,5 mil.",
     seoDescription:
       "Online financování pro firmy a OSVČ od Flowpay až do 2,5 mil. Kč bez zástavy majetku. Předčasné splacení zdarma, možnost odkladu splátky a rychlé schválení.",
     faq: [
@@ -486,7 +486,7 @@ E-shopy, restaurace, kavárny, služby a rostoucí OSVČ s prokazatelnou histori
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Raiffeisenbank podnikatelský účet: Zdarma + bonus 1 000 Kč 2026",
+    seoTitle: "Raiffeisenbank podnikatelský účet + 1 000 Kč",
     seoDescription:
       "CHYTRÝ podnikatelský účet od Raiffeisenbank zdarma bez podmínek s bonusem 1 000 Kč za založení. Multiměnový účet, výběry zdarma a recenze.",
     faq: [
@@ -553,7 +553,7 @@ E-shopy, restaurace, kavárny, služby a rostoucí OSVČ s prokazatelnou histori
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Raiffeisenbank kreditní karta STYLE: Na rok zdarma + slevy 2026",
+    seoTitle: "RB kreditní karta STYLE: 1 rok zdarma (2026)",
     seoDescription:
       "Získejte kreditní kartu STYLE od Raiffeisenbank na první rok zdarma (do 31. 12. 2026). Cashback, slevy RB Club a až 55 dní bez úroků.",
     faq: [
@@ -631,7 +631,7 @@ E-shopy, restaurace, kavárny, služby a rostoucí OSVČ s prokazatelnou histori
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Raiffeisenbank půjčka 2026: Úrok od 4,8 % a 3 měsíce bez úroků",
+    seoTitle: "RB Půjčka 2026: Od 4,8 % a 3 měs. bez úroků",
     seoDescription:
       "Online RB Půjčka od Raiffeisenbank od 4,8 % p.a. s akcí Minutová půjčka – první 3 měsíce bez úroků. Sjednání zdarma, kalkulačka a podmínky.",
     faq: [
@@ -700,7 +700,7 @@ Hledáte kombinaci bezplatného běžného účtu a nadprůměrného zhodnocení
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "mBank mSpořicí účet Plus 4,41 % p.a. + mKonto zdarma (2026/2027)",
+    seoTitle: "mBank mSpořicí účet 4,41 % p.a. + mKonto",
     seoDescription:
       "Založte si mBank mKonto zdarma a získejte mSpořicí účet Plus s úrokem až 4,41 % p.a. Akce platí do 31. 1. 2027. Podmínky a online sjednání.",
     faq: [
@@ -780,7 +780,7 @@ Pro majitele investičních bytů v Praze, Brně a dalších velkých městech, 
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Stálýnájem.cz recenze 2026: Garantovaný pronájem bytu bez starostí",
+    seoTitle: "Stálýnájem.cz recenze 2026: Garantovaný nájem",
     seoDescription:
       "Pronajímejte byt bez rizika neplatičů se Stálýnájem.cz. Garantovaný měsíční nájem, kompletní správa a nezávazná online kalkulačka nájemného.",
     faq: [
@@ -847,7 +847,7 @@ Vyberte si konkrétní typ pojištění v přehledu akcí výše a sjednejte poj
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "ČSOB Pojišťovna online sleva 20 % + Alza poukázka 500 Kč (2026)",
+    seoTitle: "ČSOB Pojišťovna: Sleva 20 % + Alza 500 Kč",
     seoDescription:
       "Sjednejte pojištění ČSOB online se slevou 20 % (cestovní a autopojištění), 10 % na odpovědnost a získejte Alza poukázku 500 Kč k pojištění majetku.",
     faq: [
@@ -959,7 +959,7 @@ Klikněte na vybranou promo kartu výše, zkontrolujte dostupnost internetu nebo
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Vodafone akce 2026: Tarif BezLimitu M za 472 Kč a internet za 299 Kč",
+    seoTitle: "Vodafone akce 2026: Tarif 472 Kč, net 299 Kč",
     seoDescription:
       "Využijte Black Friday a Vánoce u Vodafone: neomezený tarif za 472 Kč, internet na rok za 299 Kč/měs., Disney+ na 3 měsíce zdarma a až 17 000 Kč sleva na telefony.",
     faq: [
@@ -1057,7 +1057,7 @@ Klikněte na vybranou promo kartu výše, zkontrolujte dostupnost internetu nebo
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "innogy elektřina a plyn 2026: Ceník, recenze a online kalkulace",
+    seoTitle: "innogy elektřina a plyn 2026: Recenze a ceník",
     seoDescription:
       "Ověřte si, kolik můžete ušetřit za elektřinu a plyn u innogy. Stabilní dodavatel pro 1,5 mil. zákazníků v ČR, nezávazná online nabídka zdarma.",
     faq: [
@@ -1124,7 +1124,7 @@ Vyplňte krátký nezávazný poptávkový formulář na webu E.ON.cz s platným
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "E.ON.cz elektřina, plyn, fotovoltaika a tepelná čerpadla 2026",
+    seoTitle: "E.ON.cz 2026: Elektřina, plyn a fotovoltaika",
     seoDescription:
       "Nezávazná poptávka elektřiny, plynu, fotovoltaiky (FVE) a tepelných čerpadel u E.ON.cz. Stabilní dodavatel, pomoc s dotacemi a přehled výhod.",
     faq: [

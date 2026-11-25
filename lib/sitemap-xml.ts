@@ -6,8 +6,6 @@ export interface SitemapIndexEntry {
 export interface SitemapUrlEntry {
   loc: string;
   lastmod?: Date | string | null;
-  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority?: number;
 }
 
 function escapeXml(str: string): string {
@@ -19,12 +17,22 @@ function escapeXml(str: string): string {
     .replace(/'/g, "&apos;");
 }
 
-function formatW3CDate(date?: Date | string | null): string | null {
+export function formatW3CDate(date?: Date | string | null): string | null {
   if (!date) return null;
   const d = typeof date === "string" ? new Date(date) : date;
   if (Number.isNaN(d.getTime())) return null;
   return d.toISOString().split("T")[0];
 }
+
+export function maxDate(...dates: Array<Date | null | undefined>): Date {
+  const valid = dates
+    .filter((d): d is Date => d instanceof Date && !Number.isNaN(d.getTime()))
+    .map((d) => d.getTime());
+  if (valid.length === 0) return new Date("2026-11-25T00:00:00Z");
+  return new Date(Math.max(...valid));
+}
+
+export const STATIC_CONTENT_LASTMOD = "2026-11-25";
 
 export function buildSitemapIndexXml(entries: SitemapIndexEntry[]): string {
   const items = entries
@@ -56,10 +64,6 @@ export function buildUrlsetXml(entries: SitemapUrlEntry[]): string {
         "  <url>",
         `    <loc>${escapeXml(entry.loc)}</loc>`,
         ...(lastmod ? [`    <lastmod>${lastmod}</lastmod>`] : []),
-        ...(entry.changefreq ? [`    <changefreq>${entry.changefreq}</changefreq>`] : []),
-        ...(entry.priority !== undefined
-          ? [`    <priority>${entry.priority.toFixed(1)}</priority>`]
-          : []),
         "  </url>",
       ].join("\n");
     })

@@ -53,7 +53,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Jabkolevně.cz slevový kód sleva600: Sleva 600 Kč na iPhone (2026)",
+    seoTitle: "Jabkolevně.cz kód sleva600: Sleva 600 Kč",
     seoDescription:
       "Ověřený slevový kód sleva600 na Jabkolevně.cz — ušetřete okamžitě 600 Kč na nákupu nového či zánovního iPhonu nad 2 000 Kč bez DPH. Recenze a návod.",
     faq: [
@@ -138,7 +138,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "iPhoneMarket.cz slevový kód SLEVA400: Sleva 400 Kč na iPhone 2026",
+    seoTitle: "iPhoneMarket.cz kód SLEVA400: Sleva 400 Kč",
     seoDescription:
       "Získejte slevu 400 Kč na prověřený zánovní iPhone na iPhoneMarket.cz s kódem SLEVA400 (nad 2 000 Kč). Diagnostika, záruka a recenze e-shopu.",
     faq: [
@@ -223,7 +223,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Brilianty.cz slevový kód BF2026: Black Friday sleva 15 % na šperky",
+    seoTitle: "Brilianty.cz kód BF2026: Sleva 15 % šperky",
     seoDescription:
       "Získejte 15% slevu na luxusní diamantové šperky české výroby Danfil na Brilianty.cz s kódem BF2026 (do 29. 11. 2026). Recenze a tipy k nákupu.",
     faq: [
@@ -300,7 +300,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "iStyle.cz recenze 2026: Apple Premium Partner, výkup a slevy",
+    seoTitle: "iStyle.cz recenze 2026: Apple a výkup",
     seoDescription:
       "Nakupujte iPhone, MacBook a iPad u oficiálního Apple Premium Partnera iStyle.cz. Výkup na protiúčet, studentské slevy ISIC a výhodné financování.",
     faq: [
@@ -360,7 +360,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Sencor.cz oficiální e-shop 2026: Spotřebiče, roboty a akce",
+    seoTitle: "Sencor.cz e-shop 2026: Spotřebiče a akce",
     seoDescription:
       "Nakupujte kuchyňské roboty, kávovary, horkovzdušné fritézy a vysavače přímo v oficiálním e-shopu Sencor.cz. Přehled výhod, záruky a aktuálních akcí.",
     faq: [
@@ -415,7 +415,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "DronPro.cz recenze 2026: Drony DJI, akční kamery a letecká škola",
+    seoTitle: "DronPro.cz recenze 2026: Drony DJI a škola",
     seoDescription:
       "Vybíráte dron DJI nebo akční kameru? DronPro.cz nabízí kompletní sortiment, odborné poradenství, servis i leteckou školu v Praze.",
     faq: [
@@ -471,7 +471,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Banggood zkušenosti 2026: Nákup z EU/CZ skladů bez cla a DPH",
+    seoTitle: "Banggood 2026: EU/CZ sklady bez cla a DPH",
     seoDescription:
       "Jak nakupovat chytrou elektroniku, 3D tiskárny a nářadí na Banggood z evropských skladů bez cla a DPH? Tipy, zkušenosti a aktuální výprodeje.",
     faq: [
@@ -527,7 +527,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "AliExpress česky 2026: Výprodeje až 90 %, Choice doručení a clo",
+    seoTitle: "AliExpress česky 2026: Slevy až 90 % a Choice",
     seoDescription:
       "Jak chytře nakupovat na AliExpressu z ČR bez doplatků? Výhody AliExpress Choice, DPH v ceně do 150 EUR a tipy na nejvyšší slevy.",
     faq: [
@@ -582,7 +582,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Spíme.cz recenze 2026: České masivní postele a matrace Postelia",
+    seoTitle: "Spíme.cz recenze 2026: Postele a matrace",
     seoDescription:
       "Hledáte poctivou postel z masivu a kvalitní matraci? Spíme.cz (český výrobce Postelia) nabízí vysokou nosnost, atypické rozměry a skvělé hodnocení.",
     faq: [
@@ -637,7 +637,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Marimex.cz recenze 2026: Bazény, infrasauny, vířivky a trampolíny",
+    seoTitle: "Marimex.cz recenze 2026: Bazény a infrasauny",
     seoDescription:
       "Vybavte zahradu i domácí wellness na Marimex.cz. Zahradní bazény, vířivky, infrasauny a bezpečné trampolíny s dostupnými náhradními díly v ČR.",
     faq: [
@@ -692,7 +692,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "VENTILÁTORY.cz recenze 2026: Koupelnové ventilátory a rekuperace",
+    seoTitle: "VENTILÁTORY.cz 2026: Ventilátory a rekuperace",
     seoDescription:
       "Vybíráte tichý koupelnový ventilátor, potrubní vzduchotechniku nebo lokální rekuperaci? Přehled sortimentu a výhod specializovaného e-shopu VENTILÁTORY.cz.",
     faq: [
@@ -747,7 +747,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Originálnípneu.cz recenze 2026: Levné pneumatiky s uvedeným DOT",
+    seoTitle: "Originálnípneu.cz 2026: Pneu s uvedeným DOT",
     seoDescription:
       "Kupte letní, zimní nebo celoroční pneumatiky (Michelin, Continental, Barum) a alu kola na Originálnípneu.cz s přehledným uvedením roku výroby DOT.",
     faq: [
@@ -801,7 +801,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Honzovy-longboardy.cz recenze 2026: Longboardy, surfskaty a brusle",
+    seoTitle: "Honzovy-longboardy.cz: Longboardy a brusle",
     seoDescription:
       "Vybíráte longboard, cruiser, surfskate, skateboard nebo trekové brusle? Honzovy-longboardy.cz nabízí top značky, náhradní díly a půjčovnu v Praze.",
     faq: [
@@ -855,7 +855,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "MinisterstvoHraček.cz recenze 2026: Elektrická autíčka a dřevěné hračky",
+    seoTitle: "MinisterstvoHraček.cz 2026: Hračky a autíčka",
     seoDescription:
       "Originální dětské hračky na MinisterstvoHraček.cz — licencovaná elektrická autíčka s dálkovým ovládáním i ručně vyráběné dřevěné hračky.",
     faq: [
@@ -912,7 +912,7 @@ export const ESHOP_OFFERS: OfferSeed[] = [
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "EroticCity.cz recenze 2026: Diskrétní doručení a výběr (18+)",
+    seoTitle: "EroticCity.cz 2026: Diskrétní doručení (18+)",
     seoDescription:
       "Největší český e-shop EroticCity.cz (18+) se 100% diskrétním neoznačeným doručením do výdejních boxů i domů. Prémiové značky a zkušenosti.",
     faq: [

@@ -29,6 +29,7 @@ export function ArticleStickyBar({ offer }: ArticleStickyBarProps) {
                 src={offer.logo}
                 alt={offer.name}
                 fill
+                unoptimized={offer.logo.endsWith(".svg")}
                 className="object-contain p-0.5"
               />
             </div>

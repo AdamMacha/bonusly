@@ -5,12 +5,14 @@ import { JsonLd } from "@/components/json-ld";
 import { OfferCatalogClient } from "@/components/offer-catalog-client";
 import { buildCanonical, getBaseUrl } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 const canonical = buildCanonical("/nabidky");
 
 export const metadata: Metadata = {
-  title: "Všechny ověřené nabídky, bonusy a slevové kódy 2026",
+  title: "Všechny ověřené nabídky, bonusy a kódy 2026",
   description:
-    "Kompletní katalog ověřených bankovních bonusů, investičních platforem, levnějších energií, pojištění, slevových kódů na Apple i možností extra příjmu v ČR.",
+    "Kompletní katalog 41 ověřených bankovních bonusů, investičních platforem, levnějších energií, pojištění, slevových kódů na Apple i extra příjmu v ČR.",
   alternates: { canonical },
   openGraph: {
     type: "website",
@@ -18,6 +20,7 @@ export const metadata: Metadata = {
     title: "Všechny ověřené nabídky a bonusy 2026 | BONUSLY",
     description:
       "Porovnejte přes 40 ověřených nabídek, finančních produktů, slevových kódů a možností extra příjmu na jednom místě.",
+    images: [{ url: `${getBaseUrl()}/opengraph-image`, width: 1200, height: 630 }],
   },
 };
 

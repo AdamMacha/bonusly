@@ -11,6 +11,8 @@ import { CopyCodeButton } from "@/components/copy-code-button";
 import { CtaButton } from "@/components/cta-button";
 import { buildCanonical, cleanSeoTitle, getBaseUrl } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -52,11 +54,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       locale: "cs_CZ",
       siteName: "BONUSLY",
+      images: [{ url: `${canonical}/opengraph-image`, width: 1200, height: 630, alt: category.name }],
     },
     twitter: {
       card: "summary_large_image",
       title: `${title} | BONUSLY`,
       description,
+      images: [`${canonical}/opengraph-image`],
     },
   };
 }

@@ -15,8 +15,6 @@ export async function GET() {
     categories.map((cat) => ({
       loc: `${baseUrl}/kategorie/${cat.slug}`,
       lastmod: cat.updatedAt,
-      changefreq: "weekly",
-      priority: 0.8,
     }))
   );
 

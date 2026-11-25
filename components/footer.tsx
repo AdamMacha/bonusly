@@ -16,14 +16,18 @@ const footerLinks = {
   informace: [
     { href: "/nabidky", label: "Všechny nabídky" },
     { href: "/akce-a-kupony", label: "Akce a slevové kódy" },
+    { href: "/kalkulacka-bonusu", label: "Kalkulačka bonusů 2026" },
+    { href: "/nejlepsi-bankovni-bonusy-2026", label: "Bankovní bonusy 2026" },
+    { href: "/investicni-bonusy-2026", label: "Investiční bonusy 2026" },
     { href: "/porovnani", label: "Srovnání nabídek" },
     { href: "/blog", label: "Blog & Magazín" },
-    { href: "/o-nas", label: "O BONUSLY" },
-    { href: "/kontakt", label: "Kontakt" },
   ],
   pravni: [
-    { href: "/podminky", label: "Podmínky" },
-    { href: "/ochrana-soukromi", label: "Ochrana soukromí" },
+    { href: "/jak-hodnotime", label: "Jak hodnotíme nabídky" },
+    { href: "/o-nas", label: "O BONUSLY & provozovatel" },
+    { href: "/kontakt", label: "Kontakt" },
+    { href: "/podminky", label: "Podmínky použití" },
+    { href: "/ochrana-soukromi", label: "Ochrana soukromí (GDPR)" },
     { href: "/cookies", label: "Cookies" },
   ],
 };

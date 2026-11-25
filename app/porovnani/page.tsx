@@ -4,19 +4,22 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { buildCanonical, CURATED_COMPARISONS, getBaseUrl } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 const canonical = buildCanonical("/porovnani");
 
 export const metadata: Metadata = {
-  title: "Velká srovnání nabídek, bank, investic a e-shopů 2026",
+  title: "Srovnání bank, investic, energií a e-shopů 2026",
   description:
     "Objektivní srovnání bankovních účtů, investičních platforem, dodavatelů energií, rozvážkových aplikací i prodejců zánovních iPhonů v ČR.",
   alternates: { canonical },
   openGraph: {
     type: "website",
     url: canonical,
-    title: "Velká srovnání nabídek a služeb 2026 | BONUSLY",
+    title: "Srovnání bank, investic, energií a e-shopů 2026 | BONUSLY",
     description:
-      "Porovnání bonusů, poplatků, podmínek a výhod: Raiffeisenbank vs mBank, Portu vs Patria, Investown vs Roier, Jabkolevně vs iPhoneMarket a další.",
+      "Porovnání bonusů, poplatků, podmínek a výhod: Raiffeisenbank vs. mBank, Portu vs. Patria, Investown vs. Roier, Jabkolevně vs. iPhoneMarket.",
+    images: [{ url: `${getBaseUrl()}/opengraph-image`, width: 1200, height: 630 }],
   },
 };
 

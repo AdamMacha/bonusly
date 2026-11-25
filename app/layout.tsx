@@ -21,40 +21,31 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+// DŮLEŽITÉ: V root layoutu NENASTAVUJEME alternates.canonical ani openGraph.url,
+// aby je nedědily podstránky (/podminky, /hledani, 404 aj.). Každá stránka si je nastavuje sama.
 export const metadata: Metadata = {
   title: {
-    default: "BONUSLY — Ověřené bonusy, slevové kódy, investice a extra příjem",
+    default: "BONUSLY — Ověřené bonusy, slevové kódy a investice",
     template: "%s | BONUSLY",
   },
   description:
-    "Porovnáváme nejvýhodnější bankovní bonusy, investiční platformy, pojištění, energie, ověřené slevové kódy a možnosti extra příjmu v ČR na jednom místě.",
+    "Porovnáváme nejvýhodnější bankovní bonusy, investiční platformy, pojištění, energie, ověřené slevové kódy a možnosti extra příjmu v ČR.",
   keywords: [
     "bonusy za registraci",
     "slevové kódy 2026",
     "bankovní účty s bonusem",
     "investiční platformy srovnání",
     "extra příjem",
-    "cashback ČR",
     "akce a kupóny",
   ],
   metadataBase: new URL(baseUrl),
-  alternates: {
-    canonical: baseUrl,
-  },
   openGraph: {
     type: "website",
     locale: "cs_CZ",
-    url: baseUrl,
     siteName: "BONUSLY",
-    title: "BONUSLY — Ověřené bonusy, slevové kódy, investice a extra příjem",
-    description:
-      "Porovnáváme bankovní bonusy, investice, pojištění, energie, ověřené slevové kódy a možnosti extra příjmu v ČR.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BONUSLY — Ověřené bonusy, slevové kódy a extra příjem",
-    description:
-      "Najdi ověřené bonusy, slevové kódy, finanční produkty a příležitosti v ČR na jednom místě.",
   },
   robots: {
     index: true,

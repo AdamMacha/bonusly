@@ -67,6 +67,7 @@ export function ArticleOfferHeroCta({ offer }: ArticleOfferCtaProps) {
                 src={offer.logo}
                 alt={offer.name}
                 fill
+                unoptimized={offer.logo.endsWith(".svg")}
                 className="object-contain p-1"
               />
             </div>

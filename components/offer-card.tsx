@@ -72,6 +72,7 @@ export function OfferCard({
                 alt={`Logo ${name}`}
                 width={32}
                 height={32}
+                unoptimized={logo.endsWith(".svg")}
                 className="h-8 w-8 object-contain"
               />
             </div>

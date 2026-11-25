@@ -17,15 +17,25 @@ import {
   SOCIAL_LINKS,
 } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 const canonical = buildCanonical("/");
 
 export const metadata: Metadata = {
   title: {
-    absolute: "BONUSLY — Ověřené bonusy, slevové kódy, investice a extra příjem 2026",
+    absolute: "BONUSLY — Ověřené bonusy, slevové kódy a investice 2026",
   },
   description:
-    "Porovnáváme více než 40 ověřených nabídek v ČR: bankovní bonusy až 3 000 Kč, investice bez poplatků, pojištění se slevou 20 %, tarify, slevové kódy na Apple i extra příjem.",
+    "Porovnáváme přes 40 ověřených nabídek v ČR: bankovní bonusy až 3 000 Kč, investice bez poplatků, pojištění -20 %, slevové kódy i extra příjem.",
   alternates: { canonical },
+  openGraph: {
+    type: "website",
+    url: canonical,
+    title: "BONUSLY — Ověřené bonusy, slevové kódy a investice 2026",
+    description:
+      "Porovnáváme přes 40 ověřených nabídek v ČR: bankovní bonusy až 3 000 Kč, investice bez poplatků, pojištění -20 % a ověřené slevové kódy.",
+    images: [{ url: `${canonical}opengraph-image`, width: 1200, height: 630, alt: "BONUSLY" }],
+  },
 };
 
 export default async function Home() {
@@ -189,6 +199,56 @@ export default async function Home() {
           </div>
         </section>
       )}
+
+      {/* Money Hubs & Bonus Calculator Banner */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <Link
+            href="/kalkulacka-bonusu"
+            className="group rounded-2xl bg-navy text-white p-6 shadow-md hover:bg-navy-light transition-all"
+          >
+            <span className="inline-flex items-center rounded-full bg-green/20 px-2.5 py-0.5 text-[11px] font-bold text-green mb-3">
+              🧮 Kalkulačka 2026
+            </span>
+            <h2 className="text-lg font-extrabold text-white group-hover:text-green transition-colors">
+              Spočítejte si celkový zisk z bonusů →
+            </h2>
+            <p className="mt-1.5 text-xs text-slate-300 leading-relaxed">
+              Zaškrtněte banky a platformy, které ještě nemáte, a získejte akční plán až na 13 000+ Kč.
+            </p>
+          </Link>
+
+          <Link
+            href="/nejlepsi-bankovni-bonusy-2026"
+            className="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-green/40 hover:shadow-md transition-all"
+          >
+            <span className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-[11px] font-bold text-slate-600 mb-3">
+              🏦 Žebříček 2026
+            </span>
+            <h2 className="text-lg font-extrabold text-navy group-hover:text-green-dark transition-colors">
+              Nejlepší bankovní bonusy za účet →
+            </h2>
+            <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
+              Přehledná tabulka bank s odměnou až 3 000 Kč, kódy a úroky na spořicích účtech.
+            </p>
+          </Link>
+
+          <Link
+            href="/investicni-bonusy-2026"
+            className="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-green/40 hover:shadow-md transition-all"
+          >
+            <span className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-[11px] font-bold text-slate-600 mb-3">
+              📈 Srovnání 2026
+            </span>
+            <h2 className="text-lg font-extrabold text-navy group-hover:text-green-dark transition-colors">
+              Investiční platformy a bonusy →
+            </h2>
+            <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
+              Portu, Patria Finance (ETF zdarma), Investown +500 Kč, Ronda Invest +1 % a DIP.
+            </p>
+          </Link>
+        </div>
+      </section>
 
       {/* Featured Offers */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">

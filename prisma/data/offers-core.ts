@@ -53,7 +53,7 @@ Wolt patří mezi nejoblíbenější rozvážkové platformy v České republice
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Wolt kurýr bonus 4 000 Kč: Referral kód CPCJPUX a návod 2026",
+    seoTitle: "Wolt kurýr bonus 4 000 Kč: Kód CPCJPUX (2026)",
     seoDescription:
       "Staňte se kurýrem Wolt s promo kódem CPCJPUX a získejte startovací bonus 4 000 Kč za 150 objednávek do 45 dní. Reálné výdělky a podmínky.",
     faq: [
@@ -121,7 +121,7 @@ Wolt patří mezi nejoblíbenější rozvážkové platformy v České republice
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "foodora kurýr: Výdělky, podmínky a online registrace 2026",
+    seoTitle: "foodora kurýr 2026: Výdělky a registrace",
     seoDescription:
       "Jak začít rozvážet pro foodoru v ČR? Zjistěte reálné výdělky, jak funguje rezervace směn, rozvoz bez IČO a aktuální podmínky registrace.",
     faq: [
@@ -189,7 +189,7 @@ Máte volný pokoj, investiční byt, chatu nebo chalupu? Stát se hostitelem na
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Airbnb hostitel: Jak začít pronajímat + bonus 500 Kč 2026",
+    seoTitle: "Airbnb hostitel 2026: Bonus 500 Kč a návod",
     seoDescription:
       "Proměňte volný byt, pokoj nebo chalupu v pravidelný příjem na Airbnb. Uvítací bonus 500 Kč pro nové hostitele, ochrana AirCover a návod.",
     faq: [
@@ -253,7 +253,7 @@ Standardní provize Booking.com se pohybuje kolem 15 %. Při průměrné hodnot�
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Booking.com Partner: 0% provize na prvních 50 rezervací 2026",
+    seoTitle: "Booking.com Partner: 0% provize (50 rezervací)",
     seoDescription:
       "Zaregistrujte svůj apartmán, chatu nebo penzion na Booking.com přes partnerský odkaz a neplaťte žádnou provizi z prvních 50 rezervací.",
     faq: [
@@ -320,7 +320,7 @@ Aby vznikl nárok na kompletní kombinovanou odměnu **1 000 + 300 Kč**, vyžad
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Tipsport bonus 1 300 Kč (300 Kč bez vkladu + 1 000 Kč pozvánka)",
+    seoTitle: "Tipsport bonus 1 300 Kč: Pozvánka a návod 2026",
     seoDescription:
       "Získejte 300 Kč bez vkladu za registraci přes BankID a dalších 1 000 Kč přes oficiální pozvánku Tipsport Přiveď kamaráda. Návod 2026.",
     faq: [
@@ -390,7 +390,7 @@ Aby vznikl nárok na kompletní kombinovanou odměnu **1 000 + 300 Kč**, vyžad
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Raiffeisenbank Chytrý účet: Bonus 3 000 Kč s kódem lWcT2P",
+    seoTitle: "Raiffeisenbank bonus 3 000 Kč: Kód lWcT2P",
     seoDescription:
       "Založte si Chytrý účet Raiffeisenbank online zdarma s kódem lWcT2P a získejte bonus až 3 000 Kč. Výběry ze všech bankomatů zdarma a podmínky.",
     faq: [
@@ -462,7 +462,7 @@ Aby vznikl nárok na kompletní kombinovanou odměnu **1 000 + 300 Kč**, vyžad
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "mBank mKonto bonus 1 000 Kč: Kód adamm1863 a podmínky 2026",
+    seoTitle: "mBank mKonto bonus 1 000 Kč: Kód adamm1863",
     seoDescription:
       "Založte si mBank mKonto zdarma s kódem adamm1863 a získejte 100 Kč za každou z prvních 10 plateb kartou (celkem 1 000 Kč). Návod krok za krokem.",
     faq: [
@@ -526,7 +526,7 @@ Aby vznikl nárok na kompletní kombinovanou odměnu **1 000 + 300 Kč**, vyžad
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Air Bank účet zdarma: Kód qupir6, odměny My Air a recenze 2026",
+    seoTitle: "Air Bank účet zdarma: Kód qupir6 a recenze",
     seoDescription:
       "Založte si Air Bank běžný účet zdarma s doporučovacím kódem qupir6. Stačí 5 plateb kartou do 45 dnů. Recenze, poplatky a výhody My Air.",
     faq: [
@@ -599,7 +599,7 @@ Věrnostní program Revolutu umožňuje automaticky sbírat body z každé platb
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Revolut recenze, RevPoints a jak získat bonus za registraci 2026",
+    seoTitle: "Revolut recenze 2026: Bonus a RevPoints",
     seoDescription:
       "Založte si Revolut přes náš odkaz, proveďte 3 platby min. 100 Kč, objednejte kartu a získejte odměnu od BONUSLY. Recenze kurzů a RevPoints.",
     faq: [
@@ -669,7 +669,7 @@ Věrnostní program Revolutu umožňuje automaticky sbírat body z každé platb
     featured: true,
     active: true,
     verified: true,
-    seoTitle: "Investown bonus 500 Kč: Kód 0G1ADBC5, recenze a zkušenosti 2026",
+    seoTitle: "Investown bonus 500 Kč: Kód 0G1ADBC5 (2026)",
     seoDescription:
       "Investujte do nemovitostí přes Investown s kódem 0G1ADBC5 a získejte 500 Kč bonus za investici 5 000 Kč do 7 dní. Recenze výnosů a sekundárního trhu.",
     faq: [
@@ -734,7 +734,7 @@ Věrnostní program Revolutu umožňuje automaticky sbírat body z každé platb
     featured: false,
     active: true,
     verified: true,
-    seoTitle: "Trading 212 recenze 2026: Akcie a ETF bez poplatků + stav bonusu",
+    seoTitle: "Trading 212 recenze 2026: ETF bez poplatků",
     seoDescription:
       "Aktuální recenze brokera Trading 212 v češtině. Nulové poplatky na ETF a akcie, denní úročení hotovosti a aktuální stav akce na akcii zdarma.",
     faq: [

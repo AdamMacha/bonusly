@@ -16,6 +16,7 @@ import { TipsportLeadForm } from "@/components/tipsport-lead-form";
 import { CashbackBanner } from "@/components/cashback-banner";
 import { CopyCodeButton } from "@/components/copy-code-button";
 import { OfferStickyBar } from "@/components/offer-sticky-bar";
+import { OfferReviews } from "@/components/offer-reviews";
 import {
   buildCanonical,
   cleanSeoTitle,
@@ -23,11 +24,12 @@ import {
   getComparisonsForOffer,
 } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
-// React cache() sdílí 1 DB dotaz mezi generateMetadata a OfferPage
 const getOfferBySlug = cache(async (slug: string) => {
   return prisma.offer.findUnique({
     where: { slug },
@@ -37,6 +39,11 @@ const getOfferBySlug = cache(async (slug: string) => {
       promos: {
         where: { active: true },
         orderBy: { order: "asc" },
+      },
+      reviews: {
+        where: { approved: true },
+        orderBy: { createdAt: "desc" },
+        take: 25,
       },
     },
   });
@@ -48,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!offer || !offer.active) return {};
 
-  const title = cleanSeoTitle(offer.seoTitle || `${offer.name}: Recenze, bonus a podmínky`);
+  const title = cleanSeoTitle(offer.seoTitle || `${offer.name}: Recenze a bonus 2026`);
   const description = offer.seoDescription || offer.shortDescription;
   const canonical = buildCanonical(`/nabidky/${offer.slug}`);
 
@@ -63,11 +70,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       locale: "cs_CZ",
       siteName: "BONUSLY",
+      images: [{ url: `${canonical}/opengraph-image`, width: 1200, height: 630, alt: offer.name }],
     },
     twitter: {
       card: "summary_large_image",
       title: `${title} | BONUSLY`,
       description,
+      images: [`${canonical}/opengraph-image`],
     },
   };
 }
@@ -121,35 +130,86 @@ export default async function OfferPage({ params }: Props) {
       })
     : null;
 
-  const productSchema: Record<string, unknown> = {
+  // Bezpečné určení Schema.org typu (žádné nesmyslné "price": "0" pro placené e-shopy!)
+  const isFreeAccountCategory =
+    offer.category.slug === "banky" ||
+    offer.category.slug === "extra-prijem" ||
+    offer.category.slug === "finance";
+
+  const schemaType =
+    offer.category.slug === "banky" || offer.category.slug === "finance"
+      ? "FinancialProduct"
+      : offer.category.slug === "extra-prijem" || offer.category.slug === "pojisteni-a-sluzby"
+        ? "Service"
+        : "Product";
+
+  const latestPromoValidUntil = offer.promos
+    .map((p) => p.validUntil)
+    .filter((d): d is Date => d instanceof Date)
+    .sort((a, b) => b.getTime() - a.getTime())[0];
+
+  const userReviewCount = offer.reviews.length;
+  const userRatingAvg =
+    userReviewCount > 0
+      ? Number(
+          (
+            offer.reviews.reduce((sum, r) => sum + r.rating, 0) / userReviewCount
+          ).toFixed(1)
+        )
+      : null;
+
+  const entitySchema: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": schemaType,
     name: offer.name,
     description: offer.seoDescription || offer.shortDescription,
     url: pageUrl,
-    image: offer.logo ? `${baseUrl}${offer.logo}` : `${pageUrl}/opengraph-image`,
+    image:
+      offer.logo && !offer.logo.endsWith(".svg")
+        ? `${baseUrl}${offer.logo}`
+        : `${pageUrl}/opengraph-image`,
     category: offer.category.name,
-    brand: {
-      "@type": "Brand",
-      name: offer.name,
-    },
-    offers: {
-      "@type": "Offer",
-      url: pageUrl,
-      price: "0",
-      priceCurrency: "CZK",
-      availability: "https://schema.org/InStock",
-      ...(offer.bonus && { description: offer.bonus }),
-    },
+    ...(schemaType === "Product"
+      ? { brand: { "@type": "Brand", name: offer.name } }
+      : { provider: { "@type": "Organization", name: offer.name } }),
+    ...(offer.bonus && {
+      offers: {
+        "@type": "Offer",
+        name: offer.bonus,
+        description: offer.bonusDescription || offer.bonus,
+        url: pageUrl,
+        availability: "https://schema.org/InStock",
+        ...(isFreeAccountCategory && { price: "0", priceCurrency: "CZK" }),
+        ...(latestPromoValidUntil && {
+          validThrough: latestPromoValidUntil.toISOString().split("T")[0],
+        }),
+      },
+    }),
+    ...(userReviewCount > 0 &&
+      userRatingAvg !== null && {
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: userRatingAvg,
+          bestRating: 5,
+          worstRating: 1,
+          ratingCount: userReviewCount,
+        },
+      }),
     ...(offer.rating && {
       review: {
         "@type": "Review",
         author: {
-          "@type": "Organization",
-          name: "Redakce BONUSLY",
-          url: baseUrl,
+          "@type": "Person",
+          name: "Adam Mácha",
+          jobTitle: "Finanční analytik a zakladatel BONUSLY",
+          url: `${baseUrl}/o-nas`,
         },
-        datePublished: (offer.lastVerifiedAt || offer.updatedAt).toISOString(),
+        publisher: {
+          "@type": "Organization",
+          name: "BONUSLY",
+          url: `${baseUrl}/`,
+        },
+        datePublished: (offer.lastVerifiedAt || offer.updatedAt).toISOString().split("T")[0],
         reviewBody: offer.shortDescription,
         reviewRating: {
           "@type": "Rating",
@@ -181,9 +241,19 @@ export default async function OfferPage({ params }: Props) {
     }),
   };
 
+  const serializedReviews = offer.reviews.map((r) => ({
+    id: r.id,
+    authorName: r.authorName,
+    rating: r.rating,
+    comment: r.comment,
+    bonusReceived: r.bonusReceived,
+    daysToReceive: r.daysToReceive,
+    createdAt: r.createdAt.toISOString(),
+  }));
+
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-14 pb-24 lg:pb-14">
-      <JsonLd data={productSchema} />
+      <JsonLd data={entitySchema} />
 
       {faqItems.length > 0 && (
         <JsonLd
@@ -204,7 +274,7 @@ export default async function OfferPage({ params }: Props) {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "BONUSLY", item: baseUrl },
+            { "@type": "ListItem", position: 1, name: "BONUSLY", item: `${baseUrl}/` },
             { "@type": "ListItem", position: 2, name: "Nabídky", item: `${baseUrl}/nabidky` },
             {
               "@type": "ListItem",
@@ -238,6 +308,7 @@ export default async function OfferPage({ params }: Props) {
                   width={48}
                   height={48}
                   priority
+                  unoptimized={offer.logo.endsWith(".svg")}
                   className="h-10 w-10 object-contain"
                 />
               ) : (
@@ -255,7 +326,10 @@ export default async function OfferPage({ params }: Props) {
                   {offer.category.name}
                 </Link>
                 {offer.verified && (
-                  <span className="inline-flex items-center gap-1 rounded-full bg-green/10 px-2.5 py-0.5 text-xs font-semibold text-green-dark">
+                  <Link
+                    href="/jak-hodnotime"
+                    className="inline-flex items-center gap-1 rounded-full bg-green/10 px-2.5 py-0.5 text-xs font-semibold text-green-dark hover:bg-green/20 transition-colors"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -270,12 +344,16 @@ export default async function OfferPage({ params }: Props) {
                       />
                     </svg>
                     Ověřeno redakcí
-                  </span>
+                  </Link>
                 )}
                 {offer.rating && (
-                  <span className="inline-flex items-center gap-1 rounded-full bg-amber-50 border border-amber-200/70 px-2.5 py-0.5 text-xs font-bold text-amber-700">
-                    <span aria-hidden="true">★</span> {offer.rating.toFixed(1)} / 5
-                  </span>
+                  <a
+                    href="#zkusenosti"
+                    className="inline-flex items-center gap-1 rounded-full bg-amber-50 border border-amber-200/70 px-2.5 py-0.5 text-xs font-bold text-amber-700 hover:bg-amber-100/70 transition-colors"
+                  >
+                    <span aria-hidden="true">★</span> {(userRatingAvg ?? offer.rating).toFixed(1)} / 5
+                    {userReviewCount > 0 && ` (${userReviewCount})`}
+                  </a>
                 )}
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy tracking-tight">
@@ -332,7 +410,6 @@ export default async function OfferPage({ params }: Props) {
             </section>
           )}
 
-          {/* Fallback CTA if offer has neither bonus nor promoCode */}
           {!offer.bonus && !offer.promoCode && (
             <div className="mt-6">
               <CtaButton href={`/go/${offer.trackingSlug}`} size="lg">
@@ -341,12 +418,10 @@ export default async function OfferPage({ params }: Props) {
             </div>
           )}
 
-          {/* Tipsport Lead Capture Form */}
           {offer.slug === "tipsport" && (
             <TipsportLeadForm offerSlug={offer.slug} offerName={offer.name} />
           )}
 
-          {/* Cashback Banner (strictly rendered only when rewardAmount > 0) */}
           <CashbackBanner rewardAmount={offer.rewardAmount} className="mt-6" />
 
           {/* Sheet 2 Active Promo Offers & Coupons */}
@@ -406,7 +481,7 @@ export default async function OfferPage({ params }: Props) {
             </section>
           )}
 
-          {/* Quick Summary Facts Table (great for Google Featured Snippets & AI Overviews) */}
+          {/* Quick Summary Facts Table */}
           <section className="mt-10 rounded-xl border border-slate-200 bg-slate-50/70 p-5 sm:p-6">
             <h2 className="text-base font-bold text-navy mb-4">Rychlý přehled: {offer.name}</h2>
             <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm">
@@ -529,7 +604,7 @@ export default async function OfferPage({ params }: Props) {
             </section>
           )}
 
-          {/* Bottom Conversion Box inside article */}
+          {/* Bottom Conversion Box */}
           <section className="mt-10 rounded-2xl bg-navy p-6 sm:p-8 text-white">
             <h2 className="text-xl font-bold text-white">
               Připraveni využít nabídku {offer.name}?
@@ -554,15 +629,30 @@ export default async function OfferPage({ params }: Props) {
             </div>
           )}
 
-          {/* Verification date */}
-          {offer.lastVerifiedAt && verifiedDateFormatted && (
-            <p className="mt-8 text-sm text-slate-400">
-              Naposledy ověřeno redakcí BONUSLY:{" "}
-              <time dateTime={offer.lastVerifiedAt.toISOString()}>{verifiedDateFormatted}</time>
-            </p>
-          )}
+          {/* Community Reviews Widget */}
+          <OfferReviews
+            offerSlug={offer.slug}
+            offerName={offer.name}
+            initialReviews={serializedReviews}
+          />
 
-          <div className="mt-8">
+          {/* Verification date & E-E-A-T note */}
+          <div className="mt-8 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+            {offer.lastVerifiedAt && verifiedDateFormatted && (
+              <p>
+                Naposledy ověřil{" "}
+                <Link href="/o-nas" className="font-semibold text-navy hover:text-green-dark">
+                  Adam Mácha
+                </Link>{" "}
+                dne <time dateTime={offer.lastVerifiedAt.toISOString()}>{verifiedDateFormatted}</time>
+              </p>
+            )}
+            <Link href="/jak-hodnotime" className="font-semibold text-green-dark hover:text-green">
+              Jak hodnotíme a ověřujeme nabídky →
+            </Link>
+          </div>
+
+          <div className="mt-6">
             <AffiliateDisclosure />
           </div>
         </article>
@@ -570,13 +660,12 @@ export default async function OfferPage({ params }: Props) {
         {/* Sidebar */}
         <aside className="lg:col-span-1">
           <div className="sticky top-20 space-y-6">
-            {/* Quick CTA card */}
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs">
               <div className="flex items-center justify-between mb-2">
                 <h2 className="font-bold text-navy">{offer.name}</h2>
                 {offer.rating && (
                   <span className="text-xs font-bold text-amber-600">
-                    ★ {offer.rating.toFixed(1)}
+                    ★ {(userRatingAvg ?? offer.rating).toFixed(1)}
                   </span>
                 )}
               </div>
@@ -599,7 +688,6 @@ export default async function OfferPage({ params }: Props) {
               </p>
             </div>
 
-            {/* Category link */}
             <Link
               href={`/kategorie/${offer.category.slug}`}
               className="block rounded-xl border border-slate-200 bg-white p-5 hover:border-green/30 transition-colors"
@@ -615,7 +703,6 @@ export default async function OfferPage({ params }: Props) {
               </p>
             </Link>
 
-            {/* Internal links to relevant comparisons */}
             {comparisons.length > 0 && (
               <div className="rounded-xl border border-slate-200 bg-white p-5">
                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
@@ -638,17 +725,27 @@ export default async function OfferPage({ params }: Props) {
                 </ul>
               </div>
             )}
+
+            <Link
+              href="/kalkulacka-bonusu"
+              className="block rounded-xl border border-green/25 bg-green/5 p-5 hover:bg-green/10 transition-colors"
+            >
+              <p className="text-xs font-bold uppercase tracking-wider text-green-dark mb-1">
+                🧮 Kalkulačka 2026
+              </p>
+              <p className="text-sm font-bold text-navy">
+                Spočítejte si celkový bonus ze všech nabídek →
+              </p>
+            </Link>
           </div>
         </aside>
       </div>
 
-      {/* Related */}
       <div className="mt-16 space-y-12 border-t border-slate-100 pt-12">
         <RelatedOffers offers={relatedOffers} />
         <RelatedArticles articles={relatedArticles} />
       </div>
 
-      {/* Mobile sticky CTA bar */}
       <OfferStickyBar
         name={offer.name}
         bonus={offer.bonus}

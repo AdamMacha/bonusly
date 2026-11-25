@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/db";
 import { CURATED_COMPARISONS, getBaseUrl } from "@/lib/seo";
-import { buildUrlsetXml, xmlResponse } from "@/lib/sitemap-xml";
+import { buildUrlsetXml, maxDate, STATIC_CONTENT_LASTMOD, xmlResponse } from "@/lib/sitemap-xml";
 
 export const revalidate = 3600;
 
@@ -12,20 +12,14 @@ export async function GET() {
   });
 
   const offerUpdatedMap = new Map(offers.map((o) => [o.slug, o.updatedAt]));
-  const now = new Date();
+  const fallback = new Date(`${STATIC_CONTENT_LASTMOD}T00:00:00Z`);
 
   const entries = CURATED_COMPARISONS.filter(
     (c) => offerUpdatedMap.has(c.slugA) && offerUpdatedMap.has(c.slugB)
-  ).map((c) => {
-    const dA = offerUpdatedMap.get(c.slugA) || now;
-    const dB = offerUpdatedMap.get(c.slugB) || now;
-    return {
-      loc: `${baseUrl}/porovnani/${c.slug}`,
-      lastmod: dA > dB ? dA : dB,
-      changefreq: "weekly" as const,
-      priority: 0.7,
-    };
-  });
+  ).map((c) => ({
+    loc: `${baseUrl}/porovnani/${c.slug}`,
+    lastmod: maxDate(offerUpdatedMap.get(c.slugA), offerUpdatedMap.get(c.slugB), fallback),
+  }));
 
   return xmlResponse(buildUrlsetXml(entries));
 }

@@ -16,8 +16,6 @@ export async function GET() {
     articles.map((article) => ({
       loc: `${baseUrl}/blog/${article.slug}`,
       lastmod: article.updatedAt,
-      changefreq: "weekly",
-      priority: 0.8,
     }))
   );
 

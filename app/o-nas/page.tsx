@@ -1,38 +1,119 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { JsonLd } from "@/components/json-ld";
+import { buildCanonical, getBaseUrl, SOCIAL_LINKS } from "@/lib/seo";
 
-import { buildCanonical } from "@/lib/seo";
+export const revalidate = 86400;
+
+const canonical = buildCanonical("/o-nas");
 
 export const metadata: Metadata = {
-  title: "O nás",
+  title: "O nás — Provozovatel, redakce a mise",
   description:
-    "BONUSLY je moderní česká platforma pro porovnávání nabídek, ověřených slevových kódů, investic, bankovních bonusů a možností extra příjmu.",
-  alternates: { canonical: buildCanonical("/o-nas") },
+    "Poznejte tým a provozovatele nezávislého českého srovnávače BONUSLY.cz. Jak vybíráme a ověřujeme bankovní bonusy, investice, pojištění a slevové kódy.",
+  alternates: { canonical },
+  openGraph: {
+    type: "website",
+    url: canonical,
+    title: "O nás — Provozovatel a redakce | BONUSLY",
+    description:
+      "Kdo stojí za portálem BONUSLY.cz, jak ověřujeme finanční nabídky a proč nám záleží na transparentnosti bez skrytých háčků.",
+    images: [{ url: `${getBaseUrl()}/opengraph-image`, width: 1200, height: 630 }],
+  },
 };
 
 export default function ONasPage() {
+  const baseUrl = getBaseUrl();
+
   return (
     <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "O projektu BONUSLY.cz",
+          url: canonical,
+          mainEntity: {
+            "@type": "Organization",
+            name: "BONUSLY",
+            url: `${baseUrl}/`,
+            logo: `${baseUrl}/logo.png`,
+            email: "info@bonusly.cz",
+            sameAs: SOCIAL_LINKS,
+            founder: {
+              "@type": "Person",
+              name: "Adam Mácha",
+              jobTitle: "Zakladatel a finanční analytik",
+              url: canonical,
+            },
+          },
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "BONUSLY", item: `${baseUrl}/` },
+            { "@type": "ListItem", position: 2, name: "O nás", item: canonical },
+          ],
+        }}
+      />
+
       <Breadcrumbs items={[{ label: "O nás" }]} />
-      <h1 className="text-3xl font-bold text-navy tracking-tight mb-6">O BONUSLY</h1>
+
+      <h1 className="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight mb-6">
+        O projektu BONUSLY.cz
+      </h1>
+
       <div className="prose">
         <p>
-          BONUSLY je moderní česká platforma, která pomáhá lidem objevovat možnosti extra příjmu, referral nabídky, finanční produkty, bankovní účty, platební karty a registrační bonusy.
+          <strong>BONUSLY.cz</strong> je nezávislý český srovnávací a informační portál zaměřený na bankovní bonusy za založení účtu, prověřené investiční platformy, online pojištění, energie, ověřené slevové kódy bez vynucené registrace a flexibilní možnosti extra příjmu.
         </p>
         <p>
-          Naším cílem je poskytnout přehledné a ověřené informace na jednom místě, aby uživatelé mohli snadno porovnat dostupné nabídky a vybrat si to, co jim dává smysl.
+          Projekt vznikl s jednoduchým cílem: ušetřit lidem hodiny hledání v drobném písmu bankovních sazebníků a promo podmínek. Místo desítek nepřehledných stránek přinášíme u každé služby jasnou tabulku parametrů, přesný návod krok za krokem, reálné výhody i nevýhody a datum posledního ověření.
         </p>
-        <h2>Co děláme</h2>
+
+        <h2>Kdo stojí za BONUSLY</h2>
+        <div className="not-prose my-6 rounded-2xl border border-slate-200 bg-slate-50/70 p-6">
+          <div className="flex items-start gap-4">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-navy text-green font-black text-xl">
+              AM
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-navy">Adam Mácha</h3>
+              <p className="text-xs font-semibold uppercase tracking-wider text-green-dark">
+                Zakladatel, provozovatel a hlavní analytik BONUSLY.cz
+              </p>
+              <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                Dlouhodobě se věnuje osobním financím, online investování (ETF, nemovitostní crowdfunding), srovnávání bankovních produktů a digitálnímu marketingu v České republice. Většinu nabídek publikovaných na BONUSLY osobně zakládá, testuje a pravidelně ověřuje funkčnost odměn i slevových kódů.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Provozovatel a transparentnost</h2>
         <ul>
-          <li>Vyhledáváme a ověřujeme zajímavé nabídky</li>
-          <li>Porovnáváme finanční produkty a služby</li>
-          <li>Publikujeme užitečné články a průvodce</li>
-          <li>Pravidelně aktualizujeme informace</li>
+          <li><strong>Provozovatel:</strong> Adam Mácha — BONUSLY.cz (Česká republika)</li>
+          <li><strong>Kontaktní e-mail:</strong> <a href="mailto:info@bonusly.cz">info@bonusly.cz</a></li>
+          <li><strong>Metodika hodnocení:</strong> Podrobná pravidla testování a bodování najdete na stránce <Link href="/jak-hodnotime">Jak ověřujeme a hodnotíme nabídky</Link>.</li>
+          <li><strong>Financování projektu:</strong> Web je pro uživatele 100 % zdarma. Příjmy pocházejí z partnerských (affiliate) provizí při prokliku vybraných odkazů, což nikdy nezvyšuje cenu pro uživatele ani neovlivňuje objektivitu recenzí.</li>
         </ul>
-        <h2>Transparentnost</h2>
+
+        <h2>Důležité upozornění (YMYL)</h2>
         <p>
-          BONUSLY může získat provizi, pokud nabídku využijete prostřednictvím některých našich odkazů. Pro uživatele se cena nabídky tímto nemění. Vždy usilujeme o to, aby naše doporučení byla založena na kvalitě nabídky, nikoli na výši provize.
+          Veškeré články, kalkulace a srovnání na portálu BONUSLY.cz slouží výhradně pro informační a vzdělávací účely a nepředstavují individuální finanční, daňové ani investiční poradenství. Před uzavřením jakékoliv smlouvy si vždy ověřte aktuální znění smluvních podmínek přímo u poskytovatele služby.
         </p>
+      </div>
+
+      <div className="mt-10 pt-6 border-t border-slate-100 flex flex-wrap gap-4 text-sm">
+        <Link href="/jak-hodnotime" className="font-semibold text-green-dark hover:text-green">
+          Metodika hodnocení →
+        </Link>
+        <Link href="/kontakt" className="font-semibold text-navy hover:text-green-dark">
+          Kontaktovat redakci →
+        </Link>
       </div>
     </div>
   );

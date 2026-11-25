@@ -33,6 +33,7 @@ yarn-error.log*
 # env files (can opt in via git add -f)
 .env*
 spoluprace.xlsx
+tipli_vs_bonusly_seo_audit_v2.md
 
 # vercel
 .vercel

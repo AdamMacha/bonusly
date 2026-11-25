@@ -8,7 +8,7 @@ export async function GET() {
   const baseUrl = getBaseUrl();
   const offers = await prisma.offer.findMany({
     where: { active: true },
-    select: { slug: true, updatedAt: true, featured: true },
+    select: { slug: true, updatedAt: true },
     orderBy: [{ featured: "desc" }, { updatedAt: "desc" }],
   });
 
@@ -16,8 +16,6 @@ export async function GET() {
     offers.map((offer) => ({
       loc: `${baseUrl}/nabidky/${offer.slug}`,
       lastmod: offer.updatedAt,
-      changefreq: "weekly",
-      priority: offer.featured ? 0.9 : 0.8,
     }))
   );
 

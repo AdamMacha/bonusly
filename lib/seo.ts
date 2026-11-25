@@ -12,7 +12,7 @@ export function getBaseUrl(): string {
 
 export function buildCanonical(path: string): string {
   const base = getBaseUrl();
-  if (!path || path === "/") return base;
+  if (!path || path === "/") return `${base}/`;
   return `${base}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
