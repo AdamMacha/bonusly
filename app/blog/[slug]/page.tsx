@@ -20,6 +20,7 @@ import {
   getBaseUrl,
   getComparisonsForOffer,
 } from "@/lib/seo";
+import { formatCzDate } from "@/lib/date";
 
 export const revalidate = 3600;
 
@@ -49,7 +50,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = rawTitle.length > 52 ? `${rawTitle.slice(0, 49).trim()}...` : rawTitle;
   const description = article.seoDescription || article.excerpt;
   const canonical = article.canonicalUrl || buildCanonical(`/blog/${article.slug}`);
-  const ogImage = article.featuredImage || `${getBaseUrl()}/opengraph-image`;
+  const baseUrl = getBaseUrl();
+  const ogImage = article.featuredImage
+    ? article.featuredImage.startsWith("http")
+      ? article.featuredImage
+      : `${baseUrl}${article.featuredImage}`
+    : `${baseUrl}/opengraph-image`;
 
   return {
     title,
@@ -107,17 +113,24 @@ export default async function ArticlePage({ params }: Props) {
         id: targetOffer ? { not: targetOffer.id } : undefined,
       },
       include: { category: true },
+      orderBy: [{ priority: "desc" }, { featured: "desc" }, { rating: "desc" }],
       take: 3,
     }),
     prisma.article.findMany({
       where: { categoryId: article.categoryId, draft: false, slug: { not: article.slug } },
       include: { category: true, author: true },
+      orderBy: { publishedAt: "desc" },
       take: 3,
     }),
   ]);
 
   const baseUrl = getBaseUrl();
   const pageUrl = buildCanonical(`/blog/${article.slug}`);
+  const schemaImage = article.featuredImage
+    ? article.featuredImage.startsWith("http")
+      ? article.featuredImage
+      : `${baseUrl}${article.featuredImage}`
+    : `${baseUrl}/opengraph-image`;
   const { html, toc, faqs, wordCount } = parseArticleMarkdown(article.content);
   const readingTime = calculateReadingTime(article.content);
   const comparisons = targetOffer ? getComparisonsForOffer(targetOffer.slug) : [];
@@ -131,7 +144,7 @@ export default async function ArticlePage({ params }: Props) {
           "@type": "Article",
           headline: article.title,
           description: article.seoDescription || article.excerpt,
-          image: [article.featuredImage || `${baseUrl}/opengraph-image`],
+          image: [schemaImage],
           author: isOrgAuthor
             ? { "@type": "Organization", name: article.author.name, url: `${baseUrl}/o-nas` }
             : {
@@ -228,7 +241,7 @@ export default async function ArticlePage({ params }: Props) {
             {article.publishedAt && (
               <time dateTime={article.publishedAt.toISOString()}>
                 Aktualizováno:{" "}
-                {new Date(article.updatedAt).toLocaleDateString("cs-CZ", {
+                {formatCzDate(article.updatedAt, {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
@@ -251,8 +264,7 @@ export default async function ArticlePage({ params }: Props) {
               src={article.featuredImage}
               alt={article.title}
               fill
-              priority
-              fetchPriority="high"
+              preload
               sizes="(max-width: 768px) 100vw, 768px"
               className="object-cover"
             />
