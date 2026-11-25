@@ -103,6 +103,14 @@ export default async function Home() {
           name: "BONUSLY",
           url: baseUrl,
           logo: `${baseUrl}/logo.png`,
+          identifier: { "@type": "PropertyValue", name: "IČO", value: "19421915" },
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "U smaltovny 1375/25",
+            addressLocality: "Praha 7 – Holešovice",
+            postalCode: "170 00",
+            addressCountry: "CZ",
+          },
           sameAs: SOCIAL_LINKS,
           contactPoint: {
             "@type": "ContactPoint",

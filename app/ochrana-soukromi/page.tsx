@@ -30,7 +30,7 @@ export default function OchranaSoukromiPage() {
       </h1>
       <div className="prose">
         <p>
-          <strong>Poslední aktualizace:</strong> 25. listopadu 2026 · <strong>Správce údajů:</strong> Adam Mácha — BONUSLY.cz (<a href="mailto:info@bonusly.cz">info@bonusly.cz</a>)
+          <strong>Poslední aktualizace:</strong> 25. listopadu 2026 · <strong>Správce údajů:</strong> Adam Mácha — BONUSLY.cz, IČO: 19421915, sídlo: U smaltovny 1375/25, 170 00 Praha 7 – Holešovice (<a href="mailto:info@bonusly.cz">info@bonusly.cz</a>)
         </p>
 
         <h2>1. Jaké osobní údaje zpracováváme</h2>

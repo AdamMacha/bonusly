@@ -40,6 +40,14 @@ export default function ONasPage() {
             url: `${baseUrl}/`,
             logo: `${baseUrl}/logo.png`,
             email: "info@bonusly.cz",
+            identifier: { "@type": "PropertyValue", name: "IČO", value: "19421915" },
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "U smaltovny 1375/25",
+              addressLocality: "Praha 7 – Holešovice",
+              postalCode: "170 00",
+              addressCountry: "CZ",
+            },
             sameAs: SOCIAL_LINKS,
             founder: {
               "@type": "Person",
@@ -95,7 +103,9 @@ export default function ONasPage() {
 
         <h2>Provozovatel a transparentnost</h2>
         <ul>
-          <li><strong>Provozovatel:</strong> Adam Mácha — BONUSLY.cz (Česká republika)</li>
+          <li><strong>Provozovatel:</strong> Adam Mácha — BONUSLY.cz</li>
+          <li><strong>IČO:</strong> 19421915</li>
+          <li><strong>Sídlo:</strong> U smaltovny 1375/25, 170 00 Praha 7 – Holešovice</li>
           <li><strong>Kontaktní e-mail:</strong> <a href="mailto:info@bonusly.cz">info@bonusly.cz</a></li>
           <li><strong>Metodika hodnocení:</strong> Podrobná pravidla testování a bodování najdete na stránce <Link href="/jak-hodnotime">Jak ověřujeme a hodnotíme nabídky</Link>.</li>
           <li><strong>Financování projektu:</strong> Web je pro uživatele 100 % zdarma. Příjmy pocházejí z partnerských (affiliate) provizí při prokliku vybraných odkazů, což nikdy nezvyšuje cenu pro uživatele ani neovlivňuje objektivitu recenzí.</li>
