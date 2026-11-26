@@ -41,9 +41,9 @@ export default function CookiesPage() {
           Zajišťují základní funkce webu, zabezpečení formulářů (CSRF ochrana) a udržení přihlášení do uživatelské peněženky (Auth.js session cookie). Bez těchto cookies nemohou přihlašovací funkce fungovat.
         </p>
 
-        <h2>2. Výkonnostní a anonymizované statistiky</h2>
+        <h2>2. Výkonnostní a analytické statistiky</h2>
         <p>
-          Pro sledování rychlosti načítání (Core Web Vitals) a obecné návštěvnosti používáme soukromí respektující nástroje Vercel Analytics a Speed Insights, které neukládají sledovací cookies napříč jinými weby.
+          Pro sledování rychlosti načítání (Core Web Vitals) a obecné návštěvnosti používáme nástroje Vercel Analytics, Speed Insights a Google Analytics (značka Google <code>GTM-P2DX3ZQB</code>), které nám pomáhají vyhodnocovat výkon obsahu a vylepšovat uživatelskou přívětivost webu.
         </p>
 
         <h2>3. Partnerské (affiliate) cookies u třetích stran</h2>
