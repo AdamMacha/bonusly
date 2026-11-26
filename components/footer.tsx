@@ -45,15 +45,15 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link
               href="/"
-              className="inline-block bg-white/95 hover:bg-white transition-all px-2.5 py-1.5 rounded-lg shadow-sm"
+              className="inline-block transition-opacity hover:opacity-90"
             >
               <Image
-                src="/logo.png"
+                src="/logo-white.png"
                 alt="BONUSLY"
-                width={120}
-                height={30}
+                width={150}
+                height={42}
                 loading="lazy"
-                className="h-6 w-auto object-contain"
+                className="h-8 w-auto object-contain"
               />
             </Link>
             <p className="mt-3 text-sm text-slate-400 leading-relaxed">

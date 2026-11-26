@@ -28,14 +28,14 @@ export function Navbar() {
           <div className="flex items-center gap-8">
             <Link
               href="/"
-              className="flex shrink-0 items-center gap-2 bg-white/95 hover:bg-white transition-all px-2.5 py-1 rounded-lg shadow-sm"
+              className="flex shrink-0 items-center transition-opacity hover:opacity-90"
             >
               <Image
-                src="/logo.png"
+                src="/logo-white.png"
                 alt="BONUSLY — domovská stránka"
-                width={120}
-                height={30}
-                className="h-6 w-auto object-contain"
+                width={140}
+                height={39}
+                className="h-7 w-auto object-contain"
                 preload
               />
             </Link>
