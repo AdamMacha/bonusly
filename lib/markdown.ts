@@ -19,9 +19,16 @@ function slugifyHeading(text: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+function wrapMarkdownTables(html: string): string {
+  return html.replace(
+    /<table>([\s\S]*?)<\/table>/gi,
+    '<div class="table-scroll" role="region" aria-label="Srovnávací tabulka" tabindex="0"><table>$1</table></div>'
+  );
+}
+
 export function renderMarkdown(content: string): string {
   if (!content) return "";
-  return marked.parse(content, { async: false }) as string;
+  return wrapMarkdownTables(marked.parse(content, { async: false }) as string);
 }
 
 /**
@@ -83,7 +90,7 @@ export function parseArticleMarkdown(content: string): {
 
   const toc: TocItem[] = [];
   const usedIds = new Set<string>();
-  const rawHtml = marked.parse(mainMarkdown, { async: false }) as string;
+  const rawHtml = wrapMarkdownTables(marked.parse(mainMarkdown, { async: false }) as string);
 
   const html = rawHtml.replace(/<h2>([\s\S]*?)<\/h2>/gi, (_full, inner: string) => {
     const plainText = inner.replace(/<[^>]+>/g, "").trim();

@@ -20,23 +20,25 @@ export function ArticleStickyBar({ offer }: ArticleStickyBarProps) {
 
   return (
     <div className="fixed bottom-0 inset-x-0 z-40 p-3 sm:p-4 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl transition-all animate-in slide-in-from-bottom duration-300">
-      <div className="max-w-5xl mx-auto flex items-center justify-between gap-3 sm:gap-6">
+      <div className="max-w-5xl mx-auto flex items-center justify-between gap-2.5 sm:gap-6">
         {/* Left: Offer info */}
-        <div className="flex items-center gap-3 min-w-0">
-          <OfferLogo
-            logo={offer.logo}
-            name={offer.name}
-            size="sticky"
-            alt={offer.name}
-            fallback="none"
-          />
+        <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+          <div className="hidden sm:block shrink-0">
+            <OfferLogo
+              logo={offer.logo}
+              name={offer.name}
+              size="sticky"
+              alt={offer.name}
+              fallback="none"
+            />
+          </div>
           <div className="min-w-0">
             <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-green-dark">
+              <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-green-dark">
                 Bonus k článku
               </span>
             </div>
-            <p className="text-sm font-bold text-navy truncate">
+            <p className="text-xs sm:text-sm font-bold text-navy truncate">
               {offer.name}
               {offer.bonus && (
                 <span className="hidden sm:inline font-normal text-slate-500 ml-2">
@@ -48,14 +50,15 @@ export function ArticleStickyBar({ offer }: ArticleStickyBarProps) {
         </div>
 
         {/* Right: CTA Button & Dismiss */}
-        <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <div className="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
           <a
             href={`/go/${offer.trackingSlug}`}
             target="_blank"
             rel="nofollow sponsored noopener"
-            className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-green px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-bold text-navy shadow-md shadow-green/20 hover:bg-green-light hover:shadow-lg transition-all whitespace-nowrap active:scale-95"
+            className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-green px-3.5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-bold text-navy shadow-md shadow-green/20 hover:bg-green-light hover:shadow-lg transition-all whitespace-nowrap active:scale-95"
           >
-            <span>Aktivovat bonus</span>
+            <span className="sm:hidden">Získat bonus</span>
+            <span className="hidden sm:inline">Aktivovat bonus</span>
             <svg
               className="w-4 h-4"
               fill="none"

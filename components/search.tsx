@@ -101,7 +101,7 @@ export function Search() {
           setLoading(false);
         }
       }
-    }, trimmed ? 200 : 0);
+    }, trimmed ? 120 : 0);
 
     return () => {
       clearTimeout(timer);

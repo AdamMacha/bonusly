@@ -318,8 +318,8 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       "Rychlý a přehledný online nákup v ČR"
     ],
     "cons": [
-      "Na tohoto partnera se podle podmínek programu nevztahuje BONUSLY cashback",
-      "Slevové kódy a akce nelze zpravidla kombinovat s jinými kupóny"
+      "Slevové kódy a akce nelze zpravidla kombinovat s jinými kupóny",
+      "Dostupnost akčního zboží se může v průběhu výprodejů měnit"
     ],
     "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=4b0b1605",
     "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=4b0b1605",
@@ -333,16 +333,12 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "seoDescription": "CigaretyCajk.cz je specializovaný český e-shop zaměřený na vaping a související sortiment. Nabízíme široký výběr elektro Ověřené akce na BONUSLY.",
     "faq": [
       {
-        "question": "Jak uplatním výhodnou nabídku na Cigaretycajk.cz?",
-        "answer": "Stačí přejít na oficiální e-shop Cigaretycajk.cz přes tlačítko výše a v košíku vložit slevový kód CAJKPARTNER5."
+        "question": "Jak uplatnit akci nebo slevový kód na Cigaretycajk.cz?",
+        "answer": "Zkopírujte slevový kód CAJKPARTNER5, přejděte na Cigaretycajk.cz přes tlačítko na této stránce a zadejte kód v košíku před dokončením objednávky."
       },
       {
-        "question": "Jak dlouho trvá schválení objednávky u Cigaretycajk.cz?",
-        "answer": "Partner Cigaretycajk.cz má na ověření a schválení transakce maximálně 50 dní (z důvodu zákonné lhůty pro vrácení zboží). Cookies platí 30 dní od prokliku."
-      },
-      {
-        "question": "Je nákup přes odkaz z BONUSLY za stejnou cenu jako napřímo?",
-        "answer": "Ano, ceny na Cigaretycajk.cz jsou přes náš partnerský odkaz 100 % totožné — nikdy neplatíte nic navíc."
+        "question": "Je pro využití nabídky u Cigaretycajk.cz nutná registrace na BONUSLY?",
+        "answer": "Ne, všechny uvedené slevy a akce u Cigaretycajk.cz uplatníte okamžitě bez nutnosti registrace."
       }
     ],
     "promos": [
@@ -794,12 +790,12 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "name": "Blaire.cz",
     "categorySlug": "moda-a-doplnky",
     "shortDescription": "Český e-shop Blaire.cz se stylovými koženými kabelkami, peněženkami, batohy a módními doplňky pro každodenní nošení i slavnostní příležitosti.",
-    "description": "## O e-shopu Blaire.cz\n\n**Blaire.cz** je český módní e-shop specializovaný na dámské i pánské kabelky, kožené peněženky, městské batohy, cestovní tašky a stylové doplňky. Nabídku doplňují pravidelné sezónní akce a slevové kupóny.\n\n## Jak uplatnit slevu na Blaire.cz\n\n- Zkopírujte ověřený slevový kód **BF15** a přejděte do e-shopu přes tlačítko na této stránce.\n- Kód vložte v nákupním košíku před odesláním objednávky — sleva 15 % se odečte okamžitě.\n- Program Blaire.cz neumožňuje dodatečný cashback, slevu proto získáte rovnou v košíku bez nutnosti registrace na BONUSLY.",
+    "description": "## O e-shopu Blaire.cz\n\n**Blaire.cz** je český módní e-shop specializovaný na dámské i pánské kabelky, kožené peněženky, městské batohy, cestovní tašky a stylové doplňky. Nabídku doplňují pravidelné sezónní akce a slevové kupóny.\n\n## Jak uplatnit slevu na Blaire.cz\n\n- Zkopírujte ověřený slevový kód **BF15** a přejděte do e-shopu přes tlačítko na této stránce.\n- Kód vložte v nákupním košíku před odesláním objednávky — sleva 15 % na nezlevněný sortiment se odečte okamžitě bez nutnosti registrace.",
     "logo": "/logos/blaire.png",
     "bonus": "Sleva 15 % s kódem BF15",
     "bonusDescription": "Zadejte slevový kód BF15 v košíku na Blaire.cz a získejte okamžitou slevu 15 % na veškeré nezlevněné kabelky, peněženky a módní doplňky.",
     "promoCode": "BF15",
-    "promoCodeNote": "SLEVA 15% NA VŠE NEZLEVNĚNÉ (do 29.11.2026)",
+    "promoCodeNote": "SLEVA 15 % NA VŠE NEZLEVNĚNÉ (do 29.11.2026)",
     "ctaLabel": "Přejít na Blaire.cz",
     "requirements": [
       "Nákup nebo objednávka online přímo přes web Blaire.cz",
@@ -812,8 +808,8 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       "Rychlý a přehledný online nákup v ČR"
     ],
     "cons": [
-      "Na tohoto partnera se podle podmínek programu nevztahuje BONUSLY cashback",
-      "Slevové kódy a akce nelze zpravidla kombinovat s jinými kupóny"
+      "Slevové kódy platí zpravidla na nezlevněné zboží a nelze je kombinovat",
+      "Oblíbené kožené modely v akcích se mohou rychle vyprodat"
     ],
     "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=c9561df8",
     "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=c9561df8",
@@ -827,16 +823,12 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "seoDescription": "Blaire je e-shop se stylovými dámskými kabelkami, peněženkami, módními doplňky a cestovními taškami pro každodenní nošen Ověřené akce na BONUSLY.",
     "faq": [
       {
-        "question": "Jak uplatním výhodnou nabídku na Blaire.cz?",
-        "answer": "Stačí přejít na oficiální e-shop Blaire.cz přes tlačítko výše a v košíku vložit slevový kód BF15."
+        "question": "Jak uplatnit slevový kód na Blaire.cz?",
+        "answer": "Zkopírujte ověřený kód BF15, přejděte na Blaire.cz přes tlačítko výše a zadejte kód v prvním kroku nákupního košíku před odesláním objednávky."
       },
       {
-        "question": "Jak dlouho trvá schválení objednávky u Blaire.cz?",
-        "answer": "Partner Blaire.cz má na ověření a schválení transakce maximálně 50 dní (z důvodu zákonné lhůty pro vrácení zboží). Cookies platí 30 dní od prokliku."
-      },
-      {
-        "question": "Je nákup přes odkaz z BONUSLY za stejnou cenu jako napřímo?",
-        "answer": "Ano, ceny na Blaire.cz jsou přes náš partnerský odkaz 100 % totožné — nikdy neplatíte nic navíc."
+        "question": "Je pro využití slevy na Blaire.cz nutná registrace na BONUSLY?",
+        "answer": "Ne, slevový kód i všechny akční nabídky na Blaire.cz můžete využít ihned a bez jakékoli registrace."
       }
     ],
     "promos": [
@@ -1658,7 +1650,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "slug": "shopcom",
     "name": "Shopcom.cz",
     "categorySlug": "zvirata-a-darky",
-    "shortDescription": "Společnost působí na trhu od roku 2006.",
+    "shortDescription": "Český online obchod Shopcom.cz s širokým sortimentem elektroniky, vybavení pro dům, zahradu, dílnu i volný čas a cashbackem až 8 %.",
     "description": "Společnost působí na trhu od roku 2006. Jsme spolehlivý partner pro kvalitní produkty a skvělé nákupy online! Jsme moderní e-shop zaměřený na široký sortiment zboží, které uspokojí potřeby každého zákazníka. Pečlivě vybíráme pouze kvalitní produkty od důvěryhodných výrobců. Nabízíme konkurenceschopné ceny a pravidelné akce. Rychlé dodání přímo k vám domů. Profesionální zákaznická podpora. Máme dvě kamenné prodejny, kde si můžete zboží prohlédnout a vyzkoušet osobně.\n\n### Jak získat Cashback 8 % na Shopcom.cz?\n1. Přihlaste se zdarma do své **BONUSLY peněženky** (stačí e-mail).\n2. Přejděte na **Shopcom.cz** přes tlačítko na této stránce (vypněte AdBlock a povolte cookies).\n3. Dokončete objednávku online — po schválení partnerem (obvykle do 50 dní) vám připíšeme **Cashback 8 %** přímo do peněženky.",
     "logo": "/logos/shopcom.png",
     "bonus": "Akční nabídka + Cashback 8 %",
@@ -2860,7 +2852,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "ehub-v-14051",
-        "title": "Fény Parlux 12% sleva",
+        "title": "Fény Parlux 12 % sleva",
         "badge": "Sleva 12 %",
         "validUntil": "2026-12-31",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=99271766&desturl=https%3A%2F%2Fwww.beautyonline.cz%2Fpece-o-vlasy%2Fpristroje-a-doplnky%2Ffeny%2Ffeny-parlux%2F",
@@ -3604,8 +3596,8 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       "Vysoká spolehlivost schvalování objednávek (80 %)"
     ],
     "cons": [
-      "Na tohoto partnera se podle podmínek programu nevztahuje BONUSLY cashback",
-      "Slevové kódy a akce nelze zpravidla kombinovat s jinými kupóny"
+      "Slevové kódy a akce nelze zpravidla kombinovat s jinými kupóny",
+      "Dostupnost akčního zboží se může v průběhu výprodejů měnit"
     ],
     "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=667520b9",
     "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=667520b9",
@@ -3619,16 +3611,12 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "seoDescription": "Jsme MILITARY RANGE. Udáváme směr ve světě Army & Outdoor. Už více než 20 let pomáháme našim zákazníkům zorientovat se v Ověřené akce na BONUSLY.",
     "faq": [
       {
-        "question": "Jak uplatním výhodnou nabídku na Militarysklad.cz?",
-        "answer": "Stačí přejít na oficiální e-shop Militarysklad.cz přes tlačítko výše."
+        "question": "Jak uplatnit akci nebo slevový kód na Militarysklad.cz?",
+        "answer": "Stačí přejít na oficiální stránky Militarysklad.cz přes tlačítko na této stránce a využít aktuální nabídku přímo v e-shopu."
       },
       {
-        "question": "Jak dlouho trvá schválení objednávky u Militarysklad.cz?",
-        "answer": "Partner Militarysklad.cz má na ověření a schválení transakce maximálně 50 dní (z důvodu zákonné lhůty pro vrácení zboží). Cookies platí 30 dní od prokliku."
-      },
-      {
-        "question": "Je nákup přes odkaz z BONUSLY za stejnou cenu jako napřímo?",
-        "answer": "Ano, ceny na Militarysklad.cz jsou přes náš partnerský odkaz 100 % totožné — nikdy neplatíte nic navíc."
+        "question": "Je pro využití nabídky u Militarysklad.cz nutná registrace na BONUSLY?",
+        "answer": "Ne, všechny uvedené slevy a akce u Militarysklad.cz uplatníte okamžitě bez nutnosti registrace."
       }
     ]
   },
@@ -3928,7 +3916,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "ehub-v-14095",
-        "title": "% BLACK FRIDAY! % - slevy až 76% + možnost kombinace s vaší věrnostní slevou TrailStore Klub, nebo TrailStore VIP! Tak neváhej!",
+        "title": "Black Friday – slevy až 76 % + možnost kombinace s vaší věrnostní slevou TrailStore Klub, nebo TrailStore VIP! Tak neváhej!",
         "badge": "Sleva 76 %",
         "validUntil": "2026-12-02",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=874554d3&desturl=https%3A%2F%2Fwww.trailstore.cz%2Fkategorie%2Fblackfriday%2F",
@@ -4412,8 +4400,8 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       "Vysoká spolehlivost schvalování objednávek (100 %)"
     ],
     "cons": [
-      "Na tohoto partnera se podle podmínek programu nevztahuje BONUSLY cashback",
-      "Slevové kódy a akce nelze zpravidla kombinovat s jinými kupóny"
+      "Slevové kódy a akce nelze zpravidla kombinovat s jinými kupóny",
+      "Dostupnost akčního zboží se může v průběhu výprodejů měnit"
     ],
     "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=40d84254",
     "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=40d84254",
@@ -4427,16 +4415,12 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "seoDescription": "Kvalita, originalita a odpovědný přístup. Tyto tři základní pilíře charakterizují obchod Urban Master. Batohy do města i Ověřené akce na BONUSLY.",
     "faq": [
       {
-        "question": "Jak uplatním výhodnou nabídku na Urbanmaster.cz?",
-        "answer": "Stačí přejít na oficiální e-shop Urbanmaster.cz přes tlačítko výše."
+        "question": "Jak uplatnit akci nebo slevový kód na Urbanmaster.cz?",
+        "answer": "Stačí přejít na oficiální stránky Urbanmaster.cz přes tlačítko na této stránce a využít aktuální nabídku přímo v e-shopu."
       },
       {
-        "question": "Jak dlouho trvá schválení objednávky u Urbanmaster.cz?",
-        "answer": "Partner Urbanmaster.cz má na ověření a schválení transakce maximálně 50 dní (z důvodu zákonné lhůty pro vrácení zboží). Cookies platí 30 dní od prokliku."
-      },
-      {
-        "question": "Je nákup přes odkaz z BONUSLY za stejnou cenu jako napřímo?",
-        "answer": "Ano, ceny na Urbanmaster.cz jsou přes náš partnerský odkaz 100 % totožné — nikdy neplatíte nic navíc."
+        "question": "Je pro využití nabídky u Urbanmaster.cz nutná registrace na BONUSLY?",
+        "answer": "Ne, všechny uvedené slevy a akce u Urbanmaster.cz uplatníte okamžitě bez nutnosti registrace."
       }
     ]
   },
@@ -5449,7 +5433,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "bonus": "Sleva 6 % s kódem AFVOUCHER6 + Cashback 4,5 %",
     "bonusDescription": "Sleva 6% platí na celý sortiment bez omezení.",
     "promoCode": "AFVOUCHER6",
-    "promoCodeNote": "Sleva 6% platí na celý sortiment bez omezení. (do 31.12.2030)",
+    "promoCodeNote": "Sleva 6 % platí na celý sortiment bez omezení. (do 31.12.2030)",
     "ctaLabel": "Nakoupit s cashbackem 4,5 %",
     "requirements": [
       "Nákup nebo objednávka online přímo přes web Keramikaeshop.cz",
@@ -5494,7 +5478,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "ehub-v-9571",
-        "title": "Sleva 6% platí na celý sortiment bez omezení.",
+        "title": "Sleva 6 % platí na celý sortiment bez omezení.",
         "badge": "Sleva 6 %",
         "code": "AFVOUCHER6",
         "validUntil": "2030-12-31",
@@ -6807,7 +6791,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "bonus": "Sleva 20 % s kódem 5hJC8X + Cashback 2,4 %",
     "bonusDescription": "Zadejte slevový kód 20JBL v košíku pro 20 % slevu na nezlevněná sluchátka JBL a získejte navíc cashback 2,5 % z nákupu pro registrované uživatele BONUSLY.",
     "promoCode": "5hJC8X",
-    "promoCodeNote": "Sleva 20% platí na všechny nezlevněná sluchadla (do 30.11.2026)",
+    "promoCodeNote": "Sleva 20 % platí na všechny nezlevněná sluchadla (do 30.11.2026)",
     "ctaLabel": "Nakoupit s cashbackem 2,4 %",
     "requirements": [
       "Nákup nebo objednávka online přímo přes web JBL.cz",
@@ -7355,8 +7339,8 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "slug": "eobuv",
     "name": "eObuv.cz",
     "categorySlug": "moda-a-doplnky",
-    "shortDescription": "Jeden z největších online obchodů s obuví, kabelkami a doplňky v ČR. Nabízí stovky světových značek, dopravu zdarma a cashback až 2,5 %.",
-    "description": "## O e-shopu eObuv.cz\n\n**eObuv.cz** patří mezi největší módní e-shopy s obuví, kabelkami a doplňky ve střední Evropě. V katalogu najdete přes 800 ověřených světových i sportovních značek (Adidas, Nike, Tommy Hilfiger, Rieker, Vagabond, New Balance a další) s jednoduchým vrácením zboží zdarma.\n\n## Jak získat cashback na eObuv.cz\n\n- Přihlaste se na BONUSLY a přejděte na eObuv.cz přes zelené tlačítko.\n- Po schválení objednávky partnerem se vám připíše **cashback až 2,5 %** z hodnoty nákupu přímo do vaší BONUSLY peněženky.\n- Doporučujeme nakupovat bez blokátorů reklam (AdBlock) a s povolenými cookies.",
+    "shortDescription": "Jeden z největších online obchodů s obuví, kabelkami a doplňky v ČR. Nabízí stovky světových značek, dopravu zdarma a cashback až 3,5 %.",
+    "description": "## O e-shopu eObuv.cz\n\n**eObuv.cz** patří mezi největší módní e-shopy s obuví, kabelkami a doplňky ve střední Evropě. V katalogu najdete přes 800 ověřených světových i sportovních značek (Adidas, Nike, Tommy Hilfiger, Rieker, Vagabond, New Balance a další) s jednoduchým vrácením zboží zdarma.\n\n## Jak získat cashback na eObuv.cz\n\n- Přihlaste se na BONUSLY a přejděte na eObuv.cz přes zelené tlačítko.\n- Po schválení objednávky partnerem se vám připíše **cashback až 3,5 %** z hodnoty nákupu přímo do vaší BONUSLY peněženky.\n- Doporučujeme nakupovat bez blokátorů reklam (AdBlock) a s povolenými cookies.",
     "logo": "/logos/eobuv.png",
     "bonus": "Cashback až 3,5 % z nákupu pro registrované",
     "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback až 3,5 % z každé schválené objednávky na eObuv.cz.",
@@ -8018,7 +8002,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "ehub-v-13855",
-        "title": "Největší sleva v tomto roce - 20% na vše",
+        "title": "Největší sleva v tomto roce - 20 % na vše",
         "badge": "Sleva 20 %",
         "validUntil": "2026-11-30",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=3a3832f6&desturl=https%3A%2F%2Fwww.enori.cz%2F",
@@ -8036,7 +8020,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "bonus": "Sleva 15 % s kódem AFFMAL + Cashback 2,5 %",
     "bonusDescription": "Sleva 15% na kategorii Menstruace",
     "promoCode": "AFFMAL",
-    "promoCodeNote": "Sleva 15% na kategorii Menstruace (do 31.12.2026)",
+    "promoCodeNote": "Sleva 15 % na kategorii Menstruace (do 31.12.2026)",
     "ctaLabel": "Nakoupit s cashbackem 2,5 %",
     "requirements": [
       "Nákup nebo objednávka online přímo přes web Maluna.cz",
@@ -8081,7 +8065,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "ehub-v-9057",
-        "title": "Sleva 15% na kategorii Menstruace",
+        "title": "Sleva 15 % na kategorii Menstruace",
         "badge": "Sleva 15 %",
         "code": "AFFMAL",
         "validUntil": "2026-12-31",
@@ -8090,7 +8074,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "ehub-v-9637",
-        "title": "sleva 12% na vše",
+        "title": "sleva 12 % na vše",
         "badge": "Sleva 12 %",
         "code": "ESLEVA",
         "validUntil": "2026-12-31",
@@ -8983,9 +8967,9 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "description": "Jsme český výrobce pracovních oděvů. Dbáme na kvalitu a komfort výrobků. Oděvy vyrábíme více než 30 let pro široký okruh zákazníků v oblasti zdravotnictví, gastronomie, průmyslu, potravinářství, obchodu a služeb.\n\nZaměřujeme se také na distribuci pracovní obuvi, ochranných pracovních pomůcek a reklamního textilu od ověřených dodavatelů.\n\n### Jak získat Cashback 3 % na Tradetex.cz?\n1. Přihlaste se zdarma do své **BONUSLY peněženky** (stačí e-mail).\n2. Přejděte na **Tradetex.cz** přes tlačítko na této stránce (vypněte AdBlock a povolte cookies).\n3. Dokončete objednávku online — po schválení partnerem (obvykle do 50 dní) vám připíšeme **Cashback 3 %** přímo do peněženky.",
     "logo": "/logos/tradetex.png",
     "bonus": "Sleva 150 Kč s kódem 150VANOCE + Cashback 3 %",
-    "bonusDescription": "Sleva 150 kč při nákupu nad 1699 Kč",
+    "bonusDescription": "Sleva 150 kč při nákupu nad 1 699 Kč",
     "promoCode": "150VANOCE",
-    "promoCodeNote": "Sleva 150 kč při nákupu nad 1699 Kč (do 18.12.2026)",
+    "promoCodeNote": "Sleva 150 kč při nákupu nad 1 699 Kč (do 18.12.2026)",
     "ctaLabel": "Nakoupit s cashbackem 3 %",
     "requirements": [
       "Nákup nebo objednávka online přímo přes web Tradetex.cz",
@@ -9054,7 +9038,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "ehub-v-14044",
-        "title": "Sleva 150 kč při nákupu nad 1699 Kč",
+        "title": "Sleva 150 kč při nákupu nad 1 699 Kč",
         "badge": "Sleva 150 Kč",
         "code": "150VANOCE",
         "validUntil": "2026-12-18",
@@ -9183,7 +9167,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "slug": "lounge-by-zalando",
     "name": "Lounge by Zalando",
     "categorySlug": "moda-a-doplnky",
-    "shortDescription": "Zalando Lounge není jen o slevách.",
+    "shortDescription": "Nákupní klub Lounge by Zalando s časově omezenými kampaněmi značkové módy, obuvi a doplňků se slevami až 75 % oproti doporučeným cenám.",
     "description": "Zalando Lounge není jen o slevách. Naše síla spočívá v našem výběru značek: od vyhledávaných po originální značky, od oblíbených mezinárodních návrhářů po kousky pro náročné, v naší nabídce se najde něco pro každého, nezáleží na tvém vkusu, máme prostě vše. Kromě obuvi a oblečení pro ženy, muže a děti nabízíme i spodní prádlo, doplňky, sportovní zboží a domácí potřeby. V naší nabídce je více jak 2 500 produktů, vybere si tak každý. Slevy až 75 % každý den!\n\n### Jak získat Cashback 0,4 % na Lounge by Zalando?\n1. Přihlaste se zdarma do své **BONUSLY peněženky** (stačí e-mail).\n2. Přejděte na **Lounge by Zalando** přes tlačítko na této stránce (vypněte AdBlock a povolte cookies).\n3. Dokončete objednávku online — po schválení partnerem (obvykle do 150 dní) vám připíšeme **Cashback 0,4 %** přímo do peněženky.",
     "logo": "/logos/lounge-by-zalando.png",
     "bonus": "Cashback 0,4 % z nákupu pro registrované",
@@ -9432,9 +9416,9 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "description": "Myprotein je evropskou jedničkou. Jsme top značka nabízející sportovní výživu. V naší nabídce je řada kvalitních produktů včetně proteinových prášků, vitamínů a minerálů, potravin s vysokým obsahem bílkovin, alternativ k běžné svačině a výkonnostního oblečení.\n\n### Jak získat Cashback 4 % na Myprotein CZ SK?\n1. Přihlaste se zdarma do své **BONUSLY peněženky** (stačí e-mail).\n2. Přejděte na **Myprotein CZ SK** přes tlačítko na této stránce (vypněte AdBlock a povolte cookies).\n3. Dokončete objednávku online — po schválení partnerem (obvykle do 100 dní) vám připíšeme **Cashback 4 %** přímo do peněženky.",
     "logo": "/logos/myprotein-cz-sk.png",
     "bonus": "Sleva 42 % s kódem MP42EHUB + Cashback 4 %",
-    "bonusDescription": "Sleva 42 % na celou objednávku z původních cen (neplatí pro tyto produkty https://www.myprotein.cz/all-offers/czsk-campaign-exclusion-list.list)",
+    "bonusDescription": "Sleva 42 % na celou objednávku z původních cen (vyjma vybraných vyloučených produktů)",
     "promoCode": "MP42EHUB",
-    "promoCodeNote": "Sleva 42 % na celou objednávku z původních cen (neplatí pro tyto produkty https://www.myprotein.cz/all-offers/czsk-campaign-exclusion-list.list) (do 31.01.2027)",
+    "promoCodeNote": "Sleva 42 % na celou objednávku z původních cen (vyjma vybraných vyloučených produktů) (do 31.01.2027)",
     "ctaLabel": "Nakoupit s cashbackem 4 %",
     "requirements": [
       "Nákup nebo objednávka online přímo přes web Myprotein CZ SK",
@@ -9479,7 +9463,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "ehub-v-12397",
-        "title": "Sleva 42 % na celou objednávku z původních cen (neplatí pro tyto produkty https://www.myprotein.cz/all-offers/czsk-campaign-exclusion-list.l",
+        "title": "Sleva 42 % na celou objednávku z původních cen (neplatí pro tyto produkty",
         "badge": "Sleva 42 %",
         "code": "MP42EHUB",
         "validUntil": "2027-01-31",
@@ -9949,7 +9933,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "bonus": "Sleva 10 % s kódem VLASY26 + Cashback 2 %",
     "bonusDescription": "Sleva 10% na celý sortiment, Navíc získáte cashback 2 % do BONUSLY peněženky.",
     "promoCode": "VLASY26",
-    "promoCodeNote": "Sleva 10% na celý sortiment,",
+    "promoCodeNote": "Sleva 10 % na celý sortiment",
     "ctaLabel": "Nakoupit na vlasy-obchod.cz",
     "requirements": [
       "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
@@ -9987,7 +9971,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "ehub-p2-766c617379",
-        "title": "Sleva 10% na celý sortiment,",
+        "title": "Sleva 10 % na celý sortiment",
         "badge": "Sleva 10 %",
         "code": "VLASY26",
         "validUntil": "2026-12-02",
@@ -10342,7 +10326,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "ehub-p2-737461726e",
-        "title": "Hvězdný program -sbírání hvězdiček, které promění nákupy v odměny. Hvězdičky lze využít na slevy nebo na exkluzivní produkty věrnostního programu",
+        "title": "Hvězdný program – sbírání hvězdiček, které promění nákupy v odměny. Hvězdičky lze využít na slevy nebo na exkluzivní produkty věrnostního programu",
         "badge": "Akční nabídka",
         "validUntil": "2026-12-31",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=26cb45f0&desturl=https%3A%2F%2Fwww.starnails.cz%2Fhvezdny-program-starnails%2F",
@@ -11197,7 +11181,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "ehub-p2-646565706c",
-        "title": "BLACK FRIDAY - slevy až 50 %,",
+        "title": "BLACK FRIDAY - slevy až 50 %",
         "badge": "Sleva 50 %",
         "validUntil": "2026-11-30",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a815cacb&desturl=https%3A%2F%2Fwww.deeplove.cz%2FBLACK-FRIDAY%2F",
@@ -11225,7 +11209,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "slug": "aulix",
     "name": "Aulix.cz",
     "categorySlug": "elektro",
-    "shortDescription": "AULIX lighting s.r.o. je česká rodinná společnost, která dováží do České republiky a na Slovensko osvětlení předních světových producentů, a zároveň prodává.",
+    "shortDescription": "Český specialista na interiérové, venkovní a LED osvětlení Aulix.cz nabízí designová svítidla, lustry i chytré osvětlení s cashbackem až 7,5 %.",
     "description": "## O e-shopu Aulix.cz\n\nAULIX lighting s.r.o. je česká rodinná společnost, která dováží do České republiky a na Slovensko osvětlení předních světových producentů, a zároveň prodává svítidla také od mnoha českých výrobců. V sortimentu naleznete osvětlení pro váš byt, rodinný dům, kancelář i zahradu. Hledáte-li individuální, svěží a moderní řešení osvětlení vašeho interiéru, navštivte e-shop aulix.cz, kde na vás čekají svítidla v klasickém i netradičním provedení - závěsná, stropní i nástěnná. Dále můžete vybírat stolní a stojací lampy, podhledová nebo zápustná svítidla, svítidla do kuchyně, koupelny či dětského pokoje, osvětlení obrazů, kolejnicové/tyčové a lankové systémy, svítidla do zásuvky a mnoho dalších. Co se týká exteriéru, nabízí také venkovní svítidla (sloupková, nástěnná, zápustná, stropní, solární svítidla, svítící dlažbu a další).\n\nVe Studiu interiéru a osvětlení v Dolních Břežanech vám poradí s výběrem osvětlení osobně.\n\n## Jak získat Cashback 7,5 % na Aulix.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Aulix.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
     "logo": "/logos/aulix.png",
     "bonus": "Sleva 7 % + Cashback 7,5 %",
@@ -11425,7 +11409,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "ehub-p2-72656c6178",
-        "title": "SLEVY až 56% na zahradní vybavení a nábytek Home&Garden",
+        "title": "SLEVY až 56 % na zahradní vybavení a nábytek Home&Garden",
         "badge": "Sleva 56 %",
         "validUntil": "2026-12-31",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8e6b7043&desturl=https%3A%2F%2Fwww.relaxin.cz%2Fhome-garden",
@@ -11433,7 +11417,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "ehub-p2-72656c6178",
-        "title": "SLEVY až 49% na zahradní vybavení Landmann - do vyprodání zásob",
+        "title": "SLEVY až 49 % na zahradní vybavení Landmann - do vyprodání zásob",
         "badge": "Sleva 49 %",
         "validUntil": "2026-12-31",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8e6b7043&desturl=https%3A%2F%2Fwww.relaxin.cz%2Flandmann",
@@ -11441,7 +11425,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "ehub-p2-72656c6178",
-        "title": "SLEVY až 43% na zahradní a kempingové příslušenství Meva",
+        "title": "SLEVY až 43 % na zahradní a kempingové příslušenství Meva",
         "badge": "Sleva 43 %",
         "validUntil": "2026-12-31",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8e6b7043&desturl=https%3A%2F%2Fwww.relaxin.cz%2Fmeva",
@@ -11449,7 +11433,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "ehub-p2-72656c6178",
-        "title": "SLEVA až 52% na veškerý kempingový sortiment Outwell",
+        "title": "SLEVA až 52 % na veškerý kempingový sortiment Outwell",
         "badge": "Sleva 52 %",
         "validUntil": "2026-12-31",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8e6b7043&desturl=https%3A%2F%2Fwww.relaxin.cz%2Foutwell",
@@ -11503,7 +11487,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "ehub-p2-616c616469",
-        "title": "Totální výprodej skladu až 50% slevy na kreativní a dárkové zboží",
+        "title": "Totální výprodej skladu až 50 % slevy na kreativní a dárkové zboží",
         "badge": "Sleva 50 %",
         "validUntil": "2026-12-31",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=c6704317&desturl=https%3A%2F%2Fwww.aladine.cz%2Fc%2Fakcni-zbozi",
@@ -12691,8 +12675,8 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       "Silné české zázemí skupiny Direct"
     ],
     "cons": [
-      "Na tohoto partnera se podle podmínek programu nevztahuje BONUSLY cashback",
-      "Hodnota investic v ETF kolísá podle vývoje finančních trhů"
+      "Hodnota investic v ETF fondů kolísá podle vývoje finančních trhů",
+      "U daňově zvýhodněného DIP platí zákonná podmínka spoření min. 10 let a do 60 let věku"
     ],
     "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e0652f78",
     "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e0652f78",
@@ -12706,12 +12690,12 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "seoDescription": "Česká online investiční platforma Direct Fondee pro jednoduché investování do nízkonákladových ETF portfolií a DIP s nízkými poplatky.",
     "faq": [
       {
-        "question": "Jak uplatnit akci nebo slevu na Direct Fondee CZ?",
-        "answer": "Stačí přejít na oficiální stránky Direct Fondee CZ přes tlačítko na této stránce — registrace na BONUSLY není potřeba."
+        "question": "Jak začít investovat přes Direct Fondee CZ?",
+        "answer": "Stačí přejít na stránky Direct Fondee přes tlačítko výše, vyplnit krátký investiční dotazník a vybrat si jedno z přednastavených ETF portfolií podle vašeho rizikového profilu."
       },
       {
-        "question": "Nabízí BONUSLY cashback na Direct Fondee CZ?",
-        "answer": "Na Direct Fondee CZ se podle oficiálních podmínek partnerského programu nevztahuje BONUSLY cashback. Všechny uvedené akce a kódy však můžete využít přímo u partnera."
+        "question": "Podporuje Direct Fondee i daňově zvýhodněný DIP?",
+        "answer": "Ano, Direct Fondee nabízí kromě klasických investičních účtů i Dlouhodobý investiční produkt (DIP), se kterým si můžete odečíst až 48 000 Kč ročně ze základu daně."
       }
     ]
   },
@@ -13015,7 +12999,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "ehub-p2-7365786963",
-        "title": "BLACK FRIDAY - slevy až 50 %,",
+        "title": "BLACK FRIDAY - slevy až 50 %",
         "badge": "Sleva 50 %",
         "validUntil": "2026-11-30",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=253967b7&desturl=https%3A%2F%2Fwww.sexicekshop.cz%2FBLACK-FRIDAY%2F",
