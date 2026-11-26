@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     absolute: "BONUSLY — Ověřené bonusy, slevové kódy a cashback 2026",
   },
   description:
-    "Porovnáváme přes 220 ověřených nabídek a 80+ kupónů v ČR: bankovní bonusy až 3 000 Kč, investice, pojištění -20 % i cashback z nákupů.",
+    "Porovnáváme přes 280 ověřených nabídek a 150+ akcí a kupónů v ČR: bankovní bonusy až 3 000 Kč, investice, pojištění -20 % i cashback z nákupů.",
   alternates: { canonical },
   openGraph: {
     type: "website",
     url: canonical,
     title: "BONUSLY — Ověřené bonusy, slevové kódy a cashback 2026",
     description:
-      "Porovnáváme přes 220 ověřených nabídek a 80+ kupónů v ČR: bankovní bonusy až 3 000 Kč, investice bez poplatků, pojištění -20 % a cashback z nákupů.",
+      "Porovnáváme přes 280 ověřených nabídek a 150+ akcí a kupónů v ČR: bankovní bonusy až 3 000 Kč, investice bez poplatků, pojištění -20 % a cashback z nákupů.",
     images: [{ url: `${canonical}opengraph-image`, width: 1200, height: 630, alt: "BONUSLY" }],
   },
 };

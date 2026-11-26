@@ -100,7 +100,7 @@ export default async function OfferPage({ params }: Props) {
 
   if (!offer || !offer.active) notFound();
 
-  const ADULT_OFFER_SLUGS = ["eroticcity", "cigaretycajk", "vapoo", "venixvape"];
+  const ADULT_OFFER_SLUGS = ["eroticcity", "cigaretycajk", "vapoo", "venixvape", "sexicekshop", "deeplove", "vaporism"];
   const excludedRelatedSlugs = ADULT_OFFER_SLUGS.includes(offer.slug)
     ? [offer.slug]
     : [offer.slug, ...ADULT_OFFER_SLUGS];

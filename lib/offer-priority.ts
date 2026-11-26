@@ -24,7 +24,9 @@ export const CURATED_OFFER_PRIORITIES: Record<string, number> = {
   portu: 860, // PPL 150 Kč / PPA 400 Kč, nejsilnější česká ETF/DIP platforma
   "patria-finance": 850, // PPA 625 Kč, ETF bez nákupních poplatků (skupina ČSOB)
   investown: 840, // Direct referral + 500 Kč bonus pro nového investora
+  bondster: 835, // PPL 1 000 Kč za investora (500 Kč cashback pro uživatele + 500 Kč nám)
   rondainvest: 830, // PPL 500 Kč za kvalifikovaný lead + 1 % vstupní bonus
+  "direct-fondee-cz": 825, // PPL 500 Kč dokončení registrace / 150 Kč lead (100 % nám — cashback zakázán)
   nejpripojeni: 820, // PPA 1 250 Kč internet / 1 000 Kč IPTV (vysoká fixní odměna)
   roier: 810, // PPL 100–300 Kč / PPA 900 Kč
   uvtnet: 800, // PPA 1 000 Kč za optický internet
@@ -49,15 +51,26 @@ export const CURATED_OFFER_PRIORITIES: Record<string, number> = {
   eobuv: 610, // PPS 7 % nový zákazník + masový módní brand
   "myprotein-cz-sk": 600, // PPS 8 % + silný kód -42 % (MP42EHUB)
   brilianty: 590, // PPS 7,5 % z vysokých objednávek šperků + kód BF2026
+  pompo: 585, // Největší česká síť hračkářství (vysoký sezónní objem)
   jbl: 580, // PPS 4,8 % + slevový kód 20 % na sluchátka
+  kosmas: 575, // Největší české online knihkupectví, silný objem objednávek
   concept: 570, // PPS 8 % na elektrospotřebiče + 7 aktivních kódů
   istyle: 560, // Apple Premium Partner, vysoký košík
   "lounge-by-zalando": 550, // PPL 30 Kč za pouhou registraci + silný módní brand
+  "moje-pradlo": 545, // PPS 8 % + známý český brand
+  luxusnipradlo: 542, // PPS 6,4 % + známý český brand
   sencor: 540, // PPS 6,8 % oficiální e-shop elektro
+  sevt: 535, // Tradiční český e-shop školních potřeb a knih
+  pocitace24: 532, // Repasované notebooky (vysoký košík + kódy až 600 Kč)
   dronpro: 530, // PPS 4,8 % z drahých dronů DJI
+  swix: 525, // Silná zimní sportovní značka
   marimex: 520, // Vysoký košík (bazény, vířivky, sauny)
+  mikov: 515, // Ikonická česká nožířská značka
   spime: 510, // Vysoký košík (masivní postele a matrace)
+  "hot-chip": 505, // PPS 20 % (vysoká provize + dárkový hit)
   originalnipneu: 500, // Vysoký objem sezónních nákupů pneumatik
+  smartyhodinky: 495, // PPS 10 % z chytrých hodinek
+  smartydum: 492, // PPS 10 % z chytré domácnosti
   blaire: 490, // PPS 8 % celých nám (cashback zakázán) + kód BF15
   ventilatory: 480, // PPS 10 % z vyššího košíku vzduchotechniky
 };

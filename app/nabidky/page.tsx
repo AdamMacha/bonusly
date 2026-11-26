@@ -12,14 +12,14 @@ const canonical = buildCanonical("/nabidky");
 export const metadata: Metadata = {
   title: "Všechny ověřené nabídky, bonusy a cashback 2026",
   description:
-    "Kompletní katalog více než 220 ověřených bankovních bonusů, investičních platforem, pojištění, energií, slevových kódů a e-shopů s cashbackem v ČR.",
+    "Kompletní katalog více než 280 ověřených bankovních bonusů, investičních platforem, pojištění, energií, slevových kódů a e-shopů s cashbackem v ČR.",
   alternates: { canonical },
   openGraph: {
     type: "website",
     url: canonical,
     title: "Všechny ověřené nabídky, bonusy a cashback 2026 | BONUSLY",
     description:
-      "Porovnejte přes 220 ověřených nabídek, finančních produktů, slevových kódů a e-shopů s cashbackem na jednom místě.",
+      "Porovnejte přes 280 ověřených nabídek, finančních produktů, slevových kódů a e-shopů s cashbackem na jednom místě.",
     images: [{ url: `${getBaseUrl()}/opengraph-image`, width: 1200, height: 630 }],
   },
 };

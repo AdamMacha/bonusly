@@ -440,7 +440,7 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
     "shortDescription": "Pražírna kávy Kroměříž je rodinná pražírna kávy z Kroměříže s tradicí od roku 2013.",
     "description": "Pražírna kávy Kroměříž je rodinná pražírna kávy z Kroměříže s tradicí od roku 2013. Denně pražíme výběrovou kávu přímo od farmářů z celého světa a posíláme ji čerstvou zákazníkům i do gastro provozů po celé ČR a SK.\n\n### Jak získat Cashback 5 % na Káva-Kroměříž.cz?\n1. Přihlaste se zdarma do své **BONUSLY peněženky** (stačí e-mail).\n2. Přejděte na **Káva-Kroměříž.cz** přes tlačítko na této stránce (vypněte AdBlock a povolte cookies).\n3. Dokončete objednávku online — po schválení partnerem (obvykle do 50 dní) vám připíšeme **Cashback 5 %** přímo do peněženky.",
     "logo": "/logos/kava-kromeriz.png",
-    "bonus": "Cashback 5 % z nákupu pro registrované",
+    "bonus": "Sleva 15 % s kódem blackfriday + Cashback 5 %",
     "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 5 % z každé schválené objednávky na Káva-Kroměříž.cz.",
     "ctaLabel": "Nakoupit s cashbackem 5 %",
     "requirements": [
@@ -479,6 +479,19 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
       {
         "question": "Je nákup přes odkaz z BONUSLY za stejnou cenu jako napřímo?",
         "answer": "Ano, ceny na Káva-Kroměříž.cz jsou přes náš partnerský odkaz 100 % totožné — nikdy neplatíte nic navíc."
+      }
+    ],
+    "promoCode": "blackfriday",
+    "promoCodeNote": "15 % sleva na zrnkovou kávu (do 27. 11. 2026)",
+    "promos": [
+      {
+        "trackingSlug": "ehub-v-14163",
+        "title": "15 % sleva na zrnkovou kávu",
+        "badge": "Sleva 15 %",
+        "code": "blackfriday",
+        "validUntil": "2026-11-27",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=77c17b15&desturl=https%3A%2F%2Fwww.kava-kromeriz.cz%2F",
+        "order": 1
       }
     ]
   },
@@ -1756,6 +1769,14 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
         "validUntil": "2026-11-30",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=231eaccc&desturl=https%3A%2F%2Fwww.cubenest.cz%2Fc%2Fblack-friday",
         "order": 1
+      },
+      {
+        "trackingSlug": "ehub-v-14160",
+        "title": "Sleva 900 Kč na Cubenest 3v1 Qi2.2 skládací bezdrátovou nabíječku",
+        "badge": "Sleva 900 Kč",
+        "validUntil": "2026-11-30",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=231eaccc&desturl=https%3A%2F%2Fwww.cubenest.cz%2Fp-279",
+        "order": 2
       }
     ]
   },
@@ -9523,6 +9544,3578 @@ export const NEW_EHUB_OFFERS: OfferSeed[] = [
         "validUntil": "2026-11-30",
         "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=00a7dfa4&desturl=https%3A%2F%2Fwww.vivaco.cz%2F",
         "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "smartydum",
+    "name": "Smartydum.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Smartydum.cz — ověřený český e-shop v kategorii Dům a zahrada, Elektro a příslušenství s výhodnými nabídkami a akcemi.",
+    "description": "## O e-shopu Smartydum.cz\n\nDoporučujte chytrou domácnost a získejte provizi z prodeje. Zapojte se do affiliate programu SMARTYdům.cz a vydělávejte doporučováním produktů, které usnadňují každodenní život. V nabídce najdete chytré zámky, kliky, schránky na klíče i zařízení pro ovládání a zabezpečení domácnosti. Program je vhodný pro tvůrce obsahu, blogery i provozovatele webů o bydlení, technologiích nebo cestování. Ukažte svému publiku, jak může chytrá domácnost fungovat v praxi — prostřednictvím recenzí, návodů či vlastních zkušeností. Sdílejte svůj partnerský odkaz a získávejte provizi za nákupy uskutečněné přes vaše doporučení.\n\n## Jak získat Cashback 5 % na Smartydum.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Smartydum.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/smartydum.png",
+    "bonus": "Cashback 5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 5 % z každé schválené objednávky na Smartydum.cz.",
+    "ctaLabel": "Nakoupit na Smartydum.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Smartydum.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Smartydum.cz",
+      "Cashback 5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=6cca294d",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=6cca294d",
+    "trackingSlug": "smartydum",
+    "partnerNetwork": "ehub",
+    "rating": 4.6,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Smartydum.cz: Cashback 5 % 2026",
+    "seoDescription": "Smartydum.cz — ověřený český e-shop v kategorii Dům a zahrada, Elektro a příslušenství s výhodnými nabídkami a akcemi.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Smartydum.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Smartydum.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Smartydum.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "smartyhodinky",
+    "name": "Smartyhodinky.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Smartyhodinky.cz — ověřený český e-shop v kategorii Elektro a příslušenství s výhodnými nabídkami a akcemi.",
+    "description": "## O e-shopu Smartyhodinky.cz\n\nDoporučujte chytré hodinky a získejte provizi z prodeje. Zapojte se do affiliate programu SMARTYhodinky.cz a proměňte své recenze, videa nebo tipy na dárky v příležitost k výdělku. V naší nabídce najdete chytré hodinky pro ženy, muže i děti, chytré prsteny a příslušenství. Program je vhodný pro tvůrce obsahu, blogery i provozovatele tematických webů. Sdílejte svůj partnerský odkaz, představte publiku produkty, které mu dávají smysl, a získávejte provizi za nákupy uskutečněné přes vaše doporučení.\n\n## Jak získat Cashback 5 % na Smartyhodinky.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Smartyhodinky.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/smartyhodinky.png",
+    "bonus": "Cashback 5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 5 % z každé schválené objednávky na Smartyhodinky.cz.",
+    "ctaLabel": "Nakoupit na Smartyhodinky.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Smartyhodinky.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Smartyhodinky.cz",
+      "Cashback 5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d00ad88f",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d00ad88f",
+    "trackingSlug": "smartyhodinky",
+    "partnerNetwork": "ehub",
+    "rating": 4.6,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Smartyhodinky.cz: Cashback 5 % 2026",
+    "seoDescription": "Smartyhodinky.cz — ověřený český e-shop v kategorii Elektro a příslušenství s výhodnými nabídkami a akcemi.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Smartyhodinky.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Smartyhodinky.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Smartyhodinky.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "moonchocolate",
+    "name": "Moonchocolate.eu",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "MOON Chocolate je rodinná bean-to-bar čokoládovna z Hrabyně. Čokoládu vyrábíme od kakaových bobů až po tabulku – sami pražíme, meleme a tvoříme vlastní receptury.",
+    "description": "## O e-shopu Moonchocolate.eu\n\nMOON Chocolate je rodinná bean-to-bar čokoládovna z Hrabyně. Čokoládu vyrábíme od kakaových bobů až po tabulku – sami pražíme, meleme a tvoříme vlastní receptury. Pracujeme s boby z pěti zemí a necháváme vyniknout jejich přirozeným chutím. Nabízíme tmavé, mléčné i bílé čokolády, pralinky a kombinace s jahodami z místní farmy, slaným karamelem či praženými mandlemi. Naše výrobky propojuje vesmírná tematika, osobité názvy a obaly.\n\n## Jak získat Cashback 6 % na Moonchocolate.eu\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Moonchocolate.eu** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/moonchocolate.png",
+    "bonus": "Kód Sleva5 s kódem Sleva5 + Cashback 6 %",
+    "bonusDescription": "Platí na všechny produkty. Minimální hodnota objednávky 500,- Navíc získáte cashback 6 % do BONUSLY peněženky.",
+    "promoCode": "Sleva5",
+    "promoCodeNote": "Platí na všechny produkty. Minimální hodnota objednávky 500,-",
+    "ctaLabel": "Nakoupit na Moonchocolate.eu",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Moonchocolate.eu s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Moonchocolate.eu",
+      "Cashback 6 % do vaší BONUSLY peněženky",
+      "Aktuální ověřený slevový kód Sleva5"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a870c2b6",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a870c2b6",
+    "trackingSlug": "moonchocolate",
+    "partnerNetwork": "ehub",
+    "rating": 4.6,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Moonchocolate.eu: Cashback 6 % 2026",
+    "seoDescription": "MOON Chocolate je rodinná bean-to-bar čokoládovna z Hrabyně. Čokoládu vyrábíme od kakaových bobů až po tabulku – sami pražíme, meleme a tvoříme vlastní recept",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Moonchocolate.eu?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Moonchocolate.eu přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Moonchocolate.eu?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6d6f6f6e63",
+        "title": "Platí na všechny produkty. Minimální hodnota objednávky 500,-",
+        "badge": "Kód Sleva5",
+        "code": "Sleva5",
+        "validUntil": "2026-12-17",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a870c2b6&desturl=https%3A%2F%2Fwww.moonchocolate.eu%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-6d6f6f6e63",
+        "title": "Platí na všechny produkty. Minimální hodnota objednávky 1000,-",
+        "badge": "Kód Sleva10",
+        "code": "Sleva10",
+        "validUntil": "2026-12-17",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a870c2b6&desturl=https%3A%2F%2Fwww.moonchocolate.eu%2F",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-6d6f6f6e63",
+        "title": "Novinka - degustační adventní kalendář 2026",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a870c2b6&desturl=https%3A%2F%2Fwww.moonchocolate.eu%2Fdegustacni-adventni-kalendar%2F",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "slug": "skloobaly",
+    "name": "Skloobaly.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "„Skloobaly - Víme, že milujete zavařování a my vaší lásce dáme tvar\".",
+    "description": "## O e-shopu Skloobaly.cz\n\n„Skloobaly - Víme, že milujete zavařování a my vaší lásce dáme tvar\" \n\nJsme rodinná firma sídlící v Orlických horách a jsme jedním z předních prodejců skleněných obalů a uzávěrů v České Republice. Naší prioritou je perfektní servis, precizní balení objednávek a hlavně spokojený zákazník.\n\nNabízíme maloobchodní prodej od jednoho kusu pro domácí zpracovatele potravin ze zahrádky, velkoobchodní prodej paletového množství pro firemní zákazníky až po kamionový prodej pro výrobní podniky, kde garantujeme skladovou dostupnost pro plánovanou výrobu. S výběrem té správné sklenice, lahve, nebo zavařovacího víčka Vám rádi odborně poradíme. Jsme přímý distributoři firmy Tecnocap. Na zakázku vyrobíme zavařovací víčko twist off dle Vašeho návrhu a požadavku.\n\n## Jak získat Cashback až 2,4 % na Skloobaly.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Skloobaly.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/skloobaly.png",
+    "bonus": "Cashback až 2,4 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback až 2,4 % z každé schválené objednávky na Skloobaly.cz.",
+    "ctaLabel": "Nakoupit na Skloobaly.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Skloobaly.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Skloobaly.cz",
+      "Cashback až 2,4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=0ca6fe42",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=0ca6fe42",
+    "trackingSlug": "skloobaly",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Skloobaly.cz: Cashback až 2,4 % 2026",
+    "seoDescription": "„Skloobaly - Víme, že milujete zavařování a my vaší lásce dáme tvar\".",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Skloobaly.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Skloobaly.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Skloobaly.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "apollostore",
+    "name": "apollostore.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Kvalita, rychlost a spolehlivý servis.",
+    "description": "## O e-shopu apollostore.cz\n\nKvalita, rychlost a spolehlivý servis\n\nApollo store znamená maximální pohodlí při nákupu z domova. Tisíce položek v nabídce, které se neustále rozšiřují. Sezónní nabídky a akce za bezkonkurenční ceny. Kvalitní produkty světových značek v širokém portfoliu nabídky. Kancelářské potřeby, dárky, plyšové hračky i praktické potřeby pro firmy i domácnost. Apollo produkty reflektují na aktuální životní styl, na potřeby a záliby generací bez rozdílu. Kopíruje trendy a určuje směr. Nákupem na Apollo nikdy neuděláte chybu. Vždy tady naleznete to, co udělá radost Vám i Vašim blízkým, kolegům i obchodním partnerům.\n\nS produkty koupenými na Apollo store dáváte styl, vysokou kvalitu a úroveň. Říkáte, že Vám na druhých záleží.\n\n## Jak získat Cashback 6 % na apollostore.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **apollostore.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/apollostore.png",
+    "bonus": "Cashback 6 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 6 % z každé schválené objednávky na apollostore.cz.",
+    "ctaLabel": "Nakoupit na apollostore.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na apollostore.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na apollostore.cz",
+      "Cashback 6 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a883bbdd",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a883bbdd",
+    "trackingSlug": "apollostore",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "apollostore.cz: Cashback 6 % 2026",
+    "seoDescription": "Kvalita, rychlost a spolehlivý servis.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u apollostore.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na apollostore.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z apollostore.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "bkshop",
+    "name": "BKshop.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "BKshop.cz je specializovaný e-shop zaměřený na železářství, spojovací materiál, kotevní techniku a široký sortiment pro dům, dílnu i zahradu.",
+    "description": "## O e-shopu BKshop.cz\n\nBKshop.cz je specializovaný e-shop zaměřený na železářství, spojovací materiál, kotevní techniku a široký sortiment pro dům, dílnu i zahradu. V nabídce máme více než 8 500 produktů skladem – od vrutů, šroubů a hmoždinek přes panty a dveřní kování až po zahradní chemii, zavlažování nebo bazénové příslušenství.\n\nNašimi zákazníky jsou hobby kutilové, řemeslníci a všichni co rádi makají na svých projektech. Zakládáme si na rychlé expedici, férových cenách a širokém výběru produktů, které jsou běžně potřeba při stavbě, opravách i údržbě domácnosti.\n\n Proč propagovat BKshop.cz? \n\n🛠️ Široký a stabilní sortiment s celoroční poptávkou\n\n📦 Rychlá expedice a vysoká skladová dostupnost\n\n💰 Atraktivní provizní podmínky\n\n🔁 Opakované nákupy (spotřební a doplňkový sortiment)\n\nStaňte se partnerem BKshop.cz a nabídněte svým návštěvníkům kvalitní železářství a vybavení pro každou dílnu i stavbu.\n\n## Jak získat Cashback 4,8 % na BKshop.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **BKshop.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/bkshop.png",
+    "bonus": "Sleva 10 % + Cashback 4,8 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 4,8 % z každé schválené objednávky na BKshop.cz.",
+    "ctaLabel": "Nakoupit na BKshop.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na BKshop.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na BKshop.cz",
+      "Cashback 4,8 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=af8988b4",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=af8988b4",
+    "trackingSlug": "bkshop",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "BKshop.cz: Cashback 4,8 % 2026",
+    "seoDescription": "BKshop.cz je specializovaný e-shop zaměřený na železářství, spojovací materiál, kotevní techniku a široký sortiment pro dům, dílnu i zahradu.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u BKshop.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na BKshop.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z BKshop.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-626b73686f",
+        "title": "Sleva 10 % na první objednávku nad 500 Kč",
+        "badge": "Sleva 10 %",
+        "validUntil": "2027-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=af8988b4&desturl=https%3A%2F%2Fwww.bkshop.cz",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "herbal-store",
+    "name": "Herbal-store.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "Herbal Store je český výrobce doplňků stravy z Jablonce nad Nisou.",
+    "description": "## O e-shopu Herbal-store.cz\n\nHerbal Store je český výrobce doplňků stravy z Jablonce nad Nisou.\n\nProdukty si sami vyvíjíme, dovážíme suroviny a vyrábíme pod vlastní značkou. Nejsme jen prodejci, ale stojíme si za tím, co nabízíme od začátku až do konce.\n\nV oboru jsme od roku 2012. Rostli jsme postupně, s důrazem na kvalitu a dlouhodobou důvěru zákazníků. Každý produkt má jasný smysl, čisté složení a důvod, proč vznikl.\n\nZajímá nás dlouhověkost, regenerace, energie i moderní přístup ke zdraví. Sledujeme vývoj, učíme se a posouváme naši výrobu i produkty dál.\n\n## Jak získat Cashback až 4 % na Herbal-store.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Herbal-store.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/herbal-store.png",
+    "bonus": "Cashback až 4 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback až 4 % z každé schválené objednávky na Herbal-store.cz.",
+    "ctaLabel": "Nakoupit na Herbal-store.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Herbal-store.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Herbal-store.cz",
+      "Cashback až 4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=efea1626",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=efea1626",
+    "trackingSlug": "herbal-store",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Herbal-store.cz: Cashback až 4 % 2026",
+    "seoDescription": "Herbal Store je český výrobce doplňků stravy z Jablonce nad Nisou.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Herbal-store.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Herbal-store.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Herbal-store.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "valasskybaca",
+    "name": "ValašskýBača.cz",
+    "categorySlug": "moda-a-doplnky",
+    "shortDescription": "Prodáváme vlněné věci z ovčí vlny (vesty, pantofle, deky, ponožky, ložní soupravy a jiné.",
+    "description": "## O e-shopu ValašskýBača.cz\n\nProdáváme vlněné věci z ovčí vlny (vesty, pantofle, deky, ponožky, ložní soupravy a jiné.\n\nDalší sortiment máme proutěné zboží, košíky, dřevěné zboží, ptačí krmítka atd.\n\nPosledním sortimentem je drogérie, kterou dodává chráněná dílna Dúbrava Valašské Klobouky.\n\n## Jak získat Cashback 2 % na ValašskýBača.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **ValašskýBača.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/valasskybaca.png",
+    "bonus": "Cashback 2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na ValašskýBača.cz.",
+    "ctaLabel": "Nakoupit na ValašskýBača.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na ValašskýBača.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na ValašskýBača.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=b8d6587e",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=b8d6587e",
+    "trackingSlug": "valasskybaca",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "ValašskýBača.cz: Cashback 2 % 2026",
+    "seoDescription": "Prodáváme vlněné věci z ovčí vlny (vesty, pantofle, deky, ponožky, ložní soupravy a jiné.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u ValašskýBača.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na ValašskýBača.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z ValašskýBača.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "vlasy-obchod",
+    "name": "vlasy-obchod.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "Jsme kadeřnický velkoobchod s profesionální vlasovou kosmetikou a potřebami.",
+    "description": "## O e-shopu vlasy-obchod.cz\n\nJsme kadeřnický velkoobchod s profesionální vlasovou kosmetikou a potřebami. V e-shopu nabízíme tisíce originálních produktů oblíbených značek – od péče o vlasy, přes barvy, až po vybavení salonů. Nakupovat u nás mohou nejen profesionálové, ale i běžní spotřebitelé. Garantujeme výhradní prodej ověřených značek od oficiálních výrobců a distributorů.\n\n## Jak získat Cashback 2 % na vlasy-obchod.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **vlasy-obchod.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/vlasy-obchod.png",
+    "bonus": "Sleva 10 % s kódem VLASY26 + Cashback 2 %",
+    "bonusDescription": "Sleva 10% na celý sortiment, Navíc získáte cashback 2 % do BONUSLY peněženky.",
+    "promoCode": "VLASY26",
+    "promoCodeNote": "Sleva 10% na celý sortiment,",
+    "ctaLabel": "Nakoupit na vlasy-obchod.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na vlasy-obchod.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na vlasy-obchod.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Aktuální ověřený slevový kód VLASY26"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=86e1df41",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=86e1df41",
+    "trackingSlug": "vlasy-obchod",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "vlasy-obchod.cz: Cashback 2 % 2026",
+    "seoDescription": "Jsme kadeřnický velkoobchod s profesionální vlasovou kosmetikou a potřebami.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u vlasy-obchod.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na vlasy-obchod.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z vlasy-obchod.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-766c617379",
+        "title": "Sleva 10% na celý sortiment,",
+        "badge": "Sleva 10 %",
+        "code": "VLASY26",
+        "validUntil": "2026-12-02",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=86e1df41&desturl=https%3A%2F%2Fvlasy-obchod.cz%2F",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "bondster",
+    "name": "BONDSTER.com",
+    "categorySlug": "finance",
+    "shortDescription": "Česká investiční platforma Bondster pro investice do zajištěných půjček s ročním výnosem až 15 % a cashbackem 500 Kč pro registrované na BONUSLY.",
+    "description": "## O platformě Bondster\n\n**Bondster.com** je zavedená česká FinTech investiční platforma, která propojuje investory s prověřenými poskytovateli úvěrů z ČR i zahraničí. Investovat můžete v českých korunách i eurech již od 100 Kč a využít automatické investiční strategie (Autoinvest) i garanci zpětného odkupu u vybraných úvěrů.\n\n## Jak získat 500 Kč cashback na Bondster přes BONUSLY\n\n- Před registrací se přihlaste do svého účtu na BONUSLY a proklikněte se přes zelené tlačítko.\n- Založte si investorský účet na Bondster.com a zainvestujte alespoň **5 000 Kč**.\n- Po schválení partnerem vám připíšeme **500 Kč cashback** přímo do vaší BONUSLY peněženky.",
+    "logo": "/logos/bondster.png",
+    "bonus": "Cashback 500 Kč při investici od 5 000 Kč",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem na Bondster.com a získejte 500 Kč cashback do své peněženky po první investici alespoň 5 000 Kč.",
+    "ctaLabel": "Přejít na BONDSTER.com",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na BONDSTER.com s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Investice v CZK i EUR již od 100 Kč",
+      "Atraktivní výnosy a automatické investování (Autoinvest)",
+      "Cashback 500 Kč do BONUSLY peněženky"
+    ],
+    "cons": [
+      "Pro schválení cashbacku je nutná první investice alespoň 5 000 Kč",
+      "P2P investování nese riziko nesplácení dlužníkem — nutná diverzifikace"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=4c326833",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=4c326833",
+    "trackingSlug": "bondster",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": true,
+    "active": true,
+    "verified": true,
+    "seoTitle": "BONDSTER.com: Cashback 500 Kč 2026",
+    "seoDescription": "Česká investiční platforma Bondster pro investice do zajištěných půjček s ročním výnosem až 15 % a cashbackem 500 Kč pro registrované na BONUSLY.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u BONDSTER.com?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na BONDSTER.com přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z BONDSTER.com?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 90 dní."
+      }
+    ]
+  },
+  {
+    "slug": "vaporism",
+    "name": "Vaporism.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Nabízíme široký sortiment vapingových produktů, od jednoduchých e-cigaret a pod systémů až po sofistikovaná zařízení a veškeré příslušenství.",
+    "description": "## O e-shopu Vaporism.cz\n\nNabízíme široký sortiment vapingových produktů, od jednoduchých e-cigaret a pod systémů až po sofistikovaná zařízení a veškeré příslušenství. Jsme vyhledávaným místem pro širokou nabídku nikotinových náplní, nikotinových solí, příchutí a boosterů pro vlastní míchání e-liquidů. Klademe důraz na profesionální a rychlé poradenství, expedici objednávek v den přijetí (Skladem u nás znamená skutečně skladem, né v externím skladě, či u partnerů atd) a záruku maximální spokojenosti při řešení případných problémů.\n\n## Jak získat Cashback až 5 % na Vaporism.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Vaporism.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/vaporism.png",
+    "bonus": "Cashback až 5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback až 5 % z každé schválené objednávky na Vaporism.cz.",
+    "ctaLabel": "Nakoupit na Vaporism.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Vaporism.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Vaporism.cz",
+      "Cashback až 5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a5e63a96",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a5e63a96",
+    "trackingSlug": "vaporism",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Vaporism.cz: Cashback až 5 % 2026",
+    "seoDescription": "Nabízíme široký sortiment vapingových produktů, od jednoduchých e-cigaret a pod systémů až po sofistikovaná zařízení a veškeré příslušenství.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Vaporism.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Vaporism.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Vaporism.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "e-matrace",
+    "name": "E-matrace.com",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Internetový obchod e-matrace.com nabízí širokou škálu kvalitních produktů, včetně skládacích matrací pro hosty a do auta, ideálních pro přespání na cestách.",
+    "description": "## O e-shopu E-matrace.com\n\nInternetový obchod e-matrace.com nabízí širokou škálu kvalitních produktů, včetně skládacích matrací pro hosty a do auta, ideálních pro přespání na cestách. Také zde najdete skládací postele šetřící místo a Montessori nábytek pro děti, podporující jejich kreativitu a samostatnost. Kromě toho e-shop nabízí různé možnosti zvukové izolace.\n\n## Jak získat Cashback 1 % na E-matrace.com\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **E-matrace.com** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 80 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/e-matrace.png",
+    "bonus": "Sleva 66 % + Cashback 1 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 1 % z každé schválené objednávky na E-matrace.com.",
+    "ctaLabel": "Nakoupit na E-matrace.com",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na E-matrace.com s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na E-matrace.com",
+      "Cashback 1 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 80 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=4be9d1a2",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=4be9d1a2",
+    "trackingSlug": "e-matrace",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "E-matrace.com: Cashback 1 % 2026",
+    "seoDescription": "Internetový obchod e-matrace.com nabízí širokou škálu kvalitních produktů, včetně skládacích matrací pro hosty a do auta, ideálních pro přespání na cestách.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u E-matrace.com?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na E-matrace.com přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z E-matrace.com?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 80 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-652d6d6174",
+        "title": "Totální výprodej - slevy až 66 % na vybrané produkty",
+        "badge": "Sleva 66 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=4be9d1a2&desturl=https%3A%2F%2Fwww.e-matrace.com%2Ftotalni-vyprodej",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "penepex",
+    "name": "Penepex.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Penepex je jednička v nabídce vodních filtrů do filtračních konvic, filtračních systémů, lednic a kávovarů.",
+    "description": "## O e-shopu Penepex.cz\n\nPenepex je jednička v nabídce vodních filtrů do filtračních konvic, filtračních systémů, lednic a kávovarů. V hlavním sortimentu najdete příslušenství do kávovarů, digestoří, vysavačů a ostatních spotřebičů pro všechny dostupné značky na trhu. Nejpopulárnější modely filtrů do bazénů a vířivek. V rámci udržitelnosti jsou pro nás stěžejní produkty pro filtraci vody, uchovávání potravin a ekologické čisticí prostředky.\n\n## Jak získat Cashback 2,4 % na Penepex.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Penepex.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/penepex.png",
+    "bonus": "Cashback 2,4 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,4 % z každé schválené objednávky na Penepex.cz.",
+    "ctaLabel": "Nakoupit na Penepex.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Penepex.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Penepex.cz",
+      "Cashback 2,4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=59192969",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=59192969",
+    "trackingSlug": "penepex",
+    "partnerNetwork": "ehub",
+    "rating": 4.7,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Penepex.cz: Cashback 2,4 % 2026",
+    "seoDescription": "Penepex je jednička v nabídce vodních filtrů do filtračních konvic, filtračních systémů, lednic a kávovarů.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Penepex.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Penepex.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Penepex.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "bookshop",
+    "name": "Bookshop.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Bookshop.cz je internetový obchod s jednou z největších nabídek cizojazyčných knih v ČR.",
+    "description": "## O e-shopu Bookshop.cz\n\nBookshop.cz je internetový obchod s jednou z největších nabídek cizojazyčných knih v ČR. Vybírat můžete z více než 3 milionů titulů ve světových jazycích, ať už hledáte beletrii, dětské knihy, učebnice, odbornou literaturu nebo bestsellery od předních světových autorů. Nabízíme knihy v angličtině, němčině, francouzštině, španělštině a dalších jazycích, takže si u nás vybere každý – od studentů a jazykových nadšenců až po odborníky z různých oborů. Díky přehledné kategorii a vyhledávání snadno najdete svůj oblíbený titul, a my vám ho doručíme rychle a spolehlivě až domů. Bookshop.cz je ideálním místem pro všechny, kteří chtějí číst v originále, zlepšovat jazykové dovednosti nebo rozšířit své znalosti.\n\n## Jak získat Cashback 1,25 % na Bookshop.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Bookshop.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/bookshop.png",
+    "bonus": "Cashback 1,25 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 1,25 % z každé schválené objednávky na Bookshop.cz.",
+    "ctaLabel": "Nakoupit na Bookshop.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Bookshop.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Bookshop.cz",
+      "Cashback 1,25 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f5bc1d1b",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f5bc1d1b",
+    "trackingSlug": "bookshop",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Bookshop.cz: Cashback 1,25 % 2026",
+    "seoDescription": "Bookshop.cz je internetový obchod s jednou z největších nabídek cizojazyčných knih v ČR.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Bookshop.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Bookshop.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Bookshop.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "obalove-materialy",
+    "name": "Obalové-materiály.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Jsme specialisté na obalové materiály (krabice, fólie, lepicí pásky, plastové obaly, obálky, pytle, tašky, přepravky a další) a balicí a stěhovací pomůcky.",
+    "description": "## O e-shopu Obalové-materiály.cz\n\nJsme specialisté na obalové materiály (krabice, fólie, lepicí pásky, plastové obaly, obálky, pytle, tašky, přepravky a další) a balicí a stěhovací pomůcky. Velkoobchodní i maloobchodní prodej prostřednictvím e-shopu a také kamenné prodejny v Praze 4 – Libuši. Pro naše zákazníky také zajišťujeme výrobu obalů na míru s vlastním potiskem, rozměry a materiálem.\n\n## Jak získat Cashback 1,2 % na Obalové-materiály.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Obalové-materiály.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/obalove-materialy.png",
+    "bonus": "Cashback 1,2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 1,2 % z každé schválené objednávky na Obalové-materiály.cz.",
+    "ctaLabel": "Nakoupit na Obalové-materiály.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Obalové-materiály.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Obalové-materiály.cz",
+      "Cashback 1,2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=5048bb6b",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=5048bb6b",
+    "trackingSlug": "obalove-materialy",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Obalové-materiály.cz: Cashback 1,2 % 2026",
+    "seoDescription": "Jsme specialisté na obalové materiály (krabice, fólie, lepicí pásky, plastové obaly, obálky, pytle, tašky, přepravky a další) a balicí a stěhovací pomůcky.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Obalové-materiály.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Obalové-materiály.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Obalové-materiály.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6f62616c6f",
+        "title": "CENOVÁ BOMBA - dlouhodobě velmi výhodné ceny na vybrané produkty",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=5048bb6b&desturl=https%3A%2F%2Fwww.obalove-materialy.cz%2Fcenova-bomba%2F",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "starnails",
+    "name": "Starnails.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "STARNAILS® je značka s dlouholetou tradicí, která se specializuje na profesionální nehtovou kosmetiku.",
+    "description": "## O e-shopu Starnails.cz\n\nSTARNAILS® je značka s dlouholetou tradicí, která se specializuje na profesionální nehtovou kosmetiku. Nabízíme široký sortiment produktů pro manikúru i pedikúru – od gel laků, UV gelů, brusek až po UV/LED lampy a další příslušenství pro hvězdnou nehtovou modeláž. Naše produkty jsou oblíbené u profesionálů i domácích uživatelů.\n\n## Jak získat Cashback 3,25 % na Starnails.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Starnails.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/starnails.png",
+    "bonus": "Sleva 64 % + Cashback 3,25 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 3,25 % z každé schválené objednávky na Starnails.cz.",
+    "ctaLabel": "Nakoupit na Starnails.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Starnails.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Starnails.cz",
+      "Cashback 3,25 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=26cb45f0",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=26cb45f0",
+    "trackingSlug": "starnails",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Starnails.cz: Cashback 3,25 % 2026",
+    "seoDescription": "STARNAILS® je značka s dlouholetou tradicí, která se specializuje na profesionální nehtovou kosmetiku.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Starnails.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Starnails.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Starnails.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-737461726e",
+        "title": "Akce - slevy na vybrané produkty až 64 %",
+        "badge": "Sleva 64 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=26cb45f0&desturl=https%3A%2F%2Fwww.starnails.cz%2Fakce%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-737461726e",
+        "title": "Doprava zdarma na výdejní místa s nákupem nad 800 Kč",
+        "badge": "Doprava zdarma",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=26cb45f0&desturl=https%3A%2F%2Fwww.starnails.cz%2Fdoprava-a-platba%2F",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-737461726e",
+        "title": "Hvězdný program -sbírání hvězdiček, které promění nákupy v odměny. Hvězdičky lze využít na slevy nebo na exkluzivní produkty věrnostního programu",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=26cb45f0&desturl=https%3A%2F%2Fwww.starnails.cz%2Fhvezdny-program-starnails%2F",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "slug": "chlorito",
+    "name": "Chlorito.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Jsme specialisty ve svém oboru, který se zaměřuje na péči o vodu nejen v bazénech. Své znalosti a dovednosti máme podložené tradicí rodinné firmy.",
+    "description": "## O e-shopu Chlorito.cz\n\nJsme specialisty ve svém oboru, který se zaměřuje na péči o vodu nejen v bazénech. Své znalosti a dovednosti máme podložené tradicí rodinné firmy.\n\nNa našem e-shopu si můžete vybrat z nepřeberného množství přípravků bazénové chemie vlastní výroby. Tyto přípravky jsou na českém trhu již několik let a jsou vyráběny pouze z těch nejlepších evropských surovin, jejichž původ garantujeme.\n\nKvalita výchozích surovin podstatným způsobem ovlivňuje finální podobu výrobku. Některé parametry hotového přípravku bazénové chemie si ale může každý zákazník ověřit sám, aniž by disponoval analytickou laboratoří.\n\nVšechny tyto parametry naše výrobky, díky pečlivě ověřeným a přísně kontrolovaným výrobním postupům, mají. Naše výrobky jsou v průběhu výrobního procesu testovány a pravidelně kontrolovány v analytické laboratoři, což zaručuje vysokou kvalitu výsledného produktu a udržení této žádoucí kvality i v dlouhodobém horizontu. Stojíme si za vysokou kvalitou a účinností našich výrobků – protože je sami vyrábíme.\n\nVeškeré zboží, které naleznete v našem e-shopu, máme skladem a okamžitě k dispozici. Díky tomu Vám můžeme nabídnout rychlou expedici zboží i v tom největším horku.\n\n## Jak získat Cashback 2,5 % na Chlorito.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Chlorito.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/chlorito.png",
+    "bonus": "Cashback 2,5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,5 % z každé schválené objednávky na Chlorito.cz.",
+    "ctaLabel": "Nakoupit na Chlorito.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Chlorito.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Chlorito.cz",
+      "Cashback 2,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=47dc7b3f",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=47dc7b3f",
+    "trackingSlug": "chlorito",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Chlorito.cz: Cashback 2,5 % 2026",
+    "seoDescription": "Jsme specialisty ve svém oboru, který se zaměřuje na péči o vodu nejen v bazénech. Své znalosti a dovednosti máme podložené tradicí rodinné firmy.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Chlorito.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Chlorito.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Chlorito.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "fantomprint",
+    "name": "Fantomprint.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Nakladatelství FANTOM Print, jedno z největších českých nakladatelství specializujících se na fantasy, sci-fi, LitRPG a literární adaptace počítačových her.",
+    "description": "## O e-shopu Fantomprint.cz\n\nNakladatelství FANTOM Print, jedno z největších českých nakladatelství specializujících se na fantasy, sci-fi, LitRPG a literární adaptace počítačových her.\n\n## Jak získat Cashback 3,5 % na Fantomprint.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Fantomprint.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/fantomprint.png",
+    "bonus": "Cashback 3,5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 3,5 % z každé schválené objednávky na Fantomprint.cz.",
+    "ctaLabel": "Nakoupit na Fantomprint.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Fantomprint.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Fantomprint.cz",
+      "Cashback 3,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d262f0ce",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d262f0ce",
+    "trackingSlug": "fantomprint",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Fantomprint.cz: Cashback 3,5 % 2026",
+    "seoDescription": "Nakladatelství FANTOM Print, jedno z největších českých nakladatelství specializujících se na fantasy, sci-fi, LitRPG a literární adaptace počítačových her.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Fantomprint.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Fantomprint.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Fantomprint.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "willi",
+    "name": "Willi.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Jsme rodinná firma a naším nejdůležitějším společným cílem je spokojený zákazník. Tomu se snažíme podřídit úplně vše.",
+    "description": "## O e-shopu Willi.cz\n\nJsme rodinná firma a naším nejdůležitějším společným cílem je spokojený zákazník. Tomu se snažíme podřídit úplně vše. Tvoříme vlastní obsah, točíme videonávody, vyhledáváme a nabízíme kvalitní, zajímavé, interaktivní a cenově dostupné erotické pomůcky z celého světa.\n\n \n\n Zkoušíme a testujeme produkty na vlastní kůži, proto ti dokážeme poradit s výběrem erotické pomůcky. Zároveň vyhledáváme nové možnosti, jak zákazníkům nabídnout top produkty za nižší ceny. Proto pracujeme na rozšíření vlastní produktové značky Willi.\n\nV době všemožných internetových srovnávačů a velkých neosobních tržišť je pro nás důležité, abychom i nadále zůstali rodinnou firmou s individuálním přístupem ke každému zákazníkovi.\n\nWilli - společnost, která prolomila hranice intimity a erotického potěšení v novodobé historii Československa a zároveň nejdéle nepřetržitě působící firmu na českém trhu s erotikou.\n\n## Jak získat Cashback 4 % na Willi.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Willi.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/willi.png",
+    "bonus": "Cashback 4 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 4 % z každé schválené objednávky na Willi.cz.",
+    "ctaLabel": "Nakoupit na Willi.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Willi.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Willi.cz",
+      "Cashback 4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=5fedde9e",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=5fedde9e",
+    "trackingSlug": "willi",
+    "partnerNetwork": "ehub",
+    "rating": 4.7,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Willi.cz: Cashback 4 % 2026",
+    "seoDescription": "Jsme rodinná firma a naším nejdůležitějším společným cílem je spokojený zákazník. Tomu se snažíme podřídit úplně vše.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Willi.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Willi.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Willi.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "atranet",
+    "name": "Atranet.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "V e-shopu atranet.cz vnímáme domácnost jako vzácné místo, kde má vládnout harmonie a věci dávat smysl.",
+    "description": "## O e-shopu Atranet.cz\n\nV e-shopu atranet.cz vnímáme domácnost jako vzácné místo, kde má vládnout harmonie a věci dávat smysl.\n\nNabízíme pomocníky pro snadné a rychlé dosažení kompletního a dokonalého výsledku.\n\nCílem nejsou přístroje a věci, ale kvalitně, zdravě a ekonomicky zpracované přírodní suroviny a pokrmy, které všem chutnají.\n\nJeden náš kvalitní a vysoce funkční produkt často nahradí několik konkurenčních nabízených za zdánlivě výhodnou cenu.\n\nNeprodáváme nic, co nás doslova nenadchlo a neumožnilo nám samotným žít zdravě, lépe a šťastně.\n\n## Jak získat Cashback 2 % na Atranet.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Atranet.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/atranet.png",
+    "bonus": "Cashback 2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na Atranet.cz.",
+    "ctaLabel": "Nakoupit na Atranet.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Atranet.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Atranet.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=75d78ced",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=75d78ced",
+    "trackingSlug": "atranet",
+    "partnerNetwork": "ehub",
+    "rating": 4.7,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Atranet.cz: Cashback 2 % 2026",
+    "seoDescription": "V e-shopu atranet.cz vnímáme domácnost jako vzácné místo, kde má vládnout harmonie a věci dávat smysl.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Atranet.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Atranet.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Atranet.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-617472616e",
+        "title": "Akční ceny na vybrané produkty",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=75d78ced&desturl=https%3A%2F%2Fwww.atranet.cz%2Fslevy-a-akcni-ceny%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-617472616e",
+        "title": "DOPRAVA se Zásilkovnou při objednávce nad 2.990 Kč ZDARMA",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=75d78ced&desturl=https%3A%2F%2Fwww.atranet.cz%2F",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-617472616e",
+        "title": "DOPRAVA s PPL při objednávce nad 2.990 Kč ZDARMA",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=75d78ced&desturl=https%3A%2F%2Fwww.atranet.cz%2F",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "slug": "sluchatka-nausniky",
+    "name": "Sluchátka-náušníky.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Český e-shop zaměřený na prodej náušníků na sluchátka. Nabízí kvalitní náhradní náušníky a další příslušenství pro sluchátka, které zlepšují pohodlí a zvukový zážitek.",
+    "description": "## O e-shopu Sluchátka-náušníky.cz\n\nČeský e-shop zaměřený na prodej náušníků na sluchátka. Nabízí kvalitní náhradní náušníky a další příslušenství pro sluchátka, které zlepšují pohodlí a zvukový zážitek.\n\n## Jak získat Cashback 2 % na Sluchátka-náušníky.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Sluchátka-náušníky.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/sluchatka-nausniky.png",
+    "bonus": "Cashback 2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na Sluchátka-náušníky.cz.",
+    "ctaLabel": "Nakoupit na Sluchátka-náušníky.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Sluchátka-náušníky.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Sluchátka-náušníky.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=6e9a9162",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=6e9a9162",
+    "trackingSlug": "sluchatka-nausniky",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Sluchátka-náušníky.cz: Cashback 2 % 2026",
+    "seoDescription": "Český e-shop zaměřený na prodej náušníků na sluchátka. Nabízí kvalitní náhradní náušníky a další příslušenství pro sluchátka, které zlepšují pohodlí a zvukový",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Sluchátka-náušníky.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Sluchátka-náušníky.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Sluchátka-náušníky.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "vwshop",
+    "name": "VWshop.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Specializujeme na prodej wrap fólií, autokosmetiky, tuningu, autodílů pro rychloservis a domácí opravy.",
+    "description": "## O e-shopu VWshop.cz\n\nSpecializujeme na prodej wrap fólií, autokosmetiky, tuningu, autodílů pro rychloservis a domácí opravy. Nabízíme široký sortiment kvalitních wrap fólií v různých barvách a stylech, které jsou ideální pro úpravu vzhledu vozidel. Naše autokosmetika zahrnuje špičkové čisticí a ochranné přípravky pro interiér i exteriér vozů. V oblasti autodílů poskytujeme díly pro rychlé opravy, které zákazníci mohou snadno aplikovat sami doma. Jsme specialisté, kteří pracují s každým zákazníkem individuálně, abychom zajistili, že jeho objednávka splní všechny potřeby a očekávání. Klademe důraz na kvalitu a cenovou dostupnost všech produktů. Wrap fólie z našeho sortimentu jsou vhodné pro profesionály i amatérské nadšence. Autokosmetiku doporučujeme pro ochranu vozidel před povětrnostními vlivy a běžným opotřebením. Díly pro rychloservis umožňují rychlou a efektivní údržbu vozidel bez potřeby návštěvy servisu. Naším cílem je usnadnit zákazníkům péči o jejich vozidla a zajistit, aby každá objednávka byla přizpůsobena konkrétním požadavkům.\n\n## Jak získat Cashback 4 % na VWshop.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **VWshop.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/vwshop.png",
+    "bonus": "Cashback 4 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 4 % z každé schválené objednávky na VWshop.cz.",
+    "ctaLabel": "Nakoupit na VWshop.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na VWshop.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na VWshop.cz",
+      "Cashback 4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f47fa5ba",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f47fa5ba",
+    "trackingSlug": "vwshop",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "VWshop.cz: Cashback 4 % 2026",
+    "seoDescription": "Specializujeme na prodej wrap fólií, autokosmetiky, tuningu, autodílů pro rychloservis a domácí opravy.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u VWshop.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na VWshop.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z VWshop.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "aku-shop",
+    "name": "Aku-shop.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Jsme specialisté akumulátory a baterie pro širokou škálu použití. Nabízíme rozšířenou záruku až na 4 roky, což zajišťuje dlouhodobou spokojenost s našimi produkty.",
+    "description": "## O e-shopu Aku-shop.cz\n\nJsme specialisté akumulátory a baterie pro širokou škálu použití. Nabízíme rozšířenou záruku až na 4 roky, což zajišťuje dlouhodobou spokojenost s našimi produkty. V naší nabídce najdete jak běžné, tak i specializované průmyslové baterie pro nejrůznější přístroje. Velký důraz klademe na kvalitu a spolehlivost. Hitem naší nabídky jsou baterie do notebooků a široký sortiment baterií pro záložní zdroje. Nezáleží na tom, zda hledáte baterie pro domácí spotřebiče nebo pro profesionální vybavení – u nás najdete vždy to pravé. Věnujeme se také prodeji baterií pro RC modely, měřící přístroje, bezdrátové routery a další zařízení. Naše zákaznická podpora je připravena vám poradit s výběrem toho nejvhodnějšího produktu. Všechny naše produkty podléhají přísným kontrolám kvality, abyste měli jistotu, že dostanete to nejlepší.\n\n## Jak získat Cashback 3,2 % na Aku-shop.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Aku-shop.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/aku-shop.png",
+    "bonus": "Cashback 3,2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 3,2 % z každé schválené objednávky na Aku-shop.cz.",
+    "ctaLabel": "Nakoupit na Aku-shop.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Aku-shop.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Aku-shop.cz",
+      "Cashback 3,2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=9bc93257",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=9bc93257",
+    "trackingSlug": "aku-shop",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Aku-shop.cz: Cashback 3,2 % 2026",
+    "seoDescription": "Jsme specialisté akumulátory a baterie pro širokou škálu použití. Nabízíme rozšířenou záruku až na 4 roky, což zajišťuje dlouhodobou spokojenost s našimi prod",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Aku-shop.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Aku-shop.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Aku-shop.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "mikov",
+    "name": "Mikov.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Mikov, s.r.o. je světově uznávaným tradičním výrobcem kancelářské techniky a průmyslových spojovačů značky RON a širokého sortimentu nožířského zboží značky Mikov.",
+    "description": "## O e-shopu Mikov.cz\n\nMikov, s.r.o. je světově uznávaným tradičním výrobcem kancelářské techniky a průmyslových spojovačů značky RON a širokého sortimentu nožířského zboží značky Mikov. Své produkty dodává nejen do České republiky a na Slovensko, ale exportuje je do celého světa.\n\n## Jak získat Cashback 3 % na Mikov.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Mikov.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/mikov.png",
+    "bonus": "Sleva 84 % + Cashback 3 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 3 % z každé schválené objednávky na Mikov.cz.",
+    "ctaLabel": "Nakoupit na Mikov.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Mikov.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Mikov.cz",
+      "Cashback 3 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=580c33bf",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=580c33bf",
+    "trackingSlug": "mikov",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Mikov.cz: Cashback 3 % 2026",
+    "seoDescription": "Mikov, s.r.o. je světově uznávaným tradičním výrobcem kancelářské techniky a průmyslových spojovačů značky RON a širokého sortimentu nožířského zboží značky M",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Mikov.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Mikov.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Mikov.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6d696b6f76",
+        "title": "Akce - slevy až 84 % na vybrané produkty",
+        "badge": "Sleva 84 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=580c33bf&desturl=https%3A%2F%2Fwww.mikov.cz%2Fakce_k650%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-6d696b6f76",
+        "title": "Věrnostní program - 1 bod = 1 Kč sleva z dalšího nákupu",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=580c33bf&desturl=https%3A%2F%2Fwww.mikov.cz%2Fvernostni-program%2F",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-6d696b6f76",
+        "title": "Doprava zdarma s nákupem nad 1 300 Kč",
+        "badge": "Doprava zdarma",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=580c33bf&desturl=https%3A%2F%2Fwww.mikov.cz%2F",
+        "order": 3
+      },
+      {
+        "trackingSlug": "ehub-p2-6d696b6f76",
+        "title": "Vybrané nože Predator s dárkem zdarma. Dárek se zobrazí po rozkliknutí konkrétního nože",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-17",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=580c33bf&desturl=https%3A%2F%2Fwww.mikov.cz%2Fspecialni-nabidka_k859%2Fvanocni-tipy_k973%2Fnoze_k974%2Fexkluzivni-predatory-s-darkem-zdarma_k984%2F",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "slug": "ampul",
+    "name": "Ampul.eu",
+    "categorySlug": "elektro",
+    "shortDescription": "Nabízíme širokou škálu elektrokomponent a LED technologií, včetně termostatů, svítidel, elektromagnetů a napájecích zdrojů.",
+    "description": "## O e-shopu Ampul.eu\n\nNabízíme širokou škálu elektrokomponent a LED technologií, včetně termostatů, svítidel, elektromagnetů a napájecích zdrojů. Ideální pro průmyslové i soukromé využití, s mezinárodní dostupností a zárukou kvality.\n\n## Jak získat Cashback 3,5 % na Ampul.eu\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Ampul.eu** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/ampul.png",
+    "bonus": "Cashback 3,5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 3,5 % z každé schválené objednávky na Ampul.eu.",
+    "ctaLabel": "Nakoupit na Ampul.eu",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Ampul.eu s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Ampul.eu",
+      "Cashback 3,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=ddb5edae",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=ddb5edae",
+    "trackingSlug": "ampul",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Ampul.eu: Cashback 3,5 % 2026",
+    "seoDescription": "Nabízíme širokou škálu elektrokomponent a LED technologií, včetně termostatů, svítidel, elektromagnetů a napájecích zdrojů.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Ampul.eu?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Ampul.eu přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Ampul.eu?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "nelenprozelen",
+    "name": "Neleňprozeleň.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Neleňprozeleň.cz je online zahradnictví s kvalitními českými rostlinami, které se navíc snaží svým zákazníkům na internetu pomoci a poradit.",
+    "description": "## O e-shopu Neleňprozeleň.cz\n\nNeleňprozeleň.cz je online zahradnictví s kvalitními českými rostlinami, které se navíc snaží svým zákazníkům na internetu pomoci a poradit.\n\nV Galerii Neleňprozeleň.cz se můžete inspirovat při tvorbě zahrad a v Aplikaci Neleňprozeleň.cz vám pro změnu poradíme, jak se o zakoupené rostliny postarat. Společně s rostlinami u nás v eshopu nakoupíte i vše do zahrady, o čem si myslíme, že je kvalitní a cenové dostupné a určitě to při zahradních pracích využijete. Hnojiva, substráty, osivo, zahradní nářadí.\n\n## Jak získat Cashback 2,4 % na Neleňprozeleň.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Neleňprozeleň.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/nelenprozelen.png",
+    "bonus": "Cashback 2,4 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,4 % z každé schválené objednávky na Neleňprozeleň.cz.",
+    "ctaLabel": "Nakoupit na Neleňprozeleň.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Neleňprozeleň.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Neleňprozeleň.cz",
+      "Cashback 2,4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d25f1a73",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d25f1a73",
+    "trackingSlug": "nelenprozelen",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Neleňprozeleň.cz: Cashback 2,4 % 2026",
+    "seoDescription": "Neleňprozeleň.cz je online zahradnictví s kvalitními českými rostlinami, které se navíc snaží svým zákazníkům na internetu pomoci a poradit.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Neleňprozeleň.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Neleňprozeleň.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Neleňprozeleň.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "soxano",
+    "name": "Soxano.cz",
+    "categorySlug": "moda-a-doplnky",
+    "shortDescription": "Soxano.cz je přední česká firma specializující se na kvalitní ponožky a spodní prádlo pro celou rodinu.",
+    "description": "## O e-shopu Soxano.cz\n\nSoxano.cz je přední česká firma specializující se na kvalitní ponožky a spodní prádlo pro celou rodinu.\n\nNabízí široký výběr produktů, které jsou pečlivě vybírány s důrazem na pohodlí, funkčnost a moderní\n\ndesign. Díky spolupráci s ověřenými značkami jako VoXX, Moose, ToeToe, Lonka, Compressox, Bambox a dalšími deseti značkami, si zákazníci\n\nmohou být jisti, že nakupují prověřené, kvalitní zboží.\n\nFirma se pyšní rychlým doručením, vynikajícím zákaznickým servisem a přátelským přístupem.\n\nSoxano.cz je nejlepší volbou pro ty, kteří hledají kvalitu, spolehlivost a styl zaměřenou právě na ponožky, podkolenky a spodní prádlo.\n\n## Jak získat Cashback 0,6 % na Soxano.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Soxano.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/soxano.png",
+    "bonus": "Cashback 0,6 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 0,6 % z každé schválené objednávky na Soxano.cz.",
+    "ctaLabel": "Nakoupit na Soxano.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Soxano.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Soxano.cz",
+      "Cashback 0,6 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e5e1560c",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e5e1560c",
+    "trackingSlug": "soxano",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Soxano.cz: Cashback 0,6 % 2026",
+    "seoDescription": "Soxano.cz je přední česká firma specializující se na kvalitní ponožky a spodní prádlo pro celou rodinu.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Soxano.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Soxano.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Soxano.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-736f78616e",
+        "title": "Akce na vybrané produkty",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e5e1560c&desturl=https%3A%2F%2Fwww.soxano.cz%2FAkce-Vyhodne-baleni-c17_0_1.htm",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "pompo",
+    "name": "Pompo.cz",
+    "categorySlug": "nakupy-a-volny-cas",
+    "shortDescription": "Největší česká síť hračkářství Pompo.cz nabízí stavebnice LEGO, stolní hry, panenky i dárky pro děti s cashbackem až 2 %.",
+    "description": "## O e-shopu Pompo.cz\n\nPompo je rozsáhlá síť hračkářství po Česku a Slovensku a internetový obchod, kde se nabízí široký výběr hraček pro všechny věkové kategorie a zájmy. Ať už hledáte plyšáky, figurky, stavebnice, autíčka, stolní hry, nebo kreativní potřeby, u Pompo si zaručeně vyberete.\n\n## Jak získat Cashback 2 % na Pompo.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Pompo.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/pompo.png",
+    "bonus": "Cashback 2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na Pompo.cz.",
+    "ctaLabel": "Nakoupit na Pompo.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Pompo.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Pompo.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=ce6cff81",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=ce6cff81",
+    "trackingSlug": "pompo",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Pompo.cz: Cashback 2 % 2026",
+    "seoDescription": "Největší česká síť hračkářství Pompo.cz nabízí stavebnice LEGO, stolní hry, panenky i dárky pro děti s cashbackem až 2 %.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Pompo.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Pompo.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Pompo.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "kobercekk",
+    "name": "KoberceKK.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Koberce K+K je ryze česká firma, která se zaměřuje na prodej podlahových krytin. V nabídce naleznete jak koberce, PVC, lino, tak umělé trávy, ale i vinylovou podlahu.",
+    "description": "## O e-shopu KoberceKK.cz\n\nKoberce K+K je ryze česká firma, která se zaměřuje na prodej podlahových krytin. V nabídce naleznete jak koberce, PVC, lino, tak umělé trávy, ale i vinylovou podlahu. Všechny naše výrobky jsou z kvalitních materiálů, které vydrží. Samozřejmostí je také odborné poradenství a milý zákaznický servis. Našim zákazníkům dokážeme zajistit i dopravu a pokládku podlahových krytin.\n\n## Jak získat Cashback 3 % na KoberceKK.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **KoberceKK.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/kobercekk.png",
+    "bonus": "Sleva 10 % + Cashback 3 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 3 % z každé schválené objednávky na KoberceKK.cz.",
+    "ctaLabel": "Nakoupit na KoberceKK.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na KoberceKK.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na KoberceKK.cz",
+      "Cashback 3 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f9b32ef5",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f9b32ef5",
+    "trackingSlug": "kobercekk",
+    "partnerNetwork": "ehub",
+    "rating": 4.6,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "KoberceKK.cz: Cashback 3 % 2026",
+    "seoDescription": "Koberce K+K je ryze česká firma, která se zaměřuje na prodej podlahových krytin. V nabídce naleznete jak koberce, PVC, lino, tak umělé trávy, ale i vinylovou ",
+    "faq": [
+      {
+        "question": "Jak získat cashback u KoberceKK.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na KoberceKK.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z KoberceKK.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6b6f626572",
+        "title": "VĚRNOSTNÍ KLUB - členové věrnostního klubu získají slevy až 10 %",
+        "badge": "Sleva 10 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f9b32ef5&desturl=https%3A%2F%2Fwww.kobercekk.cz%2Fregistrace",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-6b6f626572",
+        "title": "Výprodej - slevy na vybrané produkty až 50 %",
+        "badge": "Sleva 50 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f9b32ef5&desturl=https%3A%2F%2Fwww.kobercekk.cz%2F390%2Fvyprodej",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-6b6f626572",
+        "title": "DOPRAVA ZDARMA s nákupem nad 2 999 Kč",
+        "badge": "Doprava zdarma",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f9b32ef5&desturl=https%3A%2F%2Fwww.kobercekk.cz%2Finfo%2F4%2Fdoprava",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "slug": "lavonio",
+    "name": "Lavonio.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "Už přes 25 let nabízíme široký výběr drogistického zboží, od úklidových produktů po kosmetiku a hygienické potřeby.",
+    "description": "## O e-shopu Lavonio.cz\n\nUž přes 25 let nabízíme široký výběr drogistického zboží, od úklidových produktů po kosmetiku a hygienické potřeby. Každý měsíc přicházíme s množstvím akcí, nabízíme také exkluzivní novinky, které nejsou běžně dostupné, a zajišťujeme efektivní dodání přímo k vám nebo na výdejní místo. Naše online platforma a široká distribuční síť podporují rychlou a pohodlnou dostupnost našich produktů po celé České republice.\n\n## Jak získat Cashback 1,5 % na Lavonio.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Lavonio.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/lavonio.png",
+    "bonus": "Sleva 30 % + Cashback 1,5 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 1,5 % z každé schválené objednávky na Lavonio.cz.",
+    "ctaLabel": "Nakoupit na Lavonio.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Lavonio.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Lavonio.cz",
+      "Cashback 1,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d76124da",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d76124da",
+    "trackingSlug": "lavonio",
+    "partnerNetwork": "ehub",
+    "rating": 4.7,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Lavonio.cz: Cashback 1,5 % 2026",
+    "seoDescription": "Už přes 25 let nabízíme široký výběr drogistického zboží, od úklidových produktů po kosmetiku a hygienické potřeby.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Lavonio.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Lavonio.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Lavonio.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6c61766f6e",
+        "title": "BLACK WEEK: Slevy až 30 % na vybraný vánoční a podzimní sortiment",
+        "badge": "Sleva 30 %",
+        "validUntil": "2026-11-30",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d76124da&desturl=https%3A%2F%2Fwww.lavonio.cz%2Fblack-week%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-6c61766f6e",
+        "title": "Slevy až 40 % na Oral-B a Braun",
+        "badge": "Sleva 40 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d76124da&desturl=https%3A%2F%2Fwww.lavonio.cz%2Foral-b-a-braun%2F",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-6c61766f6e",
+        "title": "Slevy až 50 % na vybrané produkty značek Lenor a Ariel",
+        "badge": "Sleva 50 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d76124da&desturl=https%3A%2F%2Fwww.lavonio.cz%2Fakcni-nabidka-prani%2F",
+        "order": 3
+      },
+      {
+        "trackingSlug": "ehub-p2-6c61766f6e",
+        "title": "LAVONIO CLUB - sbírejte body a vyměňte je za odměny, které jinde nekoupíte!",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d76124da&desturl=https%3A%2F%2Fwww.lavonio.cz%2Flavonio-club%2F",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "slug": "marre",
+    "name": "Marre.cz",
+    "categorySlug": "moda-a-doplnky",
+    "shortDescription": "E-shop specializovaný na prodej piercingu, stříbrných šperků, ocelových šperků, snubních prstenů a zlatého piercingu. Provádíme zakázkové rytí do šperků a snubních prstenů.",
+    "description": "## O e-shopu Marre.cz\n\nE-shop specializovaný na prodej piercingu, stříbrných šperků, ocelových šperků, snubních prstenů a zlatého piercingu. Provádíme zakázkové rytí do šperků a snubních prstenů.\n\n## Jak získat Cashback 2,5 % na Marre.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Marre.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/marre.png",
+    "bonus": "Cashback 2,5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,5 % z každé schválené objednávky na Marre.cz.",
+    "ctaLabel": "Nakoupit na Marre.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Marre.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Marre.cz",
+      "Cashback 2,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=75b5dc73",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=75b5dc73",
+    "trackingSlug": "marre",
+    "partnerNetwork": "ehub",
+    "rating": 4.7,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Marre.cz: Cashback 2,5 % 2026",
+    "seoDescription": "E-shop specializovaný na prodej piercingu, stříbrných šperků, ocelových šperků, snubních prstenů a zlatého piercingu. Provádíme zakázkové rytí do šperků a snu",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Marre.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Marre.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Marre.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "deeplove",
+    "name": "DeepLove.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Diskrétní sexshop prodávající luxusní erotické pomůcky a vibrátory. Navštivte naší kamennou prodejnu v Praze a vyberte si z široké nabídky luxusních pomůcek.",
+    "description": "## O e-shopu DeepLove.cz\n\nDiskrétní sexshop prodávající luxusní erotické pomůcky a vibrátory. Navštivte naší kamennou prodejnu v Praze a vyberte si z široké nabídky luxusních pomůcek.\n\n## Jak získat Cashback 1,2 % na DeepLove.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **DeepLove.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/deeplove.png",
+    "bonus": "Sleva 25 % s kódem LOVE69 + Cashback 1,2 %",
+    "bonusDescription": "Sleva 25 % s kódem na celou kategorii \"výprodej\" Navíc získáte cashback 1,2 % do BONUSLY peněženky.",
+    "promoCode": "LOVE69",
+    "promoCodeNote": "Sleva 25 % s kódem na celou kategorii \"výprodej\"",
+    "ctaLabel": "Nakoupit na DeepLove.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na DeepLove.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na DeepLove.cz",
+      "Cashback 1,2 % do vaší BONUSLY peněženky",
+      "Aktuální ověřený slevový kód LOVE69"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a815cacb",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a815cacb",
+    "trackingSlug": "deeplove",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "DeepLove.cz: Cashback 1,2 % 2026",
+    "seoDescription": "Diskrétní sexshop prodávající luxusní erotické pomůcky a vibrátory. Navštivte naší kamennou prodejnu v Praze a vyberte si z široké nabídky luxusních pomůcek.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u DeepLove.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na DeepLove.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z DeepLove.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-646565706c",
+        "title": "Sleva 25 % s kódem na celou kategorii \"výprodej\"",
+        "badge": "Sleva 25 %",
+        "code": "LOVE69",
+        "validUntil": "2027-01-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a815cacb&desturl=https%3A%2F%2Fwww.deeplove.cz%2FVYPRODEJ-700%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-646565706c",
+        "title": "BLACK FRIDAY - slevy až 50 %,",
+        "badge": "Sleva 50 %",
+        "validUntil": "2026-11-30",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a815cacb&desturl=https%3A%2F%2Fwww.deeplove.cz%2FBLACK-FRIDAY%2F",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-646565706c",
+        "title": "Sleva 3 % při registraci – u první objednávky s registrací automaticky získává zákazník slevu 3 %, kterou bude mít i na další objednávky při přihlášení",
+        "badge": "Sleva 3 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a815cacb&desturl=https%3A%2F%2Fwww.deeplove.cz%2F",
+        "order": 3
+      },
+      {
+        "trackingSlug": "ehub-p2-646565706c",
+        "title": "Doprava zdarma se Zásilkovnou, nákupem nad 1 500 Kč a platbou předem",
+        "badge": "Doprava zdarma",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=a815cacb&desturl=https%3A%2F%2Fwww.deeplove.cz%2F",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "slug": "aulix",
+    "name": "Aulix.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "AULIX lighting s.r.o. je česká rodinná společnost, která dováží do České republiky a na Slovensko osvětlení předních světových producentů, a zároveň prodává.",
+    "description": "## O e-shopu Aulix.cz\n\nAULIX lighting s.r.o. je česká rodinná společnost, která dováží do České republiky a na Slovensko osvětlení předních světových producentů, a zároveň prodává svítidla také od mnoha českých výrobců. V sortimentu naleznete osvětlení pro váš byt, rodinný dům, kancelář i zahradu. Hledáte-li individuální, svěží a moderní řešení osvětlení vašeho interiéru, navštivte e-shop aulix.cz, kde na vás čekají svítidla v klasickém i netradičním provedení - závěsná, stropní i nástěnná. Dále můžete vybírat stolní a stojací lampy, podhledová nebo zápustná svítidla, svítidla do kuchyně, koupelny či dětského pokoje, osvětlení obrazů, kolejnicové/tyčové a lankové systémy, svítidla do zásuvky a mnoho dalších. Co se týká exteriéru, nabízí také venkovní svítidla (sloupková, nástěnná, zápustná, stropní, solární svítidla, svítící dlažbu a další).\n\nVe Studiu interiéru a osvětlení v Dolních Břežanech vám poradí s výběrem osvětlení osobně.\n\n## Jak získat Cashback 7,5 % na Aulix.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Aulix.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/aulix.png",
+    "bonus": "Sleva 7 % + Cashback 7,5 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 7,5 % z každé schválené objednávky na Aulix.cz.",
+    "ctaLabel": "Nakoupit na Aulix.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Aulix.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Aulix.cz",
+      "Cashback 7,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=2b123dfe",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=2b123dfe",
+    "trackingSlug": "aulix",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Aulix.cz: Cashback 7,5 % 2026",
+    "seoDescription": "AULIX lighting s.r.o. je česká rodinná společnost, která dováží do České republiky a na Slovensko osvětlení předních světových producentů, a zároveň prodává.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Aulix.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Aulix.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Aulix.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-61756c6978",
+        "title": "Sleva 7 % pro registrované zákazníky na okamžitý nákup",
+        "badge": "Sleva 7 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=2b123dfe&desturl=https%3A%2F%2Faulix.cz%2Fcs%2Fpage%2Fsleva-pro-registrovane",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-61756c6978",
+        "title": "Při objednávce nad 1.990 Kč vč. DPH je dopravné a balné na území ČR zdarma",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=2b123dfe&desturl=https%3A%2F%2Faulix.cz%2Fcs%2Fpage%2Fdoprava-a-platba",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-61756c6978",
+        "title": "Při objednávce nad 8.000 Kč vč. DPH je dopravné a balné na území Slovenska zdarma",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=2b123dfe&desturl=https%3A%2F%2Faulix.cz%2Fcs%2Fpage%2Fdoprava-a-platba",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "slug": "nadeta",
+    "name": "Nadeta.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Jsme specialisté na dodávky náhradních dílů pro spotřební a bílou elektroniku (myčky, pračky, lednice, kávovary, trouby), náhradní a originální ovladače, podsvícení.",
+    "description": "## O e-shopu Nadeta.cz\n\nJsme specialisté na dodávky náhradních dílů pro spotřební a bílou elektroniku (myčky, pračky, lednice, kávovary, trouby), náhradní a originální ovladače, podsvícení LED pro TV, rozběhové kondenzátory, uhlíky do motorů, elektronické součástky, repase akumulátorů, baterie, antény a mnoho dalšího… Většinu zboží máme skladem, díky tomu zboží dodáme rychle a za ty nejlepší ceny na trhu.\n\n## Jak získat Cashback 2,4 % na Nadeta.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Nadeta.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/nadeta.png",
+    "bonus": "Cashback 2,4 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,4 % z každé schválené objednávky na Nadeta.cz.",
+    "ctaLabel": "Nakoupit na Nadeta.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Nadeta.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Nadeta.cz",
+      "Cashback 2,4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=9d71a806",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=9d71a806",
+    "trackingSlug": "nadeta",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Nadeta.cz: Cashback 2,4 % 2026",
+    "seoDescription": "Jsme specialisté na dodávky náhradních dílů pro spotřební a bílou elektroniku (myčky, pračky, lednice, kávovary, trouby), náhradní a originální ovladače, pods",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Nadeta.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Nadeta.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Nadeta.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "ame",
+    "name": "Ame.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Náhradní díly pro spotřební elektroniku, náhradní ovladače, podsvícení LED a mnoho dalšího. Většinu zboží máme skladem, díky tomu zboží dodáme rychle a za ty nejlepší ceny!",
+    "description": "## O e-shopu Ame.cz\n\nNáhradní díly pro spotřební elektroniku, náhradní ovladače, podsvícení LED a mnoho dalšího. Většinu zboží máme skladem, díky tomu zboží dodáme rychle a za ty nejlepší ceny!\n\n## Jak získat Cashback 2,4 % na Ame.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Ame.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/ame.png",
+    "bonus": "Cashback 2,4 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,4 % z každé schválené objednávky na Ame.cz.",
+    "ctaLabel": "Nakoupit na Ame.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Ame.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Ame.cz",
+      "Cashback 2,4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d2e98685",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d2e98685",
+    "trackingSlug": "ame",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Ame.cz: Cashback 2,4 % 2026",
+    "seoDescription": "Náhradní díly pro spotřební elektroniku, náhradní ovladače, podsvícení LED a mnoho dalšího. Většinu zboží máme skladem, díky tomu zboží dodáme rychle a za ty ",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Ame.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Ame.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Ame.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "relaxin",
+    "name": "Relaxin.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Zavedený internetový obchod s nabídkou matrací, bytového i zahradního nábytku a vybavení. Prioritou je pro nás spokojený zákazník, o čemž svědčí výborné hodnocení.",
+    "description": "## O e-shopu Relaxin.cz\n\nZavedený internetový obchod s nabídkou matrací, bytového i zahradního nábytku a vybavení. Prioritou je pro nás spokojený zákazník, o čemž svědčí výborné hodnocení. Přesvědčit se můžete i Vy zakoupením jednoho či více produktů z více než 25 000 kusů skladem.\n\n## Jak získat Cashback 1,25 % na Relaxin.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Relaxin.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 80 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/relaxin.png",
+    "bonus": "Sleva 56 % + Cashback 1,25 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 1,25 % z každé schválené objednávky na Relaxin.cz.",
+    "ctaLabel": "Nakoupit na Relaxin.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Relaxin.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Relaxin.cz",
+      "Cashback 1,25 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 80 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8e6b7043",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8e6b7043",
+    "trackingSlug": "relaxin",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Relaxin.cz: Cashback 1,25 % 2026",
+    "seoDescription": "Zavedený internetový obchod s nabídkou matrací, bytového i zahradního nábytku a vybavení. Prioritou je pro nás spokojený zákazník, o čemž svědčí výborné hodno",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Relaxin.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Relaxin.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Relaxin.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 80 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-72656c6178",
+        "title": "SLEVY až 56% na zahradní vybavení a nábytek Home&Garden",
+        "badge": "Sleva 56 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8e6b7043&desturl=https%3A%2F%2Fwww.relaxin.cz%2Fhome-garden",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-72656c6178",
+        "title": "SLEVY až 49% na zahradní vybavení Landmann - do vyprodání zásob",
+        "badge": "Sleva 49 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8e6b7043&desturl=https%3A%2F%2Fwww.relaxin.cz%2Flandmann",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-72656c6178",
+        "title": "SLEVY až 43% na zahradní a kempingové příslušenství Meva",
+        "badge": "Sleva 43 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8e6b7043&desturl=https%3A%2F%2Fwww.relaxin.cz%2Fmeva",
+        "order": 3
+      },
+      {
+        "trackingSlug": "ehub-p2-72656c6178",
+        "title": "SLEVA až 52% na veškerý kempingový sortiment Outwell",
+        "badge": "Sleva 52 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8e6b7043&desturl=https%3A%2F%2Fwww.relaxin.cz%2Foutwell",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "slug": "aladine",
+    "name": "Aladine.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Aladine.cz - kreativní potřeby pro začátečníky, umělce i nadšené kreativce.",
+    "description": "## O e-shopu Aladine.cz\n\nAladine.cz - kreativní potřeby pro začátečníky, umělce i nadšené kreativce.\n\nMáme největší výběr razítek - dřevěná, pěnová, gelová, pro děti od 18 měsíců, pro školy, pro nevěsty, pro všechna roční období. Máme razítka na scrapbooking, diářová razítka, otočná. Nabízíme také všechny druhy vychytávek pro papírové a textilní tvoření, Home Deco, Bullet Journal, pečetění, embosování nebo patinování. Najdete u nás pohádkové odstíny různých barev, kouzelné pasty na mixed média, šablony, vyřezávací šablony a štětce.\n\nVyhledáváme a zastupujeme světové kreativní značky jako jsou Aladine, Cadence, Studio Light, Gelli Plate. Prostřednictvím autorských návodů, kurzů a workshopů je představujeme našim zákazníkům. Chceme, aby naši zákazníci získali odvahu tvořit, kreativně se vyjádřit, vytvářet krásné věci vlastníma rukama a užívat si čas s rodinou, dětmi nebo přáteli.\n\nPřinášíme také malé radosti v podobě originálních dárků anglické značky Wrendale Designs a Royal Worcester.\n\n## Jak získat Cashback 5 % na Aladine.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Aladine.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/aladine.png",
+    "bonus": "Sleva 50 % + Cashback 5 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 5 % z každé schválené objednávky na Aladine.cz.",
+    "ctaLabel": "Nakoupit na Aladine.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Aladine.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Aladine.cz",
+      "Cashback 5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=c6704317",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=c6704317",
+    "trackingSlug": "aladine",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Aladine.cz: Cashback 5 % 2026",
+    "seoDescription": "Aladine.cz - kreativní potřeby pro začátečníky, umělce i nadšené kreativce.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Aladine.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Aladine.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Aladine.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-616c616469",
+        "title": "Totální výprodej skladu až 50% slevy na kreativní a dárkové zboží",
+        "badge": "Sleva 50 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=c6704317&desturl=https%3A%2F%2Fwww.aladine.cz%2Fc%2Fakcni-zbozi",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-616c616469",
+        "title": "Novinky na eshopu aladine.cz",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=c6704317&desturl=https%3A%2F%2Fwww.aladine.cz%2Fc%2Fnovinky",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "slug": "bylik",
+    "name": "Bylík.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "E-shop Bylík.cz je vaším společníkem na cestě k přírodnímu zdraví a pohodě.",
+    "description": "## O e-shopu Bylík.cz\n\nE-shop Bylík.cz je vaším společníkem na cestě k přírodnímu zdraví a pohodě. Specializujeme se na širokou škálu bylinek, sušených plodů a semínek, které jsou základem zdravé výživy a přírodní léčby. Náš sortiment zahrnuje kvalitní bylinné směsi, čaje a koření, které obohatí vaši kuchyni a pomohou udržet vaše tělo v harmonii.\n\nNavštivte náš e-shop a objevte bohatství přírodních pokladů, které můžete mít přímo u sebe doma. Prozkoumejte naši pestrou nabídku a najděte to pravé pro vaše zdraví a pohodu. Na Bylík.cz se snažíme, aby každý váš nákup byl jednoduchý a příjemný zážitek, a vždy se těšíme na vaši další návštěvu.\n\n## Jak získat Cashback 5 % na Bylík.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Bylík.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/bylik.png",
+    "bonus": "Sleva 10 % + Cashback 5 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 5 % z každé schválené objednávky na Bylík.cz.",
+    "ctaLabel": "Nakoupit na Bylík.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Bylík.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Bylík.cz",
+      "Cashback 5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=fc69bdf3",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=fc69bdf3",
+    "trackingSlug": "bylik",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Bylík.cz: Cashback 5 % 2026",
+    "seoDescription": "E-shop Bylík.cz je vaším společníkem na cestě k přírodnímu zdraví a pohodě.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Bylík.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Bylík.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Bylík.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-62796c696b",
+        "title": "S registrací k odběru Bylíkovinek sleva 10 % na nákup",
+        "badge": "Sleva 10 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=fc69bdf3&desturl=https%3A%2F%2Fbylik.cz%2Fuzitecne-info%2Fregistrace-emailu.html",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-62796c696b",
+        "title": "S nákupem nad 599 Kč doprava zdarma",
+        "badge": "Doprava zdarma",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=fc69bdf3&desturl=https%3A%2F%2Fbylik.cz%2Fdoprava-a-platba.html",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-62796c696b",
+        "title": "Věrnostní program Bylíkačka - výhody pro členy věrnostního programu",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=fc69bdf3&desturl=https%3A%2F%2Fbylik.cz%2Fvernostni-program.html",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "slug": "diskont-zahradkar",
+    "name": "Diskont-zahrádkář.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "U nás si vyberete ze širokého sortimentu potřeb pro zahrádkáře, hnojiv, substrátů, postřiků, plastů, zahradních udíren, koření a kořenících směsí, ořechů a suchých.",
+    "description": "## O e-shopu Diskont-zahrádkář.cz\n\nU nás si vyberete ze širokého sortimentu potřeb pro zahrádkáře, hnojiv, substrátů, postřiků, plastů, zahradních udíren, koření a kořenících směsí, ořechů a suchých plodů, bylinných džemů, sirupů a bonbonů včetně osiv a sadby. Téměř všechno nabízené zboží držíme na skladě a jsme schopni je obratem expedovat.\n\n## Jak získat Cashback 2,5 % na Diskont-zahrádkář.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Diskont-zahrádkář.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/diskont-zahradkar.png",
+    "bonus": "Cashback 2,5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,5 % z každé schválené objednávky na Diskont-zahrádkář.cz.",
+    "ctaLabel": "Nakoupit na Diskont-zahrádkář.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Diskont-zahrádkář.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Diskont-zahrádkář.cz",
+      "Cashback 2,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=7039de6e",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=7039de6e",
+    "trackingSlug": "diskont-zahradkar",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Diskont-zahrádkář.cz: Cashback 2,5 % 2026",
+    "seoDescription": "U nás si vyberete ze širokého sortimentu potřeb pro zahrádkáře, hnojiv, substrátů, postřiků, plastů, zahradních udíren, koření a kořenících směsí, ořechů a su",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Diskont-zahrádkář.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Diskont-zahrádkář.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Diskont-zahrádkář.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "asiafood",
+    "name": "Asiafood.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "Jsme Asiafood - vaše jednička s asijskými produkty v České republice.",
+    "description": "## O e-shopu Asiafood.cz\n\nJsme Asiafood - vaše jednička s asijskými produkty v České republice\n\nSuperpotraviny Asie vám přivážime již od roku 2013. Na našem e-shopu najdete tu nejširší nabídku produktů z Číny, Japonska, Thajska a dalších asijských zemí.\n\n## Jak získat Cashback 5 % na Asiafood.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Asiafood.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/asiafood.png",
+    "bonus": "Sleva 60 % + Cashback 5 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 5 % z každé schválené objednávky na Asiafood.cz.",
+    "ctaLabel": "Nakoupit na Asiafood.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Asiafood.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Asiafood.cz",
+      "Cashback 5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f101f91a",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f101f91a",
+    "trackingSlug": "asiafood",
+    "partnerNetwork": "ehub",
+    "rating": 4.7,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Asiafood.cz: Cashback 5 % 2026",
+    "seoDescription": "Jsme Asiafood - vaše jednička s asijskými produkty v České republice.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Asiafood.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Asiafood.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Asiafood.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6173696166",
+        "title": "Výprodej - slevy až 60 %",
+        "badge": "Sleva 60 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=f101f91a&desturl=https%3A%2F%2Fwww.asiafood.cz%2Fvyprodej%2F",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "de-park",
+    "name": "De-park.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Jsme zavedený prodejce jedinečných látek v metráži, nápadité galanterie a vlastních krejčovských střihů.",
+    "description": "## O e-shopu De-park.cz\n\nJsme zavedený prodejce jedinečných látek v metráži, nápadité galanterie a vlastních krejčovských střihů. Specializujeme se na tradiční české pohádkové licence, kterých u nás najdete opravdu dost. Všechny naše materiály jsou prvotřídní kvality. Mrkněte na náš e-shop a nebo se k nám do Podkrkonoší přijeďte podívat.\n\n## Jak získat Cashback 2,5 % na De-park.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **De-park.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/de-park.png",
+    "bonus": "Cashback 2,5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,5 % z každé schválené objednávky na De-park.cz.",
+    "ctaLabel": "Nakoupit na De-park.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na De-park.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na De-park.cz",
+      "Cashback 2,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=fac44607",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=fac44607",
+    "trackingSlug": "de-park",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "De-park.cz: Cashback 2,5 % 2026",
+    "seoDescription": "Jsme zavedený prodejce jedinečných látek v metráži, nápadité galanterie a vlastních krejčovských střihů.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u De-park.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na De-park.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z De-park.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-64652d7061",
+        "title": "Věrnostní systém - VIP klub - z každého nákupu získává zákazník body, které může proměnit ve slevu + spousta dalších výhod",
+        "badge": "Akční nabídka",
+        "validUntil": "2027-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=fac44607&desturl=https%3A%2F%2Fwww.de-park.cz%2Fvip-klub-de-park-vyhody-pro-cleny-m71%2F",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "grenze",
+    "name": "Grenze.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "Velký výběr potravinářské a spotřební zboží za bezkonkurenční ceny. Vše skladem.",
+    "description": "## O e-shopu Grenze.cz\n\nVelký výběr potravinářské a spotřební zboží za bezkonkurenční ceny. Vše skladem.\n\n## Jak získat Cashback 2 % na Grenze.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Grenze.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/grenze.png",
+    "bonus": "Sleva 80 % + Cashback 2 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na Grenze.cz.",
+    "ctaLabel": "Nakoupit na Grenze.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Grenze.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Grenze.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=91f6e789",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=91f6e789",
+    "trackingSlug": "grenze",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Grenze.cz: Cashback 2 % 2026",
+    "seoDescription": "Velký výběr potravinářské a spotřební zboží za bezkonkurenční ceny. Vše skladem.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Grenze.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Grenze.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Grenze.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6772656e7a",
+        "title": "Slevy až 80 % na expirační zboží",
+        "badge": "Sleva 80 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=91f6e789&desturl=https%3A%2F%2Fwww.grenze.cz%2Fexpiracni-zbozi%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-6772656e7a",
+        "title": "Promo akce - slevy na vybrané produkty. Do vyprodání zásob",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=91f6e789&desturl=https%3A%2F%2Fwww.grenze.cz%2Fpromo-akce%2F",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "slug": "sarabags",
+    "name": "SARAbags.cz",
+    "categorySlug": "moda-a-doplnky",
+    "shortDescription": "Náš prověřený e-shop SARA Bags, který nabízí široký výběr kabelek, peněženek, batohů, kufrů, manikúr, pánských aktovek, atd. s více než 40 značkami můžete vše zakoupit pohodlně online.",
+    "description": "## O e-shopu SARAbags.cz\n\nNáš prověřený e-shop SARA Bags, který nabízí široký výběr kabelek, peněženek, batohů, kufrů, manikúr, pánských aktovek, atd. s více než 40 značkami můžete vše zakoupit pohodlně online.\n\nNabízíme rozmanitý výběr od sportovních designů přes nadčasovou klasiku až po nejnovější trendy tašek. Objevte více než 4 000 produktů v našem online obchodě nebo nás navštivte v naší pobočce a nechte si poradit přímo na místě.\n\nV naší centrále v Klimentově u Mariánských Lázní připravujeme obrázky a popisy zboží, abychom vám nabídli co nejlepší zážitek z nakupování – z pohodlí vašeho domova. Projděte si náš obchod a nechte se inspirovat nebo použijte naše filtry, abyste konkrétně našli dokonalý kousek, který přesně hledáte. Vložte ji do nákupního košíku a objednejte si ji snadno jako host nebo registrovaný zákazník a vaše nová taška nebo peněženka je na cestě k vám.\n\nZákladem Vaší spokojenosti je rychlá a pohodlná prémiová doprava. To je důvod, proč slibujeme doručení a poskytujeme vám bezplatné přepravní náklady pro zásilky v rámci České Republiky s hodnotou objednávky 1500,- Kč nebo více. Všechny objednávky odesíláme následující pracovní den.\n\n## Jak získat Cashback 3,5 % na SARAbags.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **SARAbags.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/sarabags.png",
+    "bonus": "Cashback 3,5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 3,5 % z každé schválené objednávky na SARAbags.cz.",
+    "ctaLabel": "Nakoupit na SARAbags.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na SARAbags.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na SARAbags.cz",
+      "Cashback 3,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=465abf3e",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=465abf3e",
+    "trackingSlug": "sarabags",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "SARAbags.cz: Cashback 3,5 % 2026",
+    "seoDescription": "Náš prověřený e-shop SARA Bags, který nabízí široký výběr kabelek, peněženek, batohů, kufrů, manikúr, pánských aktovek, atd. s více než 40 značkami můžete vše",
+    "faq": [
+      {
+        "question": "Jak získat cashback u SARAbags.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na SARAbags.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z SARAbags.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "balonkypraha",
+    "name": "BalonkyPraha.cz",
+    "categorySlug": "nakupy-a-volny-cas",
+    "shortDescription": "Dekorace na party a oslavy je naše veliká láska, dovážíme a vyrábíme produkty, které dělají radost a to nás naplňuje.",
+    "description": "## O e-shopu BalonkyPraha.cz\n\nDekorace na party a oslavy je naše veliká láska, dovážíme a vyrábíme produkty, které dělají radost a to nás naplňuje. Nejsme jen obyčejní prodejci, ale naše produkty známe a prověřujeme.\n\n## Jak získat Cashback až 3 % na BalonkyPraha.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **BalonkyPraha.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/balonkypraha.png",
+    "bonus": "Cashback až 3 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback až 3 % z každé schválené objednávky na BalonkyPraha.cz.",
+    "ctaLabel": "Nakoupit na BalonkyPraha.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na BalonkyPraha.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na BalonkyPraha.cz",
+      "Cashback až 3 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=eacf1102",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=eacf1102",
+    "trackingSlug": "balonkypraha",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "BalonkyPraha.cz: Cashback až 3 % 2026",
+    "seoDescription": "Dekorace na party a oslavy je naše veliká láska, dovážíme a vyrábíme produkty, které dělají radost a to nás naplňuje.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u BalonkyPraha.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na BalonkyPraha.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z BalonkyPraha.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "kvalitex",
+    "name": "Kvalitex.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Jsme rodinná firma z Písku a vyrábíme lůžkoviny převážně z přírodních materiálů.",
+    "description": "## O e-shopu Kvalitex.cz\n\nJsme rodinná firma z Písku a vyrábíme lůžkoviny převážně z přírodních materiálů. Materiály pro ložní povlečení, prostěradla, přikrývky a polštáře testujeme a ručíme zákazníkovi za kvalitu všech našich výrobků. Technologické postupy máme nastavené tak, aby uspokojily i ty nejnáročnější zákazníky. Prodáváme převážně přes internet, ale naše výrobky můžete naleznout i v některých kamenných obchodech po celé České republice.\n\n## Jak získat Cashback 0,4 % na Kvalitex.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Kvalitex.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/kvalitex.png",
+    "bonus": "Sleva 15 % + Cashback 0,4 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 0,4 % z každé schválené objednávky na Kvalitex.cz.",
+    "ctaLabel": "Nakoupit na Kvalitex.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Kvalitex.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Kvalitex.cz",
+      "Cashback 0,4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d103e495",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d103e495",
+    "trackingSlug": "kvalitex",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Kvalitex.cz: Cashback 0,4 % 2026",
+    "seoDescription": "Jsme rodinná firma z Písku a vyrábíme lůžkoviny převážně z přírodních materiálů.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Kvalitex.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Kvalitex.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Kvalitex.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6b76616c69",
+        "title": "Akce - slevy až 15 % na vybrané produkty",
+        "badge": "Sleva 15 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=d103e495&desturl=https%3A%2F%2Fwww.kvalitex.cz%2Fakcni-bytovy-textil%2F",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "zavarovacisklo",
+    "name": "Zavařovacísklo.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Jsme přesvědčení, že balit a skladovat potraviny ve skle je správná cesta. Pojďte s námi \"zavařit\" plastovým obalům!",
+    "description": "## O e-shopu Zavařovacísklo.cz\n\nJsme přesvědčení, že balit a skladovat potraviny ve skle je správná cesta. Pojďte s námi \"zavařit\" plastovým obalům!\n\n## Jak získat Cashback až 3 % na Zavařovacísklo.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Zavařovacísklo.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/zavarovacisklo.png",
+    "bonus": "Cashback až 3 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback až 3 % z každé schválené objednávky na Zavařovacísklo.cz.",
+    "ctaLabel": "Nakoupit na Zavařovacísklo.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Zavařovacísklo.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Zavařovacísklo.cz",
+      "Cashback až 3 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=4f262bbb",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=4f262bbb",
+    "trackingSlug": "zavarovacisklo",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Zavařovacísklo.cz: Cashback až 3 % 2026",
+    "seoDescription": "Jsme přesvědčení, že balit a skladovat potraviny ve skle je správná cesta. Pojďte s námi \"zavařit\" plastovým obalům!",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Zavařovacísklo.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Zavařovacísklo.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Zavařovacísklo.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "swix",
+    "name": "Swix.cz",
+    "categorySlug": "nakupy-a-volny-cas",
+    "shortDescription": "Filozofií firmy Swix je důraz na sebemenší detaily, které však ve výsledku znamenají zásadní rozdíl.",
+    "description": "## O e-shopu Swix.cz\n\nFilozofií firmy Swix je důraz na sebemenší detaily, které však ve výsledku znamenají zásadní rozdíl. A tak je naprosto přirozené, že nám naši lyžaři pomáhají předávat tuto myšlenku prostřednictvím nového konceptu firmy Swix: Your winning margin. Swix CZ je hrdým sponzorem a dodavatelem textilu České národní reprezentace v běhu na lyžích.\n\n## Jak získat Cashback 2,5 % na Swix.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Swix.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/swix.png",
+    "bonus": "Sleva 60 % + Cashback 2,5 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,5 % z každé schválené objednávky na Swix.cz.",
+    "ctaLabel": "Nakoupit na Swix.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Swix.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Swix.cz",
+      "Cashback 2,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=1e7916ca",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=1e7916ca",
+    "trackingSlug": "swix",
+    "partnerNetwork": "ehub",
+    "rating": 4.6,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Swix.cz: Cashback 2,5 % 2026",
+    "seoDescription": "Filozofií firmy Swix je důraz na sebemenší detaily, které však ve výsledku znamenají zásadní rozdíl.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Swix.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Swix.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Swix.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-737769782d",
+        "title": "Zimní výprodej - slevy až 60 %",
+        "badge": "Sleva 60 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=1e7916ca&desturl=https%3A%2F%2Fwww.swix.cz%2Fzimni-vyprodej%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-737769782d",
+        "title": "VÝPRODEJ - slevy až 60 %",
+        "badge": "Sleva 60 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=1e7916ca&desturl=https%3A%2F%2Fwww.swix.cz%2Fjarni-vyprodej%2F",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-737769782d",
+        "title": "Výhodnější kousky za skvělé ceny",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-11-29",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=1e7916ca&desturl=https%3A%2F%2Fwww.swix.cz%2Fvyhodnejsi-kousky%2F",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "slug": "sorrygravity",
+    "name": "SorryGravity.cz",
+    "categorySlug": "moda-a-doplnky",
+    "shortDescription": "Sorry Gravity je online obchod zaměřený na prodej špičkového sportovního vybavení pro náročné sportovce a outdoor nadšence. Nabízíme exkluzivní výběr produktů od renomovaných značek:.",
+    "description": "## O e-shopu SorryGravity.cz\n\nSorry Gravity je online obchod zaměřený na prodej špičkového sportovního vybavení pro náročné sportovce a outdoor nadšence. Nabízíme exkluzivní výběr produktů od renomovaných značek:\n\n• ON - švýcarská značka běžeckých bot známá svou inovativní technologií CloudTec®\n\n• Lundhags - švédský výrobce vysoce kvalitního outdoorového oblečení a obuvi\n\n• Swix - norská značka specializující se na lyžařské vybavení a sportovní oblečení\n\n• Ulvang - norský výrobce prémiového merino oblečení pro outdoor aktivity\n\n## Jak získat Cashback 2,5 % na SorryGravity.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **SorryGravity.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/sorrygravity.png",
+    "bonus": "Sleva 60 % + Cashback 2,5 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,5 % z každé schválené objednávky na SorryGravity.cz.",
+    "ctaLabel": "Nakoupit na SorryGravity.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na SorryGravity.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na SorryGravity.cz",
+      "Cashback 2,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=b18f98ec",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=b18f98ec",
+    "trackingSlug": "sorrygravity",
+    "partnerNetwork": "ehub",
+    "rating": 4.6,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "SorryGravity.cz: Cashback 2,5 % 2026",
+    "seoDescription": "Sorry Gravity je online obchod zaměřený na prodej špičkového sportovního vybavení pro náročné sportovce a outdoor nadšence. Nabízíme exkluzivní výběr produktů",
+    "faq": [
+      {
+        "question": "Jak získat cashback u SorryGravity.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na SorryGravity.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z SorryGravity.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-736f727279",
+        "title": "Výprodej - sleva na značku Cariuma ve výši 60 %",
+        "badge": "Sleva 60 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=b18f98ec&desturl=https%3A%2F%2Fwww.sorrygravity.cz%2Fvyprodej-cariuma%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-736f727279",
+        "title": "Akce - slevy na značku Lundhags ve výši až 60 %",
+        "badge": "Sleva 60 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=b18f98ec&desturl=https%3A%2F%2Fwww.sorrygravity.cz%2Flundhags-vyhodne-ceny%2F",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-736f727279",
+        "title": "VÝPRODEJ - slevy až 70 %",
+        "badge": "Sleva 70 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=b18f98ec&desturl=https%3A%2F%2Fwww.sorrygravity.cz%2Fjarni-vyprodej%2F",
+        "order": 3
+      },
+      {
+        "trackingSlug": "ehub-p2-736f727279",
+        "title": "BLACK FRIDAY - největší slevy v roce",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-11-29",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=b18f98ec&desturl=https%3A%2F%2Fwww.sorrygravity.cz%2Fblack-friday",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "slug": "hnojik",
+    "name": "Hnojík.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Hnojík je přírodní hnojivo z hmyzího trusu, které podporuje zdravý růst rostlin.",
+    "description": "## O e-shopu Hnojík.cz\n\nHnojík je přírodní hnojivo z hmyzího trusu, které podporuje zdravý růst rostlin.\n\nZlepšuje kvalitu půdy a dodává rostlinám potřebné živiny pro jejich vývoj.\n\nJe bez zápachu, šetrný ke všem druhům rostlin a nehrozí u něj přehnojení ani popálení.\n\n## Jak získat Cashback 8 % na Hnojík.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Hnojík.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/hnojik.png",
+    "bonus": "Sleva 30 % + Cashback 8 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 8 % z každé schválené objednávky na Hnojík.cz.",
+    "ctaLabel": "Nakoupit na Hnojík.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Hnojík.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Hnojík.cz",
+      "Cashback 8 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=1da58c10",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=1da58c10",
+    "trackingSlug": "hnojik",
+    "partnerNetwork": "ehub",
+    "rating": 4.7,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Hnojík.cz: Cashback 8 % 2026",
+    "seoDescription": "Hnojík je přírodní hnojivo z hmyzího trusu, které podporuje zdravý růst rostlin.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Hnojík.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Hnojík.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Hnojík.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-686e6f6a69",
+        "title": "Multikup - sleva až 30 %",
+        "badge": "Sleva 30 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=1da58c10&desturl=https%3A%2F%2Fhnojik.cz%2Fkatalog%2F%23multikup",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "prirodnilekarna",
+    "name": "PřírodníLékárna.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "Produkty do našeho e-shopu se snažíme vybírat na základě zkušeností, ale i intuice. Preferujeme české výrobce, což ne vždy jde.",
+    "description": "## O e-shopu PřírodníLékárna.cz\n\nProdukty do našeho e-shopu se snažíme vybírat na základě zkušeností, ale i intuice. Preferujeme české výrobce, což ne vždy jde. Kvalitní produkty východní medicíny se dováží, to však ještě neznamená, že jsou špatné. Při výběru nás nezajímá značka ani reklama v televizi. Zajímá nás kdo za produkty stojí.\n\n## Jak získat Cashback 3,2 % na PřírodníLékárna.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **PřírodníLékárna.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/prirodnilekarna.png",
+    "bonus": "Cashback 3,2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 3,2 % z každé schválené objednávky na PřírodníLékárna.cz.",
+    "ctaLabel": "Nakoupit na PřírodníLékárna.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na PřírodníLékárna.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na PřírodníLékárna.cz",
+      "Cashback 3,2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=9399a567",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=9399a567",
+    "trackingSlug": "prirodnilekarna",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "PřírodníLékárna.cz: Cashback 3,2 % 2026",
+    "seoDescription": "Produkty do našeho e-shopu se snažíme vybírat na základě zkušeností, ale i intuice. Preferujeme české výrobce, což ne vždy jde.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u PřírodníLékárna.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na PřírodníLékárna.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z PřírodníLékárna.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "hot-chip",
+    "name": "Hot-chip.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "HOT CHIP® je česká firma vyrábějící chilli potraviny a snacky pro všechny milovníky ostrého.",
+    "description": "## O e-shopu Hot-chip.cz\n\nHOT CHIP® je česká firma vyrábějící chilli potraviny a snacky pro všechny milovníky ostrého. Pikantní jídla miluje více než 30 % celé populace, nejen díky své specifické pálivosti, ale také poskytuje spoustu pozitivních účinků na zdraví. Mezi našimi produkty najdete například omáčky, tyčinky, brambůrky, koření, papričky, marmelády, sirupy, oříšky, jelly beans, stripsy a mnoho dalších. V našich produktech se snažíme držet základních ingrediencí pro autentickou chuť a vyhýbáme se umělým aromatům a sladidlům. Mezi velmi populární produkty patří Dárkové boxy a HOT CHIP® Challenge – nejpálivější chips na světě, který je virálním hitem v celé Evropě.\n\n## Jak získat Cashback 10 % na Hot-chip.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Hot-chip.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/hot-chip.png",
+    "bonus": "Cashback 10 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 10 % z každé schválené objednávky na Hot-chip.cz.",
+    "ctaLabel": "Nakoupit na Hot-chip.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Hot-chip.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Hot-chip.cz",
+      "Cashback 10 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=5ca6fed0",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=5ca6fed0",
+    "trackingSlug": "hot-chip",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Hot-chip.cz: Cashback 10 % 2026",
+    "seoDescription": "HOT CHIP® je česká firma vyrábějící chilli potraviny a snacky pro všechny milovníky ostrého.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Hot-chip.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Hot-chip.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Hot-chip.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "nutworld",
+    "name": "Nutworld.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "Naším světem jsou oříšky. Naše velká síla je v balení našich produktů do dárkových balení a originálních obalů. Přizpůsobení se zákazníkovi a personalizace.",
+    "description": "## O e-shopu Nutworld.cz\n\nNaším světem jsou oříšky. Naše velká síla je v balení našich produktů do dárkových balení a originálních obalů. Přizpůsobení se zákazníkovi a personalizace. Díky této kombinaci se nám daří prorážet na konkurenčním trhu, protože jsme neporovnatelní. Všechny dárky si ručně vyrábíme a ořechy ručně balíme. Každý náš dárek je originál.\n\n## Jak získat Cashback 3 % na Nutworld.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Nutworld.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/nutworld.png",
+    "bonus": "Cashback 3 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 3 % z každé schválené objednávky na Nutworld.cz.",
+    "ctaLabel": "Nakoupit na Nutworld.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Nutworld.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Nutworld.cz",
+      "Cashback 3 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=5a9da81a",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=5a9da81a",
+    "trackingSlug": "nutworld",
+    "partnerNetwork": "ehub",
+    "rating": 4.6,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Nutworld.cz: Cashback 3 % 2026",
+    "seoDescription": "Naším světem jsou oříšky. Naše velká síla je v balení našich produktů do dárkových balení a originálních obalů. Přizpůsobení se zákazníkovi a personalizace.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Nutworld.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Nutworld.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Nutworld.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "reckyeshop",
+    "name": "Reckyeshop.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "Největší specializovaný řecký e-shop. Široký sortiment prémiových řeckých produktů za velmi dostupné ceny.",
+    "description": "## O e-shopu Reckyeshop.cz\n\nNejvětší specializovaný řecký e-shop. Široký sortiment prémiových řeckých produktů za velmi dostupné ceny. Produkty jsou originál vyrobené a zabalené přímo v Řecku, u nás jsou k dostání pouze na nezávislém trhu a nejsou v supermarketech. Na většinu produktů máme výhradní zastoupení pro ČR a SK. Mimořádná oblíbenost a unikátnost našich produktů umožní relativně snadno získat nového zákazníka.\n\n## Jak získat Cashback 2,8 % na Reckyeshop.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Reckyeshop.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/reckyeshop.png",
+    "bonus": "Cashback 2,8 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,8 % z každé schválené objednávky na Reckyeshop.cz.",
+    "ctaLabel": "Nakoupit na Reckyeshop.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Reckyeshop.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Reckyeshop.cz",
+      "Cashback 2,8 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=b44af70e",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=b44af70e",
+    "trackingSlug": "reckyeshop",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Reckyeshop.cz: Cashback 2,8 % 2026",
+    "seoDescription": "Největší specializovaný řecký e-shop. Široký sortiment prémiových řeckých produktů za velmi dostupné ceny.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Reckyeshop.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Reckyeshop.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Reckyeshop.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "zitra-doma",
+    "name": "Zítra-doma.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Nabízíme různorodý sortiment a naší hlavní předností je rychlost doručení a velmi nízká cena.",
+    "description": "## O e-shopu Zítra-doma.cz\n\nNabízíme různorodý sortiment a naší hlavní předností je rychlost doručení a velmi nízká cena.\n\n## Jak získat Cashback 2 % na Zítra-doma.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Zítra-doma.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/zitra-doma.png",
+    "bonus": "Cashback 2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na Zítra-doma.cz.",
+    "ctaLabel": "Nakoupit na Zítra-doma.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Zítra-doma.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Zítra-doma.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e474579c",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e474579c",
+    "trackingSlug": "zitra-doma",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Zítra-doma.cz: Cashback 2 % 2026",
+    "seoDescription": "Nabízíme různorodý sortiment a naší hlavní předností je rychlost doručení a velmi nízká cena.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Zítra-doma.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Zítra-doma.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Zítra-doma.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "reminky-pasky",
+    "name": "Řemínky-pásky.cz",
+    "categorySlug": "moda-a-doplnky",
+    "shortDescription": "Vyberte si řemínek ke svým hodinkám. Velký výběr z různých druhů řemínků pro vaše smart watch všech značek. Přesvědčte se sami! Skvělé ceny a rychlá doprava. Dobírka za 30 Kč.",
+    "description": "## O e-shopu Řemínky-pásky.cz\n\nVyberte si řemínek ke svým hodinkám. Velký výběr z různých druhů řemínků pro vaše smart watch všech značek. Přesvědčte se sami! Skvělé ceny a rychlá doprava. Dobírka za 30 Kč.\n\n## Jak získat Cashback 2 % na Řemínky-pásky.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Řemínky-pásky.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/reminky-pasky.png",
+    "bonus": "Cashback 2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na Řemínky-pásky.cz.",
+    "ctaLabel": "Nakoupit na Řemínky-pásky.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Řemínky-pásky.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Řemínky-pásky.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=60fcbade",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=60fcbade",
+    "trackingSlug": "reminky-pasky",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Řemínky-pásky.cz: Cashback 2 % 2026",
+    "seoDescription": "Vyberte si řemínek ke svým hodinkám. Velký výběr z různých druhů řemínků pro vaše smart watch všech značek. Přesvědčte se sami! Skvělé ceny a rychlá doprava. ",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Řemínky-pásky.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Řemínky-pásky.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Řemínky-pásky.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-72656d696e",
+        "title": "Doprava zdarma s nákupem nad 600 Kč",
+        "badge": "Doprava zdarma",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=60fcbade&desturl=https%3A%2F%2Fwww.reminky-pasky.cz%2F",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "dratek",
+    "name": "Drátek.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Nabízíme sortiment zboží věnovaný celosvětově úspěšnému projektu Arduino. Prodáváme vývojové desky, vstupní periferie, výstupní periferie a další...",
+    "description": "## O e-shopu Drátek.cz\n\nNabízíme sortiment zboží věnovaný celosvětově úspěšnému projektu Arduino. Prodáváme vývojové desky, vstupní periferie, výstupní periferie a další... Potřebujete poradit? V Arduinu se vyznáme a rádi vám poradíme. Rychlá doprava. Datasheety. Návody k produktům. Doprava od 69 Kč.\n\n## Jak získat Cashback 2 % na Drátek.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Drátek.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/dratek.png",
+    "bonus": "Cashback 2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na Drátek.cz.",
+    "ctaLabel": "Nakoupit na Drátek.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Drátek.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Drátek.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=beb6f6e3",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=beb6f6e3",
+    "trackingSlug": "dratek",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Drátek.cz: Cashback 2 % 2026",
+    "seoDescription": "Nabízíme sortiment zboží věnovaný celosvětově úspěšnému projektu Arduino. Prodáváme vývojové desky, vstupní periferie, výstupní periferie a další...",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Drátek.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Drátek.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Drátek.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6472617465",
+        "title": "Akce na vybrané produkty",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=beb6f6e3&desturl=https%3A%2F%2Fdratek.cz%2Fakce-slevy%2F",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "ochranna-skla",
+    "name": "Ochranná-skla.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Ochranná skla a ochranné folie pro Vaše zařízení od značek jako je Apple, Samsung, Nokia, Xiaomi a mnoho dalšího. Připraveno k odeslání. Skla a folie pro vaše zařízení.",
+    "description": "## O e-shopu Ochranná-skla.cz\n\nOchranná skla a ochranné folie pro Vaše zařízení od značek jako je Apple, Samsung, Nokia, Xiaomi a mnoho dalšího. Připraveno k odeslání. Skla a folie pro vaše zařízení.\n\n## Jak získat Cashback 2 % na Ochranná-skla.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Ochranná-skla.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/ochranna-skla.png",
+    "bonus": "Cashback 2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na Ochranná-skla.cz.",
+    "ctaLabel": "Nakoupit na Ochranná-skla.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Ochranná-skla.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Ochranná-skla.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=bc4c2103",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=bc4c2103",
+    "trackingSlug": "ochranna-skla",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Ochranná-skla.cz: Cashback 2 % 2026",
+    "seoDescription": "Ochranná skla a ochranné folie pro Vaše zařízení od značek jako je Apple, Samsung, Nokia, Xiaomi a mnoho dalšího. Připraveno k odeslání. Skla a folie pro vaše",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Ochranná-skla.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Ochranná-skla.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Ochranná-skla.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6f63687261",
+        "title": "Doprava zdarma s nákupem nad 400 Kč",
+        "badge": "Doprava zdarma",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=bc4c2103&desturl=https%3A%2F%2Fwww.ochranna-skla.cz%2F",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "sevt",
+    "name": "SEVT.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Tradiční český e-shop SEVT.cz s učebnicemi, školními a kancelářskými potřebami, knihami i hračkami s cashbackem 2 %.",
+    "description": "## O e-shopu SEVT.cz\n\nInternetový obchod SEVT.cz je lídr v oblasti vzdělávání, školních, výtvarných a kancelářských potřeb. Řadí se mezi nejspolehlivější e-shopy a je držitelem ocenění ShopRoku 2018, 2019, 2020, 2021, 2022, 2023, 2024 a 2025 v kategorii kancelářské potřeby. V nabídce najdete také rozmanitou nabídku knižního sortimentu zaměřenou především na vzdělávání, odbornou literaturu a publikace pro děti, dále hry a hračky s důrazem na edukaci a v neposlední řadě také stále více se rozrůstající oblast hygieny a drogerie. Zboží můžete zakoupit ve dvou kamenných prodejnách a na našem e-shopu.\n\n## Jak získat Cashback 2 % na SEVT.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **SEVT.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/sevt.png",
+    "bonus": "Cashback 2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na SEVT.cz.",
+    "ctaLabel": "Nakoupit na SEVT.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na SEVT.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na SEVT.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=22691232",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=22691232",
+    "trackingSlug": "sevt",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "SEVT.cz: Cashback 2 % 2026",
+    "seoDescription": "Tradiční český e-shop SEVT.cz s učebnicemi, školními a kancelářskými potřebami, knihami i hračkami s cashbackem 2 %.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u SEVT.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na SEVT.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z SEVT.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-736576742d",
+        "title": "Doprava po ČR s nákupem nad 1 500 Kč zdarma",
+        "badge": "Akční nabídka",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=22691232&desturl=https%3A%2F%2Fsevt.cz%2Fdoprava-a-platba",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "tvproducts",
+    "name": "TVproducts.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Moderní zásilkový obchod s prodejnami v ČR. Nabízíme fitness, hračky, bazény, úklidové potřeby, zahradní techniku a vybavení pro kuchyň, domácnost a dílnu.",
+    "description": "## O e-shopu TVproducts.cz\n\nModerní zásilkový obchod s prodejnami v ČR. Nabízíme fitness, hračky, bazény, úklidové potřeby, zahradní techniku a vybavení pro kuchyň, domácnost a dílnu.\n\n## Jak získat Cashback 2 % na TVproducts.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **TVproducts.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 80 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/tvproducts.png",
+    "bonus": "Cashback 2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na TVproducts.cz.",
+    "ctaLabel": "Nakoupit na TVproducts.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na TVproducts.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na TVproducts.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 80 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=2c01a533",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=2c01a533",
+    "trackingSlug": "tvproducts",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "TVproducts.cz: Cashback 2 % 2026",
+    "seoDescription": "Moderní zásilkový obchod s prodejnami v ČR. Nabízíme fitness, hračky, bazény, úklidové potřeby, zahradní techniku a vybavení pro kuchyň, domácnost a dílnu.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u TVproducts.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na TVproducts.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z TVproducts.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 80 dní."
+      }
+    ]
+  },
+  {
+    "slug": "direct-fondee-cz",
+    "name": "Direct Fondee CZ",
+    "categorySlug": "finance",
+    "shortDescription": "Česká online investiční platforma Direct Fondee pro jednoduché investování do nízkonákladových ETF portfolií a DIP s nízkými poplatky.",
+    "description": "## O platformě Direct Fondee\n\n**Direct Fondee** (součást české finanční skupiny Direct) umožňuje snadné a plně automatizované investování do globálně diverzifikovaných portfolií akciových a dluhopisových ETF. Stačí si vybrat investiční profil podle vaší tolerance rizika, nastavit trvalý příkaz a platforma se postará o nákupy i pravidelné rebalancování — včetně podpory daňově zvýhodněného DIP.\n\n## Proč investovat přes Direct Fondee\n\n- Plně online registrace a přehledná česká aplikace.\n- Nízké poplatky a široká diverzifikace do světových ETF fondů.\n- Podpora Dlouhodobého investičního produktu (DIP) s daňovou úsporou.",
+    "logo": "/logos/direct-fondee-cz.png",
+    "bonus": "Automatizované ETF investice & DIP online",
+    "bonusDescription": "Založte si investiční účet nebo daňově zvýhodněný DIP u Direct Fondee online během pár minut s nízkými poplatky.",
+    "ctaLabel": "Přejít na Direct Fondee CZ",
+    "requirements": [
+      "Přejít na Direct Fondee CZ přes odkaz na BONUSLY",
+      "Dokončit objednávku nebo registraci online"
+    ],
+    "pros": [
+      "Jednoduché automatizované investování do globálních ETF",
+      "Podpora daňově zvýhodněného DIP a dětských účtů",
+      "Silné české zázemí skupiny Direct"
+    ],
+    "cons": [
+      "Na tohoto partnera se podle podmínek programu nevztahuje BONUSLY cashback",
+      "Hodnota investic v ETF kolísá podle vývoje finančních trhů"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e0652f78",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e0652f78",
+    "trackingSlug": "direct-fondee-cz",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": true,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Direct Fondee CZ: Recenze a slevy 2026",
+    "seoDescription": "Česká online investiční platforma Direct Fondee pro jednoduché investování do nízkonákladových ETF portfolií a DIP s nízkými poplatky.",
+    "faq": [
+      {
+        "question": "Jak uplatnit akci nebo slevu na Direct Fondee CZ?",
+        "answer": "Stačí přejít na oficiální stránky Direct Fondee CZ přes tlačítko na této stránce — registrace na BONUSLY není potřeba."
+      },
+      {
+        "question": "Nabízí BONUSLY cashback na Direct Fondee CZ?",
+        "answer": "Na Direct Fondee CZ se podle oficiálních podmínek partnerského programu nevztahuje BONUSLY cashback. Všechny uvedené akce a kódy však můžete využít přímo u partnera."
+      }
+    ]
+  },
+  {
+    "slug": "pocitace24",
+    "name": "Počítače24.cz",
+    "categorySlug": "elektro",
+    "shortDescription": "Specialista na repasované notebooky, počítače a monitory se zárukou, slevovými kódy až 600 Kč a cashbackem 2 %.",
+    "description": "## O e-shopu Počítače24.cz\n\nPočítače24.cz jsou lídrem v oblasti prodeje repasovaných počítačů, komponentů a příslušenství. Za repasované počítače jsou zpravidla považovány služební manažerské notebooky z velkých korporací, především bank, pojišťoven apod., které během pravidelných krátkých intervalů (závisí na dobu odpisů) obměňuji (modernizují) výpočetní techniku. Tyto vyřazené notebooky nejvyšších tříd jsou konstruovány na mnohem delší životnost, proto jsou dále ve velkých dodávkách odkupovány specializovanými firmami. Takové notebooky projdou kontrolními testovacími procesy a jsou vyčištěny. Vadné komponenty jsou vyřazeny a nahrazeny plně funkčními.\n\n## Jak získat Cashback 2 % na Počítače24.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Počítače24.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 80 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/pocitace24.png",
+    "bonus": "Sleva 200 Kč s kódem mamslevu200 + Cashback 2 %",
+    "bonusDescription": "Při nákupu v rozmezí 2 000 Kč - 4 999 Kč a využitím kupónu sleva 200 Kč (Platí na všechny repasované produkty. Kupóny se nedají kombinovat) Navíc získáte cashback 2 % do BONUSLY peněženky.",
+    "promoCode": "mamslevu200",
+    "promoCodeNote": "Při nákupu v rozmezí 2 000 Kč - 4 999 Kč a využitím kupónu sleva 200 Kč (Platí na všechny repasované produkty. Kupóny se nedají kombinovat)",
+    "ctaLabel": "Nakoupit na Počítače24.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Počítače24.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Počítače24.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Aktuální ověřený slevový kód mamslevu200"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 80 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8f4cb4de",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8f4cb4de",
+    "trackingSlug": "pocitace24",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Počítače24.cz: Cashback 2 % 2026",
+    "seoDescription": "Specialista na repasované notebooky, počítače a monitory se zárukou, slevovými kódy až 600 Kč a cashbackem 2 %.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Počítače24.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Počítače24.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Počítače24.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 80 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-706f636974",
+        "title": "Při nákupu v rozmezí 2 000 Kč - 4 999 Kč a využitím kupónu sleva 200 Kč (Platí na všechny repasované produkty. Kupóny se nedají kombinovat)",
+        "badge": "Sleva 200 Kč",
+        "code": "mamslevu200",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8f4cb4de&desturl=https%3A%2F%2Fwww.pocitace24.cz%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-706f636974",
+        "title": "Při nákupu v rozmezí 5 000 Kč - 9 999 Kč a využitím kupónu sleva 400 Kč (Platí na všechny repasované produkty. Kupóny se nedají kombinovat)",
+        "badge": "Sleva 400 Kč",
+        "code": "mamslevu400",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8f4cb4de&desturl=https%3A%2F%2Fwww.pocitace24.cz%2F",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-706f636974",
+        "title": "Při nákupu nad 10 000 Kč a využitím kupónu sleva 600 Kč (Platí na všechny repasované produkty. Kupóny se nedají kombinovat)",
+        "badge": "Sleva 600 Kč",
+        "code": "mamslevu600",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=8f4cb4de&desturl=https%3A%2F%2Fwww.pocitace24.cz%2F",
+        "order": 3
+      }
+    ]
+  },
+  {
+    "slug": "nejlevnejsipodlahy",
+    "name": "NejlevnějšíPodlahy.cz",
+    "categorySlug": "dum-a-zahrada",
+    "shortDescription": "Firma Miloš Řepa podlahářství, později Podlahy Řepa s.r.o. existuje od roku 1998 a zabývají se prodejem a pokládkou podlahových krytin po celé ČR.",
+    "description": "## O e-shopu NejlevnějšíPodlahy.cz\n\nFirma Miloš Řepa podlahářství, později Podlahy Řepa s.r.o. existuje od roku 1998 a zabývají se prodejem a pokládkou podlahových krytin po celé ČR. Podlahy lze prohlédnout a vyzvednou u velkoobchodních partnerů po celé ČR a Slovensku.\n\n## Jak získat Cashback 2,5 % na NejlevnějšíPodlahy.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **NejlevnějšíPodlahy.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/nejlevnejsipodlahy.png",
+    "bonus": "Cashback 2,5 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2,5 % z každé schválené objednávky na NejlevnějšíPodlahy.cz.",
+    "ctaLabel": "Nakoupit na NejlevnějšíPodlahy.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na NejlevnějšíPodlahy.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na NejlevnějšíPodlahy.cz",
+      "Cashback 2,5 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=84b6b734",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=84b6b734",
+    "trackingSlug": "nejlevnejsipodlahy",
+    "partnerNetwork": "ehub",
+    "rating": 4.7,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "NejlevnějšíPodlahy.cz: Cashback 2,5 % 2026",
+    "seoDescription": "Firma Miloš Řepa podlahářství, později Podlahy Řepa s.r.o. existuje od roku 1998 a zabývají se prodejem a pokládkou podlahových krytin po celé ČR.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u NejlevnějšíPodlahy.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na NejlevnějšíPodlahy.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z NejlevnějšíPodlahy.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ]
+  },
+  {
+    "slug": "bio-detox",
+    "name": "Bio-Detox.cz",
+    "categorySlug": "krasa-a-zdravi",
+    "shortDescription": "Bio-Detox.cz nabízí přírodní doplňky stravy v prémiové kvalitě.",
+    "description": "## O e-shopu Bio-Detox.cz\n\nBio-Detox.cz nabízí přírodní doplňky stravy v prémiové kvalitě.\n\n## Jak získat Cashback 4 % na Bio-Detox.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Bio-Detox.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 30 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/bio-detox.png",
+    "bonus": "Sleva 68 % + Cashback 4 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 4 % z každé schválené objednávky na Bio-Detox.cz.",
+    "ctaLabel": "Nakoupit na Bio-Detox.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Bio-Detox.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Bio-Detox.cz",
+      "Cashback 4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 30 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e839067e",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e839067e",
+    "trackingSlug": "bio-detox",
+    "partnerNetwork": "ehub",
+    "rating": 4.7,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Bio-Detox.cz: Cashback 4 % 2026",
+    "seoDescription": "Bio-Detox.cz nabízí přírodní doplňky stravy v prémiové kvalitě.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Bio-Detox.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Bio-Detox.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Bio-Detox.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 30 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-62696f2d64",
+        "title": "BLACK FRIDAY - slevy až 68 %",
+        "badge": "Sleva 68 %",
+        "validUntil": "2026-11-30",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e839067e&desturl=https%3A%2F%2Fwww.bio-detox.cz%2Fblack-friday%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-62696f2d64",
+        "title": "Po přihlášení se k newsletteru sleva 100 Kč na první nákup",
+        "badge": "Sleva 100 Kč",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=e839067e&desturl=https%3A%2F%2Fwww.bio-detox.cz%2F",
+        "order": 2
+      }
+    ]
+  },
+  {
+    "slug": "kosmas",
+    "name": "Kosmas.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Jedno z největších českých online knihkupectví Kosmas.cz s obrovským výběrem knih, e-knih, audioknih a cashbackem 2 % pro registrované.",
+    "description": "## O e-shopu Kosmas.cz\n\nKosmas.cz nabízí k zakoupení více než 90.000 titulů od více než 700 nakladatelů, a díky moderní skladové hale většinu z nich nabízíme přímo skladem.\n\n## Jak získat Cashback 2 % na Kosmas.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Kosmas.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 30 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/kosmas.png",
+    "bonus": "Sleva 20 % + Cashback 2 %",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 2 % z každé schválené objednávky na Kosmas.cz.",
+    "ctaLabel": "Nakoupit na Kosmas.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Kosmas.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Kosmas.cz",
+      "Cashback 2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 30 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=ea8bad44",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=ea8bad44",
+    "trackingSlug": "kosmas",
+    "partnerNetwork": "ehub",
+    "rating": 4.9,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Kosmas.cz: Cashback 2 % 2026",
+    "seoDescription": "Jedno z největších českých online knihkupectví Kosmas.cz s obrovským výběrem knih, e-knih, audioknih a cashbackem 2 % pro registrované.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Kosmas.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Kosmas.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Kosmas.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 30 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-6b6f736d61",
+        "title": "Sleva 20 % na všechny tituly Velkého knižního čtvrtku",
+        "badge": "Sleva 20 %",
+        "validUntil": "2026-11-30",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=ea8bad44&desturl=https%3A%2F%2Fwww.kosmas.cz%2Ftipy%2Fvkc-podzim-2026%2F",
+        "order": 1
+      }
+    ]
+  },
+  {
+    "slug": "sexicekshop",
+    "name": "SexíčekShop.cz",
+    "categorySlug": "zvirata-a-darky",
+    "shortDescription": "Sexicekshop nabízí exkluzivní erotické pomůcky pro muže, ženy i páry, stačí si vybrat a diskrétně objednat z široké nabídky kvalitního zboží.",
+    "description": "## O e-shopu SexíčekShop.cz\n\nSexicekshop nabízí exkluzivní erotické pomůcky pro muže, ženy i páry, stačí si vybrat a diskrétně objednat z široké nabídky kvalitního zboží.\n\n## Jak získat Cashback 6 % na SexíčekShop.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **SexíčekShop.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 50 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/sexicekshop.png",
+    "bonus": "Sleva 25 % s kódem LOVE69 + Cashback 6 %",
+    "bonusDescription": "Sleva 25 % s kódem na celou kategorii \"výprodej\" Navíc získáte cashback 6 % do BONUSLY peněženky.",
+    "promoCode": "LOVE69",
+    "promoCodeNote": "Sleva 25 % s kódem na celou kategorii \"výprodej\"",
+    "ctaLabel": "Nakoupit na SexíčekShop.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na SexíčekShop.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na SexíčekShop.cz",
+      "Cashback 6 % do vaší BONUSLY peněženky",
+      "Aktuální ověřený slevový kód LOVE69"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 50 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=253967b7",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=253967b7",
+    "trackingSlug": "sexicekshop",
+    "partnerNetwork": "ehub",
+    "rating": 4.6,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "SexíčekShop.cz: Cashback 6 % 2026",
+    "seoDescription": "Sexicekshop nabízí exkluzivní erotické pomůcky pro muže, ženy i páry, stačí si vybrat a diskrétně objednat z široké nabídky kvalitního zboží.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u SexíčekShop.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na SexíčekShop.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z SexíčekShop.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 50 dní."
+      }
+    ],
+    "promos": [
+      {
+        "trackingSlug": "ehub-p2-7365786963",
+        "title": "Sleva 25 % s kódem na celou kategorii \"výprodej\"",
+        "badge": "Sleva 25 %",
+        "code": "LOVE69",
+        "validUntil": "2027-01-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=253967b7&desturl=https%3A%2F%2Fwww.sexicekshop.cz%2FVYPRODEJ-700%2F",
+        "order": 1
+      },
+      {
+        "trackingSlug": "ehub-p2-7365786963",
+        "title": "Sleva 5 % při registraci – u první objednávky s registrací automaticky získává zákazník slevu 5 %, kterou bude mít i na další objednávky při přihlášení",
+        "badge": "Sleva 5 %",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=253967b7&desturl=https%3A%2F%2Fwww.sexicekshop.cz%2F",
+        "order": 2
+      },
+      {
+        "trackingSlug": "ehub-p2-7365786963",
+        "title": "BLACK FRIDAY - slevy až 50 %,",
+        "badge": "Sleva 50 %",
+        "validUntil": "2026-11-30",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=253967b7&desturl=https%3A%2F%2Fwww.sexicekshop.cz%2FBLACK-FRIDAY%2F",
+        "order": 3
+      },
+      {
+        "trackingSlug": "ehub-p2-7365786963",
+        "title": "Doprava zdarma s nákupem nad 1 500 Kč a platbou předem (neplatí pro kurýra po Praze)",
+        "badge": "Doprava zdarma",
+        "validUntil": "2026-12-31",
+        "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=253967b7&desturl=https%3A%2F%2Fwww.sexicekshop.cz%2F",
+        "order": 4
+      }
+    ]
+  },
+  {
+    "slug": "moje-pradlo",
+    "name": "Moje-prádlo.cz",
+    "categorySlug": "moda-a-doplnky",
+    "shortDescription": "Specializovaný český e-shop Moje-prádlo.cz se značkovým spodním prádlem, plavkami a domácím oblečením s cashbackem 4 %.",
+    "description": "## O e-shopu Moje-prádlo.cz\n\nE-shop s luxusním spodním prádlem.\n\n## Jak získat Cashback 4 % na Moje-prádlo.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **Moje-prádlo.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 30 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/moje-pradlo.png",
+    "bonus": "Cashback 4 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 4 % z každé schválené objednávky na Moje-prádlo.cz.",
+    "ctaLabel": "Nakoupit na Moje-prádlo.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na Moje-prádlo.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na Moje-prádlo.cz",
+      "Cashback 4 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 30 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=0001534B",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=0001534B",
+    "trackingSlug": "moje-pradlo",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "Moje-prádlo.cz: Cashback 4 % 2026",
+    "seoDescription": "Specializovaný český e-shop Moje-prádlo.cz se značkovým spodním prádlem, plavkami a domácím oblečením s cashbackem 4 %.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u Moje-prádlo.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na Moje-prádlo.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z Moje-prádlo.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 30 dní."
+      }
+    ]
+  },
+  {
+    "slug": "luxusnipradlo",
+    "name": "LuxusníPrádlo.cz",
+    "categorySlug": "moda-a-doplnky",
+    "shortDescription": "Oblíbený e-shop LuxusníPrádlo.cz se spodním prádlem, pyžamy a plavkami předních značek s cashbackem 3,2 % pro registrované.",
+    "description": "## O e-shopu LuxusníPrádlo.cz\n\nE-shop nabízející skladem spodní prádlo českých i světových značek pro všechny věkové kategorie. V jeho nabídce naleznete kvalitní spodní prádlo od renomovaných výrobců.\n\n## Jak získat Cashback 3,2 % na LuxusníPrádlo.cz\n\n- Před nákupem se přihlaste ke svému účtu na BONUSLY a přejděte na **LuxusníPrádlo.cz** přes zelené tlačítko.\n- Nakupujte bez zapnutého AdBlocku a povolte cookies na webu e-shopu.\n- Po schválení objednávky (zpravidla do 70 dní) se vám odměna připíše do vaší BONUSLY peněženky.",
+    "logo": "/logos/luxusnipradlo.png",
+    "bonus": "Cashback 3,2 % z nákupu pro registrované",
+    "bonusDescription": "Přihlaste se na BONUSLY před proklikem a získejte cashback 3,2 % z každé schválené objednávky na LuxusníPrádlo.cz.",
+    "ctaLabel": "Nakoupit na LuxusníPrádlo.cz",
+    "requirements": [
+      "Přihlásit se před proklikem na BONUSLY (pro připsání cashbacku)",
+      "Dokončit objednávku na LuxusníPrádlo.cz s povolenými cookies a bez AdBlocku"
+    ],
+    "pros": [
+      "Ověřený partner s nákupem online na LuxusníPrádlo.cz",
+      "Cashback 3,2 % do vaší BONUSLY peněženky",
+      "Přehledné podmínky a bezpečný nákup"
+    ],
+    "cons": [
+      "Schválení objednávky partnerem trvá zpravidla do 70 dní",
+      "Při použití nepartnerských slevových kódů nemusí být provize/cashback uznán"
+    ],
+    "referralUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=0000712B",
+    "affiliateUrl": "https://ehub.cz/system/scripts/click.php?a_aid=2eb84bd5&a_bid=0000712B",
+    "trackingSlug": "luxusnipradlo",
+    "partnerNetwork": "ehub",
+    "rating": 4.8,
+    "featured": false,
+    "active": true,
+    "verified": true,
+    "seoTitle": "LuxusníPrádlo.cz: Cashback 3,2 % 2026",
+    "seoDescription": "Oblíbený e-shop LuxusníPrádlo.cz se spodním prádlem, pyžamy a plavkami předních značek s cashbackem 3,2 % pro registrované.",
+    "faq": [
+      {
+        "question": "Jak získat cashback u LuxusníPrádlo.cz?",
+        "answer": "Přihlaste se do svého účtu na BONUSLY, proklikněte se na LuxusníPrádlo.cz přes zelené tlačítko na této stránce a dokončete nákup ve stejném okně prohlížeče bez AdBlocku."
+      },
+      {
+        "question": "Za jak dlouho se připíše cashback z LuxusníPrádlo.cz?",
+        "answer": "Objednávku zachytíme automaticky do 30 minut od jejího zaevidování v síti eHUB. Finální schválení partnerem probíhá zpravidla do 70 dní."
       }
     ]
   }
