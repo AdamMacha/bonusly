@@ -5,6 +5,7 @@
  */
 
 import { NEW_EHUB_CASHBACK_MAP } from "./ehub-cashback-map-new";
+import { CJ_CASHBACK_MAP } from "./cj-cashback-map";
 
 export interface OfferCashbackMeta {
   ehubCampaignId?: string | null;
@@ -16,6 +17,7 @@ export interface OfferCashbackMeta {
 
 export const OFFER_CASHBACK_MAP: Record<string, OfferCashbackMeta> = {
   ...NEW_EHUB_CASHBACK_MAP,
+  ...CJ_CASHBACK_MAP,
   // --- Přímé spolupráce mimo eHUB ---
   revolut: {
     cashbackAllowed: true,

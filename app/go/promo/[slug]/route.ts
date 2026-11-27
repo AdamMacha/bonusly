@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { auth } from "@/auth";
-import { isEhubUrl, appendEhubTracking } from "@/lib/affiliate";
+import {
+  isEhubUrl,
+  appendEhubTracking,
+  isCjUrl,
+  appendCjTracking,
+} from "@/lib/affiliate";
 
 export async function GET(
   request: NextRequest,
@@ -65,6 +70,11 @@ export async function GET(
 
   if (isEhubUrl(targetUrl, promo.offer.partnerNetwork)) {
     targetUrl = appendEhubTracking(targetUrl, {
+      userId: promo.offer.cashbackAllowed ? userId : null,
+      clickId,
+    });
+  } else if (isCjUrl(targetUrl, promo.offer.partnerNetwork)) {
+    targetUrl = appendCjTracking(targetUrl, {
       userId: promo.offer.cashbackAllowed ? userId : null,
       clickId,
     });
