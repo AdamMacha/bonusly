@@ -406,4 +406,157 @@ Ideálně alespoň 1 až 2 měsíce předem. Bankovní bonusy se vyplácejí po 
 ### Opravdu za založení účtu přes BONUSLY nic neplatím?
 Neplatíte vůbec nic. BONUSLY je pro uživatele 100% zdarma. Portál je financován z partnerských provizí, a u více než 200 e-shopů a služeb se s vámi o naši provizi dokonce dělíme napůl (50/50 cashback).`,
   },
+  {
+    slug: "cashback-na-vanocni-darky-2026-bonusly",
+    title: "Cashback na vánoční dárky 2026: Jak získat zpět až 2 500 Kč z nákupů přes BONUSLY",
+    excerpt:
+      "Do Vánoc zbývají necelé čtyři týdny. Zjistěte, jak přes BONUSLY získat 2 až 20 % cashback zpět z každého vánočního dárku u více než 300 ověřených e-shopů — a navíc ho zkombinovat s prosincovými slevovými kódy.",
+    featuredImage: "/blog/cashback-vanocni-darky-2026.jpg",
+    categorySlug: "bonusy",
+    authorSlug: "adam-macha",
+    offerSlug: "vivantis",
+    publishedAt: "2026-11-28",
+    featured: true,
+    draft: false,
+    keywords: [
+      "cashback na vánoční dárky",
+      "jak ušetřit za vánoční dárky 2026",
+      "cashback z nákupu dárků",
+      "slevové kódy vánoce 2026",
+      "bonusly cashback vánoce",
+      "vrácení peněz z nákupu e-shop",
+    ],
+    seoTitle: "Cashback na vánoční dárky 2026: Ušetřete až 2 500 Kč",
+    seoDescription:
+      "Získejte zpět 2 až 20 % z každého vánočního dárku přes BONUSLY (50/50 cashback). Přehled TOP e-shopů, slevových kódů na prosinec 2026 a modelový rozpočet.",
+    content: `
+Do Štědrého dne zbývají necelé čtyři týdny a většina českých domácností právě teď řeší, co pořídit pod stromeček — a hlavně kolik to letos bude stát. Průměrná rodina v Česku utratí za vánoční dárky, kosmetiku, hračky a elektroniku mezi **10 000 a 25 000 Kč**. Většina lidí přitom nakoupí napřímo v e-shopech za plnou cenu a nechá ležet na stole stovky až tisíce korun, které by mohla dostat zpět.
+
+Na **BONUSLY.cz** dnes najdete už přes **350 ověřených partnerů** (včetně velkých českých značek jako Vivantis, BAMBULE, Lékárna.cz, inSPORTline, Gorenje, KÄRCHER, Douglas, Martinus nebo iStyle) a u drtivé většiny z nich funguje náš **férový 50/50 cashback** — polovinu z provize, kterou od e-shopu za váš nákup dostaneme, vracíme přímo na váš účet.
+
+V tomto praktickém vánočním průvodci vám ukážeme:
+- **kolik reálně dostanete zpět** při běžném vánočním rozpočtu 20 000 Kč,
+- **které e-shopy letos dávají nejvyšší cashback** v každé dárkové kategorii,
+- **jak zkombinovat cashback s aktivními prosincovými slevovými kódy** pro dvojitou úsporu,
+- a **5 jednoduchých pravidel**, aby se vám každý nákup bezchybně připsal.
+
+## Jak funguje 50/50 cashback na vánoční dárky (za 30 sekund)
+
+Princip je úplně jednoduchý a cena zboží v e-shopu se pro vás nikdy nemění (podrobné vysvětlení najdete na stránce [Jak funguje cashback 50/50](/jak-funguje-cashback)):
+
+1. **Přihlásíte se na BONUSLY.cz** (registrace e-mailem zdarma zabere 15 sekund, bez jakýchkoliv poplatků).
+2. **Vyberete si e-shop v katalogu** [Všechny nabídky](/nabidky) (můžete si rovnou zapnout filtr **Jen s cashbackem**) a kliknete na tlačítko pro přechod do obchodu.
+3. **Nakoupíte vánoční dárky úplně běžně** tak, jak jste zvyklí — a po potvrzení objednávky partnerem vám automaticky připíšeme **50 % naší provize** do vaší BONUSLY peněženky, odkud si peníze vyplatíte na bankovní účet.
+
+> **Proč se to vyplatí zrovna před Vánocemi?** Během roku nakupujete spíše drobnosti. V prosinci ale pořizujete dražší dárky (parfémy, šperky, elektroniku, hračky, sportovní vybavení, kávovary), takže jediný večer strávený nákupem dárků přes BONUSLY vám snadno vrátí **1 000 až 2 500 Kč zpět**.
+
+## Modelový vánoční nákup 2026: Kolik peněz dostanete zpět?
+
+Podívejte se na reálný příklad běžné české rodiny, která nakoupí dárky pro partnera, děti, rodiče i domácího mazlíčka v celkové hodnotě **20 500 Kč** (uvedené částky vycházejí z aktuálně ověřených sazeb na BONUSLY k prosinci 2026):
+
+| Pro koho dárek | E-shop přes BONUSLY | Útrata | Slevový kód navíc | Váš cashback zpět |
+| :--- | :--- | :--- | :--- | :--- |
+| **Parfém & kosmetika pro partnerku** | [Vivantis.cz](/nabidky/vivantis) | 3 500 Kč | \`10VIVA\` (-10 %) | **až 192 Kč** (až 5,5 %) |
+| **Stavebnice & hračky pro děti** | [BAMBULE.cz](/nabidky/bambule) | 3 000 Kč | — | **150 Kč** (5 %) |
+| **Kuchyňský spotřebič pro rodiče** | [Gorenje.cz](/nabidky/gorenje) | 4 000 Kč | \`MALESPOTREBICE30-AFF\` (-30 %) | **60 Kč** (1,5 %) |
+| **Zlatý šperk / náušnice** | [Eppi.cz](/nabidky/eppi) | 4 500 Kč | — | **225 Kč** (5 %) |
+| **Spodní prádlo & pyžama pod stromeček** | [Trenýrkárna.cz](/nabidky/trenyrkarna) | 2 000 Kč | \`SNEHULAK26\` (-26 %) | **až 150 Kč** (až 7,5 %) |
+| **Knihy pro prarodiče** | [Martinus.cz](/nabidky/martinus) | 1 500 Kč | — | **52 Kč** (3,5 %) |
+| **Čokoládový set & chilli dárky** | [Hot-chip.cz](/nabidky/hot-chip) + [Moonchocolate](/nabidky/moonchocolate) | 1 200 Kč | \`Sleva10\` | **~96 Kč** (6–10 %) |
+| **Pamlsky a hračky pro psa** | [Krmeni.cz](/nabidky/krmeni) | 800 Kč | — | **32 Kč** (4 %) |
+| **Celkem zpět z dárků** | **8 běžných nákupů** | **20 500 Kč** | **+ ~2 070 Kč okamžitá sleva** | **~957 Kč cashback** |
+
+Výsledek? Jen kombinací **okamžitých ověřených kupónů (~2 070 Kč)** a **cashbacku zpět (~957 Kč)** ušetříte na jednom vánočním seznamu přes **3 000 Kč** — aniž byste museli měnit, co kupujete! Pokud si chcete nasimulovat vlastní vánoční i celoroční útratu, vyzkoušejte naši [Kalkulačku bonusů a cashbacku](/kalkulacka-bonusu).
+
+## TOP e-shopy na vánoční dárky s cashbackem (prosinec 2026)
+
+Vybrali jsme ty nejlepší aktivní e-shopy na BONUSLY rozdělené přesně podle toho, pro koho dárky sháníte:
+
+### 1. Parfémy, kosmetika a péče o pleť
+- **[Vivantis.cz](/nabidky/vivantis) (cashback až 5,5 %):** Jeden z největších českých e-shopů na parfémy, kosmetiku, hodinky a kabelky. Navíc s ověřenými kódy **\`10VIVA\`** (-10 % extra) a **\`OUTLET30\`** (outlet parfémů a kosmetiky).
+- **[Douglas.cz](/nabidky/douglas) (cashback 3,5 %):** Luxusní parfumerie se vzorky ke každé objednávce zdarma a dárkovými sety.
+- **[Yves Rocher](/nabidky/yves-rocher) (cashback 2 %):** Oblíbená francouzská rostlinná kosmetika a vánoční balíčky pro maminky a babičky.
+- **[FOREO](/nabidky/foreo) (cashback 1,75 % + kód \`BLKDROP35\`):** Prémiové sonické kartáčky LUNA a kosmetické přístroje — s kódem **\`BLKDROP35\`** ušetříte dalších **35 % navíc** na zlevněné produkty (do 31. 12. 2026).
+- **[Lékárna.cz](/nabidky/lekarna) (cashback až 3 %):** Dermokosmetika, dárkové balíčky vitamínů a péče o zdraví pro celou rodinu.
+
+### 2. Hračky a dárky pro děti
+- **[BAMBULE.cz](/nabidky/bambule) (cashback 5 %):** Největší česká síť hračkářství (LEGO, deskové hry, plyšáci, panenky) s výborným **5 % cashbackem**.
+- **[Pompo.cz](/nabidky/pompo) (cashback 2 %):** Další tradiční hračkářský gigant s rychlým doručením i osobním odběrem.
+- **[4kids.cz](/nabidky/4kids) (cashback až 1,75 %):** Skvělý výběr stavebnic, kreativních sad a dřevěných hraček.
+- **[Feedo.cz](/nabidky/feedo) (cashback až 2,5 %):** Ideální dárky pro nejmenší miminka a budoucí maminky.
+
+### 3. Elektro, chytrá domácnost a gaming
+- **[iStyle.cz](/nabidky/istyle) (cashback až 3,2 %):** Oficiální Apple Premium Partner — sluchátka AirPods, iPady, Apple Watch i příslušenství.
+- **[iPhoneMarket.cz](/nabidky/iphonemarket) (cashback 2 % + kód \`SLEVA400\`):** Zánovní iPhony se zárukou, se slevovým kódem **\`SLEVA400\`** (400 Kč dolů nad 2 000 Kč) a 2 % zpět.
+- **[JBL.cz](/nabidky/jbl) (cashback 2,4 %):** Reproduktory a sluchátka JBL patří k nejoblíbenějším dárkům pro teenagery i muže.
+- **[Gorenje.cz](/nabidky/gorenje) (cashback 1,5 % + kódy 20–30 %):** Oficiální e-shop spotřebičů s kódem **\`MALESPOTREBICE30-AFF\`** (-30 % na malé spotřebiče) a **\`LEDNICE20-AFF\`** (-20 % na lednice).
+- **[KÄRCHER.cz](/nabidky/karcher) (cashback 2,5 %):** Vysokotlaké čističe, okenní stěrky a tepovače — praktický dárek, který potěší každého kutila i domácnost.
+- **[DXRacer.cz](/nabidky/dxracer) (cashback až 4 %):** Ergonomické herní a kancelářské židle pro hráče i na home office.
+- **[NordVPN](/nabidky/nordvpn) (cashback 20 %!):** Digitální dárek na poslední chvíli (bez čekání na kurýra!) s bezkonkurenčním **20 % cashbackem**.
+
+### 4. Móda, šperky, spodní prádlo a sport
+- **[Trenýrkárna.cz](/nabidky/trenyrkarna) (cashback až 7,5 % + kód \`SNEHULAK26\`):** Absolutní vánoční klasika — s kódem **\`SNEHULAK26\`** máte **26 % slevu na vše** do konce roku a k tomu až 7,5 % zpět!
+- **[Bushman.cz](/nabidky/bushman) (cashback až 10 %):** Kvalitní česká outdoorová móda z přírodních materiálů s cashbackem až 10 %.
+- **[Eppi.cz](/nabidky/eppi) (cashback 5 %)** a **[Brilianty.cz](/nabidky/brilianty) (cashback 3,75 %):** Zlaté a diamantové šperky, kde i jediný dárek znamená stovky až tisíce korun zpět.
+- **[eObuv.cz](/nabidky/eobuv) (cashback až 3,5 %):** Značkové boty, kabelky a zimní doplňky.
+- **[inSPORTline.cz](/nabidky/insportline) (cashback 2,25 %)** a **[Meatfly.cz](/nabidky/meatfly) (cashback 4 %):** Fitness vybavení, batohy, zimní bundy a sportovní dárky.
+
+### 5. Knihy, gurmánské a originální dárky
+- **[Martinus.cz](/nabidky/martinus) (cashback 3,5 %)** a **[Kosmas.cz](/nabidky/kosmas) (cashback 2 %):** Knižní bestsellery, komiksy i deskové hry.
+- **[Moonchocolate.eu](/nabidky/moonchocolate) (cashback 6 % + kód \`Sleva10\`):** Ručně vyráběná bean-to-bar čokoláda z Česka.
+- **[Hot-chip.cz](/nabidky/hot-chip) (cashback 10 %):** Originální chilli dárkové boxy a pálivé delikatesy s 10 % cashbackem.
+- **[Mikov.cz](/nabidky/mikov) (cashback 3 %):** Tradiční české nože a kapesní nožíky (navíc s adventním kalendářem slev).
+- **[KvětinyExpres.cz](/nabidky/kvetinyexpres) (cashback 7,5 %)** a **[Hubatá černoška](/nabidky/hubatacernoska) (cashback 5 %):** Expresní rozvoz kytic i vtipné dárky.
+
+### 6. Dárky pro domácí mazlíčky
+- **[SUPER ZOO](/nabidky/superzoo) (cashback 1 %)** a **[Krmeni.cz](/nabidky/krmeni) (cashback 4 %):** Adventní kalendáře, pelíšky, hračky i kvalitní pamlsky pro psy a kočky.
+
+## Dvojitá úspora: Prosincové slevové kódy, které fungují i s cashbackem
+
+Velký chyták cashback portálů bývá v tom, že když použijete náhodný slevový kód z cizího webu, e-shop vám cashback zamítne. **Všechny kódy v naší sekci [Akce a slevové kódy](/akce-a-kupony) jsou oficiální partnerské kódy**, takže je můžete bezpečně kombinovat s cashbackem:
+
+| E-shop | Aktivní slevový kód | Sleva s kódem | Platnost do | Cashback navíc |
+| :--- | :--- | :--- | :--- | :--- |
+| **[FOREO](/nabidky/foreo)** | \`BLKDROP35\` | **35 % navíc** na zlevněné | 31. 12. 2026 | + 1,75 % |
+| **[Gorenje.cz](/nabidky/gorenje)** | \`MALESPOTREBICE30-AFF\` | **30 % sleva** na malé spotřebiče | 31. 12. 2026 | + 1,5 % |
+| **[Trenýrkárna.cz](/nabidky/trenyrkarna)** | \`SNEHULAK26\` | **26 % sleva** na celý sortiment | 31. 12. 2026 | + až 7,5 % |
+| **[Nefertitis.cz](/nabidky/nefertitis)** | \`NCZ20AF\` | **20 % sleva** na vše | 31. 12. 2026 | + 5 % |
+| **[Pomelobox.cz](/nabidky/pomelobox)** | \`VITEJ\` | **20 % sleva** pro nové zákazníky | 31. 10. 2028 | + 6 % |
+| **[Vivantis.cz](/nabidky/vivantis)** | \`10VIVA\` | **10 % extra** sleva | 31. 1. 2027 | + až 5,5 % |
+| **[iPhoneMarket.cz](/nabidky/iphonemarket)** | \`SLEVA400\` | **400 Kč sleva** nad 2 000 Kč | 31. 12. 2026 | + 2 % |
+
+## Profi trik: Spojte cashback s bankovními bonusy (až +4 500 Kč navíc)
+
+Chcete si letošní Vánoce zafinancovat skoro celé zdarma? Cashback z nákupů dárků můžete zkombinovat s **uvítacími bonusy za bezplatné bankovní účty** (např. [Raiffeisenbank až 3 000 Kč](/nabidky/raiffeisenbank), [mBank 1 000 Kč](/nabidky/mbank) a [Revolut 500 Kč](/nabidky/revolut)) — přesně ty platby, kterými koupíte vánoční dárky přes BONUSLY, vám totiž současně splní i podmínku plateb kartou u nové banky!
+
+Detailní návod, jak si na dárky tímto způsobem během prosince přivydělat, najdete v našem sesterském článku **[Jak si přivydělat na vánoční dárky díky BONUSLY](/blog/jak-si-privydelat-na-vanocni-darky-diky-bonusly)**.
+
+## 5 pravidel, aby se vám vánoční cashback vždy 100 % připsal
+
+1. **Vždy buďte přihlášeni na BONUSLY.cz před proklikem** — jedině tak systém pozná, do které peněženky má odměnu spárovat.
+2. **Proklikněte se až těsně před nákupem** a dokončete objednávku v tom samém okně prohlížeče bez odskakování na srovnávače cen (Heureka, Zboží.cz), které by přepsaly affiliate cookie.
+3. **Dočasně vypněte AdBlock / přísné blokování cookies** v prohlížeči pro e-shop, ve kterém nakupujete.
+4. **Používejte jen kódy z BONUSLY** — cizí nepartnerské kupóny (např. z prohlížečových lišt) mohou způsobit zamítnutí cashbacku.
+5. **Neplaťte dárkovými poukazy třetích stran** — u většiny e-shopů se cashback počítá jen z reálně zaplacené částky bez DPH a dopravy.
+
+## Často kladené otázky
+
+### Stojí používání cashbacku na BONUSLY něco?
+Ne, registrace i používání BONUSLY je 100 % zdarma. Ceny v e-shopech jsou úplně stejné, jako když přijdete napřímo — jen vám z naší partnerské provize vrátíme rovnou polovinu (50/50 cashback).
+
+### Jak poznám, který e-shop cashback podporuje?
+Na stránce [Všechny nabídky](/nabidky) stačí zapnout filtr **Jen s cashbackem**, případně seřadit obchody podle **Nejvyšší cashback (%)**. U každé nabídky vidíte přesnou sazbu v procentech nebo korunách přímo na kartě.
+
+### Kdy mi přijdou peníze z vánočního cashbacku na účet?
+Proklik evidujeme okamžitě. Samotné schválení cashbacku e-shopem trvá zpravidla 30 až 60 dnů (po uplynutí zákonné lhůty pro vrácení či výměnu vánočního dárku). Jakmile e-shop objednávku potvrdí, částka se vám odemkne k výplatě na bankovní účet — ideální malý povánoční bonus v lednu či únoru!
+
+### Můžu nakoupit dárky přes BONUSLY i na mobilu?
+Ano, cashback funguje na počítači i v mobilním prohlížeči (Chrome, Safari). Jen si dejte pozor, aby vás odkaz na mobilu nepřesměroval do nativní mobilní aplikace obchodu — některé aplikace totiž nepodporují webové cookies. Nákup proto vždy dokončete v mobilním prohlížeči.
+
+### Co když budu muset nevhodný vánoční dárek vyměnit nebo vrátit?
+Pokud celou objednávku stornujete nebo zboží vrátíte ve 14denní lhůtě, e-shop provizi (a tím i cashback) zamítne. Při částečném vrácení jednoho kusu z větší objednávky se cashback automaticky přepočítá z hodnoty zboží, které jste si ponechali.
+
+### Lze cashback zkombinovat se slevovým kódem?
+Ano, pokud použijete oficiální partnerský kód uvedený přímo na BONUSLY.cz (například \`SNEHULAK26\` na Trenýrkárně, \`10VIVA\` na Vivantisu nebo \`SLEVA400\` na iPhoneMarketu). Použití nepartnerských kódů z cizích webů může cashback zrušit.`,
+  },
 ];
