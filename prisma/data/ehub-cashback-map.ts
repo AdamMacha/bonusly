@@ -50,6 +50,56 @@ export const OFFER_CASHBACK_MAP: Record<string, OfferCashbackMeta> = {
     partnerCommissionRate: "PPS 300 Kč (s kódem sleva600)",
     userCashbackLabel: null,
   },
+  cernyrytir: {
+    ehubCampaignId: "37d832d8",
+    cashbackAllowed: false,
+    partnerCommissionRate: "PPS 0,00–8,00 %",
+    userCashbackLabel: null,
+  },
+
+  // --- eHUB Batch 3 schválené programy: CASHBACK POVOLEN (50 % z reálné provize) ---
+  pomelobox: {
+    ehubCampaignId: "0c675c54",
+    cashbackAllowed: true,
+    partnerCommissionRate: "PPS 12,00 %",
+    userCashbackLabel: "Cashback 6 %",
+  },
+  tentino: {
+    ehubCampaignId: "fab8fdf5",
+    cashbackAllowed: true,
+    partnerCommissionRate: "PPS 4,00–6,40 %",
+    userCashbackLabel: "Cashback až 3,2 %",
+  },
+  "vse-pro-strechu": {
+    ehubCampaignId: "5fc79bd6",
+    cashbackAllowed: true,
+    partnerCommissionRate: "PPS 6,00 %",
+    userCashbackLabel: "Cashback 3 %",
+  },
+  armyfantasy: {
+    ehubCampaignId: "f0cf1830",
+    cashbackAllowed: true,
+    partnerCommissionRate: "PPS 7,00 %",
+    userCashbackLabel: "Cashback 3,5 %",
+  },
+  rucedozadu: {
+    ehubCampaignId: "44c0cedc",
+    cashbackAllowed: true,
+    partnerCommissionRate: "PPS 8,00 %",
+    userCashbackLabel: "Cashback 4 %",
+  },
+  svetfyzioterapie: {
+    ehubCampaignId: "d2ff8752",
+    cashbackAllowed: true,
+    partnerCommissionRate: "PPS 8,00 %",
+    userCashbackLabel: "Cashback 4 %",
+  },
+  trikon: {
+    ehubCampaignId: "25fa0a91",
+    cashbackAllowed: true,
+    partnerCommissionRate: "PPS 8,00 %",
+    userCashbackLabel: "Cashback 4 %",
+  },
 
   // --- eHUB schválené programy: CASHBACK POVOLEN (50 % z reálné provize) ---
   brilianty: {

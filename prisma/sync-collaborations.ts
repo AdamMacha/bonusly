@@ -4,6 +4,7 @@ import { CORE_OFFERS } from "./data/offers-core";
 import { FINANCE_SERVICES_OFFERS } from "./data/offers-finance-services";
 import { ESHOP_OFFERS } from "./data/offers-eshops";
 import { NEW_EHUB_OFFERS } from "./data/offers-ehub-new";
+import { EHUB_BATCH3_OFFERS } from "./data/offers-ehub-batch3";
 import { CJ_OFFERS } from "./data/offers-cj";
 import { OFFER_CASHBACK_MAP } from "./data/ehub-cashback-map";
 import { computeOfferPriority } from "../lib/offer-priority";
@@ -14,6 +15,7 @@ export const ALL_OFFERS: OfferSeed[] = [
   ...FINANCE_SERVICES_OFFERS,
   ...ESHOP_OFFERS,
   ...NEW_EHUB_OFFERS,
+  ...EHUB_BATCH3_OFFERS,
   ...CJ_OFFERS,
 ];
 

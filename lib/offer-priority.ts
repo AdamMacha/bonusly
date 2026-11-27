@@ -75,6 +75,7 @@ export const CURATED_OFFER_PRIORITIES: Record<string, number> = {
   canalplus: 552, // CJ.com: 12 EUR za předplatné streamingu/TV
   "lounge-by-zalando": 550, // PPL 30 Kč za pouhou registraci + silný módní brand
   ecoflow: 548, // CJ.com: prémiové bateriové stanice (vysoký košík)
+  pomelobox: 546, // eHUB: PPS 12 % (prům. 649 Kč!), 100 % schvalovatelnost + kód VITEJ (-20 %)
   "moje-pradlo": 545, // PPS 8 % + známý český brand
   foreo: 544, // CJ.com: prémiová kosmetická technika + kód BLKDROP35
   luxusnipradlo: 542, // PPS 6,4 % + známý český brand
@@ -94,6 +95,7 @@ export const CURATED_OFFER_PRIORITIES: Record<string, number> = {
   spime: 510, // Vysoký košík (masivní postele a matrace)
   tipa: 508, // CJ.com: tradiční český elektro e-shop (až 10 % provize)
   "hot-chip": 505, // PPS 20 % (vysoká provize + dárkový hit)
+  tentino: 504, // eHUB: PPS 6,4 % z drahých párty stanů (prům. 336 Kč)
   dxracer: 502, // CJ.com: herní a kancelářské židle (4–8 % provize)
   originalnipneu: 500, // Vysoký objem sezónních nákupů pneumatik
   "4kids": 498, // CJ.com: oblíbený český e-shop s hračkami
@@ -101,6 +103,7 @@ export const CURATED_OFFER_PRIORITIES: Record<string, number> = {
   smartyhodinky: 495, // PPS 10 % z chytrých hodinek
   smartydum: 492, // PPS 10 % z chytré domácnosti
   blaire: 490, // PPS 8 % celých nám (cashback zakázán) + kód BF15
+  "vse-pro-strechu": 488, // eHUB: PPS 6 % + 6 aktivních kupónů/akcí (prům. 193 Kč)
   ventilatory: 480, // PPS 10 % z vyššího košíku vzduchotechniky
 };
 
