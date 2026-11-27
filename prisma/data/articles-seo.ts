@@ -559,4 +559,106 @@ Pokud celou objednávku stornujete nebo zboží vrátíte ve 14denní lhůtě, e
 ### Lze cashback zkombinovat se slevovým kódem?
 Ano, pokud použijete oficiální partnerský kód uvedený přímo na BONUSLY.cz (například \`SNEHULAK26\` na Trenýrkárně, \`10VIVA\` na Vivantisu nebo \`SLEVA400\` na iPhoneMarketu). Použití nepartnerských kódů z cizích webů může cashback zrušit.`,
   },
+  {
+    slug: "vanocni-darky-pro-muze-2026-cashback",
+    title: "Vánoční dárky pro muže 2026: 18 ověřených tipů, na kterých získáte cashback až 20 %",
+    excerpt:
+      "Nevíte, co letos koupit partnerovi, tátovi nebo bratrovi pod stromeček? Připravili jsme 18 nejžádanějších vánočních dárků pro muže pro rok 2026 — s přehledem prosincových slevových kódů a 50/50 cashbacku přes BONUSLY.",
+    featuredImage: "/blog/vanocni-darky-pro-muze-2026.jpg",
+    categorySlug: "bonusy",
+    authorSlug: "adam-macha",
+    offerSlug: "trenyrkarna",
+    publishedAt: "2026-11-28",
+    featured: true,
+    draft: false,
+    keywords: [
+      "vánoční dárky pro muže 2026",
+      "tipy na vánoční dárky pro muže",
+      "dárek pro muže k vánocům",
+      "vánoční dárky pro muže s cashbackem",
+      "dárek pro přítele vánoce 2026",
+      "slevové kódy dárky pro muže",
+    ],
+    seoTitle: "Vánoční dárky pro muže 2026: 18 tipů + cashback až 20 %",
+    seoDescription:
+      "Nejlepší vánoční dárky pro muže v roce 2026 podle rozpočtu i zájmů (elektro, dílna, móda, rumy, gaming) + aktivní prosincové kódy a 50/50 cashback přes BONUSLY.",
+    content: `
+Vybrat dárek pro muže, který „nic nepotřebuje“, patří každý prosinec k nejtěžším vánočním úkolům. A když už konečně najdete kvalitní sluchátka, sadu nářadí, značkový parfém nebo herní židli, účet snadno vyskočí na několik tisíc korun.
+
+Právě u dárků pro muže se ale nejvíc vyplatí nakoupit chytře přes **BONUSLY.cz** — u všech 18 ověřených e-shopů v tomto průvodci totiž kromě aktuálních prosincových slevových kódů dostanete **50 % z naší partnerské provize zpět jako cashback** přímo na svůj účet (více na stránce [Jak funguje cashback 50/50](/jak-funguje-cashback)).
+
+Níže najdete přehledně rozdělené tipy podle typu obdarovaného i cenového rozpočtu — od drobností do 1 000 Kč až po prémiové dárky, na kterých se vám vrátí stovky korun zpět.
+
+## Rychlý přehled: Nejlepší dárky pro muže 2026 podle ceny
+
+| Rozpočet | Typ dárku | Ověřený e-shop přes BONUSLY | Kód navíc | Cashback zpět |
+| :--- | :--- | :--- | :--- | :--- |
+| **Do 1 000 Kč** | Chilli boxy, degustační rumy, trenýrky | [Hot-chip.cz](/nabidky/hot-chip), [DramRoom.cz](/nabidky/dramroom), [Trenýrkárna.cz](/nabidky/trenyrkarna) | \`vzorek5\`, \`SNEHULAK26\` | **2,25–10 %** |
+| **1 000 – 3 000 Kč** | MagSafe nabíječky, nože, knihy, parfémy | [Cubenest.cz](/nabidky/cubenest), [Mikov.cz](/nabidky/mikov), [Vivantis.cz](/nabidky/vivantis), [Martinus.cz](/nabidky/martinus) | \`OUTLET30\` | **2–5,5 %** |
+| **3 000 – 8 000 Kč** | Sluchátka, wapky, nářadí, outdoor móda | [JBL.cz](/nabidky/jbl), [KÄRCHER.cz](/nabidky/karcher), [AHProfi.cz](/nabidky/ahprofi), [Bushman.cz](/nabidky/bushman) | \`5hJC8X\` | **2,4–10 %** |
+| **Nad 8 000 Kč** | Apple, drony, repasované notebooky, herní židle | [iStyle.cz](/nabidky/istyle), [DronPro.cz](/nabidky/dronpro), [Počítače24.cz](/nabidky/pocitace24), [DXRacer.cz](/nabidky/dxracer), [EcoFlow](/nabidky/ecoflow) | \`mamslevu200\`, \`SLEVA400\` | **2–4 %** |
+
+## 1. Pro technologického nadšence a hráče
+
+Elektronika a chytré příslušenství jsou dlouhodobě nejjistější sázkou pro muže mezi 18 a 45 lety. Díky vyšší ceně košíku tu navíc cashback udělá největší rozdíl v korunách:
+
+- **[iStyle.cz](/nabidky/istyle) (cashback až 3,2 %):** Oficiální Apple Premium Partner. Skvěle fungují AirPods, AirTag (ideální dárek do 1 000 Kč), Apple Watch nebo originální pouzdra.
+- **[Cubenest.cz](/nabidky/cubenest) (cashback 2 %):** Český specialista na designové MagSafe nabíječky 3v1 pro iPhone, Apple Watch i AirPods — praktický dárek na noční stolek, který vypadá luxusně.
+- **[iPhoneMarket.cz](/nabidky/iphonemarket) (cashback 2 % + kód \`SLEVA400\`):** Prověřené zánovní iPhony se zárukou. S kódem **\`SLEVA400\`** ušetříte 400 Kč při nákupu nad 2 000 Kč a k tomu získáte 2 % cashback.
+- **[JBL.cz](/nabidky/jbl) (cashback 2,4 %):** Přenosné Bluetooth reproduktory (Charge, Flip, Xtreme) nebo sluchátka s potlačením hluku.
+- **[DXRacer.cz](/nabidky/dxracer) (cashback až 4 %):** Ergonomické herní a kancelářské židle — při ceně kolem 8 000 Kč dostanete zpět přes 300 Kč.
+- **[DronPro.cz](/nabidky/dronpro) (cashback 2,4 %):** Drony DJI, akční kamery a stabilizátory pro každého, kdo rád fotí a natáčí na cestách.
+- **[Počítače24.cz](/nabidky/pocitace24) (cashback 2 % + kódy \`mamslevu200\` až \`mamslevu600\`):** Manažerské repasované notebooky ThinkPad či Dell se slevou 200–600 Kč podle výše objednávky a 2 % zpět.
+
+## 2. Pro kutila, řemeslníka a majitele domu či auta
+
+Praktické dárky do garáže, dílny a na zahradu muži reálně využijí po celý rok:
+
+- **[KÄRCHER.cz](/nabidky/karcher) (cashback 2,5 %):** Vysokotlaké čističe (wapky) na mytí auta i terasy, dílenské vysavače nebo akumulátorové čističe oken.
+- **[AHProfi.cz](/nabidky/ahprofi) (cashback 4,5 %):** Gola sady, dílenské vozíky, momentové klíče a kvalitní profi nářadí s výborným **4,5 % cashbackem**.
+- **[Mikov.cz](/nabidky/mikov) (cashback 3 %):** Ikonické české zavírací nože Predator, lovecké nože a kapesní nožíky Rybička v dárkovém balení (navíc s prosincovým adventním kalendářem slev).
+- **[EcoFlow EU](/nabidky/ecoflow) (cashback 2,5 %):** Přenosné bateriové stanice a solární panely pro karavan, chatu nebo jako záložní zdroj energie — u dražších stanic vrátí cashback klidně přes **500 Kč**.
+- **[KVelektro.cz](/nabidky/kvelektro) (cashback až 5 % + kódy \`AFP05N26\` / \`AFP10N26\`):** Elektroinstalační materiál, chytré osvětlení a měřicí technika se slevou 5–10 % a cashbackem až 5 %.
+- **[TIPA.eu](/nabidky/tipa) (cashback až 5 %):** Tradiční český e-shop s elektronikou, pájkami, LED svítilnami a vychytávkami pro domácí bastlíře.
+
+## 3. Móda, styl a sport (dárky, které neskončí ve skříni)
+
+- **[Trenýrkárna.cz](/nabidky/trenyrkarna) (cashback až 7,5 % + kód \`SNEHULAK26\`):** Absolutní jistota pod stromeček — dárkové multipacky Styx, Calvin Klein či Tommy Hilfiger. S kódem **\`SNEHULAK26\`** máte **26 % slevu na vše** (do 31. 12. 2026) a navíc až 7,5 % zpět!
+- **[Bushman.cz](/nabidky/bushman) (cashback až 10 %):** Odolné expediční bundy, flanelové košile, kožené opasky a outdoorové oblečení z přírodních materiálů s jedním z nejvyšších cashbacků v Česku (až 10 %).
+- **[inSPORTline.cz](/nabidky/insportline) (cashback 2,25 %)** a **[Meatfly.cz](/nabidky/meatfly) (cashback 4 %):** Jednoruční činky, masážní pistole, zimní bundy, funkční batohy a snowboardové vybavení.
+- **[Vivantis.cz](/nabidky/vivantis) (cashback až 5,5 %)** a **[Brasty.cz](/nabidky/brasty) (cashback 0,5 %):** Pánské parfémy (Dior, Bleu de Chanel, Armani, Hugo Boss) a značkové hodinky.
+
+## 4. Gurmánské zážitky, rumy a dárky na poslední chvíli
+
+Pokud hledáte dárek, který nezabere místo na poličce a spolehlivě potěší chuťové buňky (nebo potřebujete dárek řešit 23. prosince):
+
+- **[Warehouse1.cz](/nabidky/warehouse1) (cashback 2,5 %):** Prémiové rumy, single malt whisky a dárková balení se skleničkami.
+- **[DramRoom.cz](/nabidky/dramroom) (cashback 2,25 % + kód \`vzorek5\`):** Degustační kalendáře a miniatury vzácných rumů, ginů a whisky — s kódem **\`vzorek5\`** ušetříte 5 % na degustační vzorky.
+- **[Hot-chip.cz](/nabidky/hot-chip) (cashback 10 %):** Dárkové chilli boxy, pálivé omáčky a proslulá Hot Chip Challenge s parádním **10 % cashbackem**.
+- **[Martinus.cz](/nabidky/martinus) (cashback 3,5 %):** Biografie, sci-fi, historie nebo deskové hry pro večery s kamarády.
+- **[NordVPN](/nabidky/nordvpn) (cashback 20 %!):** Digitální dárek doručený e-mailem za 2 minuty — dvouleté předplatné bezpečné VPN na cesty i streamování se skvělým **20 % cashbackem**.
+
+## Jak na vánočních dárcích pro muže ušetřit maximum (kombinace 3 výhod)
+
+1. **Aktivujte cashback přes BONUSLY:** Přihlaste se zdarma na BONUSLY.cz a proklikněte se na vybraný e-shop přímo z našeho webu. Přehled všech prosincových akcí najdete v sekci [Akce a slevové kódy](/akce-a-kupony).
+2. **Zadejte oficiální partnerský kód:** Například u Trenýrkárny (\`SNEHULAK26\`, -26 %), iPhoneMarketu (\`SLEVA400\`, -400 Kč) nebo Počítače24 (\`mamslevu200\` až \`mamslevu600\`) získáte okamžitou slevu v košíku i cashback najednou.
+3. **Spočítejte si celkovou úsporu a přidejte bankovní bonusy:** V [Kalkulačce bonusů a cashbacku](/kalkulacka-bonusu) během 10 sekund uvidíte, kolik vám vrátí samotné vánoční nákupy — a pokud k tomu využijete i náš přehled [Cashback na vánoční dárky 2026](/blog/cashback-na-vanocni-darky-2026-bonusly) nebo [Jak si přivydělat na vánoční dárky](/blog/jak-si-privydelat-na-vanocni-darky-diky-bonusly), zaplatíte si podstatnou část dárků z bonusů.
+
+## Často kladené otázky
+
+### Jaký vánoční dárek pro muže má na BONUSLY nejvyšší cashback?
+Nejvyšší procentní cashback mezi dárky pro muže nabízí digitální předplatné **[NordVPN](/nabidky/nordvpn) (20 %)**, dále **[Bushman.cz](/nabidky/bushman) (až 10 %)**, **[Hot-chip.cz](/nabidky/hot-chip) (10 %)** a **[Trenýrkárna.cz](/nabidky/trenyrkarna) (až 7,5 % + kód \`SNEHULAK26\` -26 %)**. V absolutních korunách ale často nejvíce vrátí dražší nákupy jako herní židle, Apple produkty, drony nebo bateriové stanice EcoFlow.
+
+### Kdy nejpozději objednat vánoční dárky online, aby dorazily do Štědrého dne?
+U českých e-shopů se zbožím skladem doporučujeme objednat nejpozději do **17.–18. prosince 2026**, aby dopravci stihli doručit zásilku bez stresu. Pokud nakupujete až 22.–24. prosince, sáhněte po digitálním dárku jako **[NordVPN](/nabidky/nordvpn)** nebo elektronických poukazech.
+
+### Platí cashback i na zlevněné vánoční sety a balíčky?
+Ano, u většiny partnerů se cashback počítá z výsledné zaplacené ceny zboží (bez DPH a dopravy), a to i u akčních dárkových setů, pokud daný obchod nemá ve svých podmínkách konkrétní výjimku.
+
+### Musím být přihlášený, aby se mi cashback z dárků připsal?
+Ano — před proklikem do e-shopu se vždy přihlaste do svého bezplatného účtu na BONUSLY.cz. Systém pak automaticky spáruje váš proklik s vaší peněženkou a po schválení objednávky e-shopem (obvykle 30–60 dní) si peníze vyplatíte na bankovní účet.
+
+### Funguje slevový kód SNEHULAK26 na Trenýrkárně současně s cashbackem?
+Ano! Kód \`SNEHULAK26\` je oficiální partnerský kupón pro BONUSLY, takže získáte jak okamžitou 26 % slevu na celý sortiment, tak následný cashback až 7,5 % z výsledné ceny nákupu.`,
+  },
 ];
