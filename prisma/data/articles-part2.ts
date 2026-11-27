@@ -119,9 +119,9 @@ Ano, účet není nijak vázaný a zrušení účtu je ze zákona zcela zdarma b
       "trading 212 zdanění",
       "trading 212 akcie zdarma",
     ],
-    seoTitle: "Trading 212 recenze 2026: ETF, úroky a daně",
+    seoTitle: "Trading 212 recenze 2026: 0 % za ETF, úroky a daně v ČR",
     seoDescription:
-      "Jak investovat do akcií a ETF bez komisí na Trading 212? Přehled poplatků (0,15 % FX), funkce Pies, denního úročení hotovosti, daní a stavu akce na akcii zdarma.",
+      "Investování na Trading 212 v roce 2026: nulové komise za ETF, trik na 0 % FX, denní úroky z hotovosti, daně v ČR i srovnání s Portu a Patria.",
     content: `
 **Trading 212** patří mezi nejoblíbenější investiční aplikace v Evropě pro dlouhodobé pasivní investování do světových ETF fondů i jednotlivých akcií (Apple, Microsoft, NVIDIA, Coca-Cola aj.). Hlavním důvodem jeho popularity jsou **0% poplatky za nákup i prodej akcií a ETF**, zlomkové akcie už od 30 Kč a mimořádně přehledná česká mobilní aplikace.
 
@@ -208,14 +208,17 @@ Ne, Trading 212 jako zahraniční broker český Dlouhodobý investiční produk
     publishedAt: "2026-09-05",
     featured: false,
     keywords: [
+      "tipsport pozvi kamaráda",
+      "tipsport pozvat kamarada",
       "tipsport bonus 1300 kč",
       "tipsport 300 kč bez vkladu",
-      "tipsport přiveď kamaráda pozvánka",
+      "tipsport bonus podmínky",
+      "jak vybrat bonus na tipsportu",
       "tipsport registrace bankid",
     ],
-    seoTitle: "Tipsport bonus 1 300 Kč 2026: Pozvánka a BankID",
+    seoTitle: "Tipsport pozvi kamaráda 2026: 300 Kč zdarma + 1 000 Kč",
     seoDescription:
-      "Přesný postup pro Tipsport bonus 1 300 Kč v roce 2026: 300 Kč zdarma bez vkladu přes BankID + 1 000 Kč v programu Přiveď kamaráda. Časté chyby a pravidla.",
+      "Návod na Tipsport bonus 1 300 Kč (2026): jak funguje Tipsport pozvi kamaráda na 1 000 Kč, 300 Kč bez vkladu přes BankID a jak vybrat výhru.",
     content: `
 Největší česká sázková kancelář **Tipsport** (s plnou licencí Ministerstva financí ČR) dlouhodobě nabízí jednu z nejštědřejších uvítacích kombinací na trhu: **300 Kč zdarma ihned bez nutnosti vkladu** za pouhé dokončení online registrace a dalších **1 000 Kč** v rámci speciálního programu **Přiveď kamaráda**.
 
@@ -246,9 +249,17 @@ Podle českého zákona o hazardních hrách musí každý nový účet projít 
 3. **Přiřazení platební metody** na vaše jméno (ověřovací platba nebo bankovní účet).
 4. **Nastavení sebeomezujících opatření** (denní/měsíční limity sázek a přihlášení — doporučujeme nastavit přísné osobní limity pro plnou kontrolu!).
 
-## Krok 3: Jak fungují Nety (1 Net = 1 Kč)
+## Krok 3: Jak fungují Nety (1 Net = 1 Kč) a jak vybrat bonus na Tipsportu
 
-Uvítací bonus **300 Kč zdarma** připíše Tipsport ihned po dokončení plného konta ve věrnostní měně **Nety** (1 Net = 1 Kč). Za Nety můžete vsadit libovolný sportovní tiket — **případná výhra z tiketu se již připisuje v klasických českých korunách**, které si můžete kdykoliv převést na svůj bankovní účet.
+Uvítací bonus **300 Kč zdarma** připíše Tipsport ihned po dokončení plného konta ve věrnostní měně **Nety** (1 Net = 1 Kč). Samotné Nety přímo na účet vybrat nejdou, ale jakmile za ně vsadíte libovolný tiket (třeba i za nižší kurz), **veškerá výhra se již připisuje v klasických českých korunách**, které si můžete obratem vybrat na svůj ověřený bankovní účet (obvykle do 1 pracovního dne).
+
+## Tipsport pozvi kamaráda vs. bezrizikové bonusy 2026
+
+Program **Tipsport pozvi kamaráda** (Přiveď kamaráda) je skvělý jednorázový bonus pro nové plnoleté uživatele, pokud ale chcete jisté peníze zcela bez rizika a bez nutnosti sázet, kombinujte jej s ověřenými bankovními a investičními odměnami:
+- **[Raiffeisenbank účet zdarma](/nabidky/raiffeisenbank)** — bonus až **3 000 Kč** za aktivní placení kartou.
+- **[mBank mKonto](/nabidky/mbank)** — **1 000 Kč** za 10 běžných plateb kartou.
+- **[Revolut](/nabidky/revolut)** — **500 Kč odměna** do vaší BONUSLY peněženky + kurzy bez přirážky.
+- **[Portu.cz](/nabidky/portu)** nebo **[Vodafone tarify & internet](/nabidky/vodafone)** — až **1 000 Kč cashback** zpět přes BONUSLY.
 
 ## Přehled benefitů plného účtu Tipsport mimo samotný bonus
 

@@ -19,9 +19,9 @@ export const CATEGORIES_DATA: CategorySeed[] = [
     order: 2,
     description:
       "Běžné, spořicí a podnikatelské účty zdarma, kreditní karty s odměnami a výhodné půjčky s bonusem až 3 000 Kč.",
-    seoTitle: "Bankovní účty a karty s bonusem 2026",
+    seoTitle: "Bankovní účty s bonusem 2026: Až 4 000 Kč zdarma",
     seoDescription:
-      "Srovnání bankovních účtů v ČR s peněžitou odměnou za založení online. Raiffeisenbank, mBank, Air Bank, Revolut i podnikatelské účty.",
+      "Nejlepší bankovní bonusy v ČR (2026): Raiffeisenbank až 3 000 Kč, mBank 1 000 Kč, Revolut 500 Kč a Air Bank. Účty zdarma za 5 minut přes BankID.",
   },
   {
     slug: "finance",

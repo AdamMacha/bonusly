@@ -217,15 +217,16 @@ Investown podléhá licenci ČNB a prostředky investorů i pohledávky jsou ú�
     publishedAt: "2026-08-02",
     featured: false,
     keywords: [
+      "revolut výhody",
       "revolut recenze 2026",
       "revolut zkušenosti",
       "revpoints jak fungují",
       "revolut poplatky víkend",
       "karta na dovolenou do zahraničí",
     ],
-    seoTitle: "Revolut recenze 2026: Kurzy, RevPoints a bonus",
+    seoTitle: "Revolut výhody 2026: Kurzy, RevPoints a 500 Kč bonus",
     seoDescription:
-      "Test karty Revolut v roce 2026: reálná úspora na směně měn, přehled tarifů Standard až Ultra, program RevPoints a postup pro získání odměny.",
+      "Jaké má Revolut výhody v roce 2026? Úspora až 3 200 Kč ročně na kurzech, jednorázové karty, RevPoints i návod na 500 Kč odměnu zdarma.",
     content: `
 Pokud na dovolené v Chorvatsku, Itálii nebo při nákupech na zahraničních e-shopech (Amazon, AliExpress, Booking) stále platíte běžnou kartou od tradiční české banky, přicházíte u každé platby zbytečně o **2,5 % až 4 %** na nevýhodném směnném kurzu. Právě tento problém elegantně vyřešil **Revolut**, který dnes v Evropě využívají desítky milionů klientů.
 
@@ -265,7 +266,7 @@ Revolut spustil propracovaný věrnostní program **RevPoints**, ve kterém sbí
 - **Plus (cca 115 Kč / měs.):** Vyšší limity směny a základní pojištění nákupů.
 - **Premium / Metal (od cca 220 / 350 Kč / měs.):** Neomezená směna měn, kvalitní cestovní pojištění, zvýhodněný sběr RevPoints a předplatná partnerů (např. NordVPN, Perplexity, Wolt+ či Financial Times dle aktuální nabídky tarifu).
 
-Hledáte k Revolutu ideální český hlavní účet? Podívejte se na srovnání [Raiffeisenbank vs. Revolut](/porovnani/raiffeisenbank-vs-revolut).
+Hledáte k Revolutu ideální český hlavní účet nebo další ověřené úspory? Podívejte se na srovnání [Raiffeisenbank vs. Revolut](/porovnani/raiffeisenbank-vs-revolut), [Raiffeisenbank účet s bonusem 3 000 Kč](/nabidky/raiffeisenbank), [mBank mKonto +1 000 Kč](/nabidky/mbank), [Air Bank](/nabidky/air-bank) nebo [NordVPN se 20 % cashbackem](/nabidky/nordvpn) pro bezpečné připojení na cestách.
 
 ## Přesný návod, jak získat bonus za založení Revolutu
 
@@ -308,9 +309,9 @@ Ano, platby digitální kartou Revolut přidanou v Apple Pay nebo Google Pay v b
       "foodora vs wolt výdělek",
       "rozvoz jídla srovnání 2026",
     ],
-    seoTitle: "Wolt vs. Foodora kurýr 2026: Kde vyděláte víc?",
+    seoTitle: "Wolt vs. Foodora 2026: Výdělek 450 Kč/h a bonus 4 000 Kč",
     seoDescription:
-      "Velké srovnání práce kurýra pro Wolt a foodoru v roce 2026: reálné hodinové sazby, volnost vs. směny, pokrytí měst a bonus 4 000 Kč.",
+      "Srovnání kurýrů Wolt vs. Foodora (2026): reálný výdělek po nákladech, volné směny vs. bloky a přesný postup na startovací bonus 4 000 Kč.",
     content: `
 Pokud uvažujete o rozvozu jídla a nákupů jako flexibilním přivýdělku nebo práci na plný úvazek, nevyhnutelně narazíte na dvě největší značky v Česku: finský **Wolt** a růžovou **foodoru** (dříve Dáme jídlo). Na první pohled dělají totéž, ale v každodenní praxi se zásadně liší způsobem plánování času, strukturou odměn i vstupními bonusy.
 

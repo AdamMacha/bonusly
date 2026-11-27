@@ -34,6 +34,20 @@ const footerLinks = {
     { href: "/ochrana-soukromi", label: "Ochrana soukromí (GDPR)" },
     { href: "/cookies", label: "Cookies" },
   ],
+  oblibene: [
+    { href: "/nabidky/raiffeisenbank", label: "Raiffeisenbank" },
+    { href: "/nabidky/revolut", label: "Revolut" },
+    { href: "/nabidky/mbank", label: "mBank" },
+    { href: "/nabidky/vodafone", label: "Vodafone" },
+    { href: "/nabidky/csob-pojistovna", label: "ČSOB Pojišťovna" },
+    { href: "/nabidky/portu", label: "Portu.cz" },
+    { href: "/nabidky/airbnb", label: "Airbnb" },
+    { href: "/nabidky/istyle", label: "iStyle.cz" },
+    { href: "/nabidky/brilianty", label: "Brilianty.cz" },
+    { href: "/nabidky/lekarna", label: "Lékárna.cz" },
+    { href: "/nabidky/vivantis", label: "Vivantis.cz" },
+    { href: "/nabidky/insportline", label: "inSPORTline.cz" },
+  ],
 };
 
 export function Footer() {
@@ -110,8 +124,26 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Affiliate disclosure */}
+        {/* Oblíbené nabídky (interní SEO prolinkování na TOP partnery) */}
         <div className="mt-10 pt-8 border-t border-white/5">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+            Oblíbené nabídky & partneři
+          </h2>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            {footerLinks.oblibene.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-xs text-slate-400 hover:text-white transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Affiliate disclosure */}
+        <div className="mt-8 pt-6 border-t border-white/5">
           <p className="text-xs text-slate-500 leading-relaxed max-w-3xl">
             BONUSLY může získat provizi, pokud nabídku využijete prostřednictvím některých našich partnerských odkazů. Pro uživatele se cena nabídky tímto nemění. Všechny informace na webu jsou pouze informativní a nepředstavují finanční ani investiční poradenství.
           </p>
