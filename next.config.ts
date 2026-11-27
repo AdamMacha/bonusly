@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     staticGenerationMinPagesPerWorker: 50,
   },
   images: {
-    formats: ["image/avif", "image/webp"],
+    unoptimized: true,
     dangerouslyAllowSVG: true,
     contentDispositionType: "inline",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
@@ -19,6 +19,28 @@ const nextConfig: NextConfig = {
         hostname: "**",
       },
     ],
+  },
+  async headers() {
+    return [
+      {
+        source: "/logos/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/blog/:file(.+\\.(?:jpg|jpeg|png|webp|avif|svg))",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
   },
   async redirects() {
     return [
