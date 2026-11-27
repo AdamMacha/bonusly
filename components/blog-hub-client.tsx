@@ -51,7 +51,9 @@ export function BlogHubClient({
 
   const visibleArticles =
     activeCategory === "all"
-      ? articles
+      ? featuredArticle
+        ? articles.filter((a) => a.slug !== featuredArticle.slug)
+        : articles
       : articles.filter((a) => a.category.slug === activeCategory);
 
   return (

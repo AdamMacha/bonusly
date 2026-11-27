@@ -52,10 +52,8 @@ export function Navbar() {
               ))}
             </div>
           </div>
-          <div className="flex items-center gap-2.5 shrink-0">
-            <div className="hidden sm:block">
-              <Search />
-            </div>
+          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+            <Search />
             <UserNav />
             <Link
               href="/nabidky"

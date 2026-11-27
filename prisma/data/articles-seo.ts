@@ -410,7 +410,7 @@ Neplatíte vůbec nic. BONUSLY je pro uživatele 100% zdarma. Portál je financo
     slug: "cashback-na-vanocni-darky-2026-bonusly",
     title: "Cashback na vánoční dárky 2026: Jak získat zpět až 2 500 Kč z nákupů přes BONUSLY",
     excerpt:
-      "Do Vánoc zbývají necelé čtyři týdny. Zjistěte, jak přes BONUSLY získat 2 až 20 % cashback zpět z každého vánočního dárku u více než 300 ověřených e-shopů — a navíc ho zkombinovat s prosincovými slevovými kódy.",
+      "Do Vánoc zbývají necelé čtyři týdny. Zjistěte, jak přes BONUSLY získat 2 až 20 % cashback zpět z každého vánočního dárku u více než 330 ověřených e-shopů — a navíc ho zkombinovat s prosincovými slevovými kódy.",
     featuredImage: "/blog/cashback-vanocni-darky-2026.jpg",
     categorySlug: "bonusy",
     authorSlug: "adam-macha",

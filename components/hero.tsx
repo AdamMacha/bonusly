@@ -3,9 +3,11 @@ import { HeroCarousel, type HeroArticle } from "./hero-carousel";
 
 interface HeroProps {
   articles?: HeroArticle[];
+  totalOfferCount?: number;
 }
 
-export function Hero({ articles = [] }: HeroProps) {
+export function Hero({ articles = [], totalOfferCount = 355 }: HeroProps) {
+  const roundedOfferCount = Math.floor(totalOfferCount / 10) * 10;
   return (
     <section className="relative overflow-hidden bg-navy">
       {/* Subtle grid pattern */}
@@ -38,7 +40,7 @@ export function Hero({ articles = [] }: HeroProps) {
             </h1>
 
             <p className="mt-5 sm:mt-6 text-base sm:text-lg text-slate-400 leading-relaxed max-w-xl">
-              Porovnáváme přes 280 ověřených nabídek v ČR — bankovní bonusy až 3 000 Kč, investice, pojištění, slevové kódy i cashback z nákupů na jednom místě.
+              Porovnáváme přes {roundedOfferCount} ověřených nabídek v ČR — bankovní bonusy až 3 000 Kč, investice, pojištění, slevové kódy i cashback z nákupů na jednom místě.
             </p>
 
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">

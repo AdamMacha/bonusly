@@ -896,7 +896,7 @@ export const CJ_OFFERS: OfferSeed[] = [
     "bonus": "Cashback 1,75 % + kód BLKDROP35",
     "bonusDescription": "Získejte zpět 1,75 % z každého dokončeného nákupu přes BONUSLY (50 % naší partnerské provize).",
     "promoCode": "BLKDROP35",
-    "promoCodeNote": "FOREO – 35% off on top of all products discounted",
+    "promoCodeNote": "Sleva 35 % navíc na zlevněné produkty FOREO",
     "ctaLabel": "Využít kód BLKDROP35",
     "requirements": [
       "Prokliknout se na e-shop přes tlačítko na BONUSLY.cz (pro cashback být přihlášený).",
@@ -940,8 +940,8 @@ export const CJ_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "cj-foreo-17397468",
-        "title": "FOREO – 35% off on top of all products discounted",
-        "description": "35% off on top of all products discounted for any live campaign Typ Text Link Jazyk English Cílené země Itálie, FRANCIE, POLSKO, Česká republika, Dánsko, CHORVATSKO Propagace Coupon",
+        "title": "Sleva 35 % navíc na zlevněné produkty FOREO",
+        "description": "Extra sleva 35 % nad rámec aktuálně zlevněných produktů FOREO při zadání kódu v košíku.",
         "badge": "Kód BLKDROP35",
         "code": "BLKDROP35",
         "validUntil": "2026-12-31",
@@ -1005,7 +1005,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-gorenje-15427431",
         "title": "20% sleva na lednice",
-        "description": "Sleva 20 % na lednice https://cz.gorenje.com/spotrebice/chlazeni/lednice/c/gocool01 i vestavné https://cz.gorenje.com/spotrebice/chlazeni/vestavne-lednice/c/gocool02 Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Sleva 20 % na vybrané volně stojící i vestavné lednice Gorenje.",
         "badge": "Kód LEDNICE20-AFF",
         "code": "LEDNICE20-AFF",
         "validUntil": "2026-12-31",
@@ -1015,7 +1015,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-gorenje-15427432",
         "title": "20% sleva na myčky",
-        "description": "Sleva 20 % na vybrané myčky Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Sleva 20 % na vybrané myčky",
         "badge": "Kód MYCKY20-AFF",
         "code": "MYCKY20-AFF",
         "validUntil": "2026-12-31",
@@ -1025,7 +1025,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-gorenje-15427831",
         "title": "20% sleva na sporáky",
-        "description": "Sleva 20 % na vybrané modely sporáků Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Sleva 20 % na vybrané modely sporáků",
         "badge": "Kód SPORAKY20-AFF",
         "code": "SPORAKY20-AFF",
         "validUntil": "2026-12-31",
@@ -1035,7 +1035,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-gorenje-15430318",
         "title": "30% sleva na malé spotřebiče",
-        "description": "Sleva 30 % na malé spotřebiče https://cz.gorenje.com/spotrebice/priprava-pokrmu/c/gofood00 Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Sleva 30 % na malé kuchyňské spotřebiče Gorenje pro přípravu pokrmů.",
         "badge": "Kód MALESPOTREBICE30-AFF",
         "code": "MALESPOTREBICE30-AFF",
         "validUntil": "2026-12-31",
@@ -1045,7 +1045,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-gorenje-15427434",
         "title": "Sleva 20 % na mrazáky",
-        "description": "Sleva 20 % na vybrané modely mrazáků Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Sleva 20 % na vybrané modely mrazáků",
         "badge": "Kód MRAZAKY20-AFF",
         "code": "MRAZAKY20-AFF",
         "validUntil": "2026-12-31",
@@ -1055,7 +1055,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-gorenje-15427427",
         "title": "25% sleva na mikrovlnné trouby",
-        "description": "Sleva 25 % na vybrané modely mikrovlnných trub Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Sleva 25 % na vybrané modely mikrovlnných trub",
         "badge": "Kód MIKROVLNY25-AFF",
         "code": "MIKROVLNY25-AFF",
         "validUntil": "2026-12-31",
@@ -1065,7 +1065,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-gorenje-15427428",
         "title": "30% sleva na odsavače",
-        "description": "Sleva 30 % na vybrané modely odsavačů Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Sleva 30 % na vybrané modely odsavačů",
         "badge": "Kód ODSAVACE30-AFF",
         "code": "ODSAVACE30-AFF",
         "validUntil": "2026-12-31",
@@ -1075,7 +1075,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-gorenje-15427832",
         "title": "15% sleva na pračky",
-        "description": "Sleva 15% na vybrané modely praček Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Sleva 15% na vybrané modely praček",
         "badge": "Kód PRACKY15-AFF",
         "code": "PRACKY15-AFF",
         "validUntil": "2026-12-31",
@@ -1555,7 +1555,6 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-klubzdravi-17380994",
         "title": "Limitované vánoční edice",
-        "description": "Limitované vánoční edice Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
         "badge": "Kód DYNE20",
         "code": "DYNE20",
         "validUntil": "2026-12-20",
@@ -1619,7 +1618,6 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-kvelektro-17300343",
         "title": "Sleva 5% na celý nákup při nákupu nad 1500 Kč",
-        "description": "Sleva 5% na celý nákup při nákupu nad 1500 Kč Typ Text Link Klíčová slova kvelektro.cz Jazyk Czech Propagace Coupon",
         "badge": "Kód AFP05N26",
         "code": "AFP05N26",
         "validUntil": "2026-12-07",
@@ -1629,7 +1627,6 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-kvelektro-17300345",
         "title": "Sleva 10% na celý nákup při nákupu nad 3000 Kč",
-        "description": "Sleva 10% na celý nákup při nákupu nad 3000 Kč Typ Text Link Klíčová slova kvelektro.cz Jazyk Czech Propagace Coupon",
         "badge": "Kód AFP10N26",
         "code": "AFP10N26",
         "validUntil": "2026-12-07",
@@ -1648,7 +1645,7 @@ export const CJ_OFFERS: OfferSeed[] = [
     "bonus": "Cashback 7,5 % + kód RUZE26",
     "bonusDescription": "Získejte zpět 7,5 % z každého dokončeného nákupu přes BONUSLY (50 % naší partnerské provize).",
     "promoCode": "RUZE26",
-    "promoCodeNote": "KvětinyExpres.cz – KÓD: RUZE26",
+    "promoCodeNote": "Květiny s kódem RUZE26",
     "ctaLabel": "Využít kód RUZE26",
     "requirements": [
       "Prokliknout se na e-shop přes tlačítko na BONUSLY.cz (pro cashback být přihlášený).",
@@ -1692,8 +1689,8 @@ export const CJ_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "cj-kvetinyexpres-17247439",
-        "title": "KvětinyExpres.cz – KÓD: RUZE26",
-        "description": "KvětinyExpres.cz – kupón je platný do 31.12.2026 Typ Text Link Klíčová slova deeplink, affiliate, kupón, sleva, Jazyk Czech Propagace Coupon",
+        "title": "Květiny s kódem RUZE26",
+        "description": "KvětinyExpres.cz – kupón je platný do 31.12.2026",
         "badge": "Kód RUZE26",
         "code": "RUZE26",
         "validUntil": "2026-12-31",
@@ -1702,8 +1699,8 @@ export const CJ_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "cj-kvetinyexpres-17347971",
-        "title": "KvětinyExpres.cz – 15% KÓD:PODZIM26CJ — 15% slevA",
-        "description": "PODZIM26CJ — 15% sleva, platí 14. 9. – 30. 11. 2026, bez dopravy. Typ Text Link Klíčová slova deeplink, affiliate, kupón, sleva, Jazyk Czech Propagace Coupon",
+        "title": "15% Kód PODZIMCJ — 15 % sleva",
+        "description": "PODZIMCJ — 15% sleva, platí 14. 9. – 30. 11. 2026, bez dopravy.",
         "badge": "Kód PODZIMCJ",
         "code": "PODZIMCJ",
         "validUntil": "2027-11-30",
@@ -1712,8 +1709,8 @@ export const CJ_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "cj-kvetinyexpres-17347970",
-        "title": "KvětinyExpres.cz – 15% KÓD: PODZIM26CJ — 15% slev",
-        "description": "PODZIM26CJ — 15% sleva, platí 14. 9. – 30. 11. 2026, bez dopravy. Typ Text Link Klíčová slova deeplink, affiliate, kupón, sleva, Jazyk Czech Propagace Coupon",
+        "title": "15% Kód PODZIMCJ — 15 % sleva",
+        "description": "PODZIMCJ — 15% sleva, platí 14. 9. – 30. 11. 2026, bez dopravy.",
         "badge": "Kód PODZIMCJ",
         "code": "PODZIMCJ",
         "validUntil": "2027-11-30",
@@ -1721,34 +1718,24 @@ export const CJ_OFFERS: OfferSeed[] = [
         "order": 3
       },
       {
-        "trackingSlug": "cj-kvetinyexpres-17286184",
-        "title": "KvětinyExpres.cz – 15% KÓD: DMATEK26",
-        "description": "KvětinyExpres.cz 15% kupón je platný do 12.5.2025 Typ Text Link Klíčová slova deeplink, affiliate, kupón, sleva, Jazyk Czech Propagace Coupon",
-        "badge": "Kód DMATEK26",
-        "code": "DMATEK26",
-        "validUntil": "2027-05-12",
-        "affiliateUrl": "https://www.jdoqocy.com/click-101942549-17286184",
-        "order": 4
-      },
-      {
         "trackingSlug": "cj-kvetinyexpres-17378940",
-        "title": "KvětinyExpres.cz – VANOCE26CJ 15% sleva",
-        "description": "VANOCECJ26 15% sleva platí do 31.12.2026 Typ Text Link Klíčová slova deeplink, affiliate, kupón, sleva, Jazyk Czech Propagace Coupon",
+        "title": "VANOCECJ26 15% sleva",
+        "description": "VANOCECJ26 15% sleva platí do 31.12.2026",
         "badge": "Kód VANOCECJ26",
         "code": "VANOCECJ26",
         "validUntil": "2026-12-31",
         "affiliateUrl": "https://www.jdoqocy.com/click-101942549-17378940",
-        "order": 5
+        "order": 4
       },
       {
         "trackingSlug": "cj-kvetinyexpres-17357920",
-        "title": "KvětinyExpres.cz – 15% KÓD:RUZECJ26— 15% slevA",
-        "description": "RUZECJ26 — 15% sleva, platí 31.12.2026 Typ Text Link Klíčová slova deeplink, affiliate, kupón, sleva, Jazyk Czech Propagace Coupon",
+        "title": "15% Kód RUZECJ26— 15 % sleva",
+        "description": "RUZECJ26 — 15% sleva, platí 31.12.2026",
         "badge": "Kód RUZECJ26",
         "code": "RUZECJ26",
         "validUntil": "2027-12-31",
         "affiliateUrl": "https://www.jdoqocy.com/click-101942549-17357920",
-        "order": 6
+        "order": 5
       }
     ]
   },
@@ -1814,7 +1801,7 @@ export const CJ_OFFERS: OfferSeed[] = [
     "bonus": "Cashback až 3 % + kód DOPRAVA12",
     "bonusDescription": "Získejte zpět až 3 % z každého nákupu přes BONUSLY podle kategorie zboží (50 % naší provize).",
     "promoCode": "DOPRAVA12",
-    "promoCodeNote": "Nákup nad 500 s doprava ZDARMA",
+    "promoCodeNote": "Doprava zdarma při nákupu nad 500 Kč",
     "ctaLabel": "Využít kód DOPRAVA12",
     "requirements": [
       "Prokliknout se na e-shop přes tlačítko na BONUSLY.cz (pro cashback být přihlášený).",
@@ -1858,8 +1845,8 @@ export const CJ_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "cj-lekarna-17384287",
-        "title": "Nákup nad 500 s doprava ZDARMA",
-        "description": "Nakupte nad 500,- Kč, vložte kód DOPRAVA500 a získejte dopravu ZDARMA. Platí pro výdejny a boxy Balíkovny. Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "title": "Doprava zdarma při nákupu nad 500 Kč",
+        "description": "Nakupte nad 500 Kč, zadejte kód a získejte dopravu zdarma na výdejny a do boxů Balíkovny.",
         "badge": "Kód DOPRAVA12",
         "code": "DOPRAVA12",
         "validUntil": "2026-11-30",
@@ -1869,7 +1856,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-lekarna-17392774",
         "title": "YUMEARTH se slevou 20 %",
-        "description": "Při koupi produktů YUMEARTH získáte s použitím kódu YUMEARTH20 slevu 20 %. Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Při koupi produktů YUMEARTH získáte s použitím kódu YUMEARTH20 slevu 20 %.",
         "badge": "Kód YUMEARTH20",
         "code": "YUMEARTH20",
         "validUntil": "2026-12-02",
@@ -1879,7 +1866,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-lekarna-17392796",
         "title": "FLECTOR se slevou 10 %",
-        "description": "Při koupi vybraných produktů získáte FLECTOR s použitím kódu FLECTOR10 slevu 10 %. Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Při koupi vybraných produktů získáte FLECTOR s použitím kódu FLECTOR10 slevu 10 %.",
         "badge": "Kód FLECTOR10",
         "code": "FLECTOR10",
         "validUntil": "2026-12-16",
@@ -1889,7 +1876,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-lekarna-17392776",
         "title": "Sušenky bez lepku NAIRNS, CUORENERO a COPPENRATH se slevou 15 %",
-        "description": "Při koupi vybraných sušenek bez lepku NAIRNS, CUORENERO a COPPENRATH získáte s použitím kódu COPPEN15 slevu 15 %. Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Při koupi vybraných sušenek bez lepku NAIRNS, CUORENERO a COPPENRATH získáte s použitím kódu COPPEN15 slevu 15 %.",
         "badge": "Kód COPPEN15",
         "code": "COPPEN15",
         "validUntil": "2026-12-02",
@@ -1899,7 +1886,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-lekarna-17392798",
         "title": "B.BOX, JELLYSTONE se slevou 13 %",
-        "description": "Při koupi vybraných produktů B.BOX a JELLYSTONE získáte s použitím kódu B13BOX slevu 13 %. Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Při koupi vybraných produktů B.BOX a JELLYSTONE získáte s použitím kódu B13BOX slevu 13 %.",
         "badge": "Kód B13BOX",
         "code": "B13BOX",
         "validUntil": "2026-12-09",
@@ -1909,7 +1896,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-lekarna-17392771",
         "title": "KOLATCH se slevou 20 %",
-        "description": "Při koupi produktů KOLATCH získáte s použitím kódu KOLATCH20 slevu 20 %. Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Při koupi produktů KOLATCH získáte s použitím kódu KOLATCH20 slevu 20 %.",
         "badge": "Kód KOLATCH20",
         "code": "KOLATCH20",
         "validUntil": "2026-12-02",
@@ -1919,7 +1906,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-lekarna-17392797",
         "title": "PLUSONE se slevou 20 %",
-        "description": "Při koupi produktů PLUSONE získáte s použitím kódu PLUSONE20 slevu 20 %. Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Při koupi produktů PLUSONE získáte s použitím kódu PLUSONE20 slevu 20 %.",
         "badge": "Kód PLUSONE20",
         "code": "PLUSONE20",
         "validUntil": "2026-12-09",
@@ -1929,7 +1916,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-lekarna-17392762",
         "title": "FUNGEX se slevou 15 %",
-        "description": "Při koupi produktů FUNGEX získáte s použitím kódu FUNGEX15 slevu 15 %. Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Při koupi produktů FUNGEX získáte s použitím kódu FUNGEX15 slevu 15 %.",
         "badge": "Kód FUNGEX15",
         "code": "FUNGEX15",
         "validUntil": "2026-11-30",
@@ -2000,7 +1987,7 @@ export const CJ_OFFERS: OfferSeed[] = [
     "bonus": "Cashback 2,5 % + kód 10LEOVLAK",
     "bonusDescription": "Získejte zpět 2,5 % z každého dokončeného nákupu přes BONUSLY (50 % naší partnerské provize).",
     "promoCode": "10LEOVLAK",
-    "promoCodeNote": "Slevový kupon CZ 10%",
+    "promoCodeNote": "Slevový kupón 10 % na vlakové jízdenky",
     "ctaLabel": "Využít kód 10LEOVLAK",
     "requirements": [
       "Prokliknout se na e-shop přes tlačítko na BONUSLY.cz (pro cashback být přihlášený).",
@@ -2044,23 +2031,13 @@ export const CJ_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "cj-leo-express-17211243",
-        "title": "Slevový kupon CZ 10%",
-        "description": "Sleva 10 % v Economy třídě v tarifu Dospělý. Platí na komerční vlakové spoje do 31.12.2026 Typ Text Link Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "title": "Slevový kupón 10 % na vlakové jízdenky",
+        "description": "Sleva 10 % v Economy třídě v tarifu Dospělý. Platí na komerční vlakové spoje do 31.12.2026",
         "badge": "Kód 10LEOVLAK",
         "code": "10LEOVLAK",
         "validUntil": "2026-12-31",
         "affiliateUrl": "https://www.jdoqocy.com/click-101942549-17211243",
         "order": 1
-      },
-      {
-        "trackingSlug": "cj-leo-express-17250121",
-        "title": "Slevový kupon SK 10%",
-        "description": "Sleva 10 % v Economy třídě v tarifu Dospělý. Platí na komerční vlakové spoje do 31.12.2026 Typ Text Link Jazyk Czech Cílené země SLOVENSKO Propagace Coupon",
-        "badge": "Kód 10LEOVLAK",
-        "code": "10LEOVLAK",
-        "validUntil": "2026-12-31",
-        "affiliateUrl": "https://www.jdoqocy.com/click-101942549-17250121",
-        "order": 2
       }
     ]
   },
@@ -2379,7 +2356,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-nefertitis-17288725",
         "title": "20% sleva na vše",
-        "description": "Minimální hodnota nákupu: 300kč. Platí i na nezlevněné zboží Typ Text Link Klíčová slova Nefertitis, šperky, jewelry, fashion, moda, kameny, naušnice Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Minimální hodnota nákupu: 300kč. Platí i na nezlevněné zboží",
         "badge": "Kód NCZ20AF",
         "code": "NCZ20AF",
         "validUntil": "2026-12-31",
@@ -2911,7 +2888,6 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-trenyrkarna-17386576",
         "title": "Sleva 26% na VŠE",
-        "description": "Sleva 26% na VŠE Typ Text Link Klíčová slova Trenýrkárna, sleva, affiliate, fashion, underwear Jazyk Czech Cílené země Česká republika Propagace Coupon",
         "badge": "Kód SNEHULAK26",
         "code": "SNEHULAK26",
         "validUntil": "2026-12-31",
@@ -3235,7 +3211,6 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-vivantis-17379170",
         "title": "Outlet parfému a kosmetiky",
-        "description": "Outlet parfému a kosmetiky Typ Text Link Klíčová slova Vivantis, fashion, oblečení, móda, beauty, sleva, kampaň, parfémy, parfumes Jazyk Czech Cílené země Česká republika Propagace Coupon",
         "badge": "Kód OUTLET30",
         "code": "OUTLET30",
         "validUntil": "2026-12-31",
@@ -3244,8 +3219,8 @@ export const CJ_OFFERS: OfferSeed[] = [
       },
       {
         "trackingSlug": "cj-vivantis-17399727",
-        "title": "30% slevu na kosmetiku Dermacol",
-        "description": "Akce platí do 30. 11. 2026 nebo do vyprodání zásob pouze na vybrané produkty označené štítkem \"Akce s kódem\". Typ Text Link Klíčová slova Vivantis, fashion, oblečení, móda, beauty, sleva, kampaň, parfémy, parfumes Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "title": "30 % sleva na kosmetiku Dermacol",
+        "description": "Akce platí do 30. 11. 2026 nebo do vyprodání zásob pouze na vybrané produkty označené štítkem Akce s kódem.",
         "badge": "Kód BLACKFRIDAY",
         "code": "BLACKFRIDAY",
         "validUntil": "2026-11-30",
@@ -3255,7 +3230,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-vivantis-17360837",
         "title": "Extra sleva 10 %",
-        "description": "Akce platí do vyprodání zásob pouze na vybrané produkty označené štítkem \"Akce s kódem\". Typ Text Link Klíčová slova Vivantis, fashion, oblečení, móda, beauty, sleva, kampaň, parfémy, parfumes Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Akce platí do vyprodání zásob pouze na vybrané produkty označené štítkem Akce s kódem.",
         "badge": "Kód 10VIVA",
         "code": "10VIVA",
         "validUntil": "2027-01-31",
@@ -3265,7 +3240,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-vivantis-17399729",
         "title": "L´Oréal Paris, Maybelline, Garnier, Mixa nebo Essie s 30% slevou",
-        "description": "Akce platí do 30. 11. 2026 nebo do vyprodání zásob pouze na vybrané produkty označené štítkem \"Akce s kódem\". Typ Text Link Klíčová slova Vivantis, fashion, oblečení, móda, beauty, sleva, kampaň, parfémy, parfumes Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Akce platí do 30. 11. 2026 nebo do vyprodání zásob pouze na vybrané produkty označené štítkem Akce s kódem.",
         "badge": "Kód BLACKFRIDAY",
         "code": "BLACKFRIDAY",
         "validUntil": "2026-11-30",
@@ -3275,7 +3250,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-vivantis-17399723",
         "title": "Sluneční brýle značky Furiosa se slevou 30 %",
-        "description": "Akce platí do 30. 11. 2026 nebo do vyprodání zásob pouze na vybrané produkty označené štítkem \"Akce s kódem\". Typ Text Link Klíčová slova Vivantis, fashion, oblečení, móda, beauty, sleva, kampaň, parfémy, parfumes Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Akce platí do 30. 11. 2026 nebo do vyprodání zásob pouze na vybrané produkty označené štítkem Akce s kódem.",
         "badge": "Kód BLACKFRIDAY",
         "code": "BLACKFRIDAY",
         "validUntil": "2026-11-30",
@@ -3285,7 +3260,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-vivantis-17360847",
         "title": "EXTRA sleva 10 % na luxusní kosmetiku",
-        "description": "Akce platí pouze na vybrané produkty označené štítkem \"Akce s kódem\". Platnost: do vyprodání zásob. Typ Text Link Klíčová slova Vivantis, fashion, oblečení, móda, beauty, sleva, kampaň, parfémy, parfumes Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Akce platí pouze na vybrané produkty označené štítkem Akce s kódem. Platnost: do vyprodání zásob.",
         "badge": "Kód 10VIVA",
         "code": "10VIVA",
         "validUntil": "2027-01-31",
@@ -3295,7 +3270,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-vivantis-17399720",
         "title": "NYX Professional Makeup s 30% slevou",
-        "description": "Akce platí do 30. 11. 2026 nebo do vyprodání zásob pouze na vybrané produkty označené štítkem \"Akce s kódem\". Typ Text Link Klíčová slova Vivantis, fashion, oblečení, móda, beauty, sleva, kampaň, parfémy, parfumes Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Akce platí do 30. 11. 2026 nebo do vyprodání zásob pouze na vybrané produkty označené štítkem Akce s kódem.",
         "badge": "Kód BLACKFRIDAY",
         "code": "BLACKFRIDAY",
         "validUntil": "2026-11-30",
@@ -3305,7 +3280,7 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-vivantis-17399718",
         "title": "Black Friday",
-        "description": "Akce platí do 30. 11. 2026 nebo do vyprodání zásob pouze na vybrané produkty označené štítkem \"Akce s kódem\". Typ Text Link Klíčová slova Vivantis, fashion, oblečení, móda, beauty, sleva, kampaň, parfémy, parfumes Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "description": "Akce platí do 30. 11. 2026 nebo do vyprodání zásob pouze na vybrané produkty označené štítkem Akce s kódem.",
         "badge": "Kód BLACKFRIDAY",
         "code": "BLACKFRIDAY",
         "validUntil": "2026-11-30",
@@ -3376,7 +3351,7 @@ export const CJ_OFFERS: OfferSeed[] = [
     "bonus": "Cashback 2 % + kód BF26",
     "bonusDescription": "Získejte zpět 2 % z každého dokončeného nákupu přes BONUSLY (50 % naší partnerské provize).",
     "promoCode": "BF26",
-    "promoCodeNote": "Black Friday – Sleva 50 % při nákupu 2 a více produktů other",
+    "promoCodeNote": "Black Friday – Sleva 50 % při nákupu 2 a více produktů",
     "ctaLabel": "Využít kód BF26",
     "requirements": [
       "Prokliknout se na e-shop přes tlačítko na BONUSLY.cz (pro cashback být přihlášený).",
@@ -3420,8 +3395,8 @@ export const CJ_OFFERS: OfferSeed[] = [
     "promos": [
       {
         "trackingSlug": "cj-yves-rocher-17391245",
-        "title": "Black Friday – Sleva 50 % při nákupu 2 a více produktů other",
-        "description": "Black Friday – Sleva 50 % při nákupu 2 a více produktů Typ 300x300 Banner Klíčová slova yves-rocher Jazyk Czech Cílené země Česká republika Propagace Coupon",
+        "title": "Black Friday – Sleva 50 % při nákupu 2 a více produktů",
+        "description": "Výhodná akce 50 % sleva při nákupu 2 a více produktů na Yves-rocher.cz.",
         "badge": "Kód BF26",
         "code": "BF26",
         "validUntil": "2026-11-28",
@@ -3485,7 +3460,6 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-zdrava-obuv-17383378",
         "title": "Black Friday – Sleva 6 % na vše",
-        "description": "Black Friday – Sleva 6 % na vše Typ Text Link Klíčová slova Zdrava-obuv-eshop.cz Jazyk Czech Cílené země Česká republika Propagace Coupon",
         "badge": "Kód black",
         "code": "black",
         "validUntil": "2026-11-28",
@@ -3495,7 +3469,6 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-zdrava-obuv-17383376",
         "title": "Sleva 4 % na vše",
-        "description": "Sleva 4 % na vše Typ Text Link Klíčová slova Zdrava-obuv-eshop.cz Jazyk Czech Cílené země Česká republika Propagace Coupon",
         "badge": "Kód viva4",
         "code": "viva4",
         "validUntil": "2027-12-30",
@@ -3505,7 +3478,6 @@ export const CJ_OFFERS: OfferSeed[] = [
       {
         "trackingSlug": "cj-zdrava-obuv-17383379",
         "title": "Akce Vánoce – Sleva 6 % na vše",
-        "description": "Akce Vánoce – Sleva 6 % na vše Typ Text Link Klíčová slova Zdrava-obuv-eshop.cz Jazyk Czech Cílené země Česká republika Propagace Coupon",
         "badge": "Kód dárky",
         "code": "dárky",
         "validUntil": "2026-12-16",

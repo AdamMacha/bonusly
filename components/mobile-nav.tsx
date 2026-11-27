@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { SocialLinks } from "./social-links";
 import { NAV_CATEGORIES } from "./navbar-categories-menu";
@@ -12,6 +12,15 @@ interface MobileNavProps {
 export function MobileNav({ links }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [catsOpen, setCatsOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [isOpen]);
 
   const closeAll = () => {
     setIsOpen(false);
@@ -45,7 +54,7 @@ export function MobileNav({ links }: MobileNavProps) {
       </button>
 
       {isOpen && (
-        <div className="absolute top-16 left-0 right-0 max-h-[calc(100dvh-4rem)] overflow-y-auto bg-navy border-b border-white/5 animate-slide-down shadow-2xl">
+        <div className="fixed inset-x-0 top-16 bottom-0 z-50 overflow-y-auto bg-[#0B1220] border-t border-white/10 animate-slide-down shadow-2xl">
           <div className="px-4 py-4 space-y-1">
             {links.map((link) => (
               <Link

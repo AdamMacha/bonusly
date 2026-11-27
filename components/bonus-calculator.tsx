@@ -281,7 +281,7 @@ export function BonusCalculator() {
             <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
               <div>
                 <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-0.5 text-[11px] font-bold text-amber-900 mb-1.5">
-                  <span aria-hidden="true">💰</span> Novinka · Cashback 50/50 z 200+ e-shopů
+                  <span aria-hidden="true">💰</span> Novinka · Cashback 50/50 z 330+ e-shopů
                 </span>
                 <label htmlFor="cashback-spend-slider" className="font-bold text-navy text-sm sm:text-base block">
                   Roční cashback z vašich běžných online nákupů

@@ -16,10 +16,10 @@ export function CopyCodeButton({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2200);
     try {
       await navigator.clipboard.writeText(code);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2200);
     } catch {
       const textarea = document.createElement("textarea");
       textarea.value = code;
@@ -29,8 +29,6 @@ export function CopyCodeButton({
       textarea.select();
       document.execCommand("copy");
       document.body.removeChild(textarea);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2200);
     }
   };
 

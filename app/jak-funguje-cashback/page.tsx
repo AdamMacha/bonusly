@@ -12,14 +12,14 @@ const canonical = buildCanonical("/jak-funguje-cashback");
 export const metadata: Metadata = {
   title: "Jak funguje cashback 50/50 na BONUSLY (návod 2026)",
   description:
-    "Získejte zpět 50 % z naší partnerské provize u více než 200 českých e-shopů. Přehledný návod, jak cashback aktivovat, jak nepřijít o odměnu a jak probíhá výplata.",
+    "Získejte zpět 50 % z naší partnerské provize u více než 330 českých e-shopů. Přehledný návod, jak cashback aktivovat, jak nepřijít o odměnu a jak probíhá výplata.",
   alternates: { canonical },
   openGraph: {
     type: "website",
     url: canonical,
     title: "Jak funguje cashback 50/50 na BONUSLY | BONUSLY",
     description:
-      "Transparentní model 50/50: polovinu provize z každého vašeho nákupu u 200+ e-shopů vracíme přímo do vaší BONUSLY peněženky.",
+      "Transparentní model 50/50: polovinu provize z každého vašeho nákupu u 330+ e-shopů vracíme přímo do vaší BONUSLY peněženky.",
     images: [{ url: `${getBaseUrl()}/opengraph-image`, width: 1200, height: 630 }],
   },
 };
@@ -102,7 +102,7 @@ export default function JakFungujeCashbackPage() {
 
       <header className="mb-10">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-900 mb-3">
-          <span aria-hidden="true">💰</span> Férový model 50/50 · 200+ českých e-shopů
+          <span aria-hidden="true">💰</span> Férový model 50/50 · 330+ českých e-shopů
         </span>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight">
           Jak funguje cashback na BONUSLY
@@ -128,7 +128,7 @@ export default function JakFungujeCashbackPage() {
             {
               step: "2",
               title: "Prokliknete se k e-shopu s cashbackem",
-              text: "Vyberte si v katalogu některý z 200+ obchodů označených zlatým štítkem 💰 Cashback (např. JBL, eObuv, Douglas, Concept) a klikněte na zelené tlačítko.",
+              text: "Vyberte si v katalogu některý z 330+ obchodů označených zlatým štítkem 💰 Cashback (např. Vivantis, Lékárna.cz, eObuv, Douglas) a klikněte na zelené tlačítko.",
             },
             {
               step: "3",
@@ -207,7 +207,7 @@ export default function JakFungujeCashbackPage() {
             Připraveni dostávat peníze zpět z každého nákupu?
           </h2>
           <p className="mt-1.5 text-sm text-slate-300">
-            Přihlášení trvá 15 sekund a je navždy zdarma. Vyberte si z více než 200 ověřených e-shopů.
+            Přihlášení trvá 15 sekund a je navždy zdarma. Vyberte si z více než 330 ověřených e-shopů.
           </p>
         </div>
         <div className="flex flex-wrap gap-3 shrink-0">

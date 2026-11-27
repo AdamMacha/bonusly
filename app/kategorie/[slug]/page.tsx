@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { prisma } from "@/lib/db";
-import { OfferGrid } from "@/components/offer-grid";
+import { OfferCatalogClient } from "@/components/offer-catalog-client";
 import { ArticleGrid } from "@/components/article-grid";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
@@ -206,10 +206,34 @@ export default async function CategoryPage({ params }: Props) {
       )}
 
       <div className="mt-10">
-        <OfferGrid
-          offers={category.offers}
-          title={`Nabídky v kategorii ${category.name}`}
-          description={`${category.offers.length} ${countLabel} k dispozici.`}
+        <div className="mb-6">
+          <h2 className="text-2xl font-bold text-navy tracking-tight">
+            Nabídky v kategorii {category.name}
+          </h2>
+          <p className="mt-1.5 text-sm text-slate-500">
+            {category.offers.length} {countLabel} k dispozici.
+          </p>
+        </div>
+        <OfferCatalogClient
+          offers={category.offers.map((o) => ({
+            slug: o.slug,
+            name: o.name,
+            shortDescription: o.shortDescription,
+            logo: o.logo,
+            bonus: o.bonus,
+            promoCode: o.promoCode,
+            cashbackLabel: o.cashbackAllowed ? o.userCashbackLabel : null,
+            rating: o.rating,
+            priority: o.priority,
+            verified: o.verified,
+            featured: o.featured,
+            hasPromos: o.promos.length > 0,
+            category: {
+              name: o.category.name,
+              slug: o.category.slug,
+              icon: o.category.icon,
+            },
+          }))}
         />
       </div>
 

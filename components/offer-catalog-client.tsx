@@ -39,14 +39,14 @@ interface CategoryFilterItem {
 
 interface OfferCatalogClientProps {
   offers: CatalogOfferItem[];
-  categories: CategoryFilterItem[];
+  categories?: CategoryFilterItem[];
 }
 
 type SortKey = "featured" | "cashback" | "bonus" | "rating" | "promo" | "alpha";
 
 const PAGE_SIZE = 24;
 
-export function OfferCatalogClient({ offers, categories }: OfferCatalogClientProps) {
+export function OfferCatalogClient({ offers, categories = [] }: OfferCatalogClientProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [onlyWithCashback, setOnlyWithCashback] = useState(false);
   const [onlyWithPromo, setOnlyWithPromo] = useState(false);
@@ -219,50 +219,52 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
         </div>
 
         {/* Category Filter Pills (horizontally scrollable on mobile, wrapped on desktop) */}
-        <div className="flex flex-nowrap overflow-x-auto pb-1.5 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0 sm:flex-wrap sm:overflow-visible gap-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <button
-            type="button"
-            onClick={() => {
-              setSelectedCategory("all");
-              resetPagination();
-            }}
-            className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer ${
-              selectedCategory === "all"
-                ? "bg-navy text-white"
-                : "border border-slate-200 bg-white text-slate-600 hover:border-green/40 hover:text-navy"
-            }`}
-          >
-            <span>Všechny</span>
-            <span className={`text-xs ${selectedCategory === "all" ? "text-slate-300" : "text-slate-400"}`}>
-              ({offers.length})
-            </span>
-          </button>
+        {categories.length > 0 && (
+          <div className="flex flex-nowrap overflow-x-auto pb-1.5 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0 sm:flex-wrap sm:overflow-visible gap-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedCategory("all");
+                resetPagination();
+              }}
+              className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer ${
+                selectedCategory === "all"
+                  ? "bg-navy text-white"
+                  : "border border-slate-200 bg-white text-slate-600 hover:border-green/40 hover:text-navy"
+              }`}
+            >
+              <span>Všechny</span>
+              <span className={`text-xs ${selectedCategory === "all" ? "text-slate-300" : "text-slate-400"}`}>
+                ({offers.length})
+              </span>
+            </button>
 
-          {categories.map((cat) => {
-            const active = selectedCategory === cat.slug;
-            return (
-              <button
-                key={cat.slug}
-                type="button"
-                onClick={() => {
-                  setSelectedCategory(cat.slug);
-                  resetPagination();
-                }}
-                className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer ${
-                  active
-                    ? "bg-navy text-white"
-                    : "border border-slate-200 bg-white text-slate-600 hover:border-green/40 hover:text-navy"
-                }`}
-              >
-                {cat.icon && <span aria-hidden="true">{cat.icon}</span>}
-                <span>{cat.name}</span>
-                <span className={`text-xs ${active ? "text-slate-300" : "text-slate-400"}`}>
-                  ({cat.count})
-                </span>
-              </button>
-            );
-          })}
-        </div>
+            {categories.map((cat) => {
+              const active = selectedCategory === cat.slug;
+              return (
+                <button
+                  key={cat.slug}
+                  type="button"
+                  onClick={() => {
+                    setSelectedCategory(cat.slug);
+                    resetPagination();
+                  }}
+                  className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-medium transition-colors cursor-pointer ${
+                    active
+                      ? "bg-navy text-white"
+                      : "border border-slate-200 bg-white text-slate-600 hover:border-green/40 hover:text-navy"
+                  }`}
+                >
+                  {cat.icon && <span aria-hidden="true">{cat.icon}</span>}
+                  <span>{cat.name}</span>
+                  <span className={`text-xs ${active ? "text-slate-300" : "text-slate-400"}`}>
+                    ({cat.count})
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       {/* Results Count */}
@@ -352,23 +354,25 @@ export function OfferCatalogClient({ offers, categories }: OfferCatalogClientPro
       )}
 
       {/* Crawl-friendly direct category links */}
-      <nav aria-label="Kategorie nabídek" className="mt-14 pt-8 border-t border-slate-100">
-        <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3">
-          Procházet podle samostatných kategorií
-        </h2>
-        <div className="flex flex-wrap gap-2">
-          {categories.map((cat) => (
-            <Link
-              key={cat.slug}
-              href={`/kategorie/${cat.slug}`}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 hover:border-green/40 hover:text-green-dark transition-colors"
-            >
-              {cat.icon && <span aria-hidden="true">{cat.icon}</span>}
-              <span>{cat.name}</span>
-            </Link>
-          ))}
-        </div>
-      </nav>
+      {categories.length > 0 && (
+        <nav aria-label="Kategorie nabídek" className="mt-14 pt-8 border-t border-slate-100">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3">
+            Procházet podle samostatných kategorií
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {categories.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/kategorie/${cat.slug}`}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 hover:border-green/40 hover:text-green-dark transition-colors"
+              >
+                {cat.icon && <span aria-hidden="true">{cat.icon}</span>}
+                <span>{cat.name}</span>
+              </Link>
+            ))}
+          </div>
+        </nav>
+      )}
     </div>
   );
 }
