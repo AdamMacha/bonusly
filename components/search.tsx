@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { OfferLogo } from "./offer-logo";
@@ -156,16 +157,17 @@ export function Search() {
         </kbd>
       </button>
 
-      {isOpen && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label="Vyhledávání nabídek a článků"
-          className="fixed inset-0 z-[100] flex items-start justify-center bg-navy/65 backdrop-blur-xs px-4 pt-16 sm:pt-24"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) setIsOpen(false);
-          }}
-        >
+      {isOpen &&
+        createPortal(
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Vyhledávání nabídek a článků"
+            className="fixed inset-0 z-[100] flex items-start justify-center bg-navy/65 backdrop-blur-xs px-4 pt-16 sm:pt-24"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setIsOpen(false);
+            }}
+          >
           <div className="w-full max-w-xl rounded-2xl border border-slate-200 bg-white shadow-2xl overflow-hidden">
             {/* Search input header */}
             <search>
@@ -304,9 +306,10 @@ export function Search() {
                 </Link>
               </div>
             )}
-          </div>
-        </div>
-      )}
+            </div>
+          </div>,
+          document.body
+        )}
     </>
   );
 }
