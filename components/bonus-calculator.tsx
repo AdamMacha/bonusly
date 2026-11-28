@@ -1,8 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { CopyCodeButton } from "./copy-code-button";
+import { trackCalculatorCalculate } from "@/lib/analytics";
 
 interface CalcItem {
   id: string;
@@ -147,8 +148,10 @@ export function BonusCalculator() {
   const [rondaInvestment, setRondaInvestment] = useState<number>(0);
   const [monthlySpend, setMonthlySpend] = useState<number>(4000);
   const [cashbackRate, setCashbackRate] = useState<number>(4);
+  const hasInteracted = useRef(false);
 
   const toggleItem = (id: string) => {
+    hasInteracted.current = true;
     setSelectedIds((prev) =>
       prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
     );
@@ -174,6 +177,20 @@ export function BonusCalculator() {
     (rondaInvestment > 0 ? 1 : 0) +
     (yearlyCashback > 0 ? 1 : 0);
 
+  useEffect(() => {
+    if (!hasInteracted.current) return;
+    const timer = window.setTimeout(() => {
+      trackCalculatorCalculate({
+        selectedCount,
+        totalBonus,
+        oneTimeBonus,
+        yearlyCashback,
+        monthlySpend,
+      });
+    }, 800);
+    return () => window.clearTimeout(timer);
+  }, [selectedCount, totalBonus, oneTimeBonus, yearlyCashback, monthlySpend]);
+
   return (
     <div className="pb-24 lg:pb-0">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -186,7 +203,10 @@ export function BonusCalculator() {
             <div className="flex gap-2">
               <button
                 type="button"
-                onClick={() => setSelectedIds(CALC_ITEMS.map((i) => i.id))}
+                onClick={() => {
+                  hasInteracted.current = true;
+                  setSelectedIds(CALC_ITEMS.map((i) => i.id));
+                }}
                 className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-navy hover:border-green/40 cursor-pointer"
               >
                 Vybrat vše
@@ -194,6 +214,7 @@ export function BonusCalculator() {
               <button
                 type="button"
                 onClick={() => {
+                  hasInteracted.current = true;
                   setSelectedIds([]);
                   setRondaInvestment(0);
                   setMonthlySpend(0);
@@ -264,7 +285,10 @@ export function BonusCalculator() {
               max={200000}
               step={10000}
               value={rondaInvestment}
-              onChange={(e) => setRondaInvestment(Number(e.target.value))}
+              onChange={(e) => {
+                hasInteracted.current = true;
+                setRondaInvestment(Number(e.target.value));
+              }}
               className="w-full accent-green cursor-pointer"
             />
             <div className="mt-1 flex justify-between text-xs text-slate-400">
@@ -302,7 +326,10 @@ export function BonusCalculator() {
               max={30000}
               step={1000}
               value={monthlySpend}
-              onChange={(e) => setMonthlySpend(Number(e.target.value))}
+              onChange={(e) => {
+                hasInteracted.current = true;
+                setMonthlySpend(Number(e.target.value));
+              }}
               className="w-full accent-amber-500 cursor-pointer"
             />
             <div className="mt-1 flex justify-between text-xs text-slate-500">
@@ -320,7 +347,10 @@ export function BonusCalculator() {
                   <button
                     key={rate}
                     type="button"
-                    onClick={() => setCashbackRate(rate)}
+                    onClick={() => {
+                      hasInteracted.current = true;
+                      setCashbackRate(rate);
+                    }}
                     className={`rounded-lg px-2.5 py-1 text-xs font-bold transition-colors cursor-pointer ${
                       cashbackRate === rate
                         ? "bg-amber-600 text-white"
@@ -400,6 +430,8 @@ export function BonusCalculator() {
                             href={`/go/${item.trackingSlug}`}
                             target="_blank"
                             rel="nofollow sponsored noopener"
+                            data-ga-offer={item.slug}
+                            data-ga-location="calculator_plan"
                             className="rounded-lg bg-green px-2.5 py-1 text-[11px] font-bold text-navy hover:bg-green-light transition-colors"
                           >
                             Přejít ↗
@@ -409,7 +441,7 @@ export function BonusCalculator() {
                       <p className="text-[11px] text-slate-300 leading-snug">{item.condition}</p>
                       {item.promoCode && (
                         <div className="pt-0.5">
-                          <CopyCodeButton code={item.promoCode} size="sm" />
+                          <CopyCodeButton code={item.promoCode} offerSlug={item.slug} size="sm" />
                         </div>
                       )}
                     </li>
@@ -430,6 +462,8 @@ export function BonusCalculator() {
                           href="/go/rondainvest"
                           target="_blank"
                           rel="nofollow sponsored noopener"
+                          data-ga-offer="rondainvest"
+                          data-ga-location="calculator_plan"
                           className="rounded-lg bg-green px-2.5 py-1 text-[11px] font-bold text-navy hover:bg-green-light transition-colors"
                         >
                           Přejít ↗

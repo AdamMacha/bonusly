@@ -194,8 +194,14 @@ export default async function CategoryPage({ params }: Props) {
                   <p className="text-sm font-semibold text-navy line-clamp-1">{p.title}</p>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
-                  {p.code && <CopyCodeButton code={p.code} size="sm" />}
-                  <CtaButton href={`/go/promo/${p.trackingSlug}`} size="sm">
+                  {p.code && <CopyCodeButton code={p.code} offerSlug={p.offerSlug} size="sm" />}
+                  <CtaButton
+                    href={`/go/promo/${p.trackingSlug}`}
+                    size="sm"
+                    gaOfferSlug={p.offerSlug}
+                    gaCategory={category.slug}
+                    gaLocation="category_promos"
+                  >
                     Aktivovat
                   </CtaButton>
                 </div>

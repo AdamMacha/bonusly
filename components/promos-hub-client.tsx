@@ -296,9 +296,22 @@ export function PromosHubClient({ promos }: PromosHubClientProps) {
                   </div>
 
                   <div className="mt-5 pt-4 border-t border-slate-100 space-y-3">
-                    {promo.code && <CopyCodeButton code={promo.code} className="w-full justify-between" />}
+                    {promo.code && (
+                      <CopyCodeButton
+                        code={promo.code}
+                        offerSlug={promo.offer.slug}
+                        className="w-full justify-between"
+                      />
+                    )}
                     <div className="flex items-center justify-between gap-2">
-                      <CtaButton href={`/go/promo/${promo.trackingSlug}`} size="sm" className="flex-1">
+                      <CtaButton
+                        href={`/go/promo/${promo.trackingSlug}`}
+                        size="sm"
+                        className="flex-1"
+                        gaOfferSlug={promo.offer.slug}
+                        gaCategory={promo.offer.category.slug}
+                        gaLocation="promos_hub_code"
+                      >
                         Přejít a uplatnit kód
                       </CtaButton>
                       <Link
@@ -402,7 +415,13 @@ export function PromosHubClient({ promos }: PromosHubClientProps) {
                       >
                         Podrobnosti →
                       </Link>
-                      <CtaButton href={`/go/promo/${promo.trackingSlug}`} size="sm">
+                      <CtaButton
+                        href={`/go/promo/${promo.trackingSlug}`}
+                        size="sm"
+                        gaOfferSlug={promo.offer.slug}
+                        gaCategory={promo.offer.category.slug}
+                        gaLocation="promos_hub_deal"
+                      >
                         Aktivovat akci
                       </CtaButton>
                     </div>

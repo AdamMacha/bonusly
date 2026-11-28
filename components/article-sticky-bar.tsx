@@ -55,6 +55,8 @@ export function ArticleStickyBar({ offer }: ArticleStickyBarProps) {
             href={`/go/${offer.trackingSlug}`}
             target="_blank"
             rel="nofollow sponsored noopener"
+            data-ga-offer={offer.slug}
+            data-ga-location="article_sticky_bar"
             className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-green px-3.5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-bold text-navy shadow-md shadow-green/20 hover:bg-green-light hover:shadow-lg transition-all whitespace-nowrap active:scale-95"
           >
             <span className="sm:hidden">Získat bonus</span>

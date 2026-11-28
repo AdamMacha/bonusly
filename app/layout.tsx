@@ -5,6 +5,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { GaTracker } from "@/components/ga-tracker";
+import { GA_MEASUREMENT_ID, GTM_CONTAINER_ID } from "@/lib/analytics";
 import { getBaseUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -66,16 +68,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="cs" className={`${geistSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
-        <Script
-          id="google-tag-src"
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-P2DX3ZQB"
-          strategy="beforeInteractive"
-        />
         <Script id="google-tag-init" strategy="beforeInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());`}
+          {`(function(){
+  var isAdmin = window.location.pathname === '/admin' || window.location.pathname.indexOf('/admin/') === 0;
+  window['ga-disable-${GA_MEASUREMENT_ID}'] = isAdmin;
+  if (isAdmin) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){window.dataLayer.push(arguments);};
+  window.gtag('js', new Date());
+  window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtm.js?id=${GTM_CONTAINER_ID}';
+  var f = document.getElementsByTagName('script')[0];
+  if (f && f.parentNode) f.parentNode.insertBefore(s, f);
+  else document.head.appendChild(s);
+})();`}
         </Script>
+        <GaTracker />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

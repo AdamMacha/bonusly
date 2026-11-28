@@ -148,7 +148,7 @@ export default async function InvesticniBonusyPage() {
                   </td>
                   <td className="px-5 py-4">
                     {offer.promoCode ? (
-                      <CopyCodeButton code={offer.promoCode} size="sm" />
+                      <CopyCodeButton code={offer.promoCode} offerSlug={offer.slug} size="sm" />
                     ) : (
                       <span className="text-xs text-slate-400">Přes odkaz</span>
                     )}
@@ -164,7 +164,13 @@ export default async function InvesticniBonusyPage() {
                       >
                         Recenze
                       </Link>
-                      <CtaButton href={`/go/${offer.trackingSlug}`} size="sm">
+                      <CtaButton
+                        href={`/go/${offer.trackingSlug}`}
+                        size="sm"
+                        gaOfferSlug={offer.slug}
+                        gaCategory="finance"
+                        gaLocation="invest_bonuses_table"
+                      >
                         Přejít
                       </CtaButton>
                     </div>

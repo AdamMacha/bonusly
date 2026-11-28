@@ -410,7 +410,7 @@ export default async function OfferPage({ params }: Props) {
                     <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">
                       {isReferralCode ? "Doporučovací kód" : "Ověřený slevový kód"}
                     </span>
-                    <CopyCodeButton code={offer.promoCode} />
+                    <CopyCodeButton code={offer.promoCode} offerSlug={offer.slug} />
                     {offer.promoCodeNote && (
                       <p className="text-[11px] text-slate-500 sm:text-right max-w-[230px]">
                         {offer.promoCodeNote}
@@ -422,7 +422,15 @@ export default async function OfferPage({ params }: Props) {
 
               <div className="mt-5 pt-4 border-t border-green/15 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                  <CtaButton href={`/go/${offer.trackingSlug}`} size="lg" className="sm:w-auto">
+                  <CtaButton
+                    href={`/go/${offer.trackingSlug}`}
+                    size="lg"
+                    className="sm:w-auto"
+                    gaOfferSlug={offer.slug}
+                    gaCategory={offer.category.slug}
+                    gaHasCashback={offer.cashbackAllowed}
+                    gaLocation="offer_hero"
+                  >
                     {ctaText}
                   </CtaButton>
                   {verifiedDateFormatted && (
@@ -442,7 +450,14 @@ export default async function OfferPage({ params }: Props) {
 
           {!offer.bonus && !offer.promoCode && (
             <div className="mt-6">
-              <CtaButton href={`/go/${offer.trackingSlug}`} size="lg">
+              <CtaButton
+                href={`/go/${offer.trackingSlug}`}
+                size="lg"
+                gaOfferSlug={offer.slug}
+                gaCategory={offer.category.slug}
+                gaHasCashback={offer.cashbackAllowed}
+                gaLocation="offer_hero_simple"
+              >
                 {ctaText}
               </CtaButton>
             </div>
@@ -512,8 +527,17 @@ export default async function OfferPage({ params }: Props) {
                       </div>
 
                       <div className="flex flex-col sm:items-end gap-2 shrink-0">
-                        {promo.code && <CopyCodeButton code={promo.code} size="sm" />}
-                        <CtaButton href={`/go/promo/${promo.trackingSlug}`} size="sm">
+                        {promo.code && (
+                          <CopyCodeButton code={promo.code} offerSlug={offer.slug} size="sm" />
+                        )}
+                        <CtaButton
+                          href={`/go/promo/${promo.trackingSlug}`}
+                          size="sm"
+                          gaOfferSlug={offer.slug}
+                          gaCategory={offer.category.slug}
+                          gaHasCashback={offer.cashbackAllowed}
+                          gaLocation="offer_promo_list"
+                        >
                           {promo.code ? "Uplatnit kód" : "Aktivovat akci"}
                         </CtaButton>
                       </div>
@@ -658,10 +682,17 @@ export default async function OfferPage({ params }: Props) {
                 : `Přejděte na oficiální stránky ${offer.name} přes náš ověřený odkaz.`}
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-3">
-              <CtaButton href={`/go/${offer.trackingSlug}`} size="md">
+              <CtaButton
+                href={`/go/${offer.trackingSlug}`}
+                size="md"
+                gaOfferSlug={offer.slug}
+                gaCategory={offer.category.slug}
+                gaHasCashback={offer.cashbackAllowed}
+                gaLocation="offer_bottom_cta"
+              >
                 {ctaText}
               </CtaButton>
-              {offer.promoCode && <CopyCodeButton code={offer.promoCode} />}
+              {offer.promoCode && <CopyCodeButton code={offer.promoCode} offerSlug={offer.slug} />}
             </div>
           </section>
 
@@ -721,10 +752,22 @@ export default async function OfferPage({ params }: Props) {
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5">
                     {isReferralCode ? "Doporučovací kód" : "Slevový kód"}
                   </p>
-                  <CopyCodeButton code={offer.promoCode} className="w-full justify-between" />
+                  <CopyCodeButton
+                    code={offer.promoCode}
+                    offerSlug={offer.slug}
+                    className="w-full justify-between"
+                  />
                 </div>
               )}
-              <CtaButton href={`/go/${offer.trackingSlug}`} size="md" className="w-full">
+              <CtaButton
+                href={`/go/${offer.trackingSlug}`}
+                size="md"
+                className="w-full"
+                gaOfferSlug={offer.slug}
+                gaCategory={offer.category.slug}
+                gaHasCashback={offer.cashbackAllowed}
+                gaLocation="offer_sidebar"
+              >
                 {ctaText}
               </CtaButton>
               <p className="mt-3 text-center text-[11px] text-slate-400">
@@ -792,6 +835,9 @@ export default async function OfferPage({ params }: Props) {
 
       <OfferStickyBar
         name={offer.name}
+        offerSlug={offer.slug}
+        categorySlug={offer.category.slug}
+        hasCashback={offer.cashbackAllowed}
         bonus={offer.bonus}
         promoCode={offer.promoCode}
         ctaLabel={offer.ctaLabel}

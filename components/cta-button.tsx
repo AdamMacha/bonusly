@@ -7,6 +7,10 @@ interface CtaButtonProps {
   variant?: "primary" | "secondary";
   className?: string;
   external?: boolean;
+  gaOfferSlug?: string;
+  gaCategory?: string;
+  gaHasCashback?: boolean;
+  gaLocation?: string;
 }
 
 export function CtaButton({
@@ -16,6 +20,10 @@ export function CtaButton({
   variant = "primary",
   className = "",
   external,
+  gaOfferSlug,
+  gaCategory,
+  gaHasCashback,
+  gaLocation,
 }: CtaButtonProps) {
   const sizeClasses = {
     sm: "px-4 py-2 text-sm",
@@ -61,6 +69,10 @@ export function CtaButton({
         target="_blank"
         rel="nofollow sponsored noopener"
         className={classes}
+        data-ga-offer={gaOfferSlug}
+        data-ga-category={gaCategory}
+        data-ga-cashback={gaHasCashback !== undefined ? String(gaHasCashback) : undefined}
+        data-ga-location={gaLocation}
       >
         {children}
         {icon}

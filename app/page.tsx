@@ -215,7 +215,7 @@ export default async function Home() {
 
                   <div className="mt-4 pt-3.5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
                     {promo.code ? (
-                      <CopyCodeButton code={promo.code} size="sm" />
+                      <CopyCodeButton code={promo.code} offerSlug={promo.offer.slug} size="sm" />
                     ) : (
                       <Link
                         href={`/nabidky/${promo.offer.slug}`}
@@ -224,7 +224,12 @@ export default async function Home() {
                         Detail nabídky →
                       </Link>
                     )}
-                    <CtaButton href={`/go/promo/${promo.trackingSlug}`} size="sm">
+                    <CtaButton
+                      href={`/go/promo/${promo.trackingSlug}`}
+                      size="sm"
+                      gaOfferSlug={promo.offer.slug}
+                      gaLocation="home_promos"
+                    >
                       {promo.code ? "Uplatnit" : "Aktivovat"}
                     </CtaButton>
                   </div>

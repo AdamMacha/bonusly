@@ -5,6 +5,9 @@ import { CopyCodeButton } from "./copy-code-button";
 
 interface OfferStickyBarProps {
   name: string;
+  offerSlug?: string;
+  categorySlug?: string;
+  hasCashback?: boolean;
   bonus?: string | null;
   promoCode?: string | null;
   ctaLabel?: string | null;
@@ -13,6 +16,9 @@ interface OfferStickyBarProps {
 
 export function OfferStickyBar({
   name,
+  offerSlug,
+  categorySlug,
+  hasCashback,
   bonus,
   promoCode,
   ctaLabel,
@@ -39,6 +45,7 @@ export function OfferStickyBar({
           {promoCode && (
             <CopyCodeButton
               code={promoCode}
+              offerSlug={offerSlug}
               size="sm"
               className="hidden sm:inline-flex"
             />
@@ -47,6 +54,10 @@ export function OfferStickyBar({
             href={href}
             target="_blank"
             rel="nofollow sponsored noopener"
+            data-ga-offer={offerSlug}
+            data-ga-category={categorySlug}
+            data-ga-cashback={hasCashback !== undefined ? String(hasCashback) : undefined}
+            data-ga-location="offer_sticky_bar"
             className="inline-flex items-center justify-center gap-1 rounded-xl bg-green px-3.5 py-2 text-xs font-bold text-navy shadow-md shadow-green/20 hover:bg-green-light transition-all whitespace-nowrap"
           >
             <span>{shortCta}</span>

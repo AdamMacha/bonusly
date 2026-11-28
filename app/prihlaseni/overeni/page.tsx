@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { TrackSignUpInitiated } from "@/components/ga-tracker";
 
 export const metadata: Metadata = {
   title: "Zkontrolujte svůj e-mail",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function OvereniPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+      <TrackSignUpInitiated />
       <Breadcrumbs items={[{ label: "Přihlášení", href: "/prihlaseni" }, { label: "Ověření e-mailu" }]} />
 
       <div className="mx-auto max-w-md text-center">

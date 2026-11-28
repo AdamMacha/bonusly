@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { submitLead } from "@/lib/actions/leads";
+import { trackLeadSubmit } from "@/lib/analytics";
 
 interface Props {
   offerSlug?: string;
@@ -25,6 +26,7 @@ export function TipsportLeadForm({ offerSlug = "tipsport", offerName = "Tipsport
       const res = await submitLead(formData);
       if (res.success) {
         setStatus("success");
+        trackLeadSubmit({ offerSlug });
       } else {
         setStatus("error");
         setErrorMessage(res.error || "Došlo k chybě při odesílání.");

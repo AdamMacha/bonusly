@@ -4,6 +4,7 @@ import Link from "next/link";
 import { auth, signOut } from "@/auth";
 import { prisma } from "@/lib/db";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { TrackSignUp } from "@/components/ga-tracker";
 import { CashoutForm } from "./cashout-form";
 import { TransactionStatus, CashoutStatus } from "@prisma/client";
 
@@ -95,6 +96,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+      <TrackSignUp userId={user.id} createdAtIso={user.createdAt.toISOString()} />
       <Breadcrumbs items={[{ label: "Moje peněženka" }]} />
 
       {/* Header */}

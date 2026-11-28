@@ -1,15 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { trackPromoCodeCopy } from "@/lib/analytics";
 
 interface CopyCodeButtonProps {
   code: string;
+  offerSlug?: string;
   size?: "sm" | "md";
   className?: string;
 }
 
 export function CopyCodeButton({
   code,
+  offerSlug,
   size = "md",
   className = "",
 }: CopyCodeButtonProps) {
@@ -18,6 +21,7 @@ export function CopyCodeButton({
   const handleCopy = async () => {
     setCopied(true);
     setTimeout(() => setCopied(false), 2200);
+    trackPromoCodeCopy({ promoCode: code, offerSlug });
     try {
       await navigator.clipboard.writeText(code);
     } catch {

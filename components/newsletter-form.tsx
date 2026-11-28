@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackNewsletterSignup } from "@/lib/analytics";
 
 export function NewsletterForm() {
   const [email, setEmail] = useState("");
@@ -24,6 +25,7 @@ export function NewsletterForm() {
         setStatus("success");
         setMessage(data.message || "Úspěšně přihlášeno!");
         setEmail("");
+        trackNewsletterSignup();
       } else {
         setStatus("error");
         setMessage(data.error || "Něco se pokazilo.");

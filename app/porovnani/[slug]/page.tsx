@@ -181,13 +181,19 @@ export default async function PorovnaniSlugPage({ params }: Props) {
 
               {offer.promoCode && (
                 <div className="mb-6">
-                  <CopyCodeButton code={offer.promoCode} size="sm" />
+                  <CopyCodeButton code={offer.promoCode} offerSlug={offer.slug} size="sm" />
                 </div>
               )}
             </div>
 
             <div className="space-y-3 pt-4 border-t border-slate-100">
-              <CtaButton href={`/go/${offer.trackingSlug}`} size="md" className="w-full">
+              <CtaButton
+                href={`/go/${offer.trackingSlug}`}
+                size="md"
+                className="w-full"
+                gaOfferSlug={offer.slug}
+                gaLocation="comparison_card"
+              >
                 {offer.ctaLabel || `Získat ${offer.name}`}
               </CtaButton>
               <Link
