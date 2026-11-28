@@ -661,4 +661,131 @@ Ano — před proklikem do e-shopu se vždy přihlaste do svého bezplatného ú
 ### Funguje slevový kód SNEHULAK26 na Trenýrkárně současně s cashbackem?
 Ano! Kód \`SNEHULAK26\` je oficiální partnerský kupón pro BONUSLY, takže získáte jak okamžitou 26 % slevu na celý sortiment, tak následný cashback až 7,5 % z výsledné ceny nákupu.`,
   },
+  {
+    slug: "vanocni-darky-pro-zeny-2026-cashback",
+    title: "Vánoční dárky pro ženy 2026: 18 ověřených tipů s cashbackem až 10 %",
+    excerpt:
+      "Nevíte, co letos nadělit partnerce, mamince, sestře nebo babičce pod stromeček? Přinášíme 18 konkrétních tipů na vánoční dárky pro ženy pro rok 2026 — s platnými prosincovými slevovými kódy až -35 % a 50/50 cashbackem přes BONUSLY.",
+    featuredImage: "/blog/vanocni-darky-pro-zeny-2026.jpg",
+    categorySlug: "krasa-a-zdravi",
+    authorSlug: "adam-macha",
+    offerSlug: "eppi",
+    publishedAt: "2026-11-28",
+    featured: true,
+    draft: false,
+    keywords: [
+      "vánoční dárky pro ženy 2026",
+      "tipy na vánoční dárky pro ženy",
+      "vánoční dárek pro přítelkyni",
+      "dárek pro maminku k vánocům",
+      "parfémy a šperky cashback",
+      "slevové kódy vánoce 2026",
+    ],
+    seoTitle: "Vánoční dárky pro ženy 2026: 18 tipů + cashback",
+    seoDescription:
+      "Nejlepší vánoční dárky pro ženy 2026: parfémy, šperky, kosmetika, móda i knihy. Aktivní slevové kódy na prosinec a 50/50 cashback až 10 % přes BONUSLY.",
+    content: `
+Vybrat vánoční dárek pro ženu, který neskončí zapomenutý na dně skříně, ale skutečně ji potěší a ještě nezruinuje váš prosincový rozpočet, chce trochu plánování. Ať už sháníte dárek pro partnerku, manželku, maminku, sestru nebo nejlepší kamarádku, právě u ženských kategorií — tedy u parfémů, pleťové kosmetiky, šperků, módy a wellness — se před Vánoci utrácí nejvíc.
+
+Dobrá zpráva je, že téměř každou z těchto položek můžete letos pořídit výrazně levněji. Pokud se před nákupem přihlásíte na **BONUSLY.cz** a prokliknete se do vybraného obchodu z našeho katalogu, získáte kromě prosincových akcí i **férový 50/50 cashback** (přesnou polovinu naší partnerské provize vracíme v korunách do vaší peněženky — podrobnosti najdete na stránce [Jak funguje cashback 50/50](/jak-funguje-cashback)).
+
+V tomto průvodci jsme vybrali **18 nejlepších ověřených e-shopů pro vánoční dárky pro ženy v roce 2026**, rozdělili je podle rozpočtu i vkusu obdarované a přidali konkrétní slevové kódy platné v prosinci.
+
+## Rozpočet na vánoční dárky pro ženy 2026: Kolik ušetříte?
+
+Než se pustíte do výběru konkrétních obchodů, podívejte se na přehlednou tabulku v korunách. Ukazuje reálné cenové hladiny vánočních dárků pro ženy a to, kolik ušetříte kombinací platných partnerských kódů a 50/50 cashbacku na BONUSLY:
+
+| Cenová kategorie | Osvědčený dárek pro ženu | Ověřený e-shop přes BONUSLY | Kód navíc (prosinec 2026) | Odhad cashbacku zpět |
+| :--- | :--- | :--- | :--- | :--- |
+| **Do 1 000 Kč** | Výběrový čaj, čokoláda, kniha, minerály | [Čajová-zahrada.cz](/nabidky/cajova-zahrada), [Moonchocolate.eu](/nabidky/moonchocolate), [Martinus.cz](/nabidky/martinus) | \`Sleva5\` (-5 % od 500 Kč) | **30–60 Kč** (3,5–6 %) |
+| **1 000 – 2 500 Kč** | K-beauty péče, parfémy, domácí pyžamo, kytice | [Kocosbeauty.cz](/nabidky/kocosbeauty), [Vivantis.cz](/nabidky/vivantis), [Trenýrkárna.cz](/nabidky/trenyrkarna), [KvětinyExpres.cz](/nabidky/kvetinyexpres) | \`10VIVA\`, \`SNEHULAK26\`, \`VANOCECJ26\` | **60–190 Kč** (2,5–7,5 %) |
+| **2 500 – 5 000 Kč** | Sonický kartáček, značková kabelka, zimní bunda | [FOREO](/nabidky/foreo), [eObuv.cz](/nabidky/eobuv), [Bushman.cz](/nabidky/bushman), [Douglas.cz](/nabidky/douglas) | \`BLKDROP35\` (-35 % na zlevněné) | **90–450 Kč** (1,75–10 %) |
+| **Nad 5 000 Kč** | Zlatý nebo diamantový šperk, Apple Watch / AirPods | [Eppi.cz](/nabidky/eppi), [Brilianty.cz](/nabidky/brilianty), [iStyle.cz](/nabidky/istyle) | \`BF2026\` (víkendově -15 %) | **180–500+ Kč** (až 5 %) |
+
+> **Rychlý výpočet pro domácnost:** Pokud nakoupíte dárky pro partnerku, maminku a sestru v celkové hodnotě **12 000 Kč** (např. šperk, parfém, pyžamo a kosmetický balíček), kombinace prosincových slevových kódů a cashbacku vám reálně vrátí **1 200 až 2 200 Kč zpět**. Přesný výpočet pro váš vlastní nákupní seznam si můžete otestovat v naší [Kalkulačce bonusů a cashbacku](/kalkulacka-bonusu).
+
+## 1. Parfémy, luxusní kosmetika a péče o pleť (sázka na jistotu)
+
+Kosmetika a vůně jsou každoročně nejvyhledávanější kategorií vánočních dárků pro ženy. Místo anonymních dárkových kazet ze supermarketu ale raději sáhněte po ověřených specializovaných e-shopech, kde máte jistotu originálního původu a k tomu aktivní cashback:
+
+- **[Vivantis.cz](/nabidky/vivantis) (cashback až 5,5 % + kódy \`10VIVA\` a \`OUTLET30\`):** Jeden z největších českých obchodů s parfémy, luxusní kosmetikou, kabelkami i hodinkami. Do 31. ledna 2027 tu platí extra kód **\`10VIVA\`** na **10 % slevu** (včetně luxusní kosmetiky) a pro lovce výhodných cen také kód **\`OUTLET30\`** na outlet parfémů a kosmetiky.
+- **[Douglas.cz](/nabidky/douglas) (cashback 3,5 %):** Prémiová parfumerie s obrovským výběrem dárkových sad značek Lancôme, Dior, Yves Saint Laurent nebo Rituals. Ke každé objednávce navíc automaticky dostanete dva vzorky zdarma a možnost dárkového balení.
+- **[FOREO](/nabidky/foreo) (cashback 1,75 % + kód \`BLKDROP35\`):** Švédská kosmetická technologie, kterou si ženy samy zřídka koupí, ale pod stromečkem z ní mají obrovskou radost — sonické čisticí kartáčky LUNA, masky UFO nebo mikroproudové přístroje BEAR. S kódem **\`BLKDROP35\`** (platným do 31. 12. 2026) získáte **35 % slevu navíc na zlevněné produkty**.
+- **[Kocosbeauty.cz](/nabidky/kocosbeauty) (cashback 2,5 % + kód \`KOREAN5\`):** Korejská kosmetika (K-beauty) je obrovský trend roku 2026. Specializovaný český e-shop nabízí autentické značky jako COSRX, Beauty of Joseon nebo Laneige — s kódem **\`KOREAN5\`** máte **5 % slevu na nezlevněný sortiment** (mimo dárkové sady, vzorky a přístroje, platí do 31. 12. 2026).
+
+## 2. Šperky, minerály a dárky, které zůstanou na památku
+
+Pokud hledáte dárek, který má trvalou hodnotu a vyvolá u stromečku skutečné emoce, šperk je bezkonkurenční volba. Protože se ceny zlatých a diamantových šperků pohybují v řádu tisíců korun, v absolutních číslech tu cashback vrací největší částky:
+
+- **[Eppi.cz](/nabidky/eppi) (cashback 5 %):** Moderní české klenotnictví s důrazem na eticky získané drahé kameny a recyklované zlato. Najdete tu minimalistické náušnice, řetízky s iniciálou, perlové přívěsky i zásnubní prsteny. Při nákupu šperku za 6 000 Kč se vám vrátí **300 Kč zpět**.
+- **[Brilianty.cz](/nabidky/brilianty) (cashback 3,75 %):** Tradiční česká výroba luxusních diamantových šperků Danfil Jewellery s certifikátem pravosti. Pokud nakoupíte ještě během tohoto listopadového víkendu (do 29. 11. 2026), využijete i Black Friday kód **\`BF2026\`** na **15 % slevu na nezlevněné šperky**.
+- **[Nefertitis.cz](/nabidky/nefertitis) (cashback 5 % + kód \`NCZ20AF\`):** Hledáte spíše cenově dostupnější přírodní šperky, náramky z drahých kamenů, minerály nebo sadu na aromaterapii? U Nefertitis uplatníte do 31. 12. 2026 partnerský kód **\`NCZ20AF\`** na **20 % slevu na vše** a k tomu získáte **5 % cashback**.
+
+## 3. Móda, kabelky, spodní prádlo a pohodlné dárky
+
+Pokud si nejste jistí konfekční velikostí, sáhněte po kabelce, zimních doplňcích nebo pohodlném domácím oblečení:
+
+- **[Trenýrkárna.cz](/nabidky/trenyrkarna) (cashback až 7,5 % + kód \`SNEHULAK26\`):** Nenechte se zmást názvem — v sekci pro ženy tu najdete obrovský výběr dámského spodního prádla, sportovních podprsenek Calvin Klein či Tommy Hilfiger a hlavně teplých vánočních pyžam a ponožek. S prosincovým kódem **\`SNEHULAK26\`** máte **26 % slevu na celý sortiment** (do 31. 12. 2026) a navíc **cashback až 7,5 %**!
+- **[eObuv.cz](/nabidky/eobuv) (cashback až 3,5 %):** Značkové kabelky (Guess, Michael Kors, Coccinelle, Tommy Hilfiger), kožené rukavice, peněženky i zimní kozačky s bezproblémovou možností vrácení po Vánocích.
+- **[Bushman.cz](/nabidky/bushman) (cashback až 10 %):** Kvalitní dámské parky, vlněné svetry, flanelové šaty a kožené tašky z přírodních materiálů pro ženy, které milují přírodu, cestování a nadčasovou kvalitu. A cashback až **10 %** patří k absolutně nejvyšším na českém trhu.
+- **[Zdravá obuv](/nabidky/zdrava-obuv) (cashback až 3 % + kód \`dárky\`):** Skvělý tip pro maminky a babičky — certifikovaná ortopedická domácí obuv, hřejivé vlněné pantofle a pohodlné zimní boty. Do 16. 12. 2026 platí vánoční kód **\`dárky\`** na **6 % slevu na vše** (dlouhodobě pak \`viva4\` na 4 % slevu).
+
+## 4. Knihy, čaje, dermokosmetika a květiny (ideální i pro maminku a babičku)
+
+Promyšlený balíček složený z knihy, kvalitního sypaného čaje, řemeslné čokolády a kosmetiky z lékárny potěší každou ženu a ušetří rodinný rozpočet:
+
+- **[Lékárna.cz](/nabidky/lekarna) (cashback až 3 %):** Dermokosmetika (Vichy, La Roche-Posay, Bioderma), kolagenové drinky, hořčík a dárkové balíčky vitamínů — praktický dárek pro zdraví maminky i babičky. (Do 30. 11. 2026 platí i kód \`DOPRAVA12\` na dopravu zdarma nad 500 Kč.)
+- **[Martinus.cz](/nabidky/martinus) (cashback 3,5 %):** Knižní bestsellery, kuchařky, společenské hry i inspirativní vánoční knižní tipy podle žánrů.
+- **[Čajová-zahrada.cz](/nabidky/cajova-zahrada) (cashback 4,8 %):** Dárkové kazety sypaných čajů, matchy a čajové doplňky na dlouhé zimní večery.
+- **[Moonchocolate.eu](/nabidky/moonchocolate) (cashback 6 % + kód \`Sleva5\`):** Česká ručně vyráběná bean-to-bar čokoláda v dárkových obalech a degustačních adventních kalendářích. S kódem **\`Sleva5\`** ušetříte 5 % (od 500 Kč) a **6 %** získáte zpět.
+- **[KvětinyExpres.cz](/nabidky/kvetinyexpres) (cashback 7,5 % + kód \`VANOCECJ26\`):** Chcete darovat kytici s vánoční atmosférou nebo adventní vazbu rovnou ke dveřím (třeba babičce přes půl republiky)? S kódem **\`VANOCECJ26\`** máte **15 % slevu** (do 31. 12. 2026) a **7,5 % cashback**.
+
+## 5. Chytré dárky z elektra a aktivního životního stylu
+
+Pokud obdarovaná ráda sportuje, fotí nebo poslouchá hudbu při práci a běhání, sáhněte po ověřené elektronice nebo fitness výbavě:
+
+- **[iStyle.cz](/nabidky/istyle) (cashback až 3,2 %):** Apple Watch pro sledování zdraví a spánku, bezdrátová sluchátka AirPods nebo barevný iPad.
+- **[inSPORTline.cz](/nabidky/insportline) (cashback 2,25 %):** Podložky na jógu a pilates, masážní pistole nebo vyhřívané deky.
+
+## Prosincové slevové kódy pro ženy, které lze kombinovat s cashbackem
+
+Velkou výhodou BONUSLY je, že všechny kódy uvedené v sekci [Akce a ověřené kupóny](/akce-a-kupony) jsou oficiální partnerské kódy — **nezruší vám nárok na cashback**, takže šetříte dvakrát najednou:
+
+| E-shop | Partnerský kód | Co s kódem získáte | Platnost kódu | Cashback přes BONUSLY |
+| :--- | :--- | :--- | :--- | :--- |
+| **[FOREO](/nabidky/foreo)** | \`BLKDROP35\` | **35 % sleva navíc** na zlevněné | do 31. 12. 2026 | **+ 1,75 %** |
+| **[Trenýrkárna.cz](/nabidky/trenyrkarna)** | \`SNEHULAK26\` | **26 % sleva** na celý sortiment | do 31. 12. 2026 | **+ až 7,5 %** |
+| **[Nefertitis.cz](/nabidky/nefertitis)** | \`NCZ20AF\` | **20 % sleva** na vše | do 31. 12. 2026 | **+ 5 %** |
+| **[KvětinyExpres.cz](/nabidky/kvetinyexpres)** | \`VANOCECJ26\` | **15 % sleva** na vánoční sortiment | do 31. 12. 2026 | **+ 7,5 %** |
+| **[Vivantis.cz](/nabidky/vivantis)** | \`10VIVA\` | **10 % extra** (vč. luxusní kosmetiky) | do 31. 1. 2027 | **+ až 5,5 %** |
+| **[Zdravá obuv](/nabidky/zdrava-obuv)** | \`dárky\` | **6 % sleva** na vše | do 16. 12. 2026 | **+ až 3 %** |
+| **[Kocosbeauty.cz](/nabidky/kocosbeauty)** | \`KOREAN5\` | **5 % sleva** na nezlevněné | do 31. 12. 2026 | **+ 2,5 %** |
+| **[Moonchocolate.eu](/nabidky/moonchocolate)** | \`Sleva5\` | **5 % sleva** (nad 500 Kč) | aktivní | **+ 6 %** |
+
+## Jak na vánočních dárcích neprodělat a zaplatit je bez půjčky?
+
+1. **Vždy nakupujte přihlášení:** Před kliknutím na tlačítko *Přejít do obchodu* se přihlaste do svého účtu na BONUSLY.cz, vypněte na chvíli AdBlock a povolte na cílovém e-shopu cookies. Nákup dokončete v tom samém okně prohlížeče.
+2. **Hledáte ještě dárky pro partnera, tátu nebo bratra?** Mrkněte na náš sesterský přehled **[Vánoční dárky pro muže 2026: 18 ověřených tipů s cashbackem](/blog/vanocni-darky-pro-muze-2026-cashback)** nebo na kompletní mapu **[Cashback na vánoční dárky 2026](/blog/cashback-na-vanocni-darky-2026-bonusly)**.
+3. **Nechcete sahat do úspor? Využijte bankovní uvítací bonusy:** Vánoční nákupy můžete platit novou kartou k bezplatnému účtu a získat uvítací bankovní bonus navíc — celý postup krok za krokem popisujeme v návodu **[Jak si přivydělat na vánoční dárky díky BONUSLY](/blog/jak-si-privydelat-na-vanocni-darky-diky-bonusly)**.
+
+## Často kladené otázky
+
+### Který obchod na dárky pro ženy má na BONUSLY nejvyšší cashback?
+Nejvyšší procentní sazbu v módě a doplňcích nabízí **[Bushman.cz](/nabidky/bushman) (až 10 %)**, dále **[Trenýrkárna.cz](/nabidky/trenyrkarna) (až 7,5 % + 26 % kód \`SNEHULAK26\`)**, **[KvětinyExpres.cz](/nabidky/kvetinyexpres) (7,5 % + 15 % kód \`VANOCECJ26\`)** **[Moonchocolate.eu](/nabidky/moonchocolate) (6 %)** a z kosmetiky **[Vivantis.cz](/nabidky/vivantis) (až 5,5 %)**. U šperků pak vyniká **[Eppi.cz](/nabidky/eppi) (5 %)**, kde i jediný dárek vrátí stovky korun.
+
+### Funguje cashback i při nákupu vánočních dárkových sad a setů?
+Ano, u naprosté většiny partnerů získáte cashback z celé reálně zaplacené hodnoty objednávky (bez DPH a ceny dopravy), včetně vánočních balíčků a kosmetických kazet. Výjimkou bývá jen použití cizích nepartnerských kupónů z internetových vyhledávačů nebo platba dárkovým poukazem třetí strany.
+
+### Co když se u dárku netrefím do velikosti nebo odstínu a budu ho po Vánocích měnit?
+Pokud v e-shopu po Vánocích zboží pouze vyměníte za jinou velikost v rámci stejné objednávky (bez storna), většina obchodů cashback zachová nebo upraví podle konečné ceny. Jestliže však dárek zcela vrátíte ve lhůtě pro odstoupení od smlouvy, e-shop provizi neschválí a cashback se za danou položku stornuje.
+
+### Jak dlouho před Štědrým dnem je bezpečné objednat dárky online?
+U zboží skladem doporučujeme objednat nejpozději do **16.–18. prosince 2026**, u šperků vyráběných na zakázku (například gravírování či úprava velikosti prstenu) si nechte rezervu alespoň **2 až 3 týdny**. Pokud objednáváte na poslední chvíli kolem 22.–23. prosince, sáhněte po expresním doručení květin přes **[KvětinyExpres.cz](/nabidky/kvetinyexpres)** nebo po dárkovém poukazu.
+
+### Lze zkombinovat prosincový slevový kód a BONUSLY cashback?
+Ano! Všechny slevové kódy uvedené v tomto článku a v sekci [Akce a kupóny](/akce-a-kupony) jsou oficiální partnerské kódy schválené danými e-shopy pro náš portál. Při jejich zadání v košíku získáte okamžitou slevu i následný 50/50 cashback z výsledné ceny.
+
+### Kdy si budu moct vyplatit cashback z vánočních dárků na svůj účet?
+Samotný proklik a objednávku vidíte v peněžence téměř okamžitě (synchronizace probíhá každých 30 minut). Finální schválení transakce e-shopem trvá obvykle 30 až 60 dní po uplynutí lhůty pro vrácení zboží. Peníze si pak vyplatíte na svůj bankovní účet jako příjemnou povánoční odměnu.`,
+  },
 ];
