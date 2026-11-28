@@ -9,6 +9,7 @@ import { TrustBadges } from "@/components/trust-badges";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { CopyCodeButton } from "@/components/copy-code-button";
 import { CtaButton } from "@/components/cta-button";
+import { OfferLogo } from "@/components/offer-logo";
 import { JsonLd } from "@/components/json-ld";
 import {
   buildCanonical,
@@ -55,7 +56,7 @@ export default async function Home() {
       prisma.offerPromo.findMany({
         where: { active: true, offer: { active: true } },
         include: {
-          offer: { select: { slug: true, name: true, featured: true } },
+          offer: { select: { slug: true, name: true, logo: true, featured: true } },
         },
         orderBy: [{ code: "asc" }, { order: "asc" }],
         take: 48,
@@ -174,15 +175,22 @@ export default async function Home() {
                   className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-xs hover:border-green/35 hover:shadow-md transition-all"
                 >
                   <div>
-                    <div className="flex items-center justify-between gap-2 mb-2.5">
+                    <div className="flex items-center justify-between gap-3 mb-3.5">
                       <Link
                         href={`/nabidky/${promo.offer.slug}`}
-                        className="text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-navy"
+                        className="flex items-center gap-2.5 min-w-0 group"
                       >
-                        {promo.offer.name}
+                        <OfferLogo
+                          logo={promo.offer.logo}
+                          name={promo.offer.name}
+                          size="search"
+                        />
+                        <span className="text-xs font-bold uppercase tracking-wider text-slate-600 group-hover:text-navy transition-colors truncate">
+                          {promo.offer.name}
+                        </span>
                       </Link>
                       {promo.badge && (
-                        <span className="inline-flex items-center rounded-full bg-green/15 px-2.5 py-0.5 text-xs font-bold text-green-dark">
+                        <span className="inline-flex shrink-0 items-center rounded-full bg-green/15 px-2.5 py-0.5 text-xs font-bold text-green-dark">
                           {promo.badge}
                         </span>
                       )}
