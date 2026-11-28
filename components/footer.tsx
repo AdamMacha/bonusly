@@ -19,8 +19,10 @@ const footerLinks = {
   informace: [
     { href: "/nabidky", label: "Všechny nabídky" },
     { href: "/akce-a-kupony", label: "Akce a slevové kódy" },
-    { href: "/jak-funguje-cashback", label: "Jak funguje cashback 50/50" },
+    { href: "/nastroje", label: "Finanční nástroje & kalkulačky" },
+    { href: "/nastroje/hypotecni-kalkulacka", label: "Hypoteční kalkulačka 2026" },
     { href: "/kalkulacka-bonusu", label: "Kalkulačka bonusů 2026" },
+    { href: "/jak-funguje-cashback", label: "Jak funguje cashback 50/50" },
     { href: "/nejlepsi-bankovni-bonusy-2026", label: "Bankovní bonusy 2026" },
     { href: "/investicni-bonusy-2026", label: "Investiční bonusy 2026" },
     { href: "/porovnani", label: "Srovnání nabídek" },

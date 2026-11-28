@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/db";
 import { CURATED_COMPARISONS, getBaseUrl } from "@/lib/seo";
 import { maxDate, STATIC_CONTENT_LASTMOD } from "@/lib/sitemap-xml";
+import { TOOL_URLS_FOR_SITEMAP } from "@/lib/tools-data";
 
 export const revalidate = 3600;
 
@@ -44,6 +45,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/nejlepsi-bankovni-bonusy-2026`, lastModified: maxDate(staticDate, latestOfferDate) },
     { url: `${baseUrl}/investicni-bonusy-2026`, lastModified: maxDate(staticDate, latestOfferDate) },
     { url: `${baseUrl}/kalkulacka-bonusu`, lastModified: maxDate(staticDate, latestOfferDate) },
+    ...TOOL_URLS_FOR_SITEMAP.map((path) => ({
+      url: `${baseUrl}${path}`,
+      lastModified: maxDate(staticDate, latestOfferDate),
+    })),
     { url: `${baseUrl}/kategorie`, lastModified: latestCatDate },
     { url: `${baseUrl}/porovnani`, lastModified: latestOfferDate },
     { url: `${baseUrl}/blog`, lastModified: latestArticleDate },

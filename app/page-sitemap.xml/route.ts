@@ -6,6 +6,7 @@ import {
   STATIC_CONTENT_LASTMOD,
   xmlResponse,
 } from "@/lib/sitemap-xml";
+import { TOOL_URLS_FOR_SITEMAP } from "@/lib/tools-data";
 
 export const revalidate = 3600;
 
@@ -49,6 +50,10 @@ export async function GET() {
     { loc: `${baseUrl}/nejlepsi-bankovni-bonusy-2026`, lastmod: maxDate(staticDate, offersLastMod) },
     { loc: `${baseUrl}/investicni-bonusy-2026`, lastmod: maxDate(staticDate, offersLastMod) },
     { loc: `${baseUrl}/kalkulacka-bonusu`, lastmod: maxDate(staticDate, offersLastMod) },
+    ...TOOL_URLS_FOR_SITEMAP.map((path) => ({
+      loc: `${baseUrl}${path}`,
+      lastmod: maxDate(staticDate, offersLastMod),
+    })),
     { loc: `${baseUrl}/kategorie`, lastmod: catsLastMod },
     { loc: `${baseUrl}/porovnani`, lastmod: offersLastMod },
     { loc: `${baseUrl}/blog`, lastmod: blogLastMod },

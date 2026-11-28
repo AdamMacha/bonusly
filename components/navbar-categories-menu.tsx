@@ -164,11 +164,11 @@ export function NavbarCategoriesMenu() {
                 Jak funguje cashback 50/50
               </Link>
               <Link
-                href="/kalkulacka-bonusu"
+                href="/nastroje"
                 onClick={closeMenu}
                 className="text-xs font-semibold text-slate-500 hover:text-navy transition-colors"
               >
-                🧮 Kalkulačka →
+                🧮 Všechny nástroje →
               </Link>
             </div>
           </div>

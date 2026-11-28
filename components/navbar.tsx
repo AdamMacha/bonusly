@@ -2,30 +2,34 @@ import Link from "next/link";
 import Image from "next/image";
 import { MobileNav } from "./mobile-nav";
 import { NavbarCategoriesMenu } from "./navbar-categories-menu";
+import { NavbarToolsMenu } from "./navbar-tools-menu";
 import { Search } from "./search";
 import { UserNav } from "./user-nav";
 
-const navLinks = [
+const navLinksBeforeTools = [
   { href: "/akce-a-kupony", label: "Akce & kupóny" },
   { href: "/kategorie/banky", label: "Banky" },
   { href: "/kategorie/finance", label: "Investice" },
+];
+
+const navLinksAfterTools = [
   { href: "/porovnani", label: "Srovnání" },
   { href: "/blog", label: "Blog" },
 ];
 
 const mobileLinks = [
   { href: "/nabidky", label: "Všechny nabídky" },
-  ...navLinks,
+  ...navLinksBeforeTools,
+  ...navLinksAfterTools,
   { href: "/jak-funguje-cashback", label: "Jak funguje cashback 50/50" },
-  { href: "/kalkulacka-bonusu", label: "Kalkulačka bonusů" },
 ];
 
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur-md border-b border-white/5">
       <nav aria-label="Hlavní navigace" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center gap-8">
+        <div className="flex h-16 items-center justify-between gap-2">
+          <div className="flex items-center gap-4 xl:gap-8">
             <Link
               href="/"
               className="flex shrink-0 items-center transition-opacity hover:opacity-90"
@@ -39,13 +43,23 @@ export function Navbar() {
                 preload
               />
             </Link>
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-0.5 xl:gap-1">
               <NavbarCategoriesMenu />
-              {navLinks.map((link) => (
+              {navLinksBeforeTools.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors rounded-lg hover:bg-white/5 whitespace-nowrap"
+                  className="px-2.5 xl:px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors rounded-lg hover:bg-white/5 whitespace-nowrap"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <NavbarToolsMenu />
+              {navLinksAfterTools.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="px-2.5 xl:px-3 py-2 text-sm text-slate-300 hover:text-white transition-colors rounded-lg hover:bg-white/5 whitespace-nowrap"
                 >
                   {link.label}
                 </Link>

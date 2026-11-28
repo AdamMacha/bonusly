@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { BonusCalculator } from "@/components/bonus-calculator";
+import { ToolCrossLinks } from "@/components/tools/tool-cross-links";
 import { Faq } from "@/components/faq";
 import { AffiliateDisclosure } from "@/components/affiliate-disclosure";
 import { JsonLd } from "@/components/json-ld";
@@ -71,7 +72,8 @@ export default function KalkulackaBonusuPage() {
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "BONUSLY", item: `${baseUrl}/` },
-            { "@type": "ListItem", position: 2, name: "Kalkulačka bonusů 2026", item: canonical },
+            { "@type": "ListItem", position: 2, name: "Nástroje", item: `${baseUrl}/nastroje` },
+            { "@type": "ListItem", position: 3, name: "Kalkulačka bonusů 2026", item: canonical },
           ],
         }}
       />
@@ -87,7 +89,12 @@ export default function KalkulackaBonusuPage() {
         }}
       />
 
-      <Breadcrumbs items={[{ label: "Kalkulačka bonusů 2026" }]} />
+      <Breadcrumbs
+        items={[
+          { label: "Nástroje", href: "/nastroje" },
+          { label: "Kalkulačka bonusů 2026" },
+        ]}
+      />
 
       <header className="max-w-3xl mb-10">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-green/15 px-3 py-1 text-xs font-bold text-green-dark mb-3">
@@ -129,6 +136,8 @@ export default function KalkulackaBonusuPage() {
       <div className="mt-14 max-w-3xl">
         <Faq items={calcFaqs} title="Často kladené otázky ke kombinování bonusů" />
       </div>
+
+      <ToolCrossLinks currentToolId="kalkulacka-bonusu" />
 
       <div className="mt-10 max-w-3xl">
         <AffiliateDisclosure />
